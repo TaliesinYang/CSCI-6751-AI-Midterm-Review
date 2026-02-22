@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Descent 完整教程 - CSCI 6751</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.8;
+      background: #f5f5f5;
+    }
+    .section {
+      background: white;
+      padding: 30px;
+      margin: 25px 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      page-break-inside: avoid;
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 4px solid #e74c3c;
+      padding-bottom: 15px;
+      font-size: 32px;
+    }
+    h2 {
+      color: #e74c3c;
+      margin-top: 35px;
+      font-size: 24px;
+      border-left: 5px solid #e74c3c;
+      padding-left: 15px;
+    }
+    h3 {
+      color: #16a085;
+      font-size: 20px;
+      margin-top: 25px;
+    }
+    .intuition {
+      background: #fff3cd;
+      padding: 25px;
+      margin: 20px 0;
+      border-left: 5px solid #ffc107;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+    .formula-box {
+      background: #e8f4f8;
+      padding: 25px;
+      margin: 20px 0;
+      border-left: 5px solid #3498db;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+    .example {
+      background: #e8f8f5;
+      padding: 25px;
+      margin: 20px 0;
+      border-left: 5px solid #16a085;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+    .step {
+      background: #f0f0f0;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 3px solid #7f8c8d;
+    }
+    .important {
+      background: #ffe6e6;
+      padding: 20px;
+      margin: 20px 0;
+      border-left: 5px solid #e74c3c;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .tip {
+      background: #e8f5e9;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 3px solid #4caf50;
+      font-size: 16px;
+    }
+    .comparison {
+      background: #f3e5f5;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 2px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background: #3498db;
+      color: white;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🎯 Gradient Descent 完整教程</h1>
+<p style="color: #7f8c8d; font-size: 16px;">期中考试必考！从直觉到公式到手算</p>
+
+<div class="important">
+  ⚠️ 期中考试重点：会手算 Gradient Descent 的一次迭代（Quiz #1 真题！）
+</div>
+
+<div class="section">
+  <h2>1️⃣ 为什么需要 Gradient Descent？</h2>
+  
+  <h3>问题：Normal Equation 的局限</h3>
+  
+  <div class="comparison">
+    <p><strong>Normal Equation（闭式解）：</strong></p>
+    $$\theta = (X^T X)^{-1} X^T y$$
+    
+    <p><strong>问题：</strong></p>
+    <ul>
+      <li>❌ 需要计算矩阵的逆 → 当特征很多时（>1000），计算非常慢</li>
+      <li>❌ X<sup>T</sup>X 可能不可逆（行列式 = 0）</li>
+      <li>❌ 内存占用大（需要存储整个 X<sup>T</sup>X 矩阵）</li>
+    </ul>
+    
+    <p><strong>Gradient Descent 的优势：</strong></p>
+    <ul>
+      <li>✅ 不需要求逆</li>
+      <li>✅ 可以处理百万级特征</li>
+      <li>✅ 内存友好（每次只用一小批数据）</li>
+      <li>✅ 可以用于非线性模型（Neural Networks）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <h2>2️⃣ 直觉理解：下山找最低点</h2>
+  
+  <div class="intuition">
+    <h3>🏔️ 比喻：雾天下山</h3>
+    
+    <p><strong>场景：</strong></p>
+    <ul>
+      <li>你站在山上（随机位置）</li>
+      <li>目标：找到山谷（最低点）</li>
+      <li>问题：大雾天，看不到全景</li>
+    </ul>
+    
+    <p><strong>策略：</strong></p>
+    <ol style="font-size: 18px;">
+      <li>📍 感受脚下的坡度（哪个方向最陡）</li>
+      <li>👣 朝最陡的下坡方向走一小步</li>
+      <li>🔁 重复步骤 1-2，直到到达山谷</li>
+    </ol>
+    
+    <p><strong>对应关系：</strong></p>
+    <ul>
+      <li><strong>山的高度</strong> = 损失函数 J(θ)</li>
+      <li><strong>你的位置</strong> = 当前参数 θ</li>
+      <li><strong>坡度</strong> = 梯度 ∇J(θ)</li>
+      <li><strong>步长</strong> = Learning Rate α</li>
+      <li><strong>山谷</strong> = 最优参数（误差最小）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<div class="section">
+  <h2>3️⃣ 数学定义</h2>
+  
+  <h3>核心思想</h3>
+  <p>从一个初始点开始，沿着<strong>负梯度方向</strong>（最陡的下坡方向）迭代更新参数，直到收敛。</p>
+  
+  <div class="formula-box">
+    <h3>更新公式（核心！）</h3>
+    $$\theta_{new} = \theta_{old} - \alpha \nabla J(\theta_{old})$$
+    
+    <p><strong>符号说明：</strong></p>
+    <ul>
+      <li>θ = 参数向量（例如 [b, a] 或 [θ₀, θ₁, θ₂]）</li>
+      <li>α (alpha) = Learning Rate（学习率，控制步长）</li>
+      <li>∇J(θ) = 梯度（Gradient，损失函数对参数的导数）</li>
+      <li>减号 (-) = 往下坡走（而不是上坡）</li>
+    </ul>
+  </div>
+  
+  <h3>为什么是"负"梯度？</h3>
+  <div class="intuition">
+    <p><strong>梯度 ∇J(θ) 指向上坡（误差增大的方向）</strong></p>
+    <p><strong>负梯度 -∇J(θ) 指向下坡（误差减小的方向）</strong></p>
+    <p>我们要让误差变小，所以要走<strong>负梯度</strong>方向！</p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>4️⃣ Linear Regression 的 Gradient Descent</h2>
+  
+  <h3>问题设定</h3>
+  <p>给定数据点 {(x₁, y₁), (x₂, y₂), ..., (xₘ, yₘ)}，找最佳的 a 和 b：</p>
+  $$y = ax + b$$
+  
+  <h3>损失函数（MSE - Mean Squared Error）</h3>
+  <div class="formula-box">
+    $$J(a, b) = \frac{1}{2m} \sum_{i=1}^{m} (\hat{y}_i - y_i)^2$$
+    
+    <p>其中：</p>
+    <ul>
+      <li>ŷ<sub>i</sub> = ax<sub>i</sub> + b （预测值）</li>
+      <li>y<sub>i</sub> = 真实值</li>
+      <li>m = 数据点个数</li>
+      <li>前面的 1/2 是为了求导时抵消 2（数学技巧）</li>
+    </ul>
+  </div>
+  
+  <h3>梯度推导（怎么来的）</h3>
+  
+  <div class="step">
+    <p><strong>对 a 求偏导：</strong></p>
+    $$\frac{\partial J}{\partial a} = \frac{1}{m} \sum_{i=1}^{m} (\hat{y}_i - y_i) \cdot x_i$$
+    
+    <p><strong>推导过程：</strong></p>
+    <ol>
+      <li>J(a, b) = (1/2m) Σ(ax<sub>i</sub> + b - y<sub>i</sub>)²</li>
+      <li>对 a 求导，用链式法则：2(ax<sub>i</sub> + b - y<sub>i</sub>) · x<sub>i</sub></li>
+      <li>2 和 1/2 抵消，得到：(1/m) Σ(ŷ<sub>i</sub> - y<sub>i</sub>) · x<sub>i</sub></li>
+    </ol>
+  </div>
+  
+  <div class="step">
+    <p><strong>对 b 求偏导：</strong></p>
+    $$\frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^{m} (\hat{y}_i - y_i)$$
+    
+    <p><strong>推导过程：</strong></p>
+    <ol>
+      <li>对 b 求导：2(ax<sub>i</sub> + b - y<sub>i</sub>) · 1</li>
+      <li>得到：(1/m) Σ(ŷ<sub>i</sub> - y<sub>i</sub>)</li>
+    </ol>
+  </div>
+  
+  <div class="formula-box">
+    <h3>更新规则（必须记住！）</h3>
+    $$a_{new} = a_{old} - \alpha \cdot \frac{1}{m} \sum_{i=1}^{m} (\hat{y}_i - y_i) \cdot x_i$$
+    $$b_{new} = b_{old} - \alpha \cdot \frac{1}{m} \sum_{i=1}^{m} (\hat{y}_i - y_i)$$
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<div class="section">
+  <h2>5️⃣ 手算步骤（期中考试必考！）</h2>
+  
+  <div class="important">
+    ⚠️ Quiz #1 真题：给定数据、初始参数、Learning Rate，计算一次 GD 迭代！
+  </div>
+  
+  <h3>标准步骤（背下来！）</h3>
+  <ol style="font-size: 18px;">
+    <li>✅ <strong>计算预测值 ŷ<sub>i</sub></strong> = a<sub>old</sub> × x<sub>i</sub> + b<sub>old</sub></li>
+    <li>✅ <strong>计算误差 e<sub>i</sub></strong> = ŷ<sub>i</sub> - y<sub>i</sub></li>
+    <li>✅ <strong>计算梯度 ∂J/∂a</strong> = (1/m) Σ(e<sub>i</sub> × x<sub>i</sub>)</li>
+    <li>✅ <strong>计算梯度 ∂J/∂b</strong> = (1/m) Σ(e<sub>i</sub>)</li>
+    <li>✅ <strong>更新参数 a</strong> = a<sub>old</sub> - α × ∂J/∂a</li>
+    <li>✅ <strong>更新参数 b</strong> = b<sub>old</sub> - α × ∂J/∂b</li>
+  </ol>
+</div>
+
+<div class="section">
+  <h2>6️⃣ 完整例子（Quiz #1 真题！）</h2>
+  
+  <div class="example">
+    <h3>题目</h3>
+    <p><strong>数据：</strong></p>
+    <table>
+      <tr><th>x</th><th>y</th></tr>
+      <tr><td>1</td><td>3</td></tr>
+      <tr><td>2</td><td>5</td></tr>
+    </table>
+    
+    <p><strong>初始参数：</strong> a = 0, b = 0</p>
+    <p><strong>Learning Rate：</strong> η (eta) = 0.1</p>
+    <p><strong>任务：</strong> 计算一次 Gradient Descent 迭代</p>
+  </div>
+  
+  <div class="step">
+    <h3>步骤 1：计算预测值</h3>
+    <p>ŷ₁ = a × x₁ + b = 0 × 1 + 0 = <strong>0</strong></p>
+    <p>ŷ₂ = a × x₂ + b = 0 × 2 + 0 = <strong>0</strong></p>
+  </div>
+  
+  <div class="step">
+    <h3>步骤 2：计算误差</h3>
+    <p>e₁ = ŷ₁ - y₁ = 0 - 3 = <strong>-3</strong></p>
+    <p>e₂ = ŷ₂ - y₂ = 0 - 5 = <strong>-5</strong></p>
+  </div>
+  
+  <div class="step">
+    <h3>步骤 3：计算梯度（对 a）</h3>
+    $$\frac{\partial J}{\partial a} = \frac{1}{m} \sum (e_i \times x_i)$$
+    $$= \frac{1}{2} [(e_1 \times x_1) + (e_2 \times x_2)]$$
+    $$= \frac{1}{2} [(-3 \times 1) + (-5 \times 2)]$$
+    $$= \frac{1}{2} [-3 - 10]$$
+    $$= \frac{1}{2} \times (-13) = \boxed{-6.5}$$
+  </div>
+  
+  <div class="step">
+    <h3>步骤 4：计算梯度（对 b）</h3>
+    $$\frac{\partial J}{\partial b} = \frac{1}{m} \sum e_i$$
+    $$= \frac{1}{2} [e_1 + e_2]$$
+    $$= \frac{1}{2} [(-3) + (-5)]$$
+    $$= \frac{1}{2} \times (-8) = \boxed{-4}$$
+  </div>
+  
+  <div class="step">
+    <h3>步骤 5：更新参数 a</h3>
+    $$a_{new} = a_{old} - \alpha \times \frac{\partial J}{\partial a}$$
+    $$= 0 - 0.1 \times (-6.5)$$
+    $$= 0 + 0.65 = \boxed{0.65}$$
+  </div>
+  
+  <div class="step">
+    <h3>步骤 6：更新参数 b</h3>
+    $$b_{new} = b_{old} - \alpha \times \frac{\partial J}{\partial b}$$
+    $$= 0 - 0.1 \times (-4)$$
+    $$= 0 + 0.4 = \boxed{0.4}$$
+  </div>
+  
+  <div class="formula-box" style="background: #e8f8f5;">
+    <h3>最终答案</h3>
+    <p><strong>一次迭代后的新参数：</strong></p>
+    $$a = 0.65, \quad b = 0.4$$
+    
+    <p><strong>新的模型：</strong></p>
+    $$y = 0.65x + 0.4$$
+  </div>
+  
+  <div class="tip">
+    💡 <strong>重复这个过程多次（100-1000次），最终会收敛到：</strong><br>
+    a ≈ 2, b ≈ 1 （真实最优解）
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<div class="section">
+  <h2>7️⃣ Learning Rate (α) 的影响</h2>
+  
+  <div class="comparison">
+    <table>
+      <tr>
+        <th>α 大小</th>
+        <th>效果</th>
+        <th>问题</th>
+      </tr>
+      <tr>
+        <td><strong>α 太大</strong><br>(如 α = 10)</td>
+        <td>步子太大</td>
+        <td>❌ 可能跳过最优点<br>❌ 震荡或发散</td>
+      </tr>
+      <tr>
+        <td><strong>α 合适</strong><br>(如 α = 0.1)</td>
+        <td>稳步下降</td>
+        <td>✅ 顺利收敛</td>
+      </tr>
+      <tr>
+        <td><strong>α 太小</strong><br>(如 α = 0.001)</td>
+        <td>步子太小</td>
+        <td>❌ 收敛非常慢<br>❌ 需要更多迭代</td>
+      </tr>
+    </table>
+  </div>
+  
+  <div class="important">
+    ⚠️ α 是一个 <strong>Hyperparameter（超参数）</strong>，需要人工选择或调优！
+  </div>
+</div>
+
+<div class="section">
+  <h2>8️⃣ 三种变体（Midterm 可能考）</h2>
+  
+  <h3>Batch Gradient Descent（批量梯度下降）</h3>
+  <p>每次用<strong>全部数据</strong>计算梯度</p>
+  <ul>
+    <li>✅ 稳定</li>
+    <li>❌ 慢（数据量大时）</li>
+  </ul>
+  
+  <h3>Stochastic Gradient Descent (SGD)（随机梯度下降）</h3>
+  <p>每次只用<strong>1个数据点</strong>计算梯度</p>
+  <ul>
+    <li>✅ 快</li>
+    <li>❌ 抖动大（不稳定）</li>
+  </ul>
+  
+  <h3>Mini-Batch Gradient Descent（小批量梯度下降）</h3>
+  <p>每次用<strong>一小批数据</strong>（如 32、64、128 个）</p>
+  <ul>
+    <li>✅ 折中方案（最常用）</li>
+    <li>✅ 速度快 + 相对稳定</li>
+  </ul>
+</div>
+
+<div class="page-break"></div>
+
+<div class="section">
+  <h2>9️⃣ 考试常见题型</h2>
+  
+  <h3>题型 1：手算一次迭代（必考！）</h3>
+  <div class="example">
+    <p>给定数据、初始参数、Learning Rate，要求：</p>
+    <ol>
+      <li>计算预测值 ŷ</li>
+      <li>计算误差 e</li>
+      <li>计算梯度 ∂J/∂a, ∂J/∂b</li>
+      <li>更新参数 a<sub>new</sub>, b<sub>new</sub></li>
+    </ol>
+  </div>
+  
+  <h3>题型 2：多变量 Linear Regression</h3>
+  <div class="example">
+    <p>y = θ₀ + θ₁x₁ + θ₂x₂</p>
+    <p>需要计算 3 个梯度：∂J/∂θ₀, ∂J/∂θ₁, ∂J/∂θ₂</p>
+  </div>
+  
+  <h3>题型 3：选择题 - 概念理解</h3>
+  <div class="example">
+    <ul>
+      <li>Q: 什么时候用 GD 而不是 Normal Equation？<br>
+          A: 特征很多（>1000）时</li>
+      <li>Q: Learning Rate 太大会怎样？<br>
+          A: 可能不收敛（Overshoot）</li>
+      <li>Q: 梯度方向是上坡还是下坡？<br>
+          A: 上坡（所以要加负号）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section" style="background: #e8f5e9;">
+  <h2>📝 考试速查表</h2>
+  
+  <h3>必须记住的公式</h3>
+  <div class="formula-box">
+    <p><strong>更新规则：</strong></p>
+    $$\theta_{new} = \theta_{old} - \alpha \nabla J(\theta)$$
+    
+    <p><strong>Linear Regression 梯度（简单形式）：</strong></p>
+    $$\frac{\partial J}{\partial a} = \frac{1}{m} \sum (e_i \times x_i)$$
+    $$\frac{\partial J}{\partial b} = \frac{1}{m} \sum e_i$$
+    
+    <p>其中 e<sub>i</sub> = ŷ<sub>i</sub> - y<sub>i</sub></p>
+  </div>
+  
+  <h3>手算步骤（背诵！）</h3>
+  <ol style="font-size: 18px;">
+    <li>算 ŷ（预测）</li>
+    <li>算 e（误差）</li>
+    <li>算梯度（∂J/∂a, ∂J/∂b）</li>
+    <li>更新参数（减去 α × 梯度）</li>
+  </ol>
+  
+  <h3>常见错误</h3>
+  <ul style="font-size: 18px; color: #e74c3c;">
+    <li>❌ 误差算反了：应该是 ŷ - y，不是 y - ŷ</li>
+    <li>❌ 忘记除以 m（数据点个数）</li>
+    <li>❌ 更新时加号变减号（应该是减）</li>
+    <li>❌ Learning Rate 忘记乘</li>
+    <li>❌ 梯度对 a 的计算忘记乘 x<sub>i</sub></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>🎯 练习题</h2>
+  
+  <div class="example">
+    <h3>练习：手算一次 GD 迭代</h3>
+    
+    <p><strong>数据：</strong></p>
+    <table>
+      <tr><th>x</th><th>y</th></tr>
+      <tr><td>0</td><td>1</td></tr>
+      <tr><td>1</td><td>3</td></tr>
+    </table>
+    
+    <p><strong>初始参数：</strong> a = 1, b = 0</p>
+    <p><strong>Learning Rate：</strong> α = 0.1</p>
+    
+    <p><strong>计算：</strong></p>
+    <ol>
+      <li>ŷ₁ = ? , ŷ₂ = ?</li>
+      <li>e₁ = ? , e₂ = ?</li>
+      <li>∂J/∂a = ?</li>
+      <li>∂J/∂b = ?</li>
+      <li>a<sub>new</sub> = ?</li>
+      <li>b<sub>new</sub> = ?</li>
+    </ol>
+  </div>
+  
+  <div style="height: 200px; border: 2px dashed #ccc; margin: 20px 0; padding: 20px;">
+    <p style="color: #999;">在此处写下你的计算过程...</p>
+  </div>
+</div>
+
+<div class="section" style="background: #fff9e6;">
+  <h2>💡 下一步</h2>
+  
+  <p style="font-size: 18px;"><strong>做完这个练习后，你应该：</strong></p>
+  <ol style="font-size: 18px;">
+    <li>✅ 理解 Gradient Descent 的直觉（下山找最低点）</li>
+    <li>✅ 知道公式怎么来的（推导梯度）</li>
+    <li>✅ 会手算一次迭代（6 个步骤）</li>
+    <li>✅ 理解 Learning Rate 的作用</li>
+  </ol>
+  
+  <p style="font-size: 18px; color: #e74c3c;"><strong>接下来复习：</strong></p>
+  <ul style="font-size: 18px;">
+    <li>L2 Regularization（Ridge）</li>
+    <li>Overfitting vs Underfitting</li>
+    <li>Classification Metrics</li>
+    <li>Fuzzy Logic</li>
+  </ul>
+</div>
+
+</body>
+</html>

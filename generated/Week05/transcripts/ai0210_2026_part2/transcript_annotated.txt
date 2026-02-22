@@ -1,0 +1,10 @@
+[00:00:01.100] [UNKNOWN] This 700, like this.
+[00:00:05.780] [UNKNOWN] Suppose that I have chunk 1, chunk 2, chunk 8.
+[00:00:09.730] [UNKNOWN] Chunk 8 is my validation.
+[00:00:12.099] [UNKNOWN] 1 to 7 is my trade.
+[00:00:14.310] [UNKNOWN] Next time, 1 to 6 is my trade plus chunk 8.
+[00:00:20.960] [UNKNOWN] Chunk 7 is going to be my validation.
+[00:00:24.359] [UNKNOWN] Okay?
+[00:00:24.679] [UNKNOWN] And next time, chunk, let's say, 3, my trade.
+[00:00:32.210] [UNKNOWN] Okay?
+[00:00:32.469] [UNKNOWN] 2, 1.

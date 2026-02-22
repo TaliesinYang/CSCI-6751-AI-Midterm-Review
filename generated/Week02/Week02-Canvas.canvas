@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"center","type":"text","text":"# Week 02\n# Machine Learning Fundamentals\n\n机器学习基础\n\n[[Week02/notes|完整笔记]]","x":0,"y":300,"width":280,"height":200,"color":"6"},
+		{"id":"branch1","type":"text","text":"## ML 定义\n\nTom Mitchell 三要素：\n- T (Task): 具体问题\n- P (Performance): 性能度量\n- E (Experience): 学习经验\n\nML vs Statistics：\n- Statistics: 解释关系\n- ML: 准确预测\n\n[[Week02/notes#1. Machine Learning Definition|详细说明]]","x":350,"y":0,"width":300,"height":340,"color":"3"},
+		{"id":"branch2","type":"text","text":"## Supervised Learning\n监督学习\n\nRegression（回归）：\n- 连续数值输出\n- 房价、温度预测\n\nClassification（分类）：\n- 离散类别输出\n- 肿瘤分类、风险评估\n\n关键区分：\n分数 0-100 → Regression\n等级 A/B/C → Classification\n\n[[Week02/notes#A. Supervised Learning|详细内容]]","x":350,"y":380,"width":300,"height":420,"color":"2"},
+		{"id":"branch3","type":"text","text":"## Unsupervised + RL\n\nUnsupervised 无监督：\n- Clustering 聚类\n- PCA 降维\n- 无标签数据\n\nReinforcement 强化学习：\n- Agent + Environment\n- Reward / Penalty\n- 游戏、机器人\n\nSemi-Supervised：\n- 混合标签数据\n\n[[Week02/notes#B. Unsupervised Learning|无监督]]\n[[Week02/notes#C. Reinforcement Learning|强化学习]]","x":720,"y":0,"width":300,"height":440,"color":"2"},
+		{"id":"branch4","type":"text","text":"## AI 层级 + Neural Networks\n\nAI 层级：\nAI → ML → Deep Learning\n\nDL 适用：图像、语音、文本\n传统 ML 适用：表格数据\n\nFace Recognition 例子：\n- 边缘 → 形状 → 特征 → 分类\n\n图像输入：\n- 像素矩阵 (H×W×3)\n- RGB: 0-255\n\n[[Week02/notes#4. AI Hierarchy|AI层级]]","x":720,"y":480,"width":300,"height":420,"color":"5"},
+		{"id":"branch5","type":"text","text":"## Data Encoding\n数据编码\n\nFeature Types：\n- Numeric 数值\n- Categorical 类别\n- Binary 二元\n\nEncoding Methods：\n- Label Encoding ❌ 创建虚假关系\n- One-Hot ✅ K列 无排序\n- Dummy ✅ K-1列 避免共线性\n\n选择：\n- 树模型 → One-Hot\n- 线性模型 → Dummy\n\n[[Week02/notes#6. Data Types and Encoding|详细内容]]","x":1090,"y":0,"width":300,"height":460,"color":"3"},
+		{"id":"branch6","type":"text","text":"## 实际例子\n\nIris 鸢尾花分类：\n4 特征 → 3 类别\n150 样本\n\n车险保费预测：\n年龄+车型+经验 → 保费\n\n房价预测：\n面积+卧室+房龄 → 价格\n\n[[Week02/notes|完整笔记]]\n[[Week02/vocabulary|术语表]]\n[[Week02/qa-summary|QA总结]]","x":1090,"y":500,"width":300,"height":360,"color":"4"}
+	],
+	"edges":[
+		{"id":"c-b1","fromNode":"center","toNode":"branch1","fromSide":"right","toSide":"left"},
+		{"id":"c-b2","fromNode":"center","toNode":"branch2","fromSide":"right","toSide":"left"},
+		{"id":"b1-b3","fromNode":"branch1","toNode":"branch3","fromSide":"right","toSide":"left"},
+		{"id":"b2-b4","fromNode":"branch2","toNode":"branch4","fromSide":"right","toSide":"left"},
+		{"id":"b3-b5","fromNode":"branch3","toNode":"branch5","fromSide":"right","toSide":"left"},
+		{"id":"b4-b6","fromNode":"branch4","toNode":"branch6","fromSide":"right","toSide":"left"},
+		{"id":"b5-b6","fromNode":"branch5","toNode":"branch6","fromSide":"right","toSide":"left"}
+	]
+}

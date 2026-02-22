@@ -1,0 +1,39 @@
+# Audio recordings (too large for git)
+materials/recordings/
+*.m4a
+*.wav
+*.mp3
+*.rttm
+
+# Python virtual environment
+.venv/
+
+# Obsidian local config
+.obsidian/
+
+# Claude Code local config
+.claude/
+generated/.claude/
+
+# macOS
+.DS_Store
+._*
+
+# Logs
+logs/
+generated/logs/
+generated/Week04/logs/
+
+# Zip archives (raw source, already extracted)
+materials/references/past-exams.zip
+materials/references/reference-materials.zip
+
+# Transcript JSON (large, derived from audio)
+*.json
+!index.yaml
+
+# Personal notes (not part of course structure)
+2026-*.md
+
+# Temp files
+*.pid

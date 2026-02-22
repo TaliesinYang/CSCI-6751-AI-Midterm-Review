@@ -1,0 +1,1681 @@
+[00:00:00.050] [UNKNOWN] the training model and i cannot like use that one for the prediction on the testing
+[00:00:06.719] [UNKNOWN] got it so validation is different from test data it's a part of our train data
+[00:00:14.580] [UNKNOWN] but it's used to evaluate the training okay the train model itself makes sense
+[00:00:26.210] [UNKNOWN] okay so that's why you see that sometimes uh you see validation and tests maybe sometimes
+[00:00:32.369] [UNKNOWN] you just see three and this okay uh it depends okay so now let's focus on the uh regression
+[00:00:42.539] [UNKNOWN] model there are a couple of uh metrics here which is uh used to evaluate the performance of the
+[00:00:52.380] [UNKNOWN] regression model so the first thing is mae mean absolute error means that y minus y hat divided by
+[00:01:04.260] [UNKNOWN] okay find the absolute error the difference between the target and prediction of the model
+[00:01:11.299] [UNKNOWN] the absolute value and then sum up this for all the observations for all the records and at the end
+[00:01:22.420] [UNKNOWN] okay it's called the mean absolute error it is very common okay so the other thing is
+[00:01:32.019] [UNKNOWN] is called mean squared error rather than y minus y hat
+[00:01:38.379] [UNKNOWN] you find a y minus y hat squared okay for each data item so for example
+[00:01:46.590] [UNKNOWN] data item one is going to be y 1 minus y hat 1 squared plus y 2 minus y hat 2 squared plus
+[00:02:00.400] [UNKNOWN] a right and then divided by the number of observations okay so it's called root e squared
+[00:02:10.659] [UNKNOWN] and then and then you can take the square root of that okay because that's in the
+[00:02:19.680] [UNKNOWN] degree of two then you can take again uh you can take the square root okay and we have also r
+[00:02:29.300] [UNKNOWN] squared we have adjusted r squared so you want to focus on uh each of this and explain so the
+[00:02:36.180] [UNKNOWN] most common one is the mae and rmse this is the
+[00:02:40.979] [UNKNOWN] uh equation that we have right so as i i made this is the simplest uh version of the you know
+[00:02:48.900] [UNKNOWN] those uh metrics so y minus y hat for all the data items and then divided by the number of so y
+[00:02:59.169] [UNKNOWN] here is the front row y hat is the model prediction okay so the difference between these
+[00:03:09.150] [UNKNOWN] two which is the absolute value right positive okay so this is the absolute value right positive
+[00:03:14.080] [UNKNOWN] example two minus y is absolute value is going to be plus two right so that's why you see absolute
+[00:03:23.219] [UNKNOWN] and it's called absolute there okay any question on this it is very common for example suppose
+[00:03:40.719] [UNKNOWN] that here um we want to make a model which uh tells that what what could be the failure uh
+[00:03:51.580] [UNKNOWN] maybe the failure is something between zero to one
+[00:03:53.900] [UNKNOWN] hundred based on the age okay let's say you have a machine and you want to know that what is the
+[00:04:02.990] [UNKNOWN] percentage of failure for that machine for different machines we have the age of that machine
+[00:04:09.310] [UNKNOWN] the higher the age the chance of failure is all right that's why you see here it's almost kind of
+[00:04:16.029] [UNKNOWN] like a linear relationship okay so suppose that we uh see the model using for example
+[00:04:25.939] [UNKNOWN] linear regression okay now we have the predictions okay so prediction is the green part
+[00:04:35.860] [UNKNOWN] h10 this is the failure and the green one is the model prediction age 20 for example here failure
+[00:04:46.300] [UNKNOWN] is 30 which is this and the green part is the prediction so the only thing we need to know
+[00:04:55.220] [UNKNOWN] just we need to find the error between predictions
+[00:04:58.420] [UNKNOWN] Prediction and failure, which is 11, right?
+[00:05:05.670] [UNKNOWN] And this one is two, right?
+[00:05:07.730] [UNKNOWN] These differences, and maybe here is negative five,
+[00:05:13.019] [UNKNOWN] because prediction is missing from truth.
+[00:05:17.959] [UNKNOWN] And after that one, we find the absolute value
+[00:05:21.889] [UNKNOWN] of this error, and then take that, which is eight point.
+[00:05:28.319] [UNKNOWN] So mean absolute error of this model is eight point five.
+[00:05:36.629] [UNKNOWN] Maybe you can ask, eight point five is good?
+[00:05:40.750] [UNKNOWN] Why it's not close to zero?
+[00:05:42.870] [UNKNOWN] It depends on the context, okay?
+[00:05:45.680] [UNKNOWN] How big, you know, sometimes, for example,
+[00:05:48.920] [UNKNOWN] eight is good, but in some systems,
+[00:05:53.000] [UNKNOWN] eight is very big number, all right?
+[00:05:55.699] [UNKNOWN] So that depends on the use case you are using.
+[00:06:00.180] [UNKNOWN] But the lower, we know that the lower failure,
+[00:06:02.740] [UNKNOWN] you have two models.
+[00:06:04.199] [UNKNOWN] When you want to compare model one with model two,
+[00:06:09.459] [UNKNOWN] so you check the mean absolute error of model one,
+[00:06:12.560] [UNKNOWN] that one is eight point five.
+[00:06:14.519] [UNKNOWN] If there is another model, it's around six,
+[00:06:18.399] [UNKNOWN] that's better than this, okay?
+[00:06:20.990] [UNKNOWN] But how much is good?
+[00:06:23.189] [UNKNOWN] We don't know, we don't know, okay?
+[00:06:33.360] [UNKNOWN] What I mean, we don't know, is something like this.
+[00:06:36.740] [UNKNOWN] Suppose that you want to predict the price of houses.
+[00:06:39.300] [UNKNOWN] Okay, so, and for the, one of the properties,
+[00:06:47.470] [UNKNOWN] the predicted value is, I don't know, 500,
+[00:06:50.470] [UNKNOWN] let's say 500,000 to 24, it's a predicted value,
+[00:07:00.019] [UNKNOWN] but the price of property is 500,000, 510,000, okay?
+[00:07:11.089] [UNKNOWN] So how much difference?
+[00:07:14.000] [UNKNOWN] 14,000.
+[00:07:15.870] [UNKNOWN] It is not far, right?
+[00:07:17.730] [UNKNOWN] But when you look at the 14,000, it's very big number.
+[00:07:21.930] [UNKNOWN] But we know that, okay, the predicted is almost similar.
+[00:07:25.050] [UNKNOWN] Close each other, okay, it's 14,000.
+[00:07:30.089] [UNKNOWN] You know what I mean?
+[00:07:31.949] [UNKNOWN] But in some context, like 14,000 is very, very big number.
+[00:07:39.730] [UNKNOWN] That's why I mean that depends on the use case,
+[00:07:45.079] [UNKNOWN] you look at that, okay, I see this much error.
+[00:07:48.699] [UNKNOWN] Is it acceptable or not?
+[00:07:51.930] [UNKNOWN] If you want to compare two models,
+[00:07:54.829] [UNKNOWN] the model with the mean absolute and less mean absolute error
+[00:07:58.529] [UNKNOWN] is gonna be the big, it's pretty, right?
+[00:08:03.009] [UNKNOWN] Question.
+[00:08:04.910] [UNKNOWN] I have a question.
+[00:08:06.250] [UNKNOWN] In the overfitting model, the mean absolutely error
+[00:08:10.930] [UNKNOWN] is very low, right?
+[00:08:13.370] [UNKNOWN] It's going to be very low number.
+[00:08:15.790] [UNKNOWN] Yeah.
+[00:08:16.709] [UNKNOWN] Almost, yeah.
+[00:08:17.889] [UNKNOWN] Almost zero.
+[00:08:19.389] [UNKNOWN] Again, it depends on the-
+[00:08:20.269] [UNKNOWN] Yeah, it depends on the case, yeah.
+[00:08:21.730] [UNKNOWN] For example, again, if you have it for the property prices,
+[00:08:27.470] [UNKNOWN] maybe 1,000 is very good prediction.
+[00:08:31.850] [UNKNOWN] Yeah, okay.
+[00:08:33.570] [UNKNOWN] Sure, yeah.
+[00:08:37.350] [UNKNOWN] If it's almost zero, that means that it's ideal,
+[00:08:41.429] [UNKNOWN] but it carries it over.
+[00:08:47.220] [UNKNOWN] On the other hand, we have also,
+[00:08:48.860] [UNKNOWN] I have forgot information.
+[00:08:50.840] [UNKNOWN] We have also underfitting model.
+[00:08:53.940] [UNKNOWN] Underfitting means, what is the underfitting model?
+[00:08:57.299] [UNKNOWN] It's opposite of overfitting.
+[00:08:59.809] [UNKNOWN] That means that it's not good on train and test, okay?
+[00:09:04.929] [UNKNOWN] Overfitting is good on the train, not in the test.
+[00:09:08.590] [UNKNOWN] Underfit means that it's useless.
+[00:09:12.909] [UNKNOWN] It's not good in train and test.
+[00:09:16.090] [UNKNOWN] Okay, so mean absolute error, okay, so again,
+[00:09:24.809] [UNKNOWN] let me say this example, mean absolute error.
+[00:09:28.110] [UNKNOWN] 8.5, it means that the average of our prediction
+[00:09:35.480] [UNKNOWN] about the number of the machine failure is,
+[00:09:40.940] [UNKNOWN] are increased by 8.5 machine failures, okay?
+[00:09:47.559] [UNKNOWN] So the other thing, root mean square,
+[00:09:55.009] [UNKNOWN] I personally an obligation problem, most of the time.
+[00:09:59.610] [UNKNOWN] this. Okay. I like this one
+[00:10:03.529] [UNKNOWN] better than this.
+[00:10:08.070] [UNKNOWN] There are some reasons. We're going to discuss about that.
+[00:10:12.250] [UNKNOWN] But like this one, as I mentioned, model prediction
+[00:10:16.220] [UNKNOWN] minus the ground truth squared
+[00:10:20.230] [UNKNOWN] and then squared. Why we do the square root?
+[00:10:28.080] [UNKNOWN] Because we have a square root. Right? Then we do this
+[00:10:32.549] [UNKNOWN] to make it normalize. Yeah? Okay.
+[00:10:51.309] [UNKNOWN] Okay. Sometimes we call that one residual.
+[00:10:55.000] [UNKNOWN] Okay. This is the example of how we can calculate
+[00:11:01.840] [UNKNOWN] RSME.
+[00:11:06.039] [UNKNOWN] Yeah. SRME is RMSE.
+[00:11:17.460] [UNKNOWN] Okay. Yeah. RMSE is the
+[00:11:20.519] [UNKNOWN] naming for this. So we have
+[00:11:24.500] [UNKNOWN] RMSE and we have MSE.
+[00:11:26.679] [UNKNOWN] This is M. So
+[00:11:28.580] [UNKNOWN] we want to calculate. This one is not MSE. We want to calculate
+[00:11:35.730] [UNKNOWN] RMSE. So rather than absolute value
+[00:11:39.470] [UNKNOWN] we need the square of that one
+[00:11:43.710] [UNKNOWN] and then take that. So this one reaches 1.9
+[00:11:48.659] [UNKNOWN] whereas this one tells 8.
+[00:11:52.600] [UNKNOWN] Okay. So y minus y hat
+[00:12:00.620] [UNKNOWN] squared.
+[00:12:04.580] [UNKNOWN] This one divided by this one and gets squared.
+[00:12:09.059] [UNKNOWN] Any questions?
+[00:12:12.549] [UNKNOWN] A simple math behind. Okay. So when we have
+[00:12:26.850] [UNKNOWN] 9.9 we can think about that one.
+[00:12:31.629] [UNKNOWN] We can read that one as the error of 9.9.
+[00:12:37.990] [UNKNOWN] Machine failure on average per observation.
+[00:12:42.600] [UNKNOWN] Per observation we have 9.9 error.
+[00:12:46.360] [UNKNOWN] Okay. We're 9.9 per week error.
+[00:12:50.899] [UNKNOWN] Okay?
+[00:13:07.149] [UNKNOWN] Okay. So here there's just a comparison between those.
+[00:13:12.009] [UNKNOWN] As you mentioned, like, the value of zero
+[00:13:14.950] [UNKNOWN] isn't the perfect fit. Okay.
+[00:13:18.629] [UNKNOWN] So, but, it's an indicator of showing
+[00:13:24.450] [UNKNOWN] that it might be here kind of like for a city.
+[00:14:00.429] [UNKNOWN] Okay. So there's a good story here.
+[00:14:03.389] [UNKNOWN] or maybe first of all
+[00:14:09.840] [UNKNOWN] like a question
+[00:14:10.919] [UNKNOWN] we have MAE
+[00:14:13.399] [UNKNOWN] why do we need RMSE
+[00:14:14.740] [UNKNOWN] and why
+[00:14:16.830] [UNKNOWN] so here there is one advantage
+[00:14:20.500] [UNKNOWN] of RMSE
+[00:14:21.940] [UNKNOWN] compared to the
+[00:14:23.980] [UNKNOWN] MAE
+[00:14:25.100] [UNKNOWN] so
+[00:14:26.960] [UNKNOWN] let's back to this formula
+[00:14:30.450] [UNKNOWN] what is the difference between
+[00:14:34.039] [UNKNOWN] Y and Y hat is bigger or not
+[00:14:35.759] [UNKNOWN] what's going to happen
+[00:14:38.409] [UNKNOWN] it's going to have like
+[00:14:48.950] [UNKNOWN] suppose that you have a big number
+[00:14:50.590] [UNKNOWN] then you make it square
+[00:14:51.850] [UNKNOWN] square of that
+[00:14:54.529] [UNKNOWN] it's going to get the bigger number
+[00:14:58.070] [UNKNOWN] in other words
+[00:15:00.409] [UNKNOWN] what's happening here
+[00:15:01.610] [UNKNOWN] so rather than
+[00:15:02.990] [UNKNOWN] first consider this one
+[00:15:05.889] [UNKNOWN] if the difference between Y and Y hat
+[00:15:11.110] [UNKNOWN] is bigger
+[00:15:11.830] [UNKNOWN] you don't do any square
+[00:15:13.389] [UNKNOWN] you don't penalize
+[00:15:15.070] [UNKNOWN] so
+[00:15:18.179] [UNKNOWN] but then
+[00:15:19.340] [UNKNOWN] Y minus Y hat is bigger
+[00:15:21.080] [UNKNOWN] and we are using
+[00:15:23.240] [UNKNOWN] this formula
+[00:15:25.039] [UNKNOWN] in fact
+[00:15:27.039] [UNKNOWN] we make
+[00:15:28.559] [UNKNOWN] square of that one
+[00:15:30.279] [UNKNOWN] so for bigger number
+[00:15:33.080] [UNKNOWN] this number is getting bigger
+[00:15:35.519] [UNKNOWN] so
+[00:15:37.470] [UNKNOWN] for a small number
+[00:15:39.870] [UNKNOWN] it's going to be ok
+[00:15:40.909] [UNKNOWN] it doesn't make too much difference
+[00:15:43.210] [UNKNOWN] but at the end
+[00:15:44.909] [UNKNOWN] what's happening is that
+[00:15:47.340] [UNKNOWN] it penalizes
+[00:15:52.379] [UNKNOWN] a few large areas
+[00:15:53.960] [UNKNOWN] so it's going to be
+[00:15:54.960] [UNKNOWN] more than a lot of small errors
+[00:15:57.600] [UNKNOWN] ok
+[00:15:59.690] [UNKNOWN] so
+[00:16:00.690] [UNKNOWN] in other words
+[00:16:03.259] [UNKNOWN] if you want your model
+[00:16:04.259] [UNKNOWN] to avoid large errors
+[00:16:05.259] [UNKNOWN] use RMS
+[00:16:06.259] [UNKNOWN] ok
+[00:16:07.259] [UNKNOWN] because this one
+[00:16:08.259] [UNKNOWN] you know
+[00:16:10.639] [UNKNOWN] again
+[00:16:14.419] [UNKNOWN] like it
+[00:16:15.419] [UNKNOWN] gives you more error
+[00:16:16.870] [UNKNOWN] for
+[00:16:17.870] [UNKNOWN] big gaps
+[00:16:18.870] [UNKNOWN] does it make sense
+[00:16:19.870] [UNKNOWN] what I mean
+[00:16:20.870] [UNKNOWN] like
+[00:16:21.870] [UNKNOWN] when you have
+[00:16:27.600] [UNKNOWN] Y minus Y hat squared
+[00:16:30.240] [UNKNOWN] if you have
+[00:16:31.240] [UNKNOWN] like one
+[00:16:32.240] [UNKNOWN] people speaking
+[00:16:33.240] [UNKNOWN] Y and
+[00:16:34.240] [UNKNOWN] Y hat
+[00:16:35.240] [UNKNOWN] or
+[00:16:36.240] [UNKNOWN] Y minus Y hat squared
+[00:16:37.240] [UNKNOWN] you have like one people speaking Y and Y hat squared
+[00:16:38.240] [UNKNOWN] and Y hat is bigger
+[00:16:40.620] [UNKNOWN] then when you square that one
+[00:16:41.620] [UNKNOWN] it's going to be more bigger
+[00:16:42.620] [UNKNOWN] right
+[00:16:43.620] [UNKNOWN] suppose that you have
+[00:16:44.620] [UNKNOWN] 100
+[00:16:45.620] [UNKNOWN] and then
+[00:16:46.779] [UNKNOWN] you find the square
+[00:16:47.779] [UNKNOWN] square of that one
+[00:16:48.779] [UNKNOWN] power 2
+[00:16:49.779] [UNKNOWN] ok
+[00:16:50.779] [UNKNOWN] it's going to be 10,000
+[00:16:51.779] [UNKNOWN] ok
+[00:16:52.779] [UNKNOWN] but for small values
+[00:16:54.389] [UNKNOWN] it's going to be just
+[00:16:55.389] [UNKNOWN] square of that one
+[00:16:56.389] [UNKNOWN] like
+[00:16:57.389] [UNKNOWN] 2
+[00:16:58.389] [UNKNOWN] square of 2
+[00:16:59.389] [UNKNOWN] is going to be 4
+[00:17:00.389] [UNKNOWN] so
+[00:17:01.389] [UNKNOWN] at the end
+[00:17:02.870] [UNKNOWN] when you divide that one
+[00:17:03.870] [UNKNOWN] by N
+[00:17:04.869] [UNKNOWN] ok
+[00:17:05.869] [UNKNOWN] so
+[00:17:06.869] [UNKNOWN] if you divide that one
+[00:17:08.890] [UNKNOWN] by N
+[00:17:09.890] [UNKNOWN] if you have more these values
+[00:17:13.470] [UNKNOWN] the average also is getting to be
+[00:17:16.470] [UNKNOWN] like a
+[00:17:18.559] [UNKNOWN] big number
+[00:17:19.559] [UNKNOWN] that's why like
+[00:17:23.069] [UNKNOWN] in RMSE
+[00:17:24.069] [UNKNOWN] if you have
+[00:17:27.420] [UNKNOWN] some large number
+[00:17:30.000] [UNKNOWN] and you want to
+[00:17:32.000] [UNKNOWN] penalize the model based on that one
+[00:17:35.000] [UNKNOWN] RMSE helps you to do that
+[00:17:40.059] [UNKNOWN] yeah you see that
+[00:17:53.890] [UNKNOWN] it penalizes larger areas
+[00:17:55.890] [UNKNOWN] so
+[00:17:56.890] [UNKNOWN] more severely
+[00:17:57.890] [UNKNOWN] uh
+[00:17:58.890] [UNKNOWN] severe
+[00:17:59.890] [UNKNOWN] ending
+[00:18:00.890] [UNKNOWN] ok
+[00:18:01.890] [UNKNOWN] it's a hard
+[00:18:02.890] [UNKNOWN] it's a very
+[00:18:03.890] [UNKNOWN] average
+[00:18:04.890] [UNKNOWN] uh
+[00:19:54.849] [UNKNOWN] large number
+[00:19:55.849] [UNKNOWN] the thing is that
+[00:19:56.849] [UNKNOWN] like suppose you have some numbers
+[00:19:57.849] [UNKNOWN] like this
+[00:19:58.849] [UNKNOWN] you have 100
+[00:19:59.849] [UNKNOWN] 1000
+[00:20:00.849] [UNKNOWN] a square of
+[00:20:01.849] [UNKNOWN] 2
+[00:20:02.849] [UNKNOWN] and 1
+[00:20:03.849] [UNKNOWN] and you take the average
+[00:20:04.849] [UNKNOWN] like a square of that one
+[00:20:05.849] [UNKNOWN] it's going to be
+[00:20:06.849] [UNKNOWN] a big number
+[00:20:08.400] [UNKNOWN] and when you divide that one
+[00:20:09.400] [UNKNOWN] by 4
+[00:20:10.400] [UNKNOWN] and take the square root
+[00:20:11.400] [UNKNOWN] its value
+[00:20:12.880] [UNKNOWN] is going to be
+[00:20:13.880] [UNKNOWN] bigger than
+[00:20:14.880] [UNKNOWN] 1000
+[00:20:15.880] [UNKNOWN] 100
+[00:20:16.880] [UNKNOWN] plus 1000
+[00:20:17.880] [UNKNOWN] plus this one
+[00:20:18.880] [UNKNOWN] divided by 2
+[00:20:19.880] [UNKNOWN] ok
+[00:20:21.230] [UNKNOWN] especially
+[00:20:22.230] [UNKNOWN] if you have more
+[00:20:23.230] [UNKNOWN] uh
+[00:20:24.230] [UNKNOWN] more of this
+[00:20:25.710] [UNKNOWN] particular number
+[00:20:26.710] [UNKNOWN] this error
+[00:20:27.710] [UNKNOWN] is going to be
+[00:20:28.799] [UNKNOWN] uh
+[00:20:29.799] [UNKNOWN] let's say
+[00:20:30.799] [UNKNOWN] significant
+[00:20:33.019] [UNKNOWN] that's why like
+[00:20:34.759] [UNKNOWN] it
+[00:20:35.759] [UNKNOWN] it helps us to
+[00:20:36.759] [UNKNOWN] penalize
+[00:20:37.759] [UNKNOWN] the
+[00:20:38.759] [UNKNOWN] larger error
+[00:20:40.200] [UNKNOWN] uh
+[00:20:41.200] [UNKNOWN] partial
+[00:20:42.200] [UNKNOWN] ok
+[00:20:43.200] [UNKNOWN] so
+[00:20:48.519] [UNKNOWN] uh
+[00:20:49.519] [UNKNOWN] error
+[00:20:52.730] [UNKNOWN] metric
+[00:20:53.730] [UNKNOWN] that we have
+[00:20:54.730] [UNKNOWN] uh
+[00:20:55.730] [UNKNOWN] in the regression model
+[00:20:57.730] [UNKNOWN] is called
+[00:20:58.730] [UNKNOWN] r squared
+[00:21:00.240] [UNKNOWN] ok
+[00:21:01.240] [UNKNOWN] so what is r squared
+[00:21:03.240] [UNKNOWN] r squared is nothing more than
+[00:21:07.240] [UNKNOWN] sum of the squared error
+[00:21:09.240] [UNKNOWN] divided by the
+[00:21:12.740] [UNKNOWN] uh
+[00:21:15.190] [UNKNOWN] let's say the
+[00:21:16.190] [UNKNOWN] s
+[00:21:17.319] [UNKNOWN] which is sum of the squared error
+[00:21:20.920] [UNKNOWN] divided by
+[00:21:23.950] [UNKNOWN] y
+[00:21:26.519] [UNKNOWN] minus y bar
+[00:21:28.519] [UNKNOWN] so rather than
+[00:21:29.609] [UNKNOWN] so what is
+[00:21:30.609] [UNKNOWN] what is the difference
+[00:21:31.609] [UNKNOWN] between these two
+[00:21:32.609] [UNKNOWN] one is prediction
+[00:21:38.000] [UNKNOWN] uh
+[00:21:39.000] [UNKNOWN] this one is the prediction
+[00:21:41.000] [UNKNOWN] and this one is the
+[00:21:43.289] [UNKNOWN] exactly point
+[00:21:45.289] [UNKNOWN] yeah
+[00:21:46.289] [UNKNOWN] it's the
+[00:21:47.289] [UNKNOWN] like a
+[00:21:48.289] [UNKNOWN] ground truth
+[00:21:49.289] [UNKNOWN] ok
+[00:21:50.390] [UNKNOWN] and we have y bar
+[00:21:52.390] [UNKNOWN] y bar is nothing more than
+[00:21:53.390] [UNKNOWN] average
+[00:21:55.519] [UNKNOWN] so
+[00:21:56.519] [UNKNOWN] what i mean
+[00:21:57.519] [UNKNOWN] is
+[00:21:58.519] [UNKNOWN] here
+[00:21:59.519] [UNKNOWN] the difference between the prediction of the model
+[00:22:02.519] [UNKNOWN] and
+[00:22:05.160] [UNKNOWN] average
+[00:22:06.160] [UNKNOWN] average
+[00:22:07.890] [UNKNOWN] and the difference between
+[00:22:09.890] [UNKNOWN] ground truth
+[00:22:11.339] [UNKNOWN] and average
+[00:22:13.880] [UNKNOWN] ok
+[00:22:22.240] [UNKNOWN] average of y
+[00:22:23.240] [UNKNOWN] no
+[00:22:24.240] [UNKNOWN] average of y
+[00:22:25.240] [UNKNOWN] average of ground truth
+[00:22:29.420] [UNKNOWN] ok
+[00:22:30.420] [UNKNOWN] so sometimes rather than this
+[00:22:32.420] [UNKNOWN] you use the variance
+[00:22:35.509] [UNKNOWN] of mean
+[00:22:36.509] [UNKNOWN] minus variance of the
+[00:22:38.509] [UNKNOWN] uh
+[00:22:39.509] [UNKNOWN] let's say the
+[00:22:43.039] [UNKNOWN] predicted values
+[00:22:44.039] [UNKNOWN] divided by
+[00:22:45.039] [UNKNOWN] again
+[00:22:46.039] [UNKNOWN] variance of the
+[00:22:47.039] [UNKNOWN] both of them are
+[00:22:49.039] [UNKNOWN] same
+[00:22:50.720] [UNKNOWN] so here
+[00:22:52.720] [UNKNOWN] s
+[00:22:53.720] [UNKNOWN] s
+[00:22:54.720] [UNKNOWN] r
+[00:22:55.720] [UNKNOWN] means sum of the square of residual
+[00:22:56.720] [UNKNOWN] sum of the square
+[00:22:57.720] [UNKNOWN] error
+[00:22:58.720] [UNKNOWN] sum of the square of residual
+[00:22:59.720] [UNKNOWN] difference between the
+[00:23:00.720] [UNKNOWN] model prediction
+[00:23:01.720] [UNKNOWN] minus
+[00:23:02.720] [UNKNOWN] average of
+[00:23:03.750] [UNKNOWN] ground truth
+[00:23:04.750] [UNKNOWN] and s
+[00:23:07.730] [UNKNOWN] s
+[00:23:08.730] [UNKNOWN] t
+[00:23:09.730] [UNKNOWN] is the
+[00:23:10.730] [UNKNOWN] sum of the square of
+[00:23:11.730] [UNKNOWN] difference between actual
+[00:23:12.730] [UNKNOWN] ground truth
+[00:23:14.400] [UNKNOWN] and
+[00:23:15.400] [UNKNOWN] average
+[00:23:16.400] [UNKNOWN] does it show
+[00:23:17.690] [UNKNOWN] this
+[00:23:18.690] [UNKNOWN] this
+[00:23:19.690] [UNKNOWN] this
+[00:23:20.690] [UNKNOWN] difference
+[00:23:21.920] [UNKNOWN] in
+[00:23:32.230] [UNKNOWN] What does it show, this metric being a point of view?
+[00:23:40.890] [UNKNOWN] Intuitively, what does it show?
+[00:23:54.009] [UNKNOWN] And then, like, intuitively it shows that,
+[00:23:56.930] [UNKNOWN] like, suppose that we have white hats here and here, right?
+[00:24:01.329] [UNKNOWN] We can skip both of them, right?
+[00:24:05.240] [UNKNOWN] So what you're gonna have is prediction of the model
+[00:24:09.160] [UNKNOWN] divided by, it shows that.
+[00:24:12.740] [UNKNOWN] And I mean that skip that one means that
+[00:24:15.240] [UNKNOWN] it's thinking this way, okay?
+[00:24:17.839] [UNKNOWN] So in general, R squared shows that
+[00:24:22.849] [UNKNOWN] how many times is the prediction of the model
+[00:24:29.990] [UNKNOWN] compared to the crunches, okay?
+[00:24:37.079] [UNKNOWN] It's the ratio of model prediction over the crunches.
+[00:24:47.650] [UNKNOWN] Make sense?
+[00:24:49.299] [UNKNOWN] It's like, yeah, simply skip this field,
+[00:24:52.359] [UNKNOWN] shows that how much bigger is our,
+[00:24:55.799] [UNKNOWN] how much bigger is our prediction.
+[00:25:05.579] [UNKNOWN] Let me see that we have example here.
+[00:25:14.619] [UNKNOWN] Okay, I think this one is a good example.
+[00:25:20.309] [UNKNOWN] So, okay, okay, let's go with this one.
+[00:25:36.279] [UNKNOWN] I think this one is the same, right?
+[00:25:38.279] [UNKNOWN] We don't need to, so what we are going to do here,
+[00:25:43.619] [UNKNOWN] we want to calculate this, okay?
+[00:25:47.170] [UNKNOWN] So first, y minus y hat, we have that one here.
+[00:25:54.019] [UNKNOWN] So let's see, take the, squared off that one,
+[00:25:59.240] [UNKNOWN] y hat, okay, and then take the average,
+[00:26:08.680] [UNKNOWN] and here, rather than y hat, use the y bar.
+[00:26:13.259] [UNKNOWN] Okay, we have y, and then we can calculate the y bar,
+[00:26:21.410] [UNKNOWN] okay, and the difference between each y and the average,
+[00:26:26.980] [UNKNOWN] squared, in other words, arrow.
+[00:26:30.690] [UNKNOWN] Okay, so then when we have these two,
+[00:26:33.940] [UNKNOWN] we apply that one in square root,
+[00:26:36.940] [UNKNOWN] which equals 0.85.
+[00:27:00.329] [UNKNOWN] Okay, so when this is just exactly the same,
+[00:27:10.990] [UNKNOWN] it's going to be zero.
+[00:27:21.539] [UNKNOWN] Sorry, it's going to be,
+[00:27:23.660] [UNKNOWN] when we have a perfect regression line,
+[00:27:25.660] [UNKNOWN] with no arrow, it's going to be one, right?
+[00:27:28.660] [UNKNOWN] Because it shows that y and y hat are almost the same.
+[00:27:32.660] [UNKNOWN] Otherwise, they're going to be the same.
+[00:27:37.589] [UNKNOWN] So the variance of line is going to be zero,
+[00:27:45.269] [UNKNOWN] and then this is going to be like .
+[00:27:57.819] [UNKNOWN] I think we don't need to continue too much about this.
+[00:28:01.819] [UNKNOWN] If I want to wrap up this discussion,
+[00:28:07.640] [UNKNOWN] what we use in reality is,
+[00:28:10.640] [UNKNOWN] for each regression model,
+[00:28:13.960] [UNKNOWN] we calculate M-A-E,
+[00:28:15.960] [UNKNOWN] we know how to calculate it,
+[00:28:18.960] [UNKNOWN] we use R-M-S-E,
+[00:28:22.059] [UNKNOWN] and also we use the R-squared.
+[00:28:24.059] [UNKNOWN] Okay?
+[00:28:25.599] [UNKNOWN] So for R-squared,
+[00:28:27.599] [UNKNOWN] the lower value is there.
+[00:28:29.599] [UNKNOWN] All of them,
+[00:28:30.599] [UNKNOWN] the lower value is there.
+[00:28:32.599] [UNKNOWN] Okay?
+[00:28:34.079] [UNKNOWN] R-squared on one shows they're perfect.
+[00:28:43.930] [UNKNOWN] Okay, so we have another one,
+[00:28:52.180] [UNKNOWN] which is adjusted R-squared error,
+[00:28:55.180] [UNKNOWN] which is the adjusted version of this,
+[00:28:58.180] [UNKNOWN] R-squared.
+[00:29:00.180] [UNKNOWN] So, and this is the formula for that one.
+[00:29:05.460] [UNKNOWN] Just see here what we have is,
+[00:29:11.789] [UNKNOWN] R-squared,
+[00:29:16.589] [UNKNOWN] we need to calculate R-squared from the previous formula.
+[00:29:19.589] [UNKNOWN] A is the number of records that we have,
+[00:29:24.589] [UNKNOWN] and P is the number of writes that we have.
+[00:29:29.259] [UNKNOWN] Just apply on this and get the average.
+[00:29:32.259] [UNKNOWN] So this one doesn't use .
+[00:29:37.859] [UNKNOWN] And we have M-A-P-E as well,
+[00:29:44.299] [UNKNOWN] in absolute percentage error,
+[00:29:46.299] [UNKNOWN] and this one is the formula.
+[00:29:48.299] [UNKNOWN] Again, I'm just reviewing this one,
+[00:29:50.299] [UNKNOWN] but we don't need to have,
+[00:29:52.299] [UNKNOWN] we don't need to focus on that one too much.
+[00:29:56.299] [UNKNOWN] So this is another thing which is called M-A-P-E.
+[00:30:00.750] [UNKNOWN] Okay?
+[00:30:01.750] [UNKNOWN] So you have this option,
+[00:30:03.750] [UNKNOWN] maybe vital programming,
+[00:30:05.750] [UNKNOWN] and you want to find the error,
+[00:30:07.750] [UNKNOWN] you can choose either of this.
+[00:30:09.750] [UNKNOWN] What is used in practice,
+[00:30:11.750] [UNKNOWN] M-A-E, R-M-S-E,
+[00:30:14.750] [UNKNOWN] and R-squared
+[00:30:15.750] [UNKNOWN] are the ones that we use.
+[00:30:18.970] [UNKNOWN] Okay.
+[00:30:19.970] [UNKNOWN] So that's why,
+[00:30:26.650] [UNKNOWN] that's why we see here,
+[00:30:30.650] [UNKNOWN] in sum, we have M-A-E, R-M-S-E, and R-squared.
+[00:30:38.420] [UNKNOWN] Okay.
+[00:30:40.700] [UNKNOWN] Sorry, just to wrap up this part,
+[00:30:43.700] [UNKNOWN] about R-squared.
+[00:30:45.700] [UNKNOWN] So R-squared tells us the degree
+[00:30:48.700] [UNKNOWN] to which the model explains the variance in the data.
+[00:30:52.700] [UNKNOWN] In other words,
+[00:30:53.700] [UNKNOWN] it shows how much better
+[00:30:55.700] [UNKNOWN] it is just than the mean.
+[00:30:57.700] [UNKNOWN] Okay?
+[00:30:58.700] [UNKNOWN] So the value of one
+[00:31:00.700] [UNKNOWN] indicates the perfect fit
+[00:31:03.799] [UNKNOWN] because of the, you know,
+[00:31:05.799] [UNKNOWN] this calculation we showed.
+[00:31:07.799] [UNKNOWN] If the variance of one is going to be zero,
+[00:31:10.799] [UNKNOWN] then divide it together,
+[00:31:11.799] [UNKNOWN] it's going to be one.
+[00:31:16.779] [UNKNOWN] And,
+[00:31:17.779] [UNKNOWN] and the zero means that
+[00:31:22.400] [UNKNOWN] it's not better than mean.
+[00:31:24.910] [UNKNOWN] So,
+[00:31:25.910] [UNKNOWN] I need to correct this part
+[00:31:27.910] [UNKNOWN] about the R-squared.
+[00:31:29.910] [UNKNOWN] I said that all of them,
+[00:31:30.910] [UNKNOWN] the lower value is good.
+[00:31:33.910] [UNKNOWN] For M-A-E,
+[00:31:35.230] [UNKNOWN] for R-M-S-E,
+[00:31:37.230] [UNKNOWN] yes,
+[00:31:38.230] [UNKNOWN] but for R-squared,
+[00:31:39.230] [UNKNOWN] the good one is one.
+[00:31:41.230] [UNKNOWN] Okay?
+[00:31:42.230] [UNKNOWN] You need to consider this.
+[00:31:43.230] [UNKNOWN] The good one is one.
+[00:31:45.259] [UNKNOWN] When it's zero,
+[00:31:46.259] [UNKNOWN] it shows that it's almost
+[00:31:48.259] [UNKNOWN] taking the average of the values.
+[00:31:52.259] [UNKNOWN] Okay?
+[00:31:56.619] [UNKNOWN] So,
+[00:31:57.619] [UNKNOWN] okay,
+[00:31:58.619] [UNKNOWN] let's say the bigger number is there.
+[00:32:00.619] [UNKNOWN] It goes to one.
+[00:32:03.230] [UNKNOWN] Okay?
+[00:32:04.230] [UNKNOWN] Clear?
+[00:32:05.259] [UNKNOWN] So,
+[00:32:06.329] [UNKNOWN] I corrected this part.
+[00:32:08.460] [UNKNOWN] When I mentioned that
+[00:32:09.460] [UNKNOWN] it's all of them should be lower.
+[00:32:11.710] [UNKNOWN] This two is okay,
+[00:32:12.710] [UNKNOWN] but for this one,
+[00:32:13.710] [UNKNOWN] it should be one for perfect.
+[00:32:15.710] [UNKNOWN] When it's like a zero,
+[00:32:17.710] [UNKNOWN] it means that it's nothing.
+[00:32:20.809] [UNKNOWN] It's just a random model,
+[00:32:22.809] [UNKNOWN] just taking the mean.
+[00:32:24.869] [UNKNOWN] Any question?
+[00:32:39.769] [UNKNOWN] And we know that
+[00:32:40.769] [UNKNOWN] it is not almost the cases,
+[00:32:42.769] [UNKNOWN] right?
+[00:32:43.769] [UNKNOWN] Sometimes our,
+[00:32:44.769] [UNKNOWN] okay,
+[00:32:48.099] [UNKNOWN] so,
+[00:32:49.099] [UNKNOWN] let's summarize here.
+[00:32:50.099] [UNKNOWN] So,
+[00:32:51.099] [UNKNOWN] if you have two models,
+[00:32:52.099] [UNKNOWN] then I have one model by decision three,
+[00:32:56.099] [UNKNOWN] one model by neural network,
+[00:32:58.099] [UNKNOWN] one model by linear regression.
+[00:33:01.099] [UNKNOWN] You want to compare them
+[00:33:03.170] [UNKNOWN] in terms of the accuracy of the model.
+[00:33:05.170] [UNKNOWN] Okay?
+[00:33:06.710] [UNKNOWN] And all of them for one specific problem.
+[00:33:10.710] [UNKNOWN] Okay?
+[00:33:11.710] [UNKNOWN] Let's say for prediction of the prices or costs.
+[00:33:14.710] [UNKNOWN] Okay?
+[00:33:15.710] [UNKNOWN] So,
+[00:33:16.710] [UNKNOWN] which one is good?
+[00:33:18.829] [UNKNOWN] We apply,
+[00:33:19.829] [UNKNOWN] we train this model,
+[00:33:20.829] [UNKNOWN] train this model,
+[00:33:21.829] [UNKNOWN] and this model,
+[00:33:22.829] [UNKNOWN] and this model.
+[00:33:23.829] [UNKNOWN] For each model,
+[00:33:24.829] [UNKNOWN] we calculate this net.
+[00:33:25.829] [UNKNOWN] Okay?
+[00:33:27.440] [UNKNOWN] So,
+[00:33:28.660] [UNKNOWN] which one has the lower MAE,
+[00:33:29.660] [UNKNOWN] lower RMSE,
+[00:33:30.660] [UNKNOWN] and higher square?
+[00:33:31.660] [UNKNOWN] Now,
+[00:33:32.660] [UNKNOWN] what is it doing?
+[00:33:33.660] [UNKNOWN] Well,
+[00:33:34.660] [UNKNOWN] lower usually means like overfitting,
+[00:33:35.660] [UNKNOWN] right?
+[00:33:36.950] [UNKNOWN] To lower.
+[00:33:37.950] [UNKNOWN] We need to consider for both of them,
+[00:33:38.950] [UNKNOWN] right?
+[00:33:39.950] [UNKNOWN] For both train and test.
+[00:33:40.950] [UNKNOWN] Okay.
+[00:33:41.950] [UNKNOWN] For now,
+[00:33:42.950] [UNKNOWN] suppose that we don't,
+[00:33:43.950] [UNKNOWN] we are not thinking about overfitting.
+[00:33:44.950] [UNKNOWN] Okay.
+[00:33:45.950] [UNKNOWN] Yeah.
+[00:33:46.950] [UNKNOWN] But,
+[00:33:47.950] [UNKNOWN] you know,
+[00:33:48.950] [UNKNOWN] we have to consider for both of them,
+[00:33:49.950] [UNKNOWN] right?
+[00:33:50.950] [UNKNOWN] For both train and test.
+[00:33:51.950] [UNKNOWN] Yeah.
+[00:33:53.269] [UNKNOWN] But,
+[00:33:54.269] [UNKNOWN] again,
+[00:33:55.269] [UNKNOWN] like what we have,
+[00:33:56.269] [UNKNOWN] like if it's close to zero,
+[00:33:57.269] [UNKNOWN] yes,
+[00:33:58.269] [UNKNOWN] there is overfitting.
+[00:33:59.269] [UNKNOWN] But,
+[00:34:00.269] [UNKNOWN] suppose that,
+[00:34:01.269] [UNKNOWN] like,
+[00:34:02.269] [UNKNOWN] we want to compare to model.
+[00:34:03.269] [UNKNOWN] Okay?
+[00:34:04.269] [UNKNOWN] One is 100.
+[00:34:05.269] [UNKNOWN] The other one is 90.
+[00:34:06.269] [UNKNOWN] Okay?
+[00:34:07.269] [UNKNOWN] There's no overfitting here.
+[00:34:08.340] [UNKNOWN] But,
+[00:34:09.340] [UNKNOWN] we know that the second one is better.
+[00:34:10.340] [UNKNOWN] Why?
+[00:34:11.340] [UNKNOWN] Because it's error.
+[00:34:12.340] [UNKNOWN] Yeah.
+[00:34:13.659] [UNKNOWN] I mean,
+[00:34:14.659] [UNKNOWN] that,
+[00:34:15.659] [UNKNOWN] lower error,
+[00:34:17.099] [UNKNOWN] it doesn't mean always,
+[00:34:18.099] [UNKNOWN] there is overfitting.
+[00:34:19.099] [UNKNOWN] Yeah.
+[00:34:20.099] [UNKNOWN] Yeah.
+[00:34:21.099] [UNKNOWN] Yeah.
+[00:34:22.099] [UNKNOWN] Yeah.
+[00:34:23.099] [UNKNOWN] There is overfitting.
+[00:34:24.519] [UNKNOWN] Okay?
+[00:34:25.519] [UNKNOWN] Okay.
+[00:34:26.679] [UNKNOWN] So,
+[00:34:27.679] [UNKNOWN] on the other hand,
+[00:34:30.380] [UNKNOWN] if,
+[00:34:31.670] [UNKNOWN] a beautiful thing is about the classification problem.
+[00:34:35.670] [UNKNOWN] So,
+[00:34:37.340] [UNKNOWN] for the classification problem,
+[00:34:38.340] [UNKNOWN] the story is a little bit different.
+[00:34:40.340] [UNKNOWN] Okay?
+[00:34:41.340] [UNKNOWN] When you want to find the performance of the classifiers,
+[00:34:47.300] [UNKNOWN] we don't use RMSC.
+[00:34:51.300] [UNKNOWN] Or,
+[00:34:52.369] [UNKNOWN] we don't use MAT.
+[00:34:53.369] [UNKNOWN] Okay?
+[00:34:54.369] [UNKNOWN] So,
+[00:34:55.369] [UNKNOWN] we use the other matrix here,
+[00:34:56.530] [UNKNOWN] which I'm going to explain.
+[00:34:58.550] [UNKNOWN] Okay?
+[00:34:59.550] [UNKNOWN] So,
+[00:35:00.550] [UNKNOWN] this slide is nothing more than,
+[00:35:02.900] [UNKNOWN] it shows that,
+[00:35:03.900] [UNKNOWN] like,
+[00:35:04.900] [UNKNOWN] what you have,
+[00:35:07.719] [UNKNOWN] you have X and Y.
+[00:35:08.719] [UNKNOWN] Based on X and Y,
+[00:35:09.719] [UNKNOWN] you train your learner,
+[00:35:10.719] [UNKNOWN] for model.
+[00:35:11.719] [UNKNOWN] Okay?
+[00:35:12.719] [UNKNOWN] And then,
+[00:35:14.650] [UNKNOWN] for new,
+[00:35:15.650] [UNKNOWN] unseen data,
+[00:35:16.650] [UNKNOWN] you pass only X,
+[00:35:17.650] [UNKNOWN] to the model,
+[00:35:18.650] [UNKNOWN] and it can predict it.
+[00:35:19.650] [UNKNOWN] For training,
+[00:35:20.650] [UNKNOWN] you need to predict it.
+[00:35:21.650] [UNKNOWN] Okay?
+[00:35:22.650] [UNKNOWN] And then,
+[00:35:23.650] [UNKNOWN] for new,
+[00:35:24.650] [UNKNOWN] unseen data,
+[00:35:25.650] [UNKNOWN] you pass only X,
+[00:35:26.650] [UNKNOWN] to the model,
+[00:35:27.650] [UNKNOWN] and it can predict it.
+[00:35:28.650] [UNKNOWN] For training,
+[00:35:30.639] [UNKNOWN] you need both X and Y.
+[00:35:32.639] [UNKNOWN] But,
+[00:35:33.639] [UNKNOWN] for prediction,
+[00:35:34.639] [UNKNOWN] you only need,
+[00:35:36.570] [UNKNOWN] to skip it.
+[00:35:37.570] [UNKNOWN] Right?
+[00:35:40.679] [UNKNOWN] Yes?
+[00:35:42.030] [UNKNOWN] Okay.
+[00:35:43.030] [UNKNOWN] Just nothing more than that one.
+[00:35:44.030] [UNKNOWN] So,
+[00:35:45.030] [UNKNOWN] here,
+[00:35:46.030] [UNKNOWN] what it says,
+[00:35:47.030] [UNKNOWN] that train your model,
+[00:35:48.030] [UNKNOWN] let's say your problem is a classification,
+[00:35:51.900] [UNKNOWN] so,
+[00:35:52.900] [UNKNOWN] for training,
+[00:35:53.900] [UNKNOWN] you need both X and Y.
+[00:35:55.900] [UNKNOWN] But,
+[00:35:57.090] [UNKNOWN] for prediction,
+[00:35:58.090] [UNKNOWN] you see that,
+[00:35:59.090] [UNKNOWN] the,
+[00:36:00.090] [UNKNOWN] the created model,
+[00:36:01.090] [UNKNOWN] dot,
+[00:36:02.090] [UNKNOWN] predict X,
+[00:36:03.090] [UNKNOWN] it tells you that,
+[00:36:04.440] [UNKNOWN] the,
+[00:36:06.880] [UNKNOWN] the model,
+[00:36:08.940] [UNKNOWN] okay,
+[00:36:09.940] [UNKNOWN] you don't pass those X and Y.
+[00:36:10.940] [UNKNOWN] Because if you pass those X and Y,
+[00:36:12.380] [UNKNOWN] why they are doing the prediction then,
+[00:36:13.380] [UNKNOWN] if you know the Y?
+[00:36:14.380] [UNKNOWN] Okay.
+[00:36:15.380] [UNKNOWN] So,
+[00:36:16.380] [UNKNOWN] again,
+[00:36:17.380] [UNKNOWN] this slide is,
+[00:36:18.380] [UNKNOWN] kind of like,
+[00:36:20.340] [UNKNOWN] repetitive.
+[00:36:31.199] [UNKNOWN] So,
+[00:36:32.199] [UNKNOWN] what performance metrics are important,
+[00:36:33.199] [UNKNOWN] because otherwise we can't,
+[00:36:34.199] [UNKNOWN] we can't,
+[00:36:35.619] [UNKNOWN] we don't know that the model performs well or not.
+[00:36:36.619] [UNKNOWN] So,
+[00:36:37.619] [UNKNOWN] the,
+[00:36:38.619] [UNKNOWN] the,
+[00:36:39.619] [UNKNOWN] the,
+[00:36:40.619] [UNKNOWN] the,
+[00:36:41.619] [UNKNOWN] the,
+[00:36:42.619] [UNKNOWN] the,
+[00:36:43.739] [UNKNOWN] the,
+[00:36:44.739] [UNKNOWN] the,
+[00:36:46.030] [UNKNOWN] the,
+[00:36:47.030] [UNKNOWN] the,
+[00:36:48.030] [UNKNOWN] the,
+[00:36:49.030] [UNKNOWN] the,
+[00:36:50.219] [UNKNOWN] the,
+[00:36:51.219] [UNKNOWN] the,
+[00:36:52.219] [UNKNOWN] the,
+[00:36:53.219] [UNKNOWN] the,
+[00:36:54.219] [UNKNOWN] the,
+[00:36:55.219] [UNKNOWN] the,
+[00:36:56.219] [UNKNOWN] the,
+[00:36:57.219] [UNKNOWN] the,
+[00:36:58.219] [UNKNOWN] the,
+[00:36:59.219] [UNKNOWN] the,
+[00:37:00.219] [UNKNOWN] the,
+[00:37:08.010] [UNKNOWN] the,
+[00:37:13.739] [UNKNOWN] the,
+[00:37:14.739] [UNKNOWN] the,
+[00:37:15.739] [UNKNOWN] the,
+[00:37:17.579] [UNKNOWN] the,
+[00:37:18.579] [UNKNOWN] the,
+[00:37:20.250] [UNKNOWN] the,
+[00:37:21.250] [UNKNOWN] the,
+[00:37:23.500] [UNKNOWN] the,
+[00:37:24.500] [UNKNOWN] the,
+[00:37:26.230] [UNKNOWN] the,
+[00:37:31.300] [UNKNOWN] the,
+[00:37:32.300] [UNKNOWN] the,
+[00:37:33.650] [UNKNOWN] the,
+[00:37:34.650] [UNKNOWN] the,
+[00:37:36.699] [UNKNOWN] the,
+[00:37:37.699] [UNKNOWN] I want to explain
+[00:37:41.119] [UNKNOWN] what is this matrix.
+[00:37:45.139] [UNKNOWN] Recall what we call this matrix.
+[00:38:12.110] [UNKNOWN] Yeah, we call that
+[00:38:12.909] [UNKNOWN] a confusion matrix.
+[00:38:15.150] [UNKNOWN] So, we call this one
+[00:38:17.719] [UNKNOWN] as confusion matrix.
+[00:38:20.079] [UNKNOWN] Okay?
+[00:38:21.059] [UNKNOWN] So, but it's not like
+[00:38:23.500] [UNKNOWN] it makes you confused.
+[00:38:25.630] [UNKNOWN] It's just named. Okay?
+[00:38:27.630] [UNKNOWN] So, what is that?
+[00:38:31.070] [UNKNOWN] So, suppose that you have a model,
+[00:38:33.429] [UNKNOWN] you train a model
+[00:38:34.449] [UNKNOWN] for classification
+[00:38:36.900] [UNKNOWN] to class A and class B.
+[00:38:41.340] [UNKNOWN] Okay?
+[00:38:42.780] [UNKNOWN] And, like,
+[00:38:44.260] [UNKNOWN] risky, non-risky.
+[00:38:46.780] [UNKNOWN] Class A is risky.
+[00:38:48.480] [UNKNOWN] Class B is non-risky.
+[00:38:50.579] [UNKNOWN] Okay?
+[00:38:51.599] [UNKNOWN] So, you have 1,000
+[00:38:53.960] [UNKNOWN] samples.
+[00:38:57.619] [UNKNOWN] And for each sample,
+[00:38:59.380] [UNKNOWN] you know the ground truth.
+[00:39:02.010] [UNKNOWN] One is positive.
+[00:39:03.929] [UNKNOWN] Zero means
+[00:39:05.530] [UNKNOWN] negative. Okay?
+[00:39:08.260] [UNKNOWN] So, or
+[00:39:11.039] [UNKNOWN] another example is that
+[00:39:13.280] [UNKNOWN] we have 1,000 samples
+[00:39:15.300] [UNKNOWN] like for different people
+[00:39:18.449] [UNKNOWN] and each person can be patient
+[00:39:20.070] [UNKNOWN] or not. Okay?
+[00:39:22.019] [UNKNOWN] Patient or not.
+[00:39:23.519] [UNKNOWN] Or, this email is spam or not.
+[00:39:27.360] [UNKNOWN] Okay? It's 1 and 0.
+[00:39:29.219] [UNKNOWN] So, it's a classification.
+[00:39:31.010] [UNKNOWN] So, let's focus on
+[00:39:32.730] [UNKNOWN] the first one.
+[00:39:34.090] [UNKNOWN] Risky and non-risky.
+[00:39:37.320] [UNKNOWN] Some of the samples here
+[00:39:38.739] [UNKNOWN] are risky. Some of the samples
+[00:39:40.679] [UNKNOWN] are risky.
+[00:39:41.300] [UNKNOWN] Not risky. Let's take the risky
+[00:39:43.179] [UNKNOWN] one, which is the positive.
+[00:39:45.739] [UNKNOWN] So, ground truth is
+[00:39:47.340] [UNKNOWN] positive. The model
+[00:39:49.710] [UNKNOWN] prediction is also
+[00:39:51.690] [UNKNOWN] positive, is that here is
+[00:39:53.630] [UNKNOWN] 1, and the ground truth
+[00:39:55.630] [UNKNOWN] is also 1. Okay?
+[00:39:58.449] [UNKNOWN] So, what we call that,
+[00:40:01.880] [UNKNOWN] it is true positive.
+[00:40:04.110] [UNKNOWN] True positive. Okay?
+[00:40:05.969] [UNKNOWN] The type of positive which is
+[00:40:07.570] [UNKNOWN] correct. Okay?
+[00:40:10.269] [UNKNOWN] But, suppose that
+[00:40:11.929] [UNKNOWN] the model
+[00:40:13.539] [UNKNOWN] prediction is 1,
+[00:40:16.039] [UNKNOWN] but the ground truth is 0.
+[00:40:18.849] [UNKNOWN] In other words,
+[00:40:20.030] [UNKNOWN] the model tells that
+[00:40:21.230] [UNKNOWN] the sample is
+[00:40:23.289] [UNKNOWN] risky, but
+[00:40:26.019] [UNKNOWN] in reality, it is
+[00:40:27.739] [UNKNOWN] not risky. So, what is
+[00:40:29.980] [UNKNOWN] that? False positive.
+[00:40:33.639] [UNKNOWN] Okay? It's false
+[00:40:35.039] [UNKNOWN] positive. Okay? So, we have
+[00:40:38.079] [UNKNOWN] true positive and false positive.
+[00:40:39.960] [UNKNOWN] Let's think about the opposite of this.
+[00:40:43.920] [UNKNOWN] Okay? So,
+[00:40:45.360] [UNKNOWN] the opposite of this is
+[00:40:47.380] [UNKNOWN] like this. In
+[00:40:49.079] [UNKNOWN] ground truth, that
+[00:40:52.480] [UNKNOWN] sample is
+[00:40:54.539] [UNKNOWN] 0. Okay?
+[00:40:57.289] [UNKNOWN] It is non-risky
+[00:40:58.650] [UNKNOWN] in ground truth. The model
+[00:41:02.199] [UNKNOWN] prediction is also 0.
+[00:41:05.400] [UNKNOWN] It is called true negative.
+[00:41:09.119] [UNKNOWN] The type of negative
+[00:41:10.199] [UNKNOWN] which is true.
+[00:41:14.500] [UNKNOWN] But, if the ground truth
+[00:41:16.099] [UNKNOWN] is positive,
+[00:41:19.130] [UNKNOWN] the model tells that that's
+[00:41:20.590] [UNKNOWN] negative. It's a fake negative.
+[00:41:23.320] [UNKNOWN] Okay? In other words, it's a false negative.
+[00:41:25.119] [UNKNOWN] Make sense?
+[00:41:27.650] [UNKNOWN] So, that's why in this table,
+[00:41:30.710] [UNKNOWN] like, we have
+[00:41:31.869] [UNKNOWN] four cells here.
+[00:41:34.989] [UNKNOWN] Okay? So,
+[00:41:37.530] [UNKNOWN] the predicted
+[00:41:38.329] [UNKNOWN] class can be yes or no,
+[00:41:41.010] [UNKNOWN] and the actual class of ground
+[00:41:42.650] [UNKNOWN] truth also can be yes and no.
+[00:41:46.920] [UNKNOWN] So, this one is
+[00:41:50.059] [UNKNOWN] true positive.
+[00:41:51.900] [UNKNOWN] Okay?
+[00:41:54.380] [UNKNOWN] Both of them yes.
+[00:41:58.170] [UNKNOWN] But, this one is false positive.
+[00:42:01.829] [UNKNOWN] Because the prediction is positive.
+[00:42:04.150] [UNKNOWN] But, in reality,
+[00:42:06.070] [UNKNOWN] it is not a positive. So, it's a fake
+[00:42:08.210] [UNKNOWN] positive. And,
+[00:42:12.880] [UNKNOWN] same thing. Like
+[00:42:15.489] [UNKNOWN] a predicted
+[00:42:18.190] [UNKNOWN] model predicts that
+[00:42:20.960] [UNKNOWN] sample as the
+[00:42:22.420] [UNKNOWN] no, but in reality
+[00:42:26.969] [UNKNOWN] that's yes. So, it's a false
+[00:42:28.789] [UNKNOWN] negative. And true.
+[00:42:33.539] [UNKNOWN] Okay? Any questions on this?
+[00:42:38.710] [UNKNOWN] So far?
+[00:42:40.820] [UNKNOWN] So, which
+[00:42:43.190] [UNKNOWN] part is error?
+[00:42:48.719] [UNKNOWN] This one or this one?
+[00:42:52.360] [UNKNOWN] The fake one, right?
+[00:42:54.369] [UNKNOWN] False negative and false positive
+[00:42:56.969] [UNKNOWN] are errors.
+[00:43:00.210] [UNKNOWN] So, if I want to find the error
+[00:43:02.090] [UNKNOWN] of the model,
+[00:43:04.539] [UNKNOWN] it's going to be this one plus this one
+[00:43:06.880] [UNKNOWN] divided by all
+[00:43:09.079] [UNKNOWN] the samples. I mean that
+[00:43:11.860] [UNKNOWN] suppose that you have 100 samples.
+[00:43:15.369] [UNKNOWN] Out of that, here
+[00:43:16.610] [UNKNOWN] you have 30,
+[00:43:18.840] [UNKNOWN] you have 30 here,
+[00:43:20.780] [UNKNOWN] you have 20 here, or 25
+[00:43:23.019] [UNKNOWN] here, and 15 here.
+[00:43:26.050] [UNKNOWN] Error is going to be,
+[00:43:27.190] [UNKNOWN] 25 plus 15
+[00:43:29.429] [UNKNOWN] divided by all,
+[00:43:31.349] [UNKNOWN] which is 40%.
+[00:43:33.269] [UNKNOWN] Okay?
+[00:43:35.699] [UNKNOWN] Error is going to be 40%, but
+[00:43:38.099] [UNKNOWN] accuracy means that
+[00:43:40.619] [UNKNOWN] A
+[00:43:41.519] [UNKNOWN] plus P,
+[00:43:45.429] [UNKNOWN] the true positive, divided by all.
+[00:43:49.070] [UNKNOWN] Alright? In our case, it's going
+[00:43:50.670] [UNKNOWN] to be 60.
+[00:44:01.070] [UNKNOWN] Any questions?
+[00:44:04.400] [UNKNOWN] So, simply, accuracy means that
+[00:44:06.800] [UNKNOWN] the true positive
+[00:44:08.280] [UNKNOWN] and
+[00:44:09.099] [UNKNOWN] false.
+[00:44:10.760] [UNKNOWN] Negative parts divided
+[00:44:12.739] [UNKNOWN] by all the samples.
+[00:44:16.409] [UNKNOWN] So, under this,
+[00:44:17.849] [UNKNOWN] if this one is 60%,
+[00:44:19.590] [UNKNOWN] 1 minus that, accuracy is going to be
+[00:44:22.070] [UNKNOWN] Let me see that. Do I have
+[00:44:25.630] [UNKNOWN] an example?
+[00:44:34.909] [UNKNOWN] Okay. Let's take this one.
+[00:44:52.739] [UNKNOWN] Okay. So,
+[00:44:53.659] [UNKNOWN] suppose that
+[00:44:56.639] [UNKNOWN] the model prediction,
+[00:45:00.500] [UNKNOWN] the label,
+[00:45:01.780] [UNKNOWN] we have 9 samples,
+[00:45:06.159] [UNKNOWN] which is, the label
+[00:45:07.360] [UNKNOWN] is positive.
+[00:45:08.880] [UNKNOWN] But the model tells that,
+[00:45:10.900] [UNKNOWN] and the model tells that
+[00:45:12.619] [UNKNOWN] that's positive.
+[00:45:14.550] [UNKNOWN] Okay?
+[00:45:17.750] [UNKNOWN] It is not.
+[00:45:20.579] [UNKNOWN] What does this do?
+[00:45:23.210] [UNKNOWN] In reality, they are
+[00:45:24.449] [UNKNOWN] positive,
+[00:45:25.909] [UNKNOWN] but the model
+[00:45:26.829] [UNKNOWN] tells that they are
+[00:45:27.909] [UNKNOWN] negative.
+[00:45:29.300] [UNKNOWN] So, it's
+[00:45:31.110] [UNKNOWN] false,
+[00:45:32.780] [UNKNOWN] negative.
+[00:45:36.079] [UNKNOWN] So, this one,
+[00:45:38.039] [UNKNOWN] in reality,
+[00:45:41.050] [UNKNOWN] the model prediction is,
+[00:45:43.449] [UNKNOWN] the model prediction is positive,
+[00:45:45.170] [UNKNOWN] negative,
+[00:45:46.070] [UNKNOWN] but in reality that's positive so it's going to be also negative and we have eight items
+[00:46:00.659] [UNKNOWN] so what is the accuracy then for this model how many samples do we have
+[00:46:11.019] [UNKNOWN] 20 20. how many of those are correct classified this part 17 yeah and this part 17 over 20 which is
+[00:46:30.340] [UNKNOWN] 85 percent right iq ratio model is 85 and 15 percent is here
+[00:47:22.199] [UNKNOWN] okay i discussed about one of these
+[00:47:30.010] [UNKNOWN] uh metrics right and that is called just explaining to positive to negative
+[00:47:49.480] [UNKNOWN] so the accuracy is interpolated okay so what kind of issues do we have with accuracy
+[00:48:43.909] [UNKNOWN] like you see that accuracy like itself is a good indicator
+[00:49:28.969] [UNKNOWN] what is it depends on the size of the data set it's small it's small
+[00:49:47.369] [UNKNOWN] that depends on the size of data okay
+[00:49:52.070] [UNKNOWN] okay let me ask you this if we have accuracy of 95 and the size of data is bigger is it good
+[00:50:11.960] [UNKNOWN] like suppose i have one million sample and the accuracy of the model is uh
+[00:50:21.019] [UNKNOWN] 95 what does it mean it means that on
+[00:50:27.300] [UNKNOWN] 90 900 50 samples i can predict
+[00:50:48.869] [UNKNOWN] the models
+[00:50:50.710] [UNKNOWN] is good
+[00:50:57.960] [UNKNOWN] people for example we don't have a certain proof death sentence
+[00:51:01.000] [UNKNOWN] Yeah, exactly.
+[00:51:05.059] [UNKNOWN] Let's make it rather than 1 million, let's make it 100.
+[00:51:09.650] [UNKNOWN] So suppose that you have 100 people, okay?
+[00:51:15.469] [UNKNOWN] And the idea here is that we want to detect that.
+[00:51:18.909] [UNKNOWN] That person has specific cancer, okay?
+[00:51:24.460] [UNKNOWN] So if our model predicts, like, a 95% predict correctly,
+[00:51:37.250] [UNKNOWN] it means that only five of those is not correct.
+[00:51:42.199] [UNKNOWN] Sometimes, for example, the person is healthy,
+[00:51:45.360] [UNKNOWN] so that she has kind of cancer, and vice versa.
+[00:51:55.119] [UNKNOWN] The first one is okay.
+[00:51:56.639] [UNKNOWN] Like, if somebody is healthy,
+[00:51:59.409] [UNKNOWN] and the first one is healthy,
+[00:52:00.269] [UNKNOWN] and the second one is healthy, and vice versa.
+[00:52:00.289] [UNKNOWN] So let's tell you that, okay, you have cancer,
+[00:52:02.250] [UNKNOWN] maybe just mental issues, all right?
+[00:52:05.070] [UNKNOWN] But the second case is not tolerable,
+[00:52:10.340] [UNKNOWN] because the model cannot detect that one way.
+[00:52:14.599] [UNKNOWN] So you know what I mean?
+[00:52:18.010] [UNKNOWN] So I just want to mention that here,
+[00:52:20.730] [UNKNOWN] 91, 95%, or even 98% is not good.
+[00:52:27.869] [UNKNOWN] It means that out of 1 million people,
+[00:52:30.010] [UNKNOWN] let's say,
+[00:52:31.750] [UNKNOWN] 95%,
+[00:52:32.269] [UNKNOWN] 180K classified correctly,
+[00:52:37.099] [UNKNOWN] but 20,000 is not classified correctly, okay?
+[00:52:43.119] [UNKNOWN] So what I want to mention here is that
+[00:52:48.119] [UNKNOWN] accuracy itself, even if it's 98%,
+[00:52:52.679] [UNKNOWN] is not okay metric.
+[00:52:56.119] [UNKNOWN] It's misleading metric, okay?
+[00:52:59.239] [UNKNOWN] Itself is misleading.
+[00:53:00.579] [UNKNOWN] What we want to know, then,
+[00:53:05.309] [UNKNOWN] is that we can think about accuracy as one metric.
+[00:53:11.079] [UNKNOWN] We need to check that.
+[00:53:13.039] [UNKNOWN] On the other hand, we need to check two things.
+[00:53:17.219] [UNKNOWN] How many positive case I have in my ground truth?
+[00:53:23.090] [UNKNOWN] And how many of those I can detect?
+[00:53:26.670] [UNKNOWN] This one is important, right?
+[00:53:28.889] [UNKNOWN] There are five case, or let's say,
+[00:53:32.630] [UNKNOWN] 10 case with positive,
+[00:53:35.929] [UNKNOWN] and the model can only detect two of those.
+[00:53:39.530] [UNKNOWN] I can detect eight of those, right?
+[00:53:40.570] [UNKNOWN] So here, it's two out of 10.
+[00:53:49.679] [UNKNOWN] You know what I mean?
+[00:53:51.280] [UNKNOWN] This metric is called recall.
+[00:53:54.260] [UNKNOWN] So recall means that how many positives
+[00:53:57.519] [UNKNOWN] do you have in ground truth,
+[00:53:59.860] [UNKNOWN] and you are able to detect how many of those, correct?
+[00:54:05.760] [UNKNOWN] Okay?
+[00:54:08.030] [UNKNOWN] So of course, for the case of cancer,
+[00:54:16.139] [UNKNOWN] there are 10 people,
+[00:54:17.599] [UNKNOWN] I need to detect not 12,
+[00:54:22.960] [UNKNOWN] I need to detect higher value, maybe eight, maybe nine.
+[00:54:26.380] [UNKNOWN] That's this metric for me, okay?
+[00:54:33.230] [UNKNOWN] So this is called recall.
+[00:54:35.449] [UNKNOWN] So off of positive, how many of those I can detect first?
+[00:54:38.690] [UNKNOWN] Right?
+[00:54:47.349] [UNKNOWN] So maybe somebody comes out to pay.
+[00:54:51.119] [UNKNOWN] The simple way is that if you see something,
+[00:54:53.539] [UNKNOWN] just label that one as positive, all right?
+[00:54:57.829] [UNKNOWN] Then you will not find positive.
+[00:54:58.329] [UNKNOWN] Then you will not have any issue.
+[00:55:00.269] [UNKNOWN] True.
+[00:55:04.909] [UNKNOWN] Then what would be the issue with that?
+[00:55:07.699] [UNKNOWN] Recall is 100 here.
+[00:55:10.269] [UNKNOWN] Recall is getting 100.
+[00:55:12.980] [UNKNOWN] But accuracy of the model is dropping.
+[00:55:18.460] [UNKNOWN] True?
+[00:55:20.469] [UNKNOWN] Accuracy means that like it won't go in the same way.
+[00:55:24.469] [UNKNOWN] True.
+[00:55:33.710] [UNKNOWN] Okay.
+[00:55:35.960] [UNKNOWN] Let's go on the same example.
+[00:55:40.150] [UNKNOWN] Consider you have two classes.
+[00:55:42.480] [UNKNOWN] It's binary.
+[00:55:44.139] [UNKNOWN] And number of zero samples is 9,990.
+[00:55:53.730] [UNKNOWN] And there are 10 positives.
+[00:55:56.460] [UNKNOWN] So the model accuracy is 99.9%.
+[00:56:00.199] [UNKNOWN] If you look at this, you can see that the error is just 1 minus this,
+[00:56:08.039] [UNKNOWN] which is only 0.1.
+[00:56:10.239] [UNKNOWN] It is 1 minus 100 minus this.
+[00:56:15.059] [UNKNOWN] 1 is going to be 0.
+[00:56:16.639] [UNKNOWN] So this one is misleading.
+[00:56:25.769] [UNKNOWN] What is the alternative?
+[00:56:28.070] [UNKNOWN] We have recalls and we have precedents.
+[00:56:33.860] [UNKNOWN] Okay.
+[00:56:35.179] [UNKNOWN] If we're going through detail of this in terms of formula for this,
+[00:56:41.059] [UNKNOWN] just think about recalls, how many positive cases you have.
+[00:56:46.639] [UNKNOWN] And out of that one, how many of those are,
+[00:56:51.630] [UNKNOWN] how many of those are true positives?
+[00:57:04.460] [UNKNOWN] And the precision is that out of the predicted positives,
+[00:57:10.440] [UNKNOWN] how many of those are truly or correctly positive?
+[00:57:16.570] [UNKNOWN] What I mean is that, like, don't think about the formula like for now.
+[00:57:22.539] [UNKNOWN] Just simply think about that.
+[00:57:24.519] [UNKNOWN] How many samples do you have?
+[00:57:28.199] [UNKNOWN] How many of those are positive?
+[00:57:30.360] [UNKNOWN] 10.
+[00:57:31.610] [UNKNOWN] How many of 10s I can detect?
+[00:57:35.090] [UNKNOWN] Two.
+[00:57:36.010] [UNKNOWN] So recall is two.
+[00:57:36.869] [UNKNOWN] Two over 10.
+[00:57:38.869] [UNKNOWN] So I can detect four of those.
+[00:57:42.159] [UNKNOWN] It's going to be four of them.
+[00:57:46.449] [UNKNOWN] It's called recall.
+[00:57:48.699] [UNKNOWN] Precision means that, okay, among those ones that you labeled as positive,
+[00:57:54.989] [UNKNOWN] how many of those in reality are positive?
+[00:57:59.139] [UNKNOWN] Okay.
+[00:58:00.139] [UNKNOWN] For example, for example, I know that I have 20 samples as positive.
+[00:58:09.289] [UNKNOWN] 20 samples.
+[00:58:11.989] [UNKNOWN] As my model tells that there are 20 samples as positive.
+[00:58:18.110] [UNKNOWN] But in reality, I have only 10 positive samples.
+[00:58:23.849] [UNKNOWN] So precision here is that 10 divided by 20, which is 0.5.
+[00:58:32.969] [UNKNOWN] Okay?
+[00:58:33.969] [UNKNOWN] So that's why what we have here is recall means that among all the positives,
+[00:58:46.070] [UNKNOWN] how many of those are detected by me and by the model?
+[00:58:52.769] [UNKNOWN] And how many of those detected by the model are?
+[00:58:59.369] [UNKNOWN] And out of these positive cases by the model, how many of those are truly positive?
+[00:59:09.460] [UNKNOWN] Let me see that.
+[00:59:11.420] [UNKNOWN] Do we have an example?
+[00:59:13.420] [UNKNOWN] Okay.
+[00:59:17.230] [UNKNOWN] Let's think about this.
+[00:59:23.940] [UNKNOWN] I have 20 cases here.
+[00:59:28.590] [UNKNOWN] Okay?
+[00:59:31.539] [UNKNOWN] True positive is 9.
+[00:59:32.539] [UNKNOWN] True negative is 8.
+[00:59:35.119] [UNKNOWN] False positive, false negative.
+[00:59:39.139] [UNKNOWN] Accuracy is 0.8.
+[00:59:42.139] [UNKNOWN] Because accuracy just means that 9 plus 8 divided by 1.
+[00:59:48.849] [UNKNOWN] Okay?
+[00:59:50.420] [UNKNOWN] Let's look at the recall first.
+[00:59:58.039] [UNKNOWN] So how many positives do I have in general in total?
+[01:00:09.059] [UNKNOWN] Okay.
+[01:00:10.570] [UNKNOWN] 9 plus 1.
+[01:00:13.760] [UNKNOWN] Because this column is positive.
+[01:00:15.760] [UNKNOWN] I have 10 samples.
+[01:00:16.760] [UNKNOWN] And how many of those are detected by the model?
+[01:00:19.070] [UNKNOWN] Nine.
+[01:00:20.070] [UNKNOWN] Nine.
+[01:00:21.070] [UNKNOWN] So there will be 9 divided by .
+[01:00:22.650] [UNKNOWN] This is recall.
+[01:00:23.650] [UNKNOWN] Okay.
+[01:00:24.650] [UNKNOWN] Precision.
+[01:00:25.650] [UNKNOWN] So how many predicted positive we have in the model, in the model?
+[01:00:27.030] [UNKNOWN] 11, right?
+[01:00:28.030] [UNKNOWN] Model tells that 9 of those are positive.
+[01:00:29.539] [UNKNOWN] Positive.
+[01:00:30.539] [UNKNOWN] Positive.
+[01:00:31.579] [UNKNOWN] Here.
+[01:00:32.579] [UNKNOWN] Here.
+[01:00:34.019] [UNKNOWN] Here.
+[01:00:36.690] [UNKNOWN] Here.
+[01:00:37.690] [UNKNOWN] Here.
+[01:00:49.820] [UNKNOWN] Here.
+[01:00:50.820] [UNKNOWN] Here.
+[01:00:51.820] [UNKNOWN] Here.
+[01:00:52.820] [UNKNOWN] Here.
+[01:00:53.820] [UNKNOWN] Here.
+[01:01:07.940] [UNKNOWN] Here.
+[01:01:08.940] [UNKNOWN] Here.
+[01:01:10.579] [UNKNOWN] Here.
+[01:01:11.579] [UNKNOWN] Here.
+[01:01:12.579] [UNKNOWN] Here.
+[01:01:13.579] [UNKNOWN] Here.
+[01:01:15.159] [UNKNOWN] Here.
+[01:01:16.159] [UNKNOWN] And in reality, they are positive.
+[01:01:19.199] [UNKNOWN] And 12 of those are positive, but they are not.
+[01:01:22.690] [UNKNOWN] Okay?
+[01:01:25.150] [UNKNOWN] So it's going to be 9 divided by 11.
+[01:01:34.510] [UNKNOWN] 9 by 11 is getting to be 81, right?
+[01:01:40.750] [UNKNOWN] 9 divided by 11.
+[01:01:44.019] [UNKNOWN] Yeah.
+[01:01:46.909] [UNKNOWN] Okay.
+[01:01:48.219] [UNKNOWN] So the model tells that they are 11 positive case.
+[01:01:52.940] [UNKNOWN] But we know that 11 positive case, right?
+[01:02:04.659] [UNKNOWN] Out of that one, 9 of those are correct positive.
+[01:02:12.710] [UNKNOWN] 12 of those are not.
+[01:02:15.070] [UNKNOWN] 12 of those are fake positive.
+[01:02:18.199] [UNKNOWN] That's why, like, we say that simply.
+[01:02:22.780] [UNKNOWN] Precision means that this one divided by some of this gold.
+[01:02:29.190] [UNKNOWN] Recall means that this one divided by some of this gold.
+[01:02:35.610] [UNKNOWN] So that's why, like, 9 divided by 11.
+[01:02:39.969] [UNKNOWN] This precision, recall means that 9 divided by 10, which is 9.
+[01:02:56.679] [UNKNOWN] Memorize this.
+[01:03:00.150] [UNKNOWN] Maybe you can memorize it.
+[01:03:02.440] [UNKNOWN] But if I were you, I would just understand it constantly.
+[01:03:09.900] [UNKNOWN] What is the recall?
+[01:03:11.739] [UNKNOWN] Recall means that, again, how many positive you have in your ground truth, 10.
+[01:03:20.380] [UNKNOWN] How many of those I can detect?
+[01:03:22.900] [UNKNOWN] 9 of them.
+[01:03:25.010] [UNKNOWN] Okay?
+[01:03:26.639] [UNKNOWN] It's 90% recall.
+[01:03:31.760] [UNKNOWN] What is the precision?
+[01:03:35.179] [UNKNOWN] Precision means that among those new labels, model, new labels as the positive,
+[01:03:42.489] [UNKNOWN] how many of those in reality are positive, right?
+[01:03:46.409] [UNKNOWN] So it's going to be 9 of them.
+[01:03:54.650] [UNKNOWN] And I'm curious to know that those are correct labels.
+[01:03:58.730] [UNKNOWN] This one and this one.
+[01:04:02.539] [UNKNOWN] So I'm curious to know.
+[01:04:04.099] [UNKNOWN] This plus this divided by total.
+[01:04:08.159] [UNKNOWN] Recall means that this divided by this column.
+[01:04:12.320] [UNKNOWN] And precision means this one divided by.
+[01:04:19.239] [UNKNOWN] Which one I need to use?
+[01:04:22.150] [UNKNOWN] You need to record all these three varieties.
+[01:04:27.179] [UNKNOWN] Okay?
+[01:04:29.869] [UNKNOWN] You need to record all these three varieties.
+[01:04:35.599] [UNKNOWN] These three.
+[01:04:40.059] [UNKNOWN] Because accuracy itself is misleading.
+[01:04:44.969] [UNKNOWN] Yeah.
+[01:04:45.150] [UNKNOWN] Okay.
+[01:04:46.289] [UNKNOWN] I'm sorry.
+[01:04:47.289] [UNKNOWN] History.
+[01:04:47.949] [UNKNOWN] Accuracy, precision, and recall in the next slide.
+[01:04:52.550] [UNKNOWN] So I look at this.
+[01:04:55.010] [UNKNOWN] It's okay.
+[01:04:56.110] [UNKNOWN] But it's not the best.
+[01:04:57.530] [UNKNOWN] Let's check the precision and the recall.
+[01:05:02.289] [UNKNOWN] Okay.
+[01:05:04.730] [UNKNOWN] So a question.
+[01:05:09.449] [UNKNOWN] You know that accuracy is metric, but it's not everything.
+[01:05:14.099] [UNKNOWN] Among recall and precision, which one do you prefer?
+[01:05:36.699] [UNKNOWN] It depends on their use case.
+[01:05:40.190] [UNKNOWN] Okay.
+[01:05:40.690] [UNKNOWN] I'm asking this question and let me know recall is important or precision.
+[01:05:49.289] [UNKNOWN] Okay?
+[01:05:50.639] [UNKNOWN] So patient case.
+[01:05:58.989] [UNKNOWN] A person is patient or not.
+[01:06:10.989] [UNKNOWN] We need to what?
+[01:06:12.170] [UNKNOWN] We need to correct the positives.
+[01:06:16.849] [UNKNOWN] We don't miss the positive ones.
+[01:06:19.869] [UNKNOWN] That's the story.
+[01:06:20.989] [UNKNOWN] All right?
+[01:06:21.230] [UNKNOWN] We don't miss any positive here.
+[01:06:24.070] [UNKNOWN] When it's a use case like that, that means that recall is important.
+[01:06:30.610] [UNKNOWN] For example, I refer to the bank.
+[01:06:33.920] [UNKNOWN] Okay?
+[01:06:35.400] [UNKNOWN] Bank is a little bit flexible.
+[01:06:37.800] [UNKNOWN] But suppose that bank wants to not have any risky customer.
+[01:06:44.260] [UNKNOWN] Zero risky customer.
+[01:06:46.320] [UNKNOWN] If there's a risky customer, it's going to be, I don't know, like damage too much to the bank system.
+[01:06:54.480] [UNKNOWN] All right?
+[01:06:54.719] [UNKNOWN] Bank wants to detect every.
+[01:06:56.980] [UNKNOWN] That means that all the positive, among all the positive case, I need to detect all of them.
+[01:07:08.750] [UNKNOWN] That's the recall important.
+[01:07:11.610] [UNKNOWN] Same as patient.
+[01:07:13.710] [UNKNOWN] You want to see that all the cancer should be detected.
+[01:07:19.010] [UNKNOWN] Because it's not tolerable to label someone, which is one, as zero.
+[01:07:26.030] [UNKNOWN] Yeah.
+[01:07:26.829] [UNKNOWN] Okay?
+[01:07:27.190] [UNKNOWN] Okay.
+[01:07:29.639] [UNKNOWN] Let's say about spam.
+[01:07:32.420] [UNKNOWN] Okay?
+[01:07:33.199] [UNKNOWN] Spam.
+[01:07:34.849] [UNKNOWN] Spam, not spam.
+[01:07:36.820] [UNKNOWN] In your Gmail, in your Outlook, you get some emails, and the Outlook or Gmail automatically
+[01:07:46.369] [UNKNOWN] click that one too.
+[01:07:49.610] [UNKNOWN] Spam, not spam.
+[01:07:51.550] [UNKNOWN] Right?
+[01:07:52.960] [UNKNOWN] What is important?
+[01:07:59.260] [UNKNOWN] Important is that, like, it is not a spam, but you spam it.
+[01:08:05.139] [UNKNOWN] Right?
+[01:08:05.860] [UNKNOWN] It's not tolerable.
+[01:08:06.460] [UNKNOWN] So, it is important email, it is not spam, it should be in your inbox, but you spam it.
+[01:08:17.479] [UNKNOWN] So, detecting spams is not important.
+[01:08:22.270] [UNKNOWN] Among those you consider as spams, how many of those are, in reality, they are spams.
+[01:08:32.470] [UNKNOWN] This one is important.
+[01:08:35.560] [UNKNOWN] Okay?
+[01:08:37.210] [UNKNOWN] So, that's why we say precision is important.
+[01:08:39.630] [UNKNOWN] This is the case.
+[01:08:41.090] [UNKNOWN] Okay.
+[01:08:47.390] [UNKNOWN] I think this table is, okay.
+[01:08:50.539] [UNKNOWN] So, percentile is medical diagnosis.
+[01:08:55.520] [UNKNOWN] Okay?
+[01:08:56.699] [UNKNOWN] So, because missing a positive case is dangerous, so recall is important.
+[01:09:04.539] [UNKNOWN] Spam.
+[01:09:07.729] [UNKNOWN] You don't want to mark a real email as a spam.
+[01:09:13.329] [UNKNOWN] That means that, okay, if you label some email as a spam, but you are not, it's an issue.
+[01:09:21.529] [UNKNOWN] So, precision is important.
+[01:09:25.489] [UNKNOWN] Okay?
+[01:09:29.859] [UNKNOWN] So, in cyber security, there's some effects.
+[01:09:34.880] [UNKNOWN] Okay?
+[01:09:35.699] [UNKNOWN] And then you don't want to miss any attack.
+[01:09:39.449] [UNKNOWN] Okay?
+[01:09:40.449] [UNKNOWN] You don't want to miss any attack.
+[01:09:43.100] [UNKNOWN] Same as medical diagnosis.
+[01:09:47.020] [UNKNOWN] That's why recall is important.
+[01:09:51.380] [UNKNOWN] Of course, precision is also important.
+[01:09:55.220] [UNKNOWN] It's some weight.
+[01:10:00.739] [UNKNOWN] Because if...
+[01:10:02.560] [UNKNOWN] There is one, I don't know, like, but it is not attack, so you don't want to label it.
+[01:10:11.579] [UNKNOWN] Right?
+[01:10:12.579] [UNKNOWN] But the important thing is that if there is an attack, you need to detect it.
+[01:10:18.579] [UNKNOWN] So, that's why recall is important.
+[01:10:22.090] [UNKNOWN] Okay?
+[01:10:24.880] [UNKNOWN] Fraud detection, both is important.
+[01:10:28.390] [UNKNOWN] In the banking system, like, I mentioned in banking system, first thing is that, like,
+[01:10:35.899] [UNKNOWN] you don't want to...
+[01:10:36.899] [UNKNOWN] You don't want to miss any fraud.
+[01:10:39.279] [UNKNOWN] Right?
+[01:10:40.279] [UNKNOWN] That's why the recall is important.
+[01:10:48.479] [UNKNOWN] On the other hand, you don't want to label someone which is correct or not risky as a
+[01:10:59.409] [UNKNOWN] risky, because it's like it leads to that customer leave the company.
+[01:11:06.560] [UNKNOWN] Right?
+[01:11:09.260] [UNKNOWN] So, that's why in the fraud in the banking system, the first thing is that you don't want
+[01:11:12.770] [UNKNOWN] to miss any fraud.
+[01:11:13.770] [UNKNOWN] The first thing is that, first of all, risky people should not be missed.
+[01:11:20.729] [UNKNOWN] That's the first thing, because those are dangerous.
+[01:11:26.100] [UNKNOWN] On the other hand, if there is a good customer, you don't want to label as a bad customer, right?
+[01:11:38.720] [UNKNOWN] If you label it, maybe that customer may be, maybe that customer is going to leave.
+[01:11:43.079] [UNKNOWN] But if there is a risky customer, and you say, okay, of course, it's going to be 100% risky.
+[01:11:52.810] [UNKNOWN] So that's why, like, in cloud detection, like the bank system, insurance system, the first thing is recall.
+[01:12:03.409] [UNKNOWN] The second thing is also precision, okay?
+[01:12:08.100] [UNKNOWN] That's why, like we say, ghost.
+[01:12:12.710] [UNKNOWN] Medical diagnosis, never, right?
+[01:12:16.050] [UNKNOWN] Just the recall is important, okay?
+[01:12:21.000] [UNKNOWN] And again, here, the most important thing is recall.
+[01:12:25.670] [UNKNOWN] You don't want to miss any positive case.
+[01:12:33.920] [UNKNOWN] Any questions?
+[01:12:38.189] [UNKNOWN] Can you make another example from where the recall is important?
+[01:12:50.819] [UNKNOWN] A scenario that we don't want to miss any positive case.
+[01:12:54.220] [UNKNOWN] For example, autonomous cars.
+[01:12:57.149] [UNKNOWN] The best way is to ask the person to come to the car.
+[01:13:01.020] [UNKNOWN] Okay.
+[01:13:01.899] [UNKNOWN] Yeah, like...
+[01:13:03.039] [UNKNOWN] Are you talking autonomous driver?
+[01:13:04.840] [UNKNOWN] Yeah, yeah.
+[01:13:05.699] [UNKNOWN] Yeah, like autonomous driver.
+[01:13:08.899] [UNKNOWN] Yeah, like if...
+[01:13:10.920] [UNKNOWN] If you take the crossroads, okay?
+[01:13:13.560] [UNKNOWN] That's a tough line.
+[01:13:15.760] [UNKNOWN] It's a tough line, right?
+[01:13:17.500] [UNKNOWN] So you shouldn't miss that one.
+[01:13:20.000] [UNKNOWN] Autonomous driver shouldn't miss that one.
+[01:13:22.640] [UNKNOWN] If you missed, like, only one of those, maybe there's going to be a big crash, right?
+[01:13:28.840] [UNKNOWN] So precision is, again, like...
+[01:13:34.899] [UNKNOWN] Reepal is also important.
+[01:13:35.859] [UNKNOWN] Reepal is important there because if it is not crossroads and then you stop, it's going to be, I mean, chance of accident as well, right?
+[01:13:48.779] [UNKNOWN] But maybe it's controllable, right?
+[01:13:51.180] [UNKNOWN] So you just stop.
+[01:13:53.720] [UNKNOWN] But if it's stopping the crossroads and you pass it, of course, it's going to be accident, right?
+[01:14:00.779] [UNKNOWN] So, I mean, in some cases, both of them is important, but there's a wait.
+[01:14:06.920] [UNKNOWN] There is a wait.
+[01:14:06.979] [UNKNOWN] There is a wait.
+[01:14:07.039] [UNKNOWN] There is a wait.
+[01:14:07.060] [UNKNOWN] There is a wait.
+[01:14:07.079] [UNKNOWN] There is a wait for one of those.
+[01:14:12.109] [UNKNOWN] In a simple way, how much you are tolerating to the positive errors, okay?
+[01:14:22.380] [UNKNOWN] You can't miss, in your scenario, you can't miss any positive, so it's a reepal.
+[01:14:30.500] [UNKNOWN] By the way, okay, you see that pH here?
+[01:15:15.409] [UNKNOWN] Nobody asked me what is the pH.
+[01:15:18.079] [UNKNOWN] Who knows what is the pH?
+[01:15:21.539] [UNKNOWN] Special for what?
+[01:15:22.579] [UNKNOWN] So to explain that...
+[01:15:36.369] [UNKNOWN] I need to give some context.
+[01:15:39.699] [UNKNOWN] If you have a model for classification problems, the output of models can be 0 and 1, right?
+[01:15:49.109] [UNKNOWN] 0 and 1.
+[01:15:51.609] [UNKNOWN] But they don't generate exactly 0 and 1.
+[01:15:54.409] [UNKNOWN] They generate something between 0 and 1.
+[01:15:57.989] [UNKNOWN] Okay, like a probability.
+[01:16:01.090] [UNKNOWN] And we tell that, okay, it's higher than 0.5.
+[01:16:05.130] [UNKNOWN] We need to consider that as 1.
+[01:16:07.489] [UNKNOWN] If it's less than 0...
+[01:16:09.619] [UNKNOWN] 0.5, we need to consider as...
+[01:16:12.439] [UNKNOWN] 0.
+[01:16:13.560] [UNKNOWN] 0, negative.
+[01:16:15.159] [UNKNOWN] Okay?
+[01:16:16.239] [UNKNOWN] That's why, like, in this case, it says that, like, suppose that the threshold is 0.5 here.
+[01:16:25.270] [UNKNOWN] The model output, which could be probability, right?
+[01:16:32.449] [UNKNOWN] All the cases which is less than 0.5 is going to be negative.
+[01:16:40.100] [UNKNOWN] All the cases greater than 0.5.
+[01:16:43.140] [UNKNOWN] It's going to be positive.
+[01:16:45.930] [UNKNOWN] These green ones are truly positive.
+[01:16:50.119] [UNKNOWN] But we see that these two is different colors.
+[01:16:54.800] [UNKNOWN] You see?
+[01:16:55.340] [UNKNOWN] Like, there are two cases here.
+[01:16:59.090] [UNKNOWN] The color is not green.
+[01:17:02.550] [UNKNOWN] Okay?
+[01:17:03.170] [UNKNOWN] Suppose that green is positive.
+[01:17:07.350] [UNKNOWN] Okay?
+[01:17:07.829] [UNKNOWN] And white is negative.
+[01:17:10.060] [UNKNOWN] So what you see here is that there are two cases.
+[01:17:14.649] [UNKNOWN] Grown truths.
+[01:17:15.810] [UNKNOWN] They are white.
+[01:17:17.489] [UNKNOWN] But the model...
+[01:17:18.590] [UNKNOWN] The model prediction is about 0.5.
+[01:17:23.920] [UNKNOWN] That means that there are two labels as positive, but in reality, they are negative.
+[01:17:35.300] [UNKNOWN] That's right.
+[01:17:37.439] [UNKNOWN] On the other hand, you have eight items here, which are white, which are white, and also there are less than 0.5.
+[01:17:49.640] [UNKNOWN] So there are two positives, right?
+[01:17:51.380] [UNKNOWN] I have one case here.
+[01:17:54.279] [UNKNOWN] It is green.
+[01:17:56.340] [UNKNOWN] That means that it should be here by the model.
+[01:18:00.600] [UNKNOWN] But the model tells us its score is less than 0.5.
+[01:18:08.079] [UNKNOWN] It said false, negative.
+[01:18:13.449] [UNKNOWN] Right?
+[01:18:13.789] [UNKNOWN] This one is false, negative.
+[01:18:15.869] [UNKNOWN] This two is false, positive.
+[01:18:18.420] [UNKNOWN] This is true, positive.
+[01:18:20.579] [UNKNOWN] This is true, negative.
+[01:18:21.800] [UNKNOWN] So this threshold is just used to...
+[01:18:28.699] [UNKNOWN] To classify.
+[01:18:32.159] [UNKNOWN] So what is important after that, how many we have here, how many we have here, and...
+[01:18:46.590] [UNKNOWN] Okay.
+[01:18:48.449] [UNKNOWN] So, I have model A on the same problem, I have model B in the same problem, right?
+[01:18:59.449] [UNKNOWN] So one normal network here, I have, let's say, the linear regression.
+[01:19:06.449] [UNKNOWN] Okay.
+[01:19:08.039] [UNKNOWN] Now, linear regression, we call that normativity classification.
+[01:19:11.539] [UNKNOWN] We call it logistic regression.
+[01:19:12.840] [UNKNOWN] So we have two models.
+[01:19:14.279] [UNKNOWN] One logistic regression, one normal network on the same classification problem.
+[01:19:21.050] [UNKNOWN] And at the end, somebody told me that, which one do you prefer?
+[01:19:26.880] [UNKNOWN] The first thing is that I check their accuracy, recall the precision.
+[01:19:36.100] [UNKNOWN] If both of them have the same accuracy, accuracy majorly belongs to...
+[01:19:43.609] [UNKNOWN] Okay.
+[01:19:45.000] [UNKNOWN] It shouldn't be...
+[01:19:46.000] [UNKNOWN] Okay.
+[01:19:47.000] [UNKNOWN] US value, but the higher, it doesn't mean that it's always good. But it should be good
+[01:19:54.000] [UNKNOWN] accuracy, let's say 85, 90% for both of them. If this is the case, we look at the recall
+[01:20:02.600] [UNKNOWN] and precision. Depends on the use case, we check that which one is important for us.
+[01:20:11.239] [UNKNOWN] For the recall, so again, check in which one the recall is higher. Sometimes it's a
+[01:20:33.229] [UNKNOWN] little bit confusing. Let's say rather than recall and precision, I want to have one metric.
+[01:20:39.579] [UNKNOWN] I can take the average on this. I want to have both recall and precision higher. So
+[01:20:47.760] [UNKNOWN] I can take the average. And that is called F1 score. Because precision and recall, they
+[01:20:59.439] [UNKNOWN] generally...
+[01:21:01.920] [UNKNOWN] It's sort of like confidence. Because increasing the recall means that you want to catch more
+[01:21:09.560] [UNKNOWN] positives. And when you catch more positive, maybe you reduce precision. Because you're
+[01:21:20.890] [UNKNOWN] going to have a false output. So all those are not positive, but you label them as positive
+[01:21:28.890] [UNKNOWN] because you just want to detect all the positive. And you label some of those as X-positive.
+[01:21:34.890] [UNKNOWN] You detected all the positives, so your recall is higher. But on the other hand, you label
+[01:21:43.960] [UNKNOWN] some of those which are non-positive. And you wrongly label those as positive. So that's
+[01:21:51.020] [UNKNOWN] why recall and precision sometimes be complete. Or let's say often complete.
+[01:21:58.079] [UNKNOWN] So what we do, we want to get another metric, which is called F1 score. This one is very
+[01:22:04.079] [UNKNOWN] important. And it is just the average of these two. But it is not the normal average.
+[01:22:16.119] [UNKNOWN] Something like this one plus this one divided by two. It is harmonic average. And harmonic
+[01:22:23.119] [UNKNOWN] average means that multiplication of these two divided by summation. So precision times
+[01:22:31.399] [UNKNOWN] recall divided by summation. And then times two.
+[01:22:35.909] [UNKNOWN] In our case here, what is the recall? 0.8. What is the precision? It's 0.85. So F1 is
+[01:22:53.130] [UNKNOWN] going to be 0.9 times this, divided by 1.71, the summation. Times two. And then all of
+[01:23:07.500] [UNKNOWN] this. This one.
+[01:23:09.359] [UNKNOWN] Which returns something, if I calculate.
+[01:23:14.470] [UNKNOWN] .
+[01:23:15.850] [UNKNOWN] If I calculate that one. So yeah. We have precision. We have recall. If you take the
+[01:23:28.390] [UNKNOWN] average using this, harmonic average or harmonic gain, which means multiplication divided by
+[01:23:38.350] [UNKNOWN] summation times two. It's going to be kind of like average, right? Average is 85. And
+[01:23:46.880] [UNKNOWN] this one is .
+[01:23:49.880] [UNKNOWN] Like a normal average.
+[01:23:55.420] [UNKNOWN] So sometimes, rather than this two, we focus, OK, how much is .
+[01:23:59.420] [UNKNOWN] If this one is higher, it shows the recall and precision .
+[01:24:13.029] [UNKNOWN] OK. This one is good. OK. So we have recall 0.5. What does it mean? Only 50% of positive
+[01:24:30.579] [UNKNOWN] cases are detected by the model, right? 50% of actual patients were detected. Precision
+[01:24:41.350] [UNKNOWN] of 0.8 means that 80% of those detected as the positive were correct. So then F1 means,
+[01:24:56.130] [UNKNOWN] again, multiplication divided by . It should be summation. So I believe the final
+[01:25:09.939] [UNKNOWN] result is . It shows a moderate . And better than either metric or not. Any
+[01:25:27.500] [UNKNOWN] question?
+[01:25:28.500] [UNKNOWN] .
+[01:25:37.079] [UNKNOWN] Why we do the .
+[01:25:38.079] [UNKNOWN] Why we do the .
+[01:25:39.720] [UNKNOWN] What we're doing is it shows our sneezing.
+[01:25:42.239] [UNKNOWN] OK?
+[01:25:43.979] [UNKNOWN] .
+[01:25:45.119] [UNKNOWN] .
+[01:25:46.489] [UNKNOWN] ?
+[01:25:47.779] [UNKNOWN] .
+[01:25:48.779] [UNKNOWN] OK .
+[01:25:49.779] [UNKNOWN] Yeah .
+[01:25:55.069] [UNKNOWN] .
+[01:25:56.069] [UNKNOWN] .
+[01:25:57.069] [UNKNOWN] .
+[01:25:58.069] [UNKNOWN] .
+[01:25:59.069] [UNKNOWN] .
+[01:26:00.069] [UNKNOWN] .
+[01:26:01.069] [UNKNOWN] OK?
+[01:26:04.920] [UNKNOWN] .
+[01:26:05.920] [UNKNOWN] .
+[01:26:06.920] [UNKNOWN] .
+[01:26:08.520] [UNKNOWN] .
+[01:26:09.520] [UNKNOWN] .
+[01:26:10.520] [UNKNOWN] .
+[01:26:11.520] [UNKNOWN] .
+[01:26:12.810] [UNKNOWN] .
+[01:26:23.510] [UNKNOWN] .
+[01:26:24.510] [UNKNOWN] .
+[01:26:25.510] [UNKNOWN] .
+[01:26:26.510] [UNKNOWN] .
+[01:26:27.510] [UNKNOWN] .
+[01:26:28.510] [UNKNOWN] So you know, F1 is 0.5 is going to be 0.02.
+[01:26:39.130] [UNKNOWN] In other words, what we do, we penalize imbalance.
+[01:26:42.430] [UNKNOWN] If it's too imbalanced, this number should be smaller.
+[01:26:50.600] [UNKNOWN] But then if it's too imbalanced, you see that here,
+[01:26:54.180] [UNKNOWN] average is the same.
+[01:26:58.750] [UNKNOWN] Emphasis on the consistency.
+[01:27:06.140] [UNKNOWN] So it shows that both of them.
+[01:27:08.640] [UNKNOWN] This one shows that, OK, it's 0.2.
+[01:27:12.010] [UNKNOWN] And 0.2 means that even if precision is higher,
+[01:27:16.840] [UNKNOWN] but decal is lower, the combined is not good.
+[01:27:30.020] [UNKNOWN] One of the precision or decal is very low,
+[01:27:32.359] [UNKNOWN] then F1 drops sharply, like this example.
+[01:27:41.220] [UNKNOWN] OK, we can continue from the rest.
+[01:27:46.420] [UNKNOWN] I have two tree slides here, maybe two slides.
+[01:27:53.300] [UNKNOWN] For this one.
+[01:27:53.800] [UNKNOWN] I need to explain one.
+[01:27:57.399] [UNKNOWN] It's later in the conference.
+[01:28:02.430] [UNKNOWN] Any questions?
+[01:28:08.140] [UNKNOWN] So if I want to summarize today's discussion,
+[01:28:12.939] [UNKNOWN] I talked about two sort of models, regression models
+[01:28:19.739] [UNKNOWN] and classification.
+[01:28:21.739] [UNKNOWN] For a regression model, if you want to know model is good
+[01:28:26.029] [UNKNOWN] or not, just find the error.
+[01:28:29.319] [UNKNOWN] It goes between targets and .
+[01:28:32.640] [UNKNOWN] It could be mean absolute, or it could be .
+[01:28:38.329] [UNKNOWN] But you can apply same thing on classification problems.
+[01:28:42.750] [UNKNOWN] Why?
+[01:28:43.250] [UNKNOWN] Because if you apply mean absolute error,
+[01:28:46.810] [UNKNOWN] what's going to happen for classification problems?
+[01:28:53.409] [UNKNOWN] In classification, we have labels 0 and 1.
+[01:28:57.579] [UNKNOWN] Right?
+[01:28:58.079] [UNKNOWN] 0 and 1.
+[01:28:58.579] [UNKNOWN] If you take the average, that then gives you
+[01:29:03.380] [UNKNOWN] the float number.
+[01:29:05.890] [UNKNOWN] That's why .
+[01:29:07.890] [UNKNOWN] For classification, you need to find,
+[01:29:10.890] [UNKNOWN] rather than RMSE, you need to focus other things.
+[01:29:16.079] [UNKNOWN] Precision.
+[01:29:17.079] [UNKNOWN] How much we classify correctly.
+[01:29:20.279] [UNKNOWN] How much of the positive we classify correctly.
+[01:29:25.079] [UNKNOWN] This is called recall.
+[01:29:27.079] [UNKNOWN] The first one is called accuracy of the total accuracy
+[01:29:32.289] [UNKNOWN] of the model.
+[01:29:33.289] [UNKNOWN] That could be the misleading.
+[01:29:35.359] [UNKNOWN] That's why we go to recall.
+[01:29:37.359] [UNKNOWN] And precision means that out of the positive cases,
+[01:29:41.359] [UNKNOWN] you detect them.
+[01:29:42.359] [UNKNOWN] You detect them.
+[01:29:43.550] [UNKNOWN] In reality, how many of those were .
+[01:29:52.159] [UNKNOWN] So that's why we need to have all these three.
+[01:29:56.159] [UNKNOWN] Sometimes we tell that rather than recall and precision,
+[01:29:59.159] [UNKNOWN] let's define F1.
+[01:30:01.159] [UNKNOWN] So if you have precision, if you have accuracy and F1,
+[01:30:08.560] [UNKNOWN] you can sum up this one.
+[01:30:15.010] [UNKNOWN] It is very important and practical topic.
+[01:30:18.010] [UNKNOWN] And also like in, again, in exam, in interview,
+[01:30:23.300] [UNKNOWN] you're going to be asked about this.
+[01:30:25.840] [UNKNOWN] One of the common question is that,
+[01:30:27.840] [UNKNOWN] suppose you have a classifier.
+[01:30:29.840] [UNKNOWN] How do you know that it's good?
+[01:30:32.640] [UNKNOWN] You need to tell .
+[01:30:37.340] [UNKNOWN] Suppose that you are in bank system.
+[01:30:40.340] [UNKNOWN] You go to the interview for bank.
+[01:30:42.340] [UNKNOWN] So because they want to know that you understand the topic
+[01:30:45.850] [UNKNOWN] or not, say, OK, in this scenario,
+[01:30:49.850] [UNKNOWN] which metric do you think is good?
+[01:30:51.850] [UNKNOWN] OK.
+[01:30:54.039] [UNKNOWN] You're going to insurance.
+[01:30:56.039] [UNKNOWN] The insurance even asks you that which metric is something
+[01:31:00.289] [UNKNOWN] that you need to .
+[01:31:02.960] [UNKNOWN] It's very practical and it's used a lot.
+[01:31:10.720] [UNKNOWN] Yeah.
+[01:31:13.760] [UNKNOWN] Wherever you see that there is a classification,
+[01:31:16.760] [UNKNOWN] like risky, non-risky, most of the use case
+[01:31:21.920] [UNKNOWN] is something like this.
+[01:31:22.920] [UNKNOWN] It's a classifier to think about .
+[01:31:28.100] [UNKNOWN] Not just risky, non-risky.
+[01:31:30.100] [UNKNOWN] Different classes, but you're focusing for now
+[01:31:33.100] [UNKNOWN] on the .
+[01:31:35.100] [UNKNOWN] That can be .
+[01:31:37.100] [UNKNOWN] OK.
+[01:31:38.550] [UNKNOWN] So take a break.
+[01:31:45.399] [UNKNOWN] Maybe eight.
+[01:31:48.479] [UNKNOWN] Yeah.
+[01:31:51.479] [UNKNOWN] Is it ?
+[01:31:56.170] [UNKNOWN] It's going to be on the paper.
+[01:31:58.170] [UNKNOWN] OK.
+[01:31:59.270] [UNKNOWN] Yeah.
+[01:32:00.270] [UNKNOWN] There is three questions.
+[01:32:01.270] [UNKNOWN] two MCQ and one calculation.
+[01:32:05.270] [UNKNOWN] OK.
+[01:32:06.270] [UNKNOWN] Thank you.
+[01:32:08.840] [UNKNOWN] Multiple choice.
+[01:32:11.689] [UNKNOWN] Two more people choice.
+[01:32:12.689] [UNKNOWN] ?
+[01:32:13.689] [UNKNOWN] ?
+[01:32:14.689] [UNKNOWN] ?
+[01:32:15.689] [UNKNOWN] ?
+[01:32:16.689] [UNKNOWN] ?
+[01:32:17.689] [UNKNOWN] ?
+[01:32:18.689] [UNKNOWN] ?
+[01:32:19.689] [UNKNOWN] ?
+[01:32:20.689] [UNKNOWN] ?
+[01:32:21.689] [UNKNOWN] ?
+[01:32:25.250] [UNKNOWN] ?
+[01:32:26.250] [UNKNOWN] ?
+[01:32:27.250] [UNKNOWN] ?
+[01:32:28.250] [UNKNOWN] ?
+[01:32:34.310] [UNKNOWN] ?
+[01:32:35.310] [UNKNOWN] ?
+[01:32:36.310] [UNKNOWN] ?
+[01:32:37.310] [UNKNOWN] ?
+[01:32:38.310] [UNKNOWN] ?
+[01:32:39.310] [UNKNOWN] ?
+[01:32:41.300] [UNKNOWN] ?
+[01:32:42.300] [UNKNOWN] ?
+[01:32:43.300] [UNKNOWN] ?
+[01:32:44.300] [UNKNOWN] ?
+[01:32:45.300] [UNKNOWN] ?
+[01:32:46.300] [UNKNOWN] ?
+[01:32:47.300] [UNKNOWN] ?
+[01:32:48.300] [UNKNOWN] .
+[01:32:49.300] [UNKNOWN] ?
+[01:32:50.909] [UNKNOWN] ?
+[01:32:51.909] [UNKNOWN] ?
+[01:32:52.909] [UNKNOWN] ?
+[01:32:55.199] [UNKNOWN] ?
+[01:32:56.479] [UNKNOWN] ?
+[01:32:57.869] [UNKNOWN] ?
+[01:33:01.720] [UNKNOWN] ?
+[01:33:06.720] [UNKNOWN] ?
+[01:33:09.720] [UNKNOWN] ?
+[01:33:12.720] [UNKNOWN] .
+[01:33:17.720] [UNKNOWN] ?
+[01:33:18.720] [UNKNOWN] ?
+[01:33:20.720] [UNKNOWN] ?
+[01:33:21.720] [UNKNOWN] It's basically the same as before, but it's a little different.
+[01:33:27.689] [UNKNOWN] It's a little different.
+[01:33:30.449] [UNKNOWN] It's a little different.
+[01:33:32.369] [UNKNOWN] It's a historical test.
+[01:33:36.890] [UNKNOWN] Did you take the test before?
+[01:33:38.149] [UNKNOWN] Do you want me to give you an A.I. award?
+[01:33:39.770] [UNKNOWN] Wow.
+[01:33:43.939] [UNKNOWN] Can you give me a hug?
+[01:33:49.560] [UNKNOWN] Do you want to hug me?
+[01:33:51.640] [UNKNOWN] I don't want to hug you.
+[01:34:05.199] [UNKNOWN] It's not necessarily the same.
+[01:34:06.319] [UNKNOWN] Because it used to be just two lines.
+[01:34:09.000] [UNKNOWN] Two lines of technology.
+[01:34:10.880] [UNKNOWN] It used to be two lines of technology.
+[01:34:12.119] [UNKNOWN] It's a little different.
+[01:34:14.039] [UNKNOWN] Because it used to be just two lines of technology.
+[01:34:14.119] [UNKNOWN] I don't know.
+[01:34:15.159] [UNKNOWN] It's a little different.
+[01:34:16.739] [UNKNOWN] The more you plan it, the more directions you want to take now and then.
+[01:34:22.079] [UNKNOWN] It's a little different.
+[01:34:24.159] [UNKNOWN] It's not necessarily all and all over again.
+[01:34:25.899] [UNKNOWN] Yeah.
+[01:34:26.319] [UNKNOWN] You don't always change the
+[01:34:27.869] [UNKNOWN] You don't always change the
+[01:34:28.829] [UNKNOWN] You don't always change the
+[01:34:29.890] [UNKNOWN] medium.
+[01:34:29.989] [UNKNOWN] medium.
+[01:34:32.140] [UNKNOWN] So I'm going to start with this
+[01:34:48.119] [UNKNOWN] You couldn't see
+[01:34:48.300] [UNKNOWN] me
+[01:34:48.840] [UNKNOWN] me
+[01:34:48.920] [UNKNOWN] I think it will be more difficult if you look at it, if you don't see it, you will think it is easy, but if you look at it, you will think it is very difficult, why is it so stupid?
+[01:35:10.609] [UNKNOWN] I think it will be more difficult if you look at it, if you don't see it, you will think it is easy, but if you don't see it, you will think it is very difficult, why is it so stupid?
+[01:36:26.880] [UNKNOWN] I don't know how to read the screen, so I choose this one.
+[01:36:42.640] [UNKNOWN] Yes, it really is.
+[01:36:44.640] [UNKNOWN] It has to be divided into two parts.
+[01:36:52.159] [UNKNOWN] I have to cough twice a day.
+[01:36:54.159] [UNKNOWN] I have to cough twice a day.
+[01:36:56.159] [UNKNOWN] I have to cough twice a day.
+[01:36:57.159] [UNKNOWN] I have to cough twice a day.
+[01:36:58.159] [UNKNOWN] I have to cough twice a day.
+[01:36:59.159] [UNKNOWN] It's fun.
+[01:37:02.279] [UNKNOWN] I was thinking, why did I write it all to math?
+[01:37:03.279] [UNKNOWN] I have to escape!
+[01:37:07.210] [UNKNOWN] I have to eat!
+[01:37:09.560] [UNKNOWN] I have to help the horse.
+[01:37:13.239] [UNKNOWN] We'd better look at it, because I'm hungry!
+[01:37:15.239] [UNKNOWN] We'd better look at it, because I'm hungry!
+[01:37:17.359] [UNKNOWN] I look at it with thesenn can.
+[01:37:18.359] [UNKNOWN] I look at it with thesenn can.
+[01:37:33.250] [UNKNOWN] I didn't learn fuzzing.
+[01:37:38.149] [UNKNOWN] If you didn't learn it, there's nothing you can do.
+[01:37:40.149] [UNKNOWN] I'm looking at the choices right now.
+[01:37:42.529] [UNKNOWN] You don't have time, right?
+[01:37:47.920] [UNKNOWN] If I didn't learn it, I wouldn't take the exam.
+[01:37:49.920] [UNKNOWN] Take the exam. You learned it in the first class.
+[01:37:51.920] [UNKNOWN] Fuzzing?
+[01:37:53.439] [UNKNOWN] I learned it in the first class.
+[01:37:55.619] [UNKNOWN] You really learned it?
+[01:37:56.619] [UNKNOWN] I saw it in the first class in the classroom.
+[01:37:58.680] [UNKNOWN] I'm the same as you.
+[01:38:00.680] [UNKNOWN] I didn't see that question.
+[01:38:02.680] [UNKNOWN] I really didn't.
+[01:38:03.680] [UNKNOWN] But he mentioned it.
+[01:38:06.260] [UNKNOWN] Where did you mention it?
+[01:38:08.640] [UNKNOWN] He mentioned it on social media.
+[01:38:24.319] [UNKNOWN] Did you learn fuzzing?
+[01:38:29.689] [UNKNOWN] I understand.
+[01:38:31.689] [UNKNOWN] But I'm looking at the choices right now.
+[01:38:35.689] [UNKNOWN] He said it.
+[01:38:37.689] [UNKNOWN] He said two choices.
+[01:38:40.689] [UNKNOWN] Go take a look.
+[01:38:41.689] [UNKNOWN] I know.
+[01:38:42.689] [UNKNOWN] Like in this class.
+[01:38:43.689] [UNKNOWN] I saw that in the question.
+[01:38:45.789] [UNKNOWN] He said it in this class.
+[01:38:46.789] [UNKNOWN] Yeah, that's possible.
+[01:38:48.789] [UNKNOWN] You took the exam.
+[01:38:49.789] [UNKNOWN] You learned it in the first class.
+[01:38:51.789] [UNKNOWN] Then you took the exam in the second class.
+[01:38:55.789] [UNKNOWN] I want to see it first.
+[01:38:56.789] [UNKNOWN] I don't know.
+[01:38:57.789] [UNKNOWN] I admitted that I took the exam.
+[01:38:59.789] [UNKNOWN] You didn't take the exam.
+[01:39:01.789] [UNKNOWN] It's okay to take the exam later.
+[01:39:03.789] [UNKNOWN] You can take the exam at the end.
+[01:39:05.789] [UNKNOWN] But you can take the exam after you memorize the formula.
+[01:39:07.789] [UNKNOWN] You can take it after you memorize the formula.
+[01:39:08.789] [UNKNOWN] So take it.
+[01:39:09.789] [UNKNOWN] Anyway, when I asked him, he said he would take the exam, but there was no limit to the topic.
+[01:39:42.250] [UNKNOWN] He said he would take the exam, but there was no limit to the topic.
+[01:40:16.060] [UNKNOWN] He said he would take the exam, but there was no limit to the topic.
+[01:40:47.279] [UNKNOWN] He said he would take the exam, but there was no limit to the topic.
+[01:41:27.640] [UNKNOWN] He said he would take the exam, but there was no limit to the topic.
+[01:42:04.970] [UNKNOWN] He said he would take the exam, but there was no limit to the topic.

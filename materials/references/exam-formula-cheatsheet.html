@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>考前速查表 - CSCI 6751</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      line-height: 1.6;
+      background: #f5f5f5;
+    }
+    .section {
+      background: white;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      page-break-inside: avoid;
+    }
+    h1 {
+      color: #e74c3c;
+      border-bottom: 3px solid #e74c3c;
+      padding-bottom: 10px;
+      font-size: 28px;
+      text-align: center;
+    }
+    h2 {
+      color: #e74c3c;
+      font-size: 22px;
+      margin-top: 20px;
+      border-left: 4px solid #e74c3c;
+      padding-left: 10px;
+    }
+    h3 {
+      color: #3498db;
+      font-size: 18px;
+      margin-top: 15px;
+    }
+    .formula {
+      background: #e8f4f8;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 4px solid #3498db;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+    .important {
+      background: #ffe6e6;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 4px solid #e74c3c;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .tip {
+      background: #e8f5e9;
+      padding: 12px;
+      margin: 10px 0;
+      border-left: 3px solid #4caf50;
+      font-size: 14px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 15px 0;
+      font-size: 14px;
+    }
+    th, td {
+      border: 2px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #3498db;
+      color: white;
+    }
+    ul, ol {
+      margin: 10px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin: 5px 0;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🎯 考前速查表</h1>
+<p style="text-align: center; color: #7f8c8d; font-size: 16px;">CSCI 6751 | 睡前必看 | 公式 + 概念</p>
+
+<div class="important">
+  ⚠️ 考试前看一遍！所有公式 + 核心概念
+</div>
+
+<!-- ==================== SECTION 1: Gradient Descent ==================== -->
+<div class="section">
+  <h2>1️⃣ Gradient Descent（梯度下降）</h2>
+  
+  <h3>核心公式（必背！）</h3>
+  <div class="formula">
+    <p><strong>更新规则：</strong></p>
+    $$\theta_{new} = \theta_{old} - \eta \nabla J(\theta)$$
+    
+    <p>其中：</p>
+    <ul>
+      <li>η (eta) = Learning Rate（学习率）</li>
+      <li>∇J = 梯度（损失函数的导数）</li>
+    </ul>
+  </div>
+  
+  <h3>简单线性回归（y = ax + b）</h3>
+  <div class="formula">
+    <p><strong>损失函数（MSE）：</strong></p>
+    $$J(a, b) = \frac{1}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i)^2$$
+    
+    <p><strong>梯度：</strong></p>
+    $$\frac{\partial J}{\partial a} = \frac{2}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i) \cdot x_i$$
+    $$\frac{\partial J}{\partial b} = \frac{2}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i)$$
+    
+    <p><strong>更新：</strong></p>
+    $$a_{new} = a_{old} - \eta \cdot \frac{\partial J}{\partial a}$$
+    $$b_{new} = b_{old} - \eta \cdot \frac{\partial J}{\partial b}$$
+  </div>
+  
+  <h3>手算步骤（6步）</h3>
+  <div class="tip">
+    <ol style="font-size: 15px;">
+      <li><strong>预测</strong>：ŷᵢ = a·xᵢ + b</li>
+      <li><strong>误差</strong>：eᵢ = ŷᵢ - yᵢ</li>
+      <li><strong>梯度 a</strong>：∂J/∂a = (2/n)Σ(eᵢ·xᵢ)</li>
+      <li><strong>梯度 b</strong>：∂J/∂b = (2/n)Σ(eᵢ)</li>
+      <li><strong>更新 a</strong>：aₙₑw = aₒₗd - η·∂J/∂a</li>
+      <li><strong>更新 b</strong>：bₙₑw = bₒₗd - η·∂J/∂b</li>
+    </ol>
+  </div>
+  
+  <h3>多变量线性回归（y = θ₀ + θ₁x₁ + θ₂x₂）</h3>
+  <div class="formula">
+    <p><strong>梯度：</strong></p>
+    $$\frac{\partial J}{\partial \theta_0} = \frac{2}{n} \sum (\hat{y}_i - y_i)$$
+    $$\frac{\partial J}{\partial \theta_1} = \frac{2}{n} \sum (\hat{y}_i - y_i) \cdot x_{1i}$$
+    $$\frac{\partial J}{\partial \theta_2} = \frac{2}{n} \sum (\hat{y}_i - y_i) \cdot x_{2i}$$
+  </div>
+</div>
+
+<!-- ==================== SECTION 2: L2 Regularization ==================== -->
+<div class="section">
+  <h2>2️⃣ L2 Regularization (Ridge)</h2>
+  
+  <h3>核心公式</h3>
+  <div class="formula">
+    <p><strong>L2 Regularized Cost：</strong></p>
+    $$J_{Ridge} = \frac{1}{n} \sum (\hat{y}_i - y_i)^2 + \lambda \sum_{j=1}^{p} \theta_j^2$$
+    
+    <p><strong>注意：</strong>通常不正则化 θ₀（截距项）</p>
+    
+    <p><strong>梯度（带正则化）：</strong></p>
+    $$\frac{\partial J}{\partial \theta_j} = \frac{2}{n} \sum (\hat{y}_i - y_i) \cdot x_{ji} + 2\lambda\theta_j$$
+  </div>
+  
+  <h3>λ (Lambda) 的影响</h3>
+  <table>
+    <tr><th>λ 大小</th><th>影响</th></tr>
+    <tr><td><strong>λ = 0</strong></td><td>无正则化（普通线性回归）</td></tr>
+    <tr><td><strong>λ 小</strong></td><td>轻微惩罚，可能 Overfit</td></tr>
+    <tr><td><strong>λ 中</strong></td><td>平衡，最优</td></tr>
+    <tr><td><strong>λ 大</strong></td><td>强惩罚，可能 Underfit</td></tr>
+  </table>
+</div>
+
+<!-- ==================== SECTION 3: Normal Equation ==================== -->
+<div class="section">
+  <h2>3️⃣ Normal Equation</h2>
+  
+  <h3>核心公式（必背！）</h3>
+  <div class="important">
+    $$\theta = (X^T X)^{-1} X^T y$$
+  </div>
+  
+  <h3>步骤</h3>
+  <ol style="font-size: 15px;">
+    <li><strong>构建设计矩阵 X</strong>（第一列全是1）</li>
+    <li><strong>计算 X^T X</strong></li>
+    <li><strong>求逆 (X^T X)^(-1)</strong></li>
+    <li><strong>计算 X^T y</strong></li>
+    <li><strong>矩阵乘法得到 θ</strong></li>
+  </ol>
+  
+  <h3>2×2 矩阵求逆（必须记住！）</h3>
+  <div class="formula">
+    $$A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$$
+    
+    <p><strong>行列式：</strong></p>
+    $$\text{det}(A) = ad - bc$$
+    
+    <p><strong>逆矩阵：</strong></p>
+    $$A^{-1} = \frac{1}{ad - bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$$
+    
+    <p><strong>口诀：</strong>对角交换、副对角取负、除以行列式</p>
+  </div>
+  
+  <h3>何时用 Normal Equation vs GD？</h3>
+  <table>
+    <tr><th>方法</th><th>何时用</th><th>优缺点</th></tr>
+    <tr>
+      <td><strong>Normal Equation</strong></td>
+      <td>特征 < 1000</td>
+      <td>✅ 一步求解<br>❌ 需要求逆，慢</td>
+    </tr>
+    <tr>
+      <td><strong>Gradient Descent</strong></td>
+      <td>特征 > 1000</td>
+      <td>✅ 不需要求逆<br>❌ 需要多次迭代</td>
+    </tr>
+  </table>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ==================== SECTION 4: Fuzzy Logic ==================== -->
+<div class="section">
+  <h2>4️⃣ Fuzzy Logic（模糊逻辑）</h2>
+  
+  <h3>三角形隶属函数 triangular(a, b, c)</h3>
+  <div class="formula">
+    <pre style="font-family: monospace; text-align: center; font-size: 14px;">
+         μ
+         1 |      /\
+           |     /  \
+           |    /    \
+           |   /      \
+         0 |__/________\__
+             a    b    c
+    </pre>
+    
+    <p><strong>公式：</strong></p>
+    $$\mu(x) = \begin{cases}
+    0 & x \leq a \\
+    \frac{x - a}{b - a} & a < x \leq b \\
+    \frac{c - x}{c - b} & b < x < c \\
+    0 & x \geq c
+    \end{cases}$$
+    
+    <p><strong>关键点：</strong></p>
+    <ul>
+      <li>a = 左边界</li>
+      <li>b = 峰值（μ = 1）</li>
+      <li>c = 右边界</li>
+    </ul>
+  </div>
+  
+  <h3>梯形隶属函数 trapmf(a, b, c, d)</h3>
+  <div class="formula">
+    <pre style="font-family: monospace; text-align: center; font-size: 14px;">
+         μ
+         1 |    ____
+           |   /    \
+           |  /      \
+           | /        \
+         0 |/          \
+             a  b  c  d
+    </pre>
+    
+    <p><strong>公式：</strong></p>
+    $$\mu(x) = \begin{cases}
+    0 & x \leq a \\
+    \frac{x - a}{b - a} & a < x < b \\
+    1 & b \leq x \leq c \\
+    \frac{d - x}{d - c} & c < x < d \\
+    0 & x \geq d
+    \end{cases}$$
+    
+    <p><strong>关键点：</strong></p>
+    <ul>
+      <li>a 到 b = 上升段</li>
+      <li>b 到 c = 平顶（μ = 1）</li>
+      <li>c 到 d = 下降段</li>
+    </ul>
+  </div>
+  
+  <h3>Fuzzy Inference System（4步）</h3>
+  <ol style="font-size: 15px;">
+    <li><strong>Fuzzification（模糊化）</strong>：把清晰输入转为隶属度</li>
+    <li><strong>Rule Evaluation（规则评估）</strong>：计算 Firing Strength</li>
+    <li><strong>Aggregation（聚合）</strong>：合并规则输出</li>
+    <li><strong>Defuzzification（去模糊化）</strong>：转回清晰值</li>
+  </ol>
+  
+  <h3>Firing Strength（激活强度）</h3>
+  <div class="formula">
+    <p><strong>IF X is A AND Y is B THEN Z is C</strong></p>
+    
+    <p><strong>使用 MIN 算子（AND）：</strong></p>
+    $$\text{Firing Strength} = \min(\mu_A(x), \mu_B(y))$$
+    
+    <p><strong>为什么是 MIN？</strong>AND = 同时满足，取最弱的</p>
+  </div>
+  
+  <h3>Centroid Defuzzification（去模糊化）</h3>
+  <div class="formula">
+    <p><strong>加权平均法：</strong></p>
+    $$\text{Output} = \frac{\sum_{i=1}^{n} (\text{FS}_i \times \text{Output}_i)}{\sum_{i=1}^{n} \text{FS}_i}$$
+    
+    <p>其中：</p>
+    <ul>
+      <li>FS = Firing Strength</li>
+      <li>Output = 规则的输出值</li>
+    </ul>
+  </div>
+  
+  <h3>计算步骤</h3>
+  <div class="tip">
+    <ol style="font-size: 15px;">
+      <li><strong>计算隶属度</strong>：对每个输入，计算 μ(x)</li>
+      <li><strong>计算 Firing Strength</strong>：min(μ₁, μ₂) for AND</li>
+      <li><strong>去模糊化</strong>：Σ(FS×Output) / Σ(FS)</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ==================== SECTION 5: Overfitting & Underfitting ==================== -->
+<div class="section">
+  <h2>5️⃣ Overfitting vs Underfitting</h2>
+  
+  <h3>定义</h3>
+  <table>
+    <tr><th>类型</th><th>Train Error</th><th>Test Error</th><th>原因</th></tr>
+    <tr>
+      <td><strong>Underfitting</strong></td>
+      <td>高</td>
+      <td>高</td>
+      <td>模型太简单</td>
+    </tr>
+    <tr>
+      <td><strong>Good Fit</strong></td>
+      <td>低</td>
+      <td>低（≈ Train）</td>
+      <td>刚好</td>
+    </tr>
+    <tr>
+      <td><strong>Overfitting</strong></td>
+      <td>很低</td>
+      <td>高（>> Train）</td>
+      <td>模型太复杂</td>
+    </tr>
+  </table>
+  
+  <h3>解决方法</h3>
+  <div class="formula">
+    <p><strong>减少 Overfitting：</strong></p>
+    <ul>
+      <li>✅ 增加 λ（正则化强度）</li>
+      <li>✅ 减少 Polynomial Degree</li>
+      <li>✅ 增加训练数据</li>
+      <li>✅ Early Stopping</li>
+    </ul>
+    
+    <p><strong>减少 Underfitting：</strong></p>
+    <ul>
+      <li>✅ 减少 λ</li>
+      <li>✅ 增加 Polynomial Degree</li>
+      <li>✅ 增加特征</li>
+    </ul>
+  </div>
+  
+  <h3>Hyperparameters（超参数）</h3>
+  <ul style="font-size: 15px;">
+    <li><strong>Learning Rate (η)</strong>：GD 步长</li>
+    <li><strong>Polynomial Degree</strong>：模型复杂度</li>
+    <li><strong>Lambda (λ)</strong>：正则化强度</li>
+  </ul>
+  
+  <p><strong>超参数不是从数据学习的，需要人工调优！</strong></p>
+</div>
+
+<!-- ==================== SECTION 6: 其他重要概念 ==================== -->
+<div class="section">
+  <h2>6️⃣ 其他重要概念</h2>
+  
+  <h3>Classification vs Regression</h3>
+  <table>
+    <tr><th>类型</th><th>输出</th><th>例子</th></tr>
+    <tr>
+      <td><strong>Regression</strong></td>
+      <td>连续数值</td>
+      <td>房价、温度</td>
+    </tr>
+    <tr>
+      <td><strong>Classification</strong></td>
+      <td>离散类别</td>
+      <td>猫狗、垃圾邮件</td>
+    </tr>
+  </table>
+  
+  <h3>Supervised vs Unsupervised Learning</h3>
+  <table>
+    <tr><th>类型</th><th>特点</th><th>例子</th></tr>
+    <tr>
+      <td><strong>Supervised</strong></td>
+      <td>有标签</td>
+      <td>房价预测、猫狗分类</td>
+    </tr>
+    <tr>
+      <td><strong>Unsupervised</strong></td>
+      <td>无标签</td>
+      <td>客户聚类、降维</td>
+    </tr>
+  </table>
+  
+  <h3>Fuzzy vs Classical Logic</h3>
+  <table>
+    <tr><th>类型</th><th>取值</th><th>例子</th></tr>
+    <tr>
+      <td><strong>Classical</strong></td>
+      <td>0 或 1（二元）</td>
+      <td>True / False</td>
+    </tr>
+    <tr>
+      <td><strong>Fuzzy</strong></td>
+      <td>0 到 1（程度）</td>
+      <td>0.7（比较热）</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ==================== SECTION 7: 常见错误 ==================== -->
+<div class="section">
+  <h2>⚠️ 常见错误（必须避免！）</h2>
+  
+  <h3>Gradient Descent</h3>
+  <ul style="font-size: 15px; color: #e74c3c;">
+    <li>❌ 误差算反了：应该是 ŷ - y，不是 y - ŷ</li>
+    <li>❌ 忘记除以 n（数据点个数）</li>
+    <li>❌ 更新时加号变减号（应该是减）</li>
+    <li>❌ Learning Rate 忘记乘</li>
+    <li>❌ 梯度对 a 的计算忘记乘 xᵢ</li>
+  </ul>
+  
+  <h3>Normal Equation</h3>
+  <ul style="font-size: 15px; color: #e74c3c;">
+    <li>❌ 矩阵大小不匹配就相乘</li>
+    <li>❌ 行列式计算错误（ad - bc，不是 ad + bc）</li>
+    <li>❌ 矩阵求逆时对角元素没交换</li>
+  </ul>
+  
+  <h3>Fuzzy Logic</h3>
+  <ul style="font-size: 15px; color: #e74c3c;">
+    <li>❌ 区间判断错误（上升/下降/平顶/外部）</li>
+    <li>❌ AND 用 MAX（应该用 MIN）</li>
+    <li>❌ Centroid 分子分母算错</li>
+    <li>❌ 梯形平顶区间忘记 μ = 1</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 8: 考试策略 ==================== -->
+<div class="section" style="background: #e8f5e9;">
+  <h2>🎯 考试策略</h2>
+  
+  <h3>时间分配（假设 50 分钟）</h3>
+  <ul style="font-size: 15px;">
+    <li>读题 + 分配时间：3-5 分钟</li>
+    <li>Question 1：20-22 分钟</li>
+    <li>Question 2：20-22 分钟</li>
+    <li>检查：3-5 分钟</li>
+  </ul>
+  
+  <h3>做题顺序</h3>
+  <ol style="font-size: 15px;">
+    <li>先做最熟悉的题</li>
+    <li>再做需要计算的题</li>
+    <li>最后检查答案</li>
+  </ol>
+  
+  <h3>答题技巧</h3>
+  <ul style="font-size: 15px;">
+    <li>✅ 写清楚步骤（即使答案错了，步骤对也有分）</li>
+    <li>✅ 检查单位和符号（特别是正负号）</li>
+    <li>✅ 不要在一道题上花太久</li>
+    <li>✅ 用铅笔（方便修改）</li>
+  </ul>
+</div>
+
+<div class="important" style="text-align: center; font-size: 18px;">
+  <p>🌙 <strong>睡前看完这个，明天考试加油！</strong> 💪</p>
+  <p>记住：理解 > 记忆，冷静 > 紧张</p>
+</div>
+
+</body>
+</html>

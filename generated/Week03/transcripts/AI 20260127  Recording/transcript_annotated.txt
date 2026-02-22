@@ -1,0 +1,1756 @@
+[00:00:00.430] [UNKNOWN] the dimension of the reduction.
+[00:00:03.009] [UNKNOWN] So, yeah, this question.
+[00:00:05.410] [UNKNOWN] Now, if you have more time than I do,
+[00:00:07.730] [UNKNOWN] why is it even bigger?
+[00:00:09.949] [UNKNOWN] Because you can't show more than 3D, right?
+[00:00:13.410] [UNKNOWN] So, maximum 3D, you can.
+[00:00:15.869] [UNKNOWN] X, Y, Z.
+[00:00:17.910] [UNKNOWN] One way is to show the features
+[00:00:21.510] [UNKNOWN] that make it the most important feature,
+[00:00:30.850] [UNKNOWN] which we call as my hands,
+[00:00:33.229] [UNKNOWN] which is the wings.
+[00:00:35.090] [UNKNOWN] The other right way is each other's reduction.
+[00:00:39.210] [UNKNOWN] What does it mean?
+[00:00:40.450] [UNKNOWN] It means that you have 100 people.
+[00:00:43.710] [UNKNOWN] I mean, you have 100 people.
+[00:00:45.770] [UNKNOWN] And you bring those under the feature.
+[00:00:48.250] [UNKNOWN] If you make a mistake,
+[00:00:50.789] [UNKNOWN] that means that their values are going to change
+[00:00:53.990] [UNKNOWN] because all the dimensions are real values.
+[00:01:02.009] [UNKNOWN] But at the end,
+[00:01:04.510] [UNKNOWN] like that transform,
+[00:01:06.170] [UNKNOWN] they work.
+[00:01:08.750] [UNKNOWN] This one is called feature reduction.
+[00:01:12.109] [UNKNOWN] Okay?
+[00:01:12.609] [UNKNOWN] So, feature selection means that
+[00:01:14.170] [UNKNOWN] you keep the data set as is,
+[00:01:16.290] [UNKNOWN] just set a tree of those,
+[00:01:18.269] [UNKNOWN] and then you show the other ways
+[00:01:21.430] [UNKNOWN] using feature reduction.
+[00:01:25.590] [UNKNOWN] How do you do it?
+[00:01:26.609] [UNKNOWN] And keeping all the, let's say,
+[00:01:30.349] [UNKNOWN] the three dimensions.
+[00:01:34.409] [UNKNOWN] In the first method,
+[00:01:36.450] [UNKNOWN] like if you would have the data,
+[00:01:37.969] [UNKNOWN] you see the original piece,
+[00:01:40.010] [UNKNOWN] but only see each other in the future.
+[00:01:42.530] [UNKNOWN] But in the second method,
+[00:01:45.109] [UNKNOWN] if you visualize,
+[00:01:48.090] [UNKNOWN] your originality is not changed.
+[00:01:50.569] [UNKNOWN] Okay.
+[00:01:50.870] [UNKNOWN] Because they are in other series.
+[00:01:53.569] [UNKNOWN] Okay.
+[00:01:54.790] [UNKNOWN] So, in the first method,
+[00:01:56.310] [UNKNOWN] for example, I want to do Gluster.
+[00:01:58.290] [UNKNOWN] I still use all the features to Gluster,
+[00:02:00.609] [UNKNOWN] but just to visualize, I select a few of them, right?
+[00:02:03.930] [UNKNOWN] If you are just talking about the visualization,
+[00:02:07.390] [UNKNOWN] yes.
+[00:02:08.569] [UNKNOWN] For visualization, you cancel anything more than three.
+[00:02:14.849] [UNKNOWN] But sometimes you do feature reduction,
+[00:02:18.050] [UNKNOWN] or feature, let's say,
+[00:02:22.310] [UNKNOWN] selection for modeling.
+[00:02:24.430] [UNKNOWN] Okay.
+[00:02:25.310] [UNKNOWN] For modeling.
+[00:02:26.330] [UNKNOWN] That could be different.
+[00:02:28.150] [UNKNOWN] Okay.
+[00:02:28.370] [UNKNOWN] That means that your radius,
+[00:02:31.150] [UNKNOWN] you don't want to make your digitalization.
+[00:02:36.580] [UNKNOWN] In terms of the modeling,
+[00:02:41.039] [UNKNOWN] sometimes maybe you can do reduction,
+[00:02:43.719] [UNKNOWN] or selection,
+[00:02:45.419] [UNKNOWN] but you have three dimensions.
+[00:02:49.259] [UNKNOWN] Okay.
+[00:02:51.860] [UNKNOWN] Okay.
+[00:02:52.139] [UNKNOWN] Thank you.
+[00:02:52.860] [UNKNOWN] So, the aim is here.
+[00:02:54.960] [UNKNOWN] Okay.
+[00:02:57.120] [UNKNOWN] So, I think last time,
+[00:02:59.560] [UNKNOWN] we discussed about the two important
+[00:03:02.319] [UNKNOWN] paradigms of the human race.
+[00:03:06.000] [UNKNOWN] One is called the,
+[00:03:09.219] [UNKNOWN] what is called the,
+[00:03:13.099] [UNKNOWN] and the other one is called
+[00:03:15.560] [UNKNOWN] uncivilized.
+[00:03:16.580] [UNKNOWN] Right?
+[00:03:17.639] [UNKNOWN] So,
+[00:03:21.169] [UNKNOWN] and for the supervised dimension that,
+[00:03:24.129] [UNKNOWN] like our data has labels,
+[00:03:27.960] [UNKNOWN] and
+[00:03:30.219] [UNKNOWN] I'm going to focus a little bit more
+[00:03:32.599] [UNKNOWN] about the supervised.
+[00:03:35.439] [UNKNOWN] So, in general,
+[00:03:36.479] [UNKNOWN] all supervised tasks have the
+[00:03:37.919] [UNKNOWN] recognition problem or classification.
+[00:03:40.620] [UNKNOWN] So, what is the classification?
+[00:03:42.199] [UNKNOWN] Classification means that we have some data like this,
+[00:03:45.539] [UNKNOWN] and we want to classify it to class.
+[00:03:48.580] [UNKNOWN] Red and green.
+[00:03:50.340] [UNKNOWN] Right?
+[00:03:50.840] [UNKNOWN] Like class A, class B.
+[00:03:52.620] [UNKNOWN] Who will really want to have the class.
+[00:03:56.180] [UNKNOWN] But if our,
+[00:03:58.060] [UNKNOWN] so here,
+[00:03:59.879] [UNKNOWN] our target values are zero and one.
+[00:04:03.060] [UNKNOWN] Okay.
+[00:04:03.560] [UNKNOWN] Well, maybe class one, two, three.
+[00:04:05.819] [UNKNOWN] Okay.
+[00:04:06.620] [UNKNOWN] It's not like classes.
+[00:04:07.979] [UNKNOWN] But this one is a binary classification.
+[00:04:11.199] [UNKNOWN] Sometimes our data
+[00:04:12.599] [UNKNOWN] is not the,
+[00:04:14.060] [UNKNOWN] only classes.
+[00:04:16.500] [UNKNOWN] But you want to predict
+[00:04:19.680] [UNKNOWN] value like Y,
+[00:04:22.279] [UNKNOWN] which is the,
+[00:04:24.490] [UNKNOWN] for example,
+[00:04:26.500] [UNKNOWN] a price house.
+[00:04:29.060] [UNKNOWN] Based on the area,
+[00:04:31.899] [UNKNOWN] you want to predict the
+[00:04:33.899] [UNKNOWN] price of that property.
+[00:04:36.579] [UNKNOWN] Okay.
+[00:04:37.360] [UNKNOWN] Here,
+[00:04:38.040] [UNKNOWN] Y is not a class.
+[00:04:39.720] [UNKNOWN] It's not zero, one.
+[00:04:40.639] [UNKNOWN] It is a real number,
+[00:04:42.560] [UNKNOWN] or maybe integer number.
+[00:04:44.360] [UNKNOWN] Okay.
+[00:04:44.779] [UNKNOWN] That's called regression problem.
+[00:04:47.240] [UNKNOWN] So, as you see here,
+[00:04:49.319] [UNKNOWN] in classification problems,
+[00:04:51.259] [UNKNOWN] our target right,
+[00:04:53.120] [UNKNOWN] some classes,
+[00:04:54.220] [UNKNOWN] class one, class two.
+[00:04:55.680] [UNKNOWN] But here,
+[00:04:56.639] [UNKNOWN] it wants two real numbers.
+[00:04:59.439] [UNKNOWN] Okay.
+[00:05:00.040] [UNKNOWN] Like flow.
+[00:05:02.579] [UNKNOWN] So,
+[00:05:03.639] [UNKNOWN] I think we have,
+[00:05:05.100] [UNKNOWN] to example here,
+[00:05:06.620] [UNKNOWN] I'm not sure like,
+[00:05:07.800] [UNKNOWN] to discuss about this last time,
+[00:05:09.660] [UNKNOWN] but,
+[00:05:09.839] [UNKNOWN] and it's going once again.
+[00:05:12.839] [UNKNOWN] So, what we have,
+[00:05:15.259] [UNKNOWN] we have different properties
+[00:05:16.959] [UNKNOWN] in our data sets.
+[00:05:18.939] [UNKNOWN] And we want to see that,
+[00:05:20.220] [UNKNOWN] can I predict that,
+[00:05:21.899] [UNKNOWN] for each properties,
+[00:05:23.839] [UNKNOWN] we have some features,
+[00:05:25.480] [UNKNOWN] like a square footage,
+[00:05:27.720] [UNKNOWN] number of bedrooms,
+[00:05:29.040] [UNKNOWN] does it have swimming pool or not.
+[00:05:33.040] [UNKNOWN] And,
+[00:05:33.959] [UNKNOWN] what is the house price
+[00:05:35.459] [UNKNOWN] in the USA?
+[00:05:37.100] [UNKNOWN] Right.
+[00:05:38.459] [UNKNOWN] Okay.
+[00:05:39.360] [UNKNOWN] So,
+[00:05:41.000] [UNKNOWN] and therefore,
+[00:05:41.939] [UNKNOWN] the second observation,
+[00:05:43.139] [UNKNOWN] the second property.
+[00:05:45.000] [UNKNOWN] Okay.
+[00:05:46.199] [UNKNOWN] And,
+[00:05:49.790] [UNKNOWN] and so on and so forth.
+[00:05:53.629] [UNKNOWN] Okay.
+[00:05:54.410] [UNKNOWN] So,
+[00:05:55.370] [UNKNOWN] here we call this guys as X,
+[00:05:58.050] [UNKNOWN] our features,
+[00:05:59.050] [UNKNOWN] and this guy has a target.
+[00:06:00.889] [UNKNOWN] And as you see,
+[00:06:01.850] [UNKNOWN] it's a real number.
+[00:06:03.569] [UNKNOWN] So, it's,
+[00:06:04.410] [UNKNOWN] it's not classification, right.
+[00:06:06.649] [UNKNOWN] It is a regression.
+[00:06:16.689] [UNKNOWN] As sent in here,
+[00:06:18.129] [UNKNOWN] I'm not sure it's readable
+[00:06:19.149] [UNKNOWN] for the people at the back.
+[00:06:23.029] [UNKNOWN] Again,
+[00:06:24.009] [UNKNOWN] like,
+[00:06:24.529] [UNKNOWN] suppose that we want to,
+[00:06:27.110] [UNKNOWN] we have a data set,
+[00:06:29.509] [UNKNOWN] it has some features for each patient,
+[00:06:32.410] [UNKNOWN] but some information,
+[00:06:33.689] [UNKNOWN] like agent,
+[00:06:34.790] [UNKNOWN] patient,
+[00:06:36.230] [UNKNOWN] gender,
+[00:06:38.050] [UNKNOWN] admission type,
+[00:06:39.790] [UNKNOWN] diagnosis category,
+[00:06:41.389] [UNKNOWN] like, for example,
+[00:06:43.029] [UNKNOWN] ages 75,
+[00:06:44.529] [UNKNOWN] gender is made,
+[00:06:46.189] [UNKNOWN] admission type is elective,
+[00:06:47.949] [UNKNOWN] it's not the emergency, right.
+[00:06:50.610] [UNKNOWN] Okay.
+[00:06:51.009] [UNKNOWN] So,
+[00:06:51.230] [UNKNOWN] and then,
+[00:06:53.610] [UNKNOWN] initial diagnosis is,
+[00:06:55.649] [UNKNOWN] are diseases.
+[00:06:57.149] [UNKNOWN] Okay.
+[00:06:58.089] [UNKNOWN] So,
+[00:06:59.810] [UNKNOWN] for the second patient,
+[00:07:02.750] [UNKNOWN] 22,
+[00:07:04.649] [UNKNOWN] male,
+[00:07:06.110] [UNKNOWN] like,
+[00:07:06.230] [UNKNOWN] admission type is emergency,
+[00:07:07.790] [UNKNOWN] and injury,
+[00:07:08.910] [UNKNOWN] is a diagnosis category.
+[00:07:11.230] [UNKNOWN] So,
+[00:07:11.430] [UNKNOWN] for each observations,
+[00:07:14.490] [UNKNOWN] for each instance,
+[00:07:16.310] [UNKNOWN] can you just
+[00:07:18.870] [UNKNOWN] focus here, please?
+[00:07:22.860] [UNKNOWN] Thank you.
+[00:07:23.980] [UNKNOWN] For each instance,
+[00:07:25.279] [UNKNOWN] we want to
+[00:07:26.699] [UNKNOWN] check the length of the stay in the hospital,
+[00:07:29.660] [UNKNOWN] how many days.
+[00:07:30.980] [UNKNOWN] So, if I have an observation like this,
+[00:07:34.120] [UNKNOWN] it's going to be 4.6.
+[00:07:37.089] [UNKNOWN] If I have such a thing,
+[00:07:38.329] [UNKNOWN] it's emergency,
+[00:07:39.490] [UNKNOWN] 2.6,
+[00:07:40.290] [UNKNOWN] and that's one as well.
+[00:07:42.189] [UNKNOWN] Then, what is the idea?
+[00:07:43.990] [UNKNOWN] We have a data set,
+[00:07:45.069] [UNKNOWN] we data like this.
+[00:07:46.769] [UNKNOWN] Then,
+[00:07:47.589] [UNKNOWN] the trainer model,
+[00:07:49.149] [UNKNOWN] based on this,
+[00:07:50.670] [UNKNOWN] you can then,
+[00:07:51.310] [UNKNOWN] suppose that,
+[00:07:51.970] [UNKNOWN] and the patient,
+[00:07:53.089] [UNKNOWN] I go to the hospital,
+[00:07:54.589] [UNKNOWN] and based on my situation,
+[00:07:56.389] [UNKNOWN] or my status,
+[00:07:57.910] [UNKNOWN] we're going to check that,
+[00:07:59.569] [UNKNOWN] how many days of work.
+[00:08:00.850] [UNKNOWN] The model,
+[00:08:01.589] [UNKNOWN] we're going to predict that,
+[00:08:02.970] [UNKNOWN] what will be the length of stay.
+[00:08:05.449] [UNKNOWN] Okay.
+[00:08:06.569] [UNKNOWN] So, the values here, again,
+[00:08:08.230] [UNKNOWN] are,
+[00:08:10.790] [UNKNOWN] oh,
+[00:08:14.290] [UNKNOWN] maybe seven days,
+[00:08:16.250] [UNKNOWN] I mean,
+[00:08:16.509] [UNKNOWN] six days,
+[00:08:18.129] [UNKNOWN] like,
+[00:08:18.670] [UNKNOWN] some hours.
+[00:08:20.189] [UNKNOWN] That's why,
+[00:08:21.170] [UNKNOWN] it's not the classification.
+[00:08:23.350] [UNKNOWN] That was something like,
+[00:08:24.649] [UNKNOWN] one, two, three, four.
+[00:08:25.790] [UNKNOWN] Again, like,
+[00:08:27.410] [UNKNOWN] okay.
+[00:08:28.050] [UNKNOWN] So,
+[00:08:29.829] [UNKNOWN] this is the example,
+[00:08:32.409] [UNKNOWN] and,
+[00:08:41.059] [UNKNOWN] so,
+[00:08:43.879] [UNKNOWN] you can color this one,
+[00:08:45.080] [UNKNOWN] or,
+[00:08:45.220] [UNKNOWN] what is this one?
+[00:08:50.039] [UNKNOWN] Okay.
+[00:08:51.379] [UNKNOWN] Like,
+[00:08:51.759] [UNKNOWN] suppose that we have,
+[00:08:54.340] [UNKNOWN] different,
+[00:08:55.559] [UNKNOWN] data sets, right?
+[00:08:56.980] [UNKNOWN] All of these,
+[00:08:57.840] [UNKNOWN] like this,
+[00:08:59.419] [UNKNOWN] or,
+[00:09:00.379] [UNKNOWN] length of stay.
+[00:09:02.960] [UNKNOWN] Okay.
+[00:09:05.240] [UNKNOWN] So, this one is,
+[00:09:07.399] [UNKNOWN] another example,
+[00:09:08.980] [UNKNOWN] and,
+[00:09:09.759] [UNKNOWN] here,
+[00:09:11.059] [UNKNOWN] we want to know that,
+[00:09:12.320] [UNKNOWN] what is the risk,
+[00:09:13.500] [UNKNOWN] based on the job card,
+[00:09:14.940] [UNKNOWN] a smoker,
+[00:09:16.820] [UNKNOWN] how else wants to say,
+[00:09:18.539] [UNKNOWN] give some,
+[00:09:20.159] [UNKNOWN] some score,
+[00:09:21.759] [UNKNOWN] to the risk,
+[00:09:23.179] [UNKNOWN] right?
+[00:09:24.000] [UNKNOWN] Like,
+[00:09:24.179] [UNKNOWN] something one,
+[00:09:25.039] [UNKNOWN] two,
+[00:09:25.100] [UNKNOWN] three, four, five.
+[00:09:26.700] [UNKNOWN] Like,
+[00:09:27.000] [UNKNOWN] higher, maybe,
+[00:09:29.039] [UNKNOWN] more risky.
+[00:09:30.899] [UNKNOWN] Okay.
+[00:09:31.299] [UNKNOWN] For example,
+[00:09:32.220] [UNKNOWN] this job is not too much risky.
+[00:09:35.240] [UNKNOWN] This one,
+[00:09:36.019] [UNKNOWN] this one is not too much risky,
+[00:09:38.059] [UNKNOWN] but,
+[00:09:39.059] [UNKNOWN] like,
+[00:09:39.679] [UNKNOWN] the others are getting.
+[00:09:41.320] [UNKNOWN] So, here,
+[00:09:42.639] [UNKNOWN] it is our target,
+[00:09:43.720] [UNKNOWN] this class,
+[00:09:44.299] [UNKNOWN] um,
+[00:09:44.879] [UNKNOWN] integer,
+[00:09:45.840] [UNKNOWN] some categories,
+[00:09:49.070] [UNKNOWN] it's the classification.
+[00:09:51.149] [UNKNOWN] Okay.
+[00:09:51.889] [UNKNOWN] What this one is saying,
+[00:09:53.929] [UNKNOWN] but it depends on,
+[00:09:55.190] [UNKNOWN] what is our problem,
+[00:09:56.710] [UNKNOWN] ethics,
+[00:09:57.350] [UNKNOWN] migration problem,
+[00:09:59.860] [UNKNOWN] ethics,
+[00:10:00.220] [UNKNOWN] execution problem,
+[00:10:02.200] [UNKNOWN] we can create different models,
+[00:10:07.690] [UNKNOWN] what I think is that,
+[00:10:09.149] [UNKNOWN] we can get our data set,
+[00:10:11.269] [UNKNOWN] and train a model.
+[00:10:13.549] [UNKNOWN] There are different ways,
+[00:10:15.309] [UNKNOWN] maybe our model is decision-free,
+[00:10:18.350] [UNKNOWN] maybe it's a linear regression,
+[00:10:20.850] [UNKNOWN] maybe it's neural network,
+[00:10:23.210] [UNKNOWN] okay,
+[00:10:23.750] [UNKNOWN] and so on and so forth.
+[00:10:25.970] [UNKNOWN] One of these models,
+[00:10:27.070] [UNKNOWN] as I mentioned,
+[00:10:27.710] [UNKNOWN] is neural network,
+[00:10:29.789] [UNKNOWN] and what is this neural network?
+[00:10:31.809] [UNKNOWN] You cannot discuss in detail about that one,
+[00:10:34.769] [UNKNOWN] but,
+[00:10:35.870] [UNKNOWN] we have some inputs,
+[00:10:37.250] [UNKNOWN] suppose the green ones,
+[00:10:39.450] [UNKNOWN] are the features,
+[00:10:41.690] [UNKNOWN] okay,
+[00:10:42.330] [UNKNOWN] like age of person,
+[00:10:48.019] [UNKNOWN] initial diagnosis,
+[00:10:50.159] [UNKNOWN] and so on and so forth,
+[00:10:51.679] [UNKNOWN] and the output,
+[00:10:53.200] [UNKNOWN] is how many days can I stay at?
+[00:10:57.159] [UNKNOWN] So,
+[00:10:58.740] [UNKNOWN] so,
+[00:10:59.039] [UNKNOWN] this is called input layer,
+[00:11:01.179] [UNKNOWN] and the output layer,
+[00:11:03.320] [UNKNOWN] is something that the model,
+[00:11:06.690] [UNKNOWN] meanwhile,
+[00:11:07.529] [UNKNOWN] between these two,
+[00:11:08.450] [UNKNOWN] we might have different layers,
+[00:11:11.090] [UNKNOWN] one layer,
+[00:11:11.789] [UNKNOWN] two layer,
+[00:11:12.690] [UNKNOWN] four,
+[00:11:13.029] [UNKNOWN] ten layers,
+[00:11:13.809] [UNKNOWN] okay,
+[00:11:14.370] [UNKNOWN] and those are called VW layers,
+[00:11:17.620] [UNKNOWN] so some of those,
+[00:11:20.179] [UNKNOWN] consider this one as there,
+[00:11:22.899] [UNKNOWN] something like that.
+[00:11:24.799] [UNKNOWN] If we have too much layers,
+[00:11:27.000] [UNKNOWN] it's called input layer,
+[00:11:28.620] [UNKNOWN] okay,
+[00:11:29.039] [UNKNOWN] rather than one VW layer,
+[00:11:30.639] [UNKNOWN] if you have too much layer,
+[00:11:31.940] [UNKNOWN] it's called V2.
+[00:11:33.600] [UNKNOWN] Okay,
+[00:11:34.799] [UNKNOWN] V2.
+[00:11:54.570] [UNKNOWN] Model is green,
+[00:11:56.090] [UNKNOWN] it takes some input,
+[00:11:57.529] [UNKNOWN] and maps that one to some output.
+[00:12:00.009] [UNKNOWN] Okay,
+[00:12:00.490] [UNKNOWN] here what's happening,
+[00:12:01.669] [UNKNOWN] we don't know.
+[00:12:03.230] [UNKNOWN] Okay,
+[00:12:04.149] [UNKNOWN] so,
+[00:12:05.330] [UNKNOWN] in other words,
+[00:12:06.269] [UNKNOWN] this part is just a function for us,
+[00:12:09.169] [UNKNOWN] like a function, right,
+[00:12:10.370] [UNKNOWN] if it's equal wide,
+[00:12:12.730] [UNKNOWN] alright,
+[00:12:13.090] [UNKNOWN] so this is our edge.
+[00:12:15.169] [UNKNOWN] If it takes edge,
+[00:12:16.350] [UNKNOWN] I can write that one to,
+[00:12:17.509] [UNKNOWN] let me know if you have this slide.
+[00:13:07.750] [UNKNOWN] Okay,
+[00:13:09.850] [UNKNOWN] so,
+[00:13:12.350] [UNKNOWN] in other words,
+[00:13:13.769] [UNKNOWN] we have a model here,
+[00:13:15.149] [UNKNOWN] this model can be normal, right,
+[00:13:17.690] [UNKNOWN] and it takes our features,
+[00:13:19.450] [UNKNOWN] convert that one to some ones.
+[00:13:22.590] [UNKNOWN] Each model,
+[00:13:23.730] [UNKNOWN] or,
+[00:13:24.590] [UNKNOWN] like a model sometimes called the function,
+[00:13:26.990] [UNKNOWN] or,
+[00:13:28.129] [UNKNOWN] we call that one hypothesis,
+[00:13:30.769] [UNKNOWN] okay,
+[00:13:31.149] [UNKNOWN] so hypothesis simply means the function.
+[00:13:33.909] [UNKNOWN] So,
+[00:13:34.549] [UNKNOWN] as you see here,
+[00:13:35.649] [UNKNOWN] this model of this function
+[00:13:37.549] [UNKNOWN] takes X,
+[00:13:40.029] [UNKNOWN] I convert that one to R.
+[00:13:48.690] [UNKNOWN] We have different models,
+[00:13:50.309] [UNKNOWN] it could be normal network,
+[00:13:51.830] [UNKNOWN] or it could be decision trees.
+[00:13:54.350] [UNKNOWN] Decision tree is a simple model.
+[00:13:56.870] [UNKNOWN] You just say that,
+[00:13:57.970] [UNKNOWN] okay, for example,
+[00:14:00.990] [UNKNOWN] let's say some of the,
+[00:14:04.049] [UNKNOWN] some of the rules.
+[00:14:06.029] [UNKNOWN] If X is less than this,
+[00:14:08.470] [UNKNOWN] then check,
+[00:14:11.070] [UNKNOWN] X1 is less than,
+[00:14:12.570] [UNKNOWN] for example,
+[00:14:13.090] [UNKNOWN] is there a show,
+[00:14:14.029] [UNKNOWN] check X2,
+[00:14:15.429] [UNKNOWN] if X is less than something,
+[00:14:17.769] [UNKNOWN] and then check the others, right,
+[00:14:20.110] [UNKNOWN] and then I then say that,
+[00:14:21.350] [UNKNOWN] based on these rules,
+[00:14:22.909] [UNKNOWN] the prediction of the model
+[00:14:24.389] [UNKNOWN] gonna be this one.
+[00:14:28.269] [UNKNOWN] Okay,
+[00:14:29.710] [UNKNOWN] so,
+[00:14:35.279] [UNKNOWN] I think I can,
+[00:14:37.620] [UNKNOWN] yeah, okay,
+[00:14:38.460] [UNKNOWN] so I can explain here,
+[00:14:53.840] [UNKNOWN] like,
+[00:14:56.789] [UNKNOWN] each of this,
+[00:14:57.629] [UNKNOWN] I mean,
+[00:15:00.529] [UNKNOWN] this F is a function, right,
+[00:15:02.850] [UNKNOWN] so that function,
+[00:15:04.169] [UNKNOWN] suppose that that function is a linear function,
+[00:15:07.370] [UNKNOWN] something like this, okay,
+[00:15:11.600] [UNKNOWN] and here,
+[00:15:12.379] [UNKNOWN] what is important for us,
+[00:15:14.580] [UNKNOWN] is that
+[00:15:16.159] [UNKNOWN] this slope,
+[00:15:20.070] [UNKNOWN] still called the function,
+[00:15:21.889] [UNKNOWN] and it's intersection, right,
+[00:15:24.850] [UNKNOWN] so,
+[00:15:26.549] [UNKNOWN] for example,
+[00:15:27.789] [UNKNOWN] suppose that we have some points,
+[00:15:30.049] [UNKNOWN] like just one point,
+[00:15:31.110] [UNKNOWN] we have some points,
+[00:15:33.549] [UNKNOWN] and then,
+[00:15:34.549] [UNKNOWN] for those points,
+[00:15:35.509] [UNKNOWN] I feed this line,
+[00:15:38.409] [UNKNOWN] okay,
+[00:15:39.590] [UNKNOWN] and that line is,
+[00:15:40.750] [UNKNOWN] or that function is 1.8X plus 1,
+[00:15:44.590] [UNKNOWN] okay,
+[00:15:45.750] [UNKNOWN] or maybe I use just this one,
+[00:15:48.309] [UNKNOWN] or maybe I use this function,
+[00:15:51.230] [UNKNOWN] either of these functions,
+[00:15:52.529] [UNKNOWN] this could be
+[00:15:54.370] [UNKNOWN] one hyper-presence,
+[00:15:57.169] [UNKNOWN] but the correct one is that,
+[00:15:58.850] [UNKNOWN] the one which exactly
+[00:16:00.850] [UNKNOWN] hit the points that I have.
+[00:16:03.330] [UNKNOWN] In other words,
+[00:16:04.649] [UNKNOWN] if it's not exactly hit,
+[00:16:07.250] [UNKNOWN] maybe the error of the points
+[00:16:10.990] [UNKNOWN] and the model should be minimal.
+[00:16:15.529] [UNKNOWN] Okay, so,
+[00:16:16.950] [UNKNOWN] what I want to mention is that
+[00:16:19.970] [UNKNOWN] each of these lines
+[00:16:21.549] [UNKNOWN] are determined by two parameters.
+[00:16:25.350] [UNKNOWN] One parameter is theta zero,
+[00:16:27.389] [UNKNOWN] and the other one is theta one,
+[00:16:29.830] [UNKNOWN] because zero is the slope
+[00:16:32.509] [UNKNOWN] of this function,
+[00:16:34.269] [UNKNOWN] sorry,
+[00:16:34.710] [UNKNOWN] theta one is the slope of this function,
+[00:16:36.730] [UNKNOWN] how much is it steep,
+[00:16:38.309] [UNKNOWN] how much is like that,
+[00:16:40.049] [UNKNOWN] and the other one shows that,
+[00:16:41.509] [UNKNOWN] how much is,
+[00:16:42.909] [UNKNOWN] it differs from the origin,
+[00:16:46.610] [UNKNOWN] okay?
+[00:16:48.250] [UNKNOWN] So,
+[00:16:49.009] [UNKNOWN] if we know that theta values,
+[00:16:51.830] [UNKNOWN] in other words,
+[00:16:52.429] [UNKNOWN] we can determine what is our function.
+[00:16:56.129] [UNKNOWN] Sometimes,
+[00:16:56.629] [UNKNOWN] not the linear function,
+[00:16:58.950] [UNKNOWN] it can be,
+[00:17:00.409] [UNKNOWN] you see,
+[00:17:00.950] [UNKNOWN] it is not a linear function, right?
+[00:17:02.750] [UNKNOWN] So, we have polynomial here.
+[00:17:06.049] [UNKNOWN] It's x one,
+[00:17:07.309] [UNKNOWN] x two,
+[00:17:08.069] [UNKNOWN] x one score,
+[00:17:09.509] [UNKNOWN] x three score,
+[00:17:10.769] [UNKNOWN] and so on and so forth.
+[00:17:12.130] [UNKNOWN] It's not like a linear function,
+[00:17:14.430] [UNKNOWN] it's like a,
+[00:17:16.430] [UNKNOWN] let's say,
+[00:17:17.690] [UNKNOWN] a function like,
+[00:17:18.490] [UNKNOWN] but this one is just a linear function,
+[00:17:21.049] [UNKNOWN] like a,
+[00:17:23.349] [UNKNOWN] as you see,
+[00:17:24.089] [UNKNOWN] but this one is not,
+[00:17:25.049] [UNKNOWN] why?
+[00:17:26.069] [UNKNOWN] Because we have a square,
+[00:17:27.230] [UNKNOWN] and also,
+[00:17:28.150] [UNKNOWN] we have a square values here.
+[00:17:30.369] [UNKNOWN] It's kind of like,
+[00:17:31.750] [UNKNOWN] a polynomial,
+[00:17:33.109] [UNKNOWN] a deeply true,
+[00:17:35.329] [UNKNOWN] so,
+[00:17:38.660] [UNKNOWN] the other thing is,
+[00:17:41.799] [UNKNOWN] I mean,
+[00:17:42.799] [UNKNOWN] it could be something like,
+[00:17:44.519] [UNKNOWN] this,
+[00:17:49.029] [UNKNOWN] x,
+[00:17:54.250] [UNKNOWN] I'm trying,
+[00:17:57.809] [UNKNOWN] we have little points here,
+[00:18:00.049] [UNKNOWN] I can,
+[00:18:00.430] [UNKNOWN] I can put theta one,
+[00:18:02.349] [UNKNOWN] like this one,
+[00:18:03.990] [UNKNOWN] which is,
+[00:18:04.910] [UNKNOWN] for example,
+[00:18:06.309] [UNKNOWN] two,
+[00:18:06.630] [UNKNOWN] x,
+[00:18:08.240] [UNKNOWN] plus,
+[00:18:09.119] [UNKNOWN] or maybe,
+[00:18:09.819] [UNKNOWN] rather than this function,
+[00:18:12.720] [UNKNOWN] I can,
+[00:18:14.980] [UNKNOWN] for example,
+[00:18:16.440] [UNKNOWN] a nonlinear function,
+[00:18:18.119] [UNKNOWN] like this,
+[00:18:20.480] [UNKNOWN] which comes from,
+[00:18:22.019] [UNKNOWN] for example,
+[00:18:23.299] [UNKNOWN] three,
+[00:18:23.680] [UNKNOWN] x,
+[00:18:24.160] [UNKNOWN] two,
+[00:18:24.420] [UNKNOWN] plus five,
+[00:18:26.880] [UNKNOWN] right?
+[00:18:27.640] [UNKNOWN] This one is,
+[00:18:29.519] [UNKNOWN] like it's not there,
+[00:18:31.220] [UNKNOWN] linear,
+[00:18:32.579] [UNKNOWN] it's like a,
+[00:18:34.000] [UNKNOWN] there's a square,
+[00:18:35.180] [UNKNOWN] or,
+[00:18:35.940] [UNKNOWN] maybe,
+[00:18:37.220] [UNKNOWN] more than one,
+[00:18:38.339] [UNKNOWN] but this one is,
+[00:18:40.410] [UNKNOWN] I know that,
+[00:18:41.910] [UNKNOWN] if I use this,
+[00:18:43.529] [UNKNOWN] nonlinear function,
+[00:18:45.470] [UNKNOWN] it can be better,
+[00:18:46.670] [UNKNOWN] for this problem.
+[00:18:48.430] [UNKNOWN] Okay,
+[00:18:48.930] [UNKNOWN] so,
+[00:18:49.289] [UNKNOWN] I'm just example.
+[00:18:51.349] [UNKNOWN] So,
+[00:18:52.109] [UNKNOWN] this is the one you mentioned,
+[00:18:53.369] [UNKNOWN] same thing,
+[00:18:54.210] [UNKNOWN] like,
+[00:18:54.470] [UNKNOWN] supposedly,
+[00:18:54.950] [UNKNOWN] rather than x,
+[00:18:56.890] [UNKNOWN] you have x1 and x2,
+[00:18:58.809] [UNKNOWN] if it's more than,
+[00:19:01.900] [UNKNOWN] one teacher,
+[00:19:03.519] [UNKNOWN] rather than in line,
+[00:19:05.339] [UNKNOWN] it's gonna be like a plate.
+[00:19:07.400] [UNKNOWN] Okay?
+[00:19:08.660] [UNKNOWN] If it's a plate,
+[00:19:09.799] [UNKNOWN] it means that that's linear.
+[00:19:11.559] [UNKNOWN] But,
+[00:19:12.000] [UNKNOWN] if it's something like,
+[00:19:14.660] [UNKNOWN] simple,
+[00:19:15.900] [UNKNOWN] right,
+[00:19:16.259] [UNKNOWN] or happy simple,
+[00:19:17.319] [UNKNOWN] it's gonna be nonlinear.
+[00:19:19.539] [UNKNOWN] Okay?
+[00:19:20.680] [UNKNOWN] We're gonna talk about that one.
+[00:19:28.210] [UNKNOWN] So,
+[00:19:28.710] [UNKNOWN] what is important here,
+[00:19:31.009] [UNKNOWN] is that,
+[00:19:32.170] [UNKNOWN] like,
+[00:19:32.630] [UNKNOWN] at the end,
+[00:19:33.230] [UNKNOWN] if I know that,
+[00:19:35.089] [UNKNOWN] the value of people is zero,
+[00:19:36.529] [UNKNOWN] people are one.
+[00:19:41.240] [UNKNOWN] I can understand that,
+[00:19:43.460] [UNKNOWN] right?
+[00:19:47.440] [UNKNOWN] If I just need,
+[00:19:48.900] [UNKNOWN] because you are different one,
+[00:19:50.660] [UNKNOWN] it's gonna be,
+[00:19:52.480] [UNKNOWN] if I have,
+[00:19:53.460] [UNKNOWN] because you're different three,
+[00:19:55.380] [UNKNOWN] it's gonna be,
+[00:19:56.279] [UNKNOWN] something like this.
+[00:19:58.359] [UNKNOWN] And,
+[00:19:59.059] [UNKNOWN] if I add more,
+[00:20:00.859] [UNKNOWN] okay,
+[00:20:01.599] [UNKNOWN] if it is,
+[00:20:02.140] [UNKNOWN] like,
+[00:20:02.700] [UNKNOWN] x3,
+[00:20:04.160] [UNKNOWN] it's gonna be,
+[00:20:05.599] [UNKNOWN] something like,
+[00:20:08.019] [UNKNOWN] a,
+[00:20:09.400] [UNKNOWN] a figure of three.
+[00:20:11.240] [UNKNOWN] Right?
+[00:20:12.039] [UNKNOWN] Like,
+[00:20:12.339] [UNKNOWN] more than,
+[00:20:13.400] [UNKNOWN] normal for this.
+[00:20:15.119] [UNKNOWN] Okay?
+[00:20:16.259] [UNKNOWN] So,
+[00:20:17.700] [UNKNOWN] training is nothing more than
+[00:20:19.559] [UNKNOWN] determining those features,
+[00:20:20.960] [UNKNOWN] those parameters.
+[00:20:27.470] [UNKNOWN] I think this one is the,
+[00:20:28.910] [UNKNOWN] talking about the same.
+[00:20:32.130] [UNKNOWN] What is important here,
+[00:20:33.769] [UNKNOWN] is that,
+[00:20:35.329] [UNKNOWN] like,
+[00:20:35.630] [UNKNOWN] we split our data in two parts.
+[00:20:38.730] [UNKNOWN] One part is called the training data.
+[00:20:41.930] [UNKNOWN] So,
+[00:20:42.549] [UNKNOWN] for example,
+[00:20:43.250] [UNKNOWN] suppose that we want to predict y,
+[00:20:45.769] [UNKNOWN] using x1 and x2.
+[00:20:48.130] [UNKNOWN] We have a couple of data points here,
+[00:20:50.910] [UNKNOWN] like,
+[00:20:51.410] [UNKNOWN] say,
+[00:20:52.250] [UNKNOWN] 10,000 data.
+[00:20:54.029] [UNKNOWN] We take,
+[00:20:54.930] [UNKNOWN] 20% of that one as our test data,
+[00:20:58.250] [UNKNOWN] and 80% as the training.
+[00:21:00.750] [UNKNOWN] We use this part,
+[00:21:02.970] [UNKNOWN] to train the model,
+[00:21:04.329] [UNKNOWN] and the regular edge.
+[00:21:06.490] [UNKNOWN] We can feed this input,
+[00:21:08.950] [UNKNOWN] to predict what would be then,
+[00:21:11.130] [UNKNOWN] because these are the points that we haven't
+[00:21:13.309] [UNKNOWN] involved there in the training.
+[00:21:15.349] [UNKNOWN] So, in other words,
+[00:21:17.390] [UNKNOWN] those are new points for us.
+[00:21:19.349] [UNKNOWN] Those are unseen data.
+[00:21:23.339] [UNKNOWN] Does that make sense?
+[00:21:26.490] [UNKNOWN] Any question?
+[00:21:32.269] [UNKNOWN] Okay.
+[00:21:33.250] [UNKNOWN] So,
+[00:21:37.809] [UNKNOWN] that's what you see here, as that.
+[00:21:39.630] [UNKNOWN] You've already seen some data,
+[00:21:41.769] [UNKNOWN] and we have some unseen data,
+[00:21:44.210] [UNKNOWN] or new data.
+[00:21:45.190] [UNKNOWN] And for this,
+[00:21:46.369] [UNKNOWN] already seen data,
+[00:21:48.089] [UNKNOWN] based on that one,
+[00:21:49.170] [UNKNOWN] we train our models,
+[00:21:50.529] [UNKNOWN] and then we try to predict on new data.
+[00:21:58.339] [UNKNOWN] Okay.
+[00:21:59.559] [UNKNOWN] So,
+[00:22:02.140] [UNKNOWN] I think the guys are,
+[00:22:04.339] [UNKNOWN] talking about the same thing,
+[00:22:06.400] [UNKNOWN] but,
+[00:22:09.059] [UNKNOWN] I will discuss about the microphone.
+[00:22:25.950] [UNKNOWN] I have some slides here,
+[00:22:31.700] [UNKNOWN] like,
+[00:22:32.579] [UNKNOWN] let's say,
+[00:22:33.099] [UNKNOWN] seven, one, two, one,
+[00:22:34.339] [UNKNOWN] five slides I get.
+[00:22:35.759] [UNKNOWN] I can get back to this one,
+[00:22:38.440] [UNKNOWN] and explain what is that.
+[00:22:40.640] [UNKNOWN] So now,
+[00:22:41.900] [UNKNOWN] I'm skipping,
+[00:22:42.700] [UNKNOWN] but I gotta get back.
+[00:22:43.619] [UNKNOWN] It's a simple thing.
+[00:22:46.960] [UNKNOWN] So that's why,
+[00:22:47.779] [UNKNOWN] for me,
+[00:22:48.720] [UNKNOWN] first,
+[00:22:50.099] [UNKNOWN] we can discuss about
+[00:22:53.299] [UNKNOWN] linear regression,
+[00:22:54.980] [UNKNOWN] and then I can get back to that one.
+[00:22:59.509] [UNKNOWN] Okay.
+[00:23:01.269] [UNKNOWN] So,
+[00:23:01.890] [UNKNOWN] the first type of models we are
+[00:23:06.180] [UNKNOWN] going to learn
+[00:23:07.859] [UNKNOWN] is called linear regression.
+[00:23:11.500] [UNKNOWN] So,
+[00:23:11.940] [UNKNOWN] what is that?
+[00:23:12.960] [UNKNOWN] That means that,
+[00:23:14.220] [UNKNOWN] you want to predict
+[00:23:16.799] [UNKNOWN] some target values,
+[00:23:18.839] [UNKNOWN] and what are the float numbers?
+[00:23:20.700] [UNKNOWN] So,
+[00:23:20.920] [UNKNOWN] the problem is the regression.
+[00:23:24.180] [UNKNOWN] Okay.
+[00:23:25.319] [UNKNOWN] And then,
+[00:23:26.220] [UNKNOWN] you want to see that,
+[00:23:29.220] [UNKNOWN] can you feed a line
+[00:23:31.839] [UNKNOWN] for those points?
+[00:23:34.119] [UNKNOWN] Something like this,
+[00:23:35.359] [UNKNOWN] or if the points are like this,
+[00:23:37.279] [UNKNOWN] maybe like this,
+[00:23:39.079] [UNKNOWN] or if the points are something like this,
+[00:23:41.579] [UNKNOWN] probably,
+[00:23:42.240] [UNKNOWN] relationship is not the linear,
+[00:23:44.420] [UNKNOWN] you can feed a non-linear function.
+[00:23:49.420] [UNKNOWN] So,
+[00:23:54.220] [UNKNOWN] again,
+[00:23:54.740] [UNKNOWN] this is the same slide,
+[00:23:57.259] [UNKNOWN] superwise,
+[00:23:57.980] [UNKNOWN] non-superwise,
+[00:23:59.539] [UNKNOWN] and
+[00:24:01.680] [UNKNOWN] if our output is quantity,
+[00:24:06.059] [UNKNOWN] it's going to be regression.
+[00:24:07.680] [UNKNOWN] If it's a category,
+[00:24:08.640] [UNKNOWN] it's going to be classification.
+[00:24:10.680] [UNKNOWN] And then,
+[00:24:12.019] [UNKNOWN] this isn't any new solution.
+[00:24:14.700] [UNKNOWN] Okay.
+[00:24:15.980] [UNKNOWN] So,
+[00:24:18.099] [UNKNOWN] superwise,
+[00:24:18.859] [UNKNOWN] it's a regression called classical regression.
+[00:24:21.660] [UNKNOWN] Any question on this slide?
+[00:24:27.960] [UNKNOWN] Okay.
+[00:24:28.680] [UNKNOWN] So,
+[00:24:29.180] [UNKNOWN] this is the agenda
+[00:24:31.700] [UNKNOWN] for the linear regression models.
+[00:24:35.579] [UNKNOWN] Okay.
+[00:24:36.200] [UNKNOWN] So, first,
+[00:24:36.980] [UNKNOWN] we want to understand
+[00:24:37.619] [UNKNOWN] what is the linear regression,
+[00:24:40.380] [UNKNOWN] and after that one,
+[00:24:42.220] [UNKNOWN] the different type of solutions
+[00:24:44.359] [UNKNOWN] for linear regression.
+[00:24:47.980] [UNKNOWN] So,
+[00:24:49.039] [UNKNOWN] one method is called
+[00:24:51.180] [UNKNOWN] this square solution,
+[00:24:53.539] [UNKNOWN] and the other one is called
+[00:24:54.559] [UNKNOWN] gradient solution.
+[00:24:58.549] [UNKNOWN] However,
+[00:25:00.089] [UNKNOWN] this square can be
+[00:25:02.910] [UNKNOWN] simple linear regression,
+[00:25:04.829] [UNKNOWN] polynomial,
+[00:25:05.569] [UNKNOWN] or multi-variant linear regression.
+[00:25:09.609] [UNKNOWN] Okay.
+[00:25:10.390] [UNKNOWN] So,
+[00:25:10.849] [UNKNOWN] this is the
+[00:25:12.769] [UNKNOWN] agenda
+[00:25:13.650] [UNKNOWN] for today's discussion.
+[00:25:16.710] [UNKNOWN] So,
+[00:25:17.690] [UNKNOWN] very same.
+[00:25:19.009] [UNKNOWN] What is linear regression?
+[00:25:21.509] [UNKNOWN] So,
+[00:25:22.710] [UNKNOWN] as you see here,
+[00:25:24.789] [UNKNOWN] the linear regression is that
+[00:25:26.529] [UNKNOWN] we have some
+[00:25:28.470] [UNKNOWN] observations, right?
+[00:25:30.750] [UNKNOWN] And some points,
+[00:25:32.410] [UNKNOWN] and those points are independent,
+[00:25:36.299] [UNKNOWN] means that they are not
+[00:25:37.299] [UNKNOWN] depends on each other, right?
+[00:25:38.779] [UNKNOWN] So, this point is independent.
+[00:25:41.880] [UNKNOWN] And,
+[00:25:44.759] [UNKNOWN] okay.
+[00:25:49.880] [UNKNOWN] Okay.
+[00:25:53.630] [UNKNOWN] So,
+[00:25:55.109] [UNKNOWN] points.
+[00:25:56.190] [UNKNOWN] If you want to say,
+[00:25:57.009] [UNKNOWN] like, we have some points here,
+[00:25:59.430] [UNKNOWN] the blue ones,
+[00:26:01.650] [UNKNOWN] and
+[00:26:03.390] [UNKNOWN] we have X,
+[00:26:04.750] [UNKNOWN] and we have Y.
+[00:26:06.750] [UNKNOWN] X is called
+[00:26:09.269] [UNKNOWN] out-in rivals,
+[00:26:12.960] [UNKNOWN] or sometimes we call that
+[00:26:14.519] [UNKNOWN] independent rivals.
+[00:26:17.200] [UNKNOWN] Y is called
+[00:26:18.339] [UNKNOWN] dependent rival,
+[00:26:19.900] [UNKNOWN] or ultimate.
+[00:26:21.259] [UNKNOWN] Why we call that one?
+[00:26:22.799] [UNKNOWN] Why is that
+[00:26:23.259] [UNKNOWN] dependent?
+[00:26:25.079] [UNKNOWN] Y depends on X.
+[00:26:26.880] [UNKNOWN] That X depends on what?
+[00:26:30.160] [UNKNOWN] This is Y equal to X.
+[00:26:32.720] [UNKNOWN] Right?
+[00:26:33.440] [UNKNOWN] We call it X,
+[00:26:34.599] [UNKNOWN] and based on that one,
+[00:26:37.099] [UNKNOWN] which
+[00:26:37.740] [UNKNOWN] something like this Y equal to
+[00:26:42.220] [UNKNOWN] Y equal to X plus Y.
+[00:26:48.109] [UNKNOWN] Okay.
+[00:26:48.529] [UNKNOWN] X is called
+[00:26:49.329] [UNKNOWN] Y is going to be dependent.
+[00:26:52.849] [UNKNOWN] In other words,
+[00:26:53.690] [UNKNOWN] Y is
+[00:26:56.109] [UNKNOWN] dependent.
+[00:26:56.750] [UNKNOWN] So, always we have some
+[00:27:11.470] [UNKNOWN] input features,
+[00:27:14.109] [UNKNOWN] we call that one
+[00:27:15.369] [UNKNOWN] independent rivals.
+[00:27:18.069] [UNKNOWN] And,
+[00:27:18.829] [UNKNOWN] we have
+[00:27:19.589] [UNKNOWN] a rival,
+[00:27:21.250] [UNKNOWN] which is called the
+[00:27:23.109] [UNKNOWN] dependent
+[00:27:24.769] [UNKNOWN] rival,
+[00:27:25.750] [UNKNOWN] or these are
+[00:27:28.799] [UNKNOWN] different names that we call.
+[00:27:31.039] [UNKNOWN] during this course,
+[00:27:32.559] [UNKNOWN] probably in many areas.
+[00:27:33.700] [UNKNOWN] Sometimes,
+[00:27:34.220] [UNKNOWN] I say target.
+[00:27:35.220] [UNKNOWN] Target means Y.
+[00:27:37.079] [UNKNOWN] Okay.
+[00:27:37.779] [UNKNOWN] Or sometimes we call it
+[00:27:38.960] [UNKNOWN] that part,
+[00:27:39.420] [UNKNOWN] same thing.
+[00:27:40.599] [UNKNOWN] Okay.
+[00:27:41.799] [UNKNOWN] So,
+[00:27:43.950] [UNKNOWN] as I mentioned,
+[00:27:45.750] [UNKNOWN] it could be different things.
+[00:27:47.769] [UNKNOWN] Sometimes,
+[00:27:48.529] [UNKNOWN] we see that the
+[00:27:49.430] [UNKNOWN] relationship between the
+[00:27:50.589] [UNKNOWN] poles are
+[00:27:51.890] [UNKNOWN] like this.
+[00:27:52.930] [UNKNOWN] I can
+[00:27:53.650] [UNKNOWN] I can
+[00:27:56.609] [UNKNOWN] fit a
+[00:27:57.289] [UNKNOWN] line,
+[00:27:59.829] [UNKNOWN] or a line like this.
+[00:28:02.250] [UNKNOWN] Sometimes,
+[00:28:03.269] [UNKNOWN] I use another function,
+[00:28:06.369] [UNKNOWN] because I see that
+[00:28:08.329] [UNKNOWN] relationship is not too much.
+[00:28:10.289] [UNKNOWN] Many are so,
+[00:28:11.029] [UNKNOWN] let's fit with non-linear function.
+[00:28:18.299] [UNKNOWN] So, for example,
+[00:28:21.420] [UNKNOWN] this is just a very
+[00:28:23.140] [UNKNOWN] simple example,
+[00:28:24.920] [UNKNOWN] and we want to see that
+[00:28:26.200] [UNKNOWN] if the temperature
+[00:28:29.880] [UNKNOWN] in general,
+[00:28:31.420] [UNKNOWN] what it shows,
+[00:28:31.980] [UNKNOWN] it shows that if the temperature
+[00:28:33.099] [UNKNOWN] is going high,
+[00:28:34.680] [UNKNOWN] increases,
+[00:28:36.160] [UNKNOWN] the sales of ice cream
+[00:28:37.460] [UNKNOWN] increases.
+[00:28:38.440] [UNKNOWN] Okay.
+[00:28:39.180] [UNKNOWN] So, it's naturally true.
+[00:28:41.680] [UNKNOWN] So, for example,
+[00:28:42.960] [UNKNOWN] when the
+[00:28:44.299] [UNKNOWN] temperature is 12,
+[00:28:46.579] [UNKNOWN] there are
+[00:28:47.000] [UNKNOWN] 200 sales of ice cream.
+[00:28:49.480] [UNKNOWN] If it's 26,
+[00:28:50.940] [UNKNOWN] there are
+[00:28:51.359] [UNKNOWN] 600
+[00:28:53.559] [UNKNOWN] sales of ice cream.
+[00:28:56.299] [UNKNOWN] So, we have some points here.
+[00:28:58.660] [UNKNOWN] Then somebody asks,
+[00:28:59.940] [UNKNOWN] okay,
+[00:29:00.220] [UNKNOWN] can you
+[00:29:01.640] [UNKNOWN] approximate the function?
+[00:29:03.779] [UNKNOWN] Which tells me that
+[00:29:05.140] [UNKNOWN] in each temperature,
+[00:29:07.779] [UNKNOWN] even if that temperature
+[00:29:09.140] [UNKNOWN] is not one of these points,
+[00:29:10.559] [UNKNOWN] what would be the prediction
+[00:29:12.539] [UNKNOWN] for the sale?
+[00:29:13.779] [UNKNOWN] Okay.
+[00:29:14.440] [UNKNOWN] For example,
+[00:29:15.880] [UNKNOWN] we are,
+[00:29:16.740] [UNKNOWN] I don't know,
+[00:29:17.420] [UNKNOWN] in July 15,
+[00:29:19.339] [UNKNOWN] the degree here is 25,
+[00:29:22.619] [UNKNOWN] and we want to know
+[00:29:23.920] [UNKNOWN] that probably
+[00:29:26.339] [UNKNOWN] sales of ice cream
+[00:29:27.740] [UNKNOWN] begin to happen.
+[00:29:29.079] [UNKNOWN] Okay.
+[00:29:29.900] [UNKNOWN] Maybe I don't see
+[00:29:30.660] [UNKNOWN] 25 here.
+[00:29:33.140] [UNKNOWN] Okay.
+[00:29:34.240] [UNKNOWN] But
+[00:29:34.619] [UNKNOWN] what I can do,
+[00:29:36.539] [UNKNOWN] I can fit a line
+[00:29:37.839] [UNKNOWN] and after
+[00:29:39.380] [UNKNOWN] fitting that line,
+[00:29:42.380] [UNKNOWN] I can check that.
+[00:29:43.720] [UNKNOWN] Here is 25.
+[00:29:45.200] [UNKNOWN] Let's go
+[00:29:45.980] [UNKNOWN] and see that
+[00:29:46.940] [UNKNOWN] what would be the
+[00:29:48.200] [UNKNOWN] set of 500.
+[00:29:50.480] [UNKNOWN] Make sense?
+[00:29:52.220] [UNKNOWN] So, feeding the line
+[00:29:53.460] [UNKNOWN] is called train.
+[00:29:55.539] [UNKNOWN] And then
+[00:29:57.200] [UNKNOWN] for 25,
+[00:29:59.319] [UNKNOWN] getting the output for 25
+[00:30:01.440] [UNKNOWN] is called prediction.
+[00:30:03.480] [UNKNOWN] Because 25 is a new point.
+[00:30:07.849] [UNKNOWN] Okay.
+[00:30:08.210] [UNKNOWN] We'll test it.
+[00:30:09.589] [UNKNOWN] Make sense?
+[00:30:12.190] [UNKNOWN] Yes?
+[00:30:14.170] [UNKNOWN] Anyone any question?
+[00:30:17.069] [UNKNOWN] Okay.
+[00:30:17.910] [UNKNOWN] So, this is just
+[00:30:19.109] [UNKNOWN] a very simple.
+[00:30:20.630] [UNKNOWN] Sometimes,
+[00:30:22.190] [UNKNOWN] rather than temperature,
+[00:30:23.849] [UNKNOWN] we might have
+[00:30:24.450] [UNKNOWN] more than one feature.
+[00:30:27.210] [UNKNOWN] Temperature
+[00:30:27.970] [UNKNOWN] and
+[00:30:30.009] [UNKNOWN] let's say area.
+[00:30:32.569] [UNKNOWN] Temperature and humidity.
+[00:30:34.950] [UNKNOWN] Temperature, area
+[00:30:36.250] [UNKNOWN] and humidity.
+[00:30:37.049] [UNKNOWN] I mean,
+[00:30:38.130] [UNKNOWN] I mean that
+[00:30:38.809] [UNKNOWN] like rather than one feature,
+[00:30:41.009] [UNKNOWN] we have
+[00:30:41.509] [UNKNOWN] our input features
+[00:30:43.450] [UNKNOWN] are more than one.
+[00:30:46.849] [UNKNOWN] Okay.
+[00:30:49.680] [UNKNOWN] It's called multi-primary
+[00:30:51.380] [UNKNOWN] problem for multi-primary.
+[00:30:53.700] [UNKNOWN] Okay.
+[00:30:54.640] [UNKNOWN] Well, like this.
+[00:30:57.140] [UNKNOWN] For example,
+[00:30:58.059] [UNKNOWN] we want to see
+[00:30:58.799] [UNKNOWN] the price of
+[00:30:59.720] [UNKNOWN] different cars,
+[00:31:00.900] [UNKNOWN] used cars.
+[00:31:02.829] [UNKNOWN] Here,
+[00:31:03.420] [UNKNOWN] this is our output
+[00:31:05.099] [UNKNOWN] and
+[00:31:05.799] [UNKNOWN] which for
+[00:31:06.799] [UNKNOWN] dependent feature
+[00:31:08.220] [UNKNOWN] and that's dependent
+[00:31:09.339] [UNKNOWN] age, distance and width.
+[00:31:12.380] [UNKNOWN] Okay.
+[00:31:13.359] [UNKNOWN] So,
+[00:31:14.240] [UNKNOWN] simply,
+[00:31:15.319] [UNKNOWN] we have a data set
+[00:31:18.299] [UNKNOWN] based on this data set.
+[00:31:20.480] [UNKNOWN] We
+[00:31:21.559] [UNKNOWN] learn
+[00:31:22.039] [UNKNOWN] what is the
+[00:31:22.740] [UNKNOWN] function
+[00:31:23.900] [UNKNOWN] and now,
+[00:31:24.960] [UNKNOWN] if you want to know that,
+[00:31:26.740] [UNKNOWN] okay,
+[00:31:27.000] [UNKNOWN] you see,
+[00:31:27.539] [UNKNOWN] you want to get a car.
+[00:31:29.799] [UNKNOWN] So,
+[00:31:30.839] [UNKNOWN] again,
+[00:31:31.339] [UNKNOWN] all you can do
+[00:31:32.039] [UNKNOWN] that one,
+[00:31:34.950] [UNKNOWN] you can pass your feature
+[00:31:37.190] [UNKNOWN] to the train model
+[00:31:38.289] [UNKNOWN] and it's going to say
+[00:31:39.349] [UNKNOWN] that what will be there.
+[00:31:41.910] [UNKNOWN] I think there are
+[00:31:42.410] [UNKNOWN] some websites for this, right?
+[00:31:44.049] [UNKNOWN] This gives you
+[00:31:45.289] [UNKNOWN] the price of used cars,
+[00:31:47.329] [UNKNOWN] predicts like that.
+[00:31:49.250] [UNKNOWN] Space and machine learning.
+[00:31:51.809] [UNKNOWN] Okay.
+[00:31:53.960] [UNKNOWN] Train the model
+[00:31:54.500] [UNKNOWN] and then
+[00:31:56.299] [UNKNOWN] for unseen data
+[00:31:58.000] [UNKNOWN] or new cars,
+[00:31:59.220] [UNKNOWN] you can
+[00:31:59.519] [UNKNOWN] predict
+[00:32:00.460] [UNKNOWN] what will be the
+[00:32:01.380] [UNKNOWN] price for that.
+[00:32:04.319] [UNKNOWN] What I want to mention,
+[00:32:05.779] [UNKNOWN] sometimes our
+[00:32:06.700] [UNKNOWN] problem,
+[00:32:10.160] [UNKNOWN] only rival,
+[00:32:11.859] [UNKNOWN] sometimes
+[00:32:12.500] [UNKNOWN] we have more than
+[00:32:13.920] [UNKNOWN] one input feature.
+[00:32:15.500] [UNKNOWN] It's called
+[00:32:16.000] [UNKNOWN] multi-primary.
+[00:32:26.690] [UNKNOWN] I see that here,
+[00:32:28.230] [UNKNOWN] the relationship
+[00:32:28.910] [UNKNOWN] is kind of linear.
+[00:32:35.160] [UNKNOWN] For the price,
+[00:32:36.279] [UNKNOWN] maybe you can find
+[00:32:37.119] [UNKNOWN] a linear function
+[00:32:38.220] [UNKNOWN] which predicts the price.
+[00:32:42.670] [UNKNOWN] Okay.
+[00:32:43.289] [UNKNOWN] What I mean here
+[00:32:50.660] [UNKNOWN] is that
+[00:32:52.079] [UNKNOWN] I can
+[00:32:53.259] [UNKNOWN] find a function
+[00:32:54.680] [UNKNOWN] like this.
+[00:32:56.640] [UNKNOWN] A0
+[00:32:57.380] [UNKNOWN] plus,
+[00:32:59.220] [UNKNOWN] sorry,
+[00:32:59.680] [UNKNOWN] alpha 0
+[00:33:00.380] [UNKNOWN] plus alpha 1
+[00:33:02.240] [UNKNOWN] times
+[00:33:02.519] [UNKNOWN] age
+[00:33:03.200] [UNKNOWN] plus alpha 2
+[00:33:05.220] [UNKNOWN] times distance
+[00:33:07.200] [UNKNOWN] plus alpha 3
+[00:33:08.380] [UNKNOWN] times weight.
+[00:33:10.259] [UNKNOWN] If you multiply this
+[00:33:11.920] [UNKNOWN] and do summation,
+[00:33:13.400] [UNKNOWN] you're going to get the price.
+[00:33:16.420] [UNKNOWN] Okay.
+[00:33:17.019] [UNKNOWN] I want to see that
+[00:33:18.579] [UNKNOWN] based on this feature,
+[00:33:20.960] [UNKNOWN] age, distance,
+[00:33:21.900] [UNKNOWN] and weight,
+[00:33:23.180] [UNKNOWN] can I determine a function
+[00:33:24.759] [UNKNOWN] which beats
+[00:33:27.660] [UNKNOWN] for all
+[00:33:28.460] [UNKNOWN] on all
+[00:33:29.259] [UNKNOWN] all the points
+[00:33:30.339] [UNKNOWN] here?
+[00:33:31.700] [UNKNOWN] So what is important?
+[00:33:35.859] [UNKNOWN] If I could
+[00:33:37.039] [UNKNOWN] know that
+[00:33:37.920] [UNKNOWN] what is the alpha 0
+[00:33:39.140] [UNKNOWN] to alpha 3,
+[00:33:40.839] [UNKNOWN] that means
+[00:33:41.279] [UNKNOWN] I have that function.
+[00:33:45.509] [UNKNOWN] In other words,
+[00:33:47.369] [UNKNOWN] what is important
+[00:33:48.589] [UNKNOWN] for me
+[00:33:50.789] [UNKNOWN] is that
+[00:33:51.609] [UNKNOWN] determining the values
+[00:33:52.609] [UNKNOWN] alpha 0 to alpha 3.
+[00:33:56.480] [UNKNOWN] And those are the parameters
+[00:33:57.599] [UNKNOWN] of the model.
+[00:33:59.099] [UNKNOWN] That's why we say
+[00:34:00.299] [UNKNOWN] that our model
+[00:34:01.299] [UNKNOWN] is nothing more
+[00:34:02.400] [UNKNOWN] than parameters.
+[00:34:03.720] [UNKNOWN] Sometimes
+[00:34:04.299] [UNKNOWN] we decrease
+[00:34:05.079] [UNKNOWN] our model
+[00:34:06.000] [UNKNOWN] to parameters.
+[00:34:09.489] [UNKNOWN] It means that
+[00:34:10.269] [UNKNOWN] if you determine
+[00:34:11.090] [UNKNOWN] the parameter,
+[00:34:11.969] [UNKNOWN] you know what is your
+[00:34:14.170] [UNKNOWN] linear.
+[00:34:15.030] [UNKNOWN] If you know that
+[00:34:15.469] [UNKNOWN] A0, A1, A2, and A3,
+[00:34:19.070] [UNKNOWN] okay,
+[00:34:19.650] [UNKNOWN] then together
+[00:34:20.869] [UNKNOWN] and you're going to get this function.
+[00:34:25.840] [UNKNOWN] Okay?
+[00:34:26.619] [UNKNOWN] Any questions?
+[00:34:33.659] [UNKNOWN] Okay.
+[00:34:34.440] [UNKNOWN] So,
+[00:34:36.119] [UNKNOWN] this is just an example,
+[00:34:38.099] [UNKNOWN] but in high level,
+[00:34:39.639] [UNKNOWN] what is important for us,
+[00:34:41.599] [UNKNOWN] we are looking for
+[00:34:42.579] [UNKNOWN] a function Y
+[00:34:43.840] [UNKNOWN] or function F
+[00:34:47.269] [UNKNOWN] which takes X,
+[00:34:49.730] [UNKNOWN] XR
+[00:34:50.590] [UNKNOWN] or our age,
+[00:34:52.329] [UNKNOWN] distance,
+[00:34:52.949] [UNKNOWN] and weight
+[00:34:54.889] [UNKNOWN] and determine
+[00:34:56.250] [UNKNOWN] what is the theta.
+[00:34:58.250] [UNKNOWN] Okay?
+[00:34:59.690] [UNKNOWN] So,
+[00:35:04.320] [UNKNOWN] as you see here,
+[00:35:05.900] [UNKNOWN] F depends on
+[00:35:06.880] [UNKNOWN] X and theta.
+[00:35:08.199] [UNKNOWN] If I know X and theta,
+[00:35:10.400] [UNKNOWN] I know that
+[00:35:11.360] [UNKNOWN] what is my output point.
+[00:35:16.690] [UNKNOWN] What is objective?
+[00:35:22.880] [UNKNOWN] To explain that,
+[00:35:24.860] [UNKNOWN] what is important for me,
+[00:35:28.079] [UNKNOWN] let me talk about
+[00:35:29.679] [UNKNOWN] this example.
+[00:35:31.260] [UNKNOWN] So, suppose that
+[00:35:32.219] [UNKNOWN] you have this orange line,
+[00:35:37.219] [UNKNOWN] how do you know that
+[00:35:38.599] [UNKNOWN] your
+[00:35:41.239] [UNKNOWN] your figured function
+[00:35:42.599] [UNKNOWN] is good?
+[00:35:43.840] [UNKNOWN] How do you know that?
+[00:35:49.780] [UNKNOWN] There, alright?
+[00:35:51.239] [UNKNOWN] So,
+[00:35:51.980] [UNKNOWN] if you check that,
+[00:35:53.079] [UNKNOWN] how much difference
+[00:35:53.840] [UNKNOWN] between the blue
+[00:35:55.679] [UNKNOWN] and
+[00:35:57.519] [UNKNOWN] orange, right?
+[00:35:59.659] [UNKNOWN] So,
+[00:36:00.219] [UNKNOWN] for this point,
+[00:36:01.059] [UNKNOWN] it's almost zero.
+[00:36:02.340] [UNKNOWN] For this point,
+[00:36:03.639] [UNKNOWN] suppose it's one,
+[00:36:05.139] [UNKNOWN] here is one, zero,
+[00:36:06.719] [UNKNOWN] it's two,
+[00:36:07.320] [UNKNOWN] one, zero, zero.
+[00:36:09.360] [UNKNOWN] Alright, for this one,
+[00:36:10.219] [UNKNOWN] it's three.
+[00:36:11.480] [UNKNOWN] Put them all together
+[00:36:13.159] [UNKNOWN] and bring in our soul.
+[00:36:15.559] [UNKNOWN] In total,
+[00:36:16.280] [UNKNOWN] I have this much error.
+[00:36:18.460] [UNKNOWN] If it's a big number,
+[00:36:20.420] [UNKNOWN] it shows that your model
+[00:36:21.460] [UNKNOWN] is not good.
+[00:36:23.139] [UNKNOWN] If it's a small number,
+[00:36:25.199] [UNKNOWN] it shows that,
+[00:36:25.960] [UNKNOWN] oh, your fitting is good.
+[00:36:28.039] [UNKNOWN] You don't have too much error.
+[00:36:30.800] [UNKNOWN] Right?
+[00:36:32.059] [UNKNOWN] So,
+[00:36:32.380] [UNKNOWN] our objective is,
+[00:36:34.039] [UNKNOWN] here is that,
+[00:36:34.940] [UNKNOWN] the difference between
+[00:36:36.179] [UNKNOWN] prediction of the model
+[00:36:39.460] [UNKNOWN] and
+[00:36:41.219] [UNKNOWN] the labels,
+[00:36:42.920] [UNKNOWN] okay,
+[00:36:43.780] [UNKNOWN] now the difference
+[00:36:44.599] [UNKNOWN] between the target
+[00:36:46.099] [UNKNOWN] and output of the models
+[00:36:48.179] [UNKNOWN] should be
+[00:36:49.300] [UNKNOWN] small value.
+[00:36:51.659] [UNKNOWN] And that is called error.
+[00:36:53.320] [UNKNOWN] Error of the model
+[00:36:54.360] [UNKNOWN] should be
+[00:36:55.480] [UNKNOWN] small value.
+[00:36:56.880] [UNKNOWN] Okay?
+[00:36:59.199] [UNKNOWN] The difference between
+[00:37:00.179] [UNKNOWN] grand truth
+[00:37:01.880] [UNKNOWN] and the model prediction.
+[00:37:04.800] [UNKNOWN] The grand truth is the blue ones.
+[00:37:07.519] [UNKNOWN] Model prediction
+[00:37:09.639] [UNKNOWN] is the model prediction, right?
+[00:37:11.780] [UNKNOWN] So,
+[00:37:12.400] [UNKNOWN] the difference between grand truth
+[00:37:13.780] [UNKNOWN] and model prediction
+[00:37:15.800] [UNKNOWN] should be
+[00:37:16.900] [UNKNOWN] small value.
+[00:37:18.480] [UNKNOWN] All the points that you have.
+[00:37:29.630] [UNKNOWN] Okay.
+[00:37:30.349] [UNKNOWN] So,
+[00:37:30.849] [UNKNOWN] you can do something.
+[00:37:36.800] [UNKNOWN] You can find the difference
+[00:37:37.880] [UNKNOWN] between the
+[00:37:39.380] [UNKNOWN] grand truth
+[00:37:40.340] [UNKNOWN] and the model output.
+[00:37:42.900] [UNKNOWN] Reach point
+[00:37:43.900] [UNKNOWN] and then find the summation.
+[00:37:46.539] [UNKNOWN] Okay?
+[00:37:47.260] [UNKNOWN] This is called the
+[00:37:49.579] [UNKNOWN] sum of
+[00:37:51.900] [UNKNOWN] absolute errors.
+[00:37:54.139] [UNKNOWN] Okay?
+[00:37:55.019] [UNKNOWN] Find the sum of errors
+[00:37:56.360] [UNKNOWN] or sum of absolute errors.
+[00:37:58.320] [UNKNOWN] Sometimes,
+[00:37:59.360] [UNKNOWN] we find the sum of errors,
+[00:38:01.340] [UNKNOWN] but here,
+[00:38:03.239] [UNKNOWN] when I get the error
+[00:38:04.400] [UNKNOWN] for each point,
+[00:38:05.659] [UNKNOWN] I do a square of that.
+[00:38:08.280] [UNKNOWN] Okay?
+[00:38:09.159] [UNKNOWN] So,
+[00:38:09.800] [UNKNOWN] something like this.
+[00:38:13.510] [UNKNOWN] The distance,
+[00:38:14.510] [UNKNOWN] the difference between
+[00:38:16.329] [UNKNOWN] y
+[00:38:18.010] [UNKNOWN] i
+[00:38:18.690] [UNKNOWN] and y hat.
+[00:38:20.409] [UNKNOWN] Okay?
+[00:38:21.989] [UNKNOWN] So, y i is what we have
+[00:38:24.590] [UNKNOWN] in our
+[00:38:28.789] [UNKNOWN] what the model
+[00:38:29.869] [UNKNOWN] to the y hat has.
+[00:38:34.539] [UNKNOWN] Okay.
+[00:38:35.199] [UNKNOWN] So,
+[00:38:35.760] [UNKNOWN] consider y hat is the
+[00:38:37.579] [UNKNOWN] model prediction
+[00:38:39.599] [UNKNOWN] and y is our grand truth.
+[00:38:42.300] [UNKNOWN] The difference between
+[00:38:43.579] [UNKNOWN] y and y hat
+[00:38:45.159] [UNKNOWN] for every point
+[00:38:47.519] [UNKNOWN] point one to n
+[00:38:48.559] [UNKNOWN] in that
+[00:38:49.500] [UNKNOWN] each of this point
+[00:38:51.159] [UNKNOWN] and then this square.
+[00:38:55.559] [UNKNOWN] Okay?
+[00:38:56.719] [UNKNOWN] So,
+[00:38:57.099] [UNKNOWN] for example,
+[00:38:59.820] [UNKNOWN] for example,
+[00:39:01.619] [UNKNOWN] if the price
+[00:39:03.639] [UNKNOWN] of the first card
+[00:39:04.940] [UNKNOWN] is
+[00:39:05.280] [UNKNOWN] thirteen hundred
+[00:39:07.639] [UNKNOWN] thirteen point five,
+[00:39:09.400] [UNKNOWN] but the model
+[00:39:11.460] [UNKNOWN] tells thirteen
+[00:39:12.519] [UNKNOWN] is going to be
+[00:39:15.480] [UNKNOWN] five hundred
+[00:39:16.280] [UNKNOWN] squared
+[00:39:17.300] [UNKNOWN] for the first point.
+[00:39:19.199] [UNKNOWN] Plus
+[00:39:19.619] [UNKNOWN] the difference
+[00:39:20.960] [UNKNOWN] of this
+[00:39:21.840] [UNKNOWN] and the model prediction.
+[00:39:23.860] [UNKNOWN] Right?
+[00:39:25.460] [UNKNOWN] Plus
+[00:39:26.440] [UNKNOWN] squared that one
+[00:39:27.300] [UNKNOWN] and plus for the table.
+[00:39:28.820] [UNKNOWN] So,
+[00:39:29.000] [UNKNOWN] this is just
+[00:39:31.159] [UNKNOWN] telling the same thing
+[00:39:32.320] [UNKNOWN] and we call that one
+[00:39:33.500] [UNKNOWN] sum of the squared
+[00:39:34.619] [UNKNOWN] error.
+[00:39:36.019] [UNKNOWN] It is very common
+[00:39:37.760] [UNKNOWN] terminology we use.
+[00:39:39.880] [UNKNOWN] Okay?
+[00:39:40.800] [UNKNOWN] So,
+[00:39:41.099] [UNKNOWN] always if you want to
+[00:39:42.340] [UNKNOWN] find the error of the
+[00:39:43.400] [UNKNOWN] model for regression
+[00:39:44.280] [UNKNOWN] problem,
+[00:39:45.539] [UNKNOWN] the indicator here
+[00:39:46.860] [UNKNOWN] is that
+[00:39:47.260] [UNKNOWN] what is your
+[00:39:48.000] [UNKNOWN] sum of squared error?
+[00:39:49.940] [UNKNOWN] If it's a higher value,
+[00:39:52.039] [UNKNOWN] it shows that
+[00:39:52.519] [UNKNOWN] your model is not good.
+[00:39:54.800] [UNKNOWN] This is low value,
+[00:39:56.139] [UNKNOWN] lower value
+[00:39:57.300] [UNKNOWN] shows it's good.
+[00:39:59.099] [UNKNOWN] And higher
+[00:40:00.039] [UNKNOWN] and lower means that
+[00:40:01.539] [UNKNOWN] the difference
+[00:40:03.139] [UNKNOWN] between the model prediction
+[00:40:06.139] [UNKNOWN] and ground truth,
+[00:40:09.829] [UNKNOWN] all the points
+[00:40:10.710] [UNKNOWN] are slim.
+[00:40:17.690] [UNKNOWN] We are looking
+[00:40:18.750] [UNKNOWN] for a function like this,
+[00:40:24.050] [UNKNOWN] but what is important,
+[00:40:25.710] [UNKNOWN] the important thing is that
+[00:40:27.190] [UNKNOWN] what is this alpha one
+[00:40:28.610] [UNKNOWN] to alpha three?
+[00:40:31.150] [UNKNOWN] And based on those
+[00:40:32.230] [UNKNOWN] alpha one
+[00:40:33.769] [UNKNOWN] to alpha three,
+[00:40:35.150] [UNKNOWN] we can determine
+[00:40:35.889] [UNKNOWN] what is the error
+[00:40:36.769] [UNKNOWN] of the model.
+[00:40:40.170] [UNKNOWN] So, the base model
+[00:40:41.130] [UNKNOWN] is that the one
+[00:40:42.190] [UNKNOWN] which for this
+[00:40:43.389] [UNKNOWN] error is
+[00:40:44.250] [UNKNOWN] close to zero.
+[00:40:45.849] [UNKNOWN] It's ideal.
+[00:40:47.690] [UNKNOWN] Okay?
+[00:40:49.170] [UNKNOWN] But sometimes
+[00:40:49.829] [UNKNOWN] probably it's not possible
+[00:40:51.429] [UNKNOWN] to feed all the points.
+[00:40:52.889] [UNKNOWN] Right?
+[00:40:53.590] [UNKNOWN] Because some of them are
+[00:40:54.489] [UNKNOWN] like,
+[00:40:55.030] [UNKNOWN] our relationship
+[00:40:56.210] [UNKNOWN] is not linear.
+[00:40:57.849] [UNKNOWN] Of course,
+[00:40:58.610] [UNKNOWN] we're going to have
+[00:40:59.010] [UNKNOWN] some errors.
+[00:41:00.250] [UNKNOWN] It's,
+[00:41:02.650] [UNKNOWN] we can't,
+[00:41:03.730] [UNKNOWN] we know about that.
+[00:41:05.369] [UNKNOWN] Right?
+[00:41:05.590] [UNKNOWN] But
+[00:41:07.880] [UNKNOWN] closer to zero
+[00:41:09.440] [UNKNOWN] is the best.
+[00:41:12.440] [UNKNOWN] Any questions?
+[00:41:16.340] [UNKNOWN] So,
+[00:41:16.599] [UNKNOWN] what is the exact mechanism
+[00:41:17.880] [UNKNOWN] of finding those?
+[00:41:20.019] [UNKNOWN] Good question.
+[00:41:20.800] [UNKNOWN] How we can find
+[00:41:21.800] [UNKNOWN] those parameters?
+[00:41:23.519] [UNKNOWN] That's the,
+[00:41:24.039] [UNKNOWN] the next thing that
+[00:41:25.500] [UNKNOWN] we're going to discuss.
+[00:41:26.579] [UNKNOWN] Okay.
+[00:41:27.440] [UNKNOWN] So, the question here
+[00:41:28.519] [UNKNOWN] is that,
+[00:41:29.079] [UNKNOWN] how we can find this
+[00:41:30.099] [UNKNOWN] alpha zero,
+[00:41:30.980] [UNKNOWN] alpha one,
+[00:41:31.699] [UNKNOWN] alpha two and
+[00:41:32.300] [UNKNOWN] alpha three?
+[00:41:34.460] [UNKNOWN] So, the optimal values
+[00:41:35.820] [UNKNOWN] for these parameters.
+[00:41:38.159] [UNKNOWN] Okay?
+[00:41:39.300] [UNKNOWN] So,
+[00:41:39.760] [UNKNOWN] there are two methods for this.
+[00:41:45.420] [UNKNOWN] One is called
+[00:41:46.599] [UNKNOWN] this square solution
+[00:41:48.519] [UNKNOWN] or it's called
+[00:41:49.719] [UNKNOWN] most four.
+[00:41:50.900] [UNKNOWN] And the other one
+[00:41:51.840] [UNKNOWN] is called
+[00:41:52.619] [UNKNOWN] drag and resistance.
+[00:41:54.739] [UNKNOWN] Okay?
+[00:41:56.099] [UNKNOWN] So,
+[00:41:57.980] [UNKNOWN] first I'm going to
+[00:41:59.320] [UNKNOWN] explain this
+[00:42:01.039] [UNKNOWN] on this square.
+[00:42:07.250] [UNKNOWN] Okay?
+[00:42:08.170] [UNKNOWN] So,
+[00:42:33.030] [UNKNOWN] sometimes I'm explaining
+[00:42:33.829] [UNKNOWN] something like this.
+[00:42:35.389] [UNKNOWN] Five or that's it.
+[00:42:36.909] [UNKNOWN] Okay.
+[00:42:38.050] [UNKNOWN] So,
+[00:42:38.329] [UNKNOWN] multi-variate, right?
+[00:56:23.010] [UNKNOWN] Multi-variate or zero?
+[00:56:37.409] [UNKNOWN] Okay.
+[00:56:42.519] [UNKNOWN] Let's make it simple,
+[00:56:43.619] [UNKNOWN] something like this,
+[00:56:47.849] [UNKNOWN] this problem
+[00:56:48.590] [UNKNOWN] and
+[00:56:58.190] [UNKNOWN] something like this.
+[00:57:00.130] [UNKNOWN] Proceeded sample,
+[00:57:01.250] [UNKNOWN] then I can go
+[00:57:01.989] [UNKNOWN] into detail on that.
+[00:57:03.309] [UNKNOWN] Okay.
+[00:57:03.690] [UNKNOWN] What we have,
+[00:57:04.289] [UNKNOWN] we have one X.
+[00:57:06.070] [UNKNOWN] Oh,
+[00:57:06.929] [UNKNOWN] sorry,
+[00:57:07.050] [UNKNOWN] can you press that button?
+[00:57:28.920] [UNKNOWN] Suppose we have
+[00:57:29.400] [UNKNOWN] example like this.
+[00:57:31.519] [UNKNOWN] Okay.
+[00:57:32.119] [UNKNOWN] What I have here,
+[00:57:33.699] [UNKNOWN] I have X
+[00:57:34.280] [UNKNOWN] and I have Y.
+[00:57:37.079] [UNKNOWN] Each X,
+[00:57:37.820] [UNKNOWN] I know what is the Y.
+[00:57:39.619] [UNKNOWN] I want to see that
+[00:57:40.940] [UNKNOWN] what is the best
+[00:57:43.989] [UNKNOWN] linear function?
+[00:57:48.510] [UNKNOWN] Which I can feed.
+[00:57:50.670] [UNKNOWN] In other words,
+[00:57:51.429] [UNKNOWN] I'm looking for
+[00:57:52.510] [UNKNOWN] the best slope
+[00:57:53.429] [UNKNOWN] and best
+[00:57:54.469] [UNKNOWN] interception.
+[00:57:58.639] [UNKNOWN] A zero
+[00:57:59.800] [UNKNOWN] and best
+[00:58:00.679] [UNKNOWN] A one.
+[00:58:07.309] [UNKNOWN] Question,
+[00:58:08.630] [UNKNOWN] which you're afraid
+[00:58:11.630] [UNKNOWN] measure,
+[00:58:12.429] [UNKNOWN] how we can find the optimal
+[00:58:13.730] [UNKNOWN] alpha zero
+[00:58:14.769] [UNKNOWN] and alpha one?
+[00:58:18.650] [UNKNOWN] If the line
+[00:58:19.409] [UNKNOWN] which has
+[00:58:20.070] [UNKNOWN] the smallest
+[00:58:21.449] [UNKNOWN] error
+[00:58:22.590] [UNKNOWN] would be the best,
+[00:58:23.570] [UNKNOWN] but what is that line?
+[00:58:25.449] [UNKNOWN] We're looking for that.
+[00:58:28.760] [UNKNOWN] I had a problem like this.
+[00:58:31.360] [UNKNOWN] For example, like this.
+[00:58:36.480] [UNKNOWN] And then
+[00:58:36.940] [UNKNOWN] let's get back to
+[00:58:38.320] [UNKNOWN] that's the same, right?
+[00:58:42.500] [UNKNOWN] That's the same.
+[00:58:43.619] [UNKNOWN] We have X
+[00:58:44.300] [UNKNOWN] and we have Y
+[00:58:45.539] [UNKNOWN] and these are our samples.
+[00:58:47.699] [UNKNOWN] X one,
+[00:58:48.260] [UNKNOWN] X two,
+[00:58:48.719] [UNKNOWN] and Y one and Y.
+[00:58:51.559] [UNKNOWN] Important for me
+[00:58:52.739] [UNKNOWN] is that
+[00:58:54.739] [UNKNOWN] okay,
+[00:58:55.320] [UNKNOWN] as you see,
+[00:58:56.440] [UNKNOWN] alpha.
+[00:58:57.219] [UNKNOWN] I'm looking for a function
+[00:58:58.360] [UNKNOWN] like this,
+[00:59:01.500] [UNKNOWN] which alpha is
+[00:59:03.510] [UNKNOWN] intercept.
+[00:59:04.300] [UNKNOWN] Beta is the slope.
+[00:59:07.059] [UNKNOWN] Y hat
+[00:59:08.539] [UNKNOWN] is the model prediction
+[00:59:10.300] [UNKNOWN] and YR
+[00:59:11.900] [UNKNOWN] is the ground truth.
+[00:59:18.610] [UNKNOWN] Okay.
+[00:59:20.159] [UNKNOWN] How we can find
+[00:59:21.210] [UNKNOWN] a function like this?
+[00:59:24.920] [UNKNOWN] I'm looking for
+[00:59:25.980] [UNKNOWN] a function like this,
+[00:59:27.880] [UNKNOWN] but at then
+[00:59:28.619] [UNKNOWN] what is important
+[00:59:29.400] [UNKNOWN] for me
+[00:59:31.300] [UNKNOWN] is that
+[00:59:32.320] [UNKNOWN] the difference between
+[00:59:33.780] [UNKNOWN] the target
+[00:59:34.900] [UNKNOWN] or the ground truth
+[00:59:36.099] [UNKNOWN] and the model prediction
+[00:59:39.059] [UNKNOWN] so this one is the target
+[00:59:41.239] [UNKNOWN] and this one is the
+[00:59:42.219] [UNKNOWN] model prediction.
+[00:59:43.920] [UNKNOWN] Y hat
+[00:59:44.480] [UNKNOWN] or Y I have.
+[00:59:46.960] [UNKNOWN] So
+[00:59:47.280] [UNKNOWN] if I get the square of this
+[00:59:50.300] [UNKNOWN] for all the samples,
+[00:59:52.239] [UNKNOWN] this error should be
+[00:59:54.800] [UNKNOWN] small number,
+[00:59:55.940] [UNKNOWN] the minimum.
+[00:59:57.420] [UNKNOWN] Okay.
+[00:59:58.679] [UNKNOWN] Oh, I can find
+[00:59:59.460] [UNKNOWN] the minimum function.
+[01:00:03.909] [UNKNOWN] If you have a function,
+[01:00:05.130] [UNKNOWN] you can find
+[01:00:06.050] [UNKNOWN] the minimum of that.
+[01:00:14.210] [UNKNOWN] But then
+[01:00:14.650] [UNKNOWN] we can start
+[01:00:15.150] [UNKNOWN] having a function like this.
+[01:00:19.679] [UNKNOWN] What is it called?
+[01:00:23.429] [UNKNOWN] X.
+[01:00:49.380] [UNKNOWN] I mean like
+[01:00:50.159] [UNKNOWN] look at here
+[01:00:51.219] [UNKNOWN] this is X equals
+[01:00:52.340] [UNKNOWN] for example
+[01:01:12.099] [UNKNOWN] this here.
+[01:01:14.019] [UNKNOWN] This one is X equals
+[01:01:16.239] [UNKNOWN] zero.
+[01:01:17.340] [UNKNOWN] In other words
+[01:01:18.059] [UNKNOWN] X equals zero is the point that
+[01:01:20.139] [UNKNOWN] the slope of this function
+[01:01:22.880] [UNKNOWN] is zero.
+[01:01:29.059] [UNKNOWN] Maybe sometimes
+[01:01:30.619] [UNKNOWN] rather than this,
+[01:01:34.030] [UNKNOWN] something like this.
+[01:01:44.599] [UNKNOWN] It's equal to
+[01:01:46.139] [UNKNOWN] the point that
+[01:01:47.400] [UNKNOWN] the slope there is zero.
+[01:01:49.639] [UNKNOWN] This is the slope.
+[01:01:51.880] [UNKNOWN] Okay.
+[01:01:53.360] [UNKNOWN] Other forms here for example
+[01:01:55.320] [UNKNOWN] I have some slope.
+[01:01:56.760] [UNKNOWN] It's not zero.
+[01:01:58.480] [UNKNOWN] Here I have some slope.
+[01:02:00.519] [UNKNOWN] The slope means
+[01:02:02.440] [UNKNOWN] just
+[01:02:04.800] [UNKNOWN] let's say that
+[01:02:05.940] [UNKNOWN] I can find this one.
+[01:02:24.880] [UNKNOWN] This is the point that
+[01:02:26.960] [UNKNOWN] the deviation of the function
+[01:02:28.639] [UNKNOWN] there is zero.
+[01:02:30.340] [UNKNOWN] The deviation of the function is zero.
+[01:02:32.800] [UNKNOWN] If I find the derivative of this
+[01:02:34.639] [UNKNOWN] so
+[01:02:53.000] [UNKNOWN] it means
+[01:03:00.670] [UNKNOWN] I want to measure that.
+[01:03:20.900] [UNKNOWN] Okay.
+[01:03:21.980] [UNKNOWN] So what do you need to do?
+[01:03:28.070] [UNKNOWN] You need to find the
+[01:03:29.929] [UNKNOWN] slope there.
+[01:03:30.769] [UNKNOWN] You can have something like this
+[01:03:36.380] [UNKNOWN] and then you want to know that
+[01:03:37.940] [UNKNOWN] where is the optimum
+[01:03:39.460] [UNKNOWN] of this function.
+[01:03:40.860] [UNKNOWN] What do you need to do?
+[01:03:42.199] [UNKNOWN] You need to find the byte file.
+[01:03:46.420] [UNKNOWN] We call
+[01:03:46.980] [UNKNOWN] sometimes we call it
+[01:03:48.219] [UNKNOWN] byte file as
+[01:03:51.139] [UNKNOWN] normal white
+[01:03:52.840] [UNKNOWN] just notation.
+[01:03:54.340] [UNKNOWN] Okay.
+[01:03:54.820] [UNKNOWN] So what is the white prime?
+[01:03:57.159] [UNKNOWN] White prime means
+[01:03:58.019] [UNKNOWN] two times this.
+[01:03:59.940] [UNKNOWN] Okay.
+[01:04:00.739] [UNKNOWN] Okay.
+[01:04:02.500] [UNKNOWN] you have
+[01:04:04.039] [UNKNOWN] x to the power of n
+[01:04:06.019] [UNKNOWN] is white prime.
+[01:04:09.559] [UNKNOWN] It's going to be
+[01:04:11.119] [UNKNOWN] nx.
+[01:04:12.199] [UNKNOWN] nx.
+[01:04:13.519] [UNKNOWN] nx.
+[01:04:14.000] [UNKNOWN] nx.
+[01:04:18.769] [UNKNOWN] nx.
+[01:04:21.300] [UNKNOWN] nx.
+[01:04:22.340] [UNKNOWN] nx.
+[01:04:22.679] [UNKNOWN] nx.
+[01:04:22.960] [UNKNOWN] nx.
+[01:04:23.559] [UNKNOWN] nx.
+[01:04:24.760] [UNKNOWN] nx.
+[01:04:26.519] [UNKNOWN] nx.
+[01:04:31.409] [UNKNOWN] nx.
+[01:04:34.050] [UNKNOWN] nx.
+[01:04:36.199] [UNKNOWN] it shows that
+[01:04:37.800] [UNKNOWN] the mean of this function
+[01:04:40.019] [UNKNOWN] is going to be
+[01:04:41.199] [UNKNOWN] n.
+[01:05:00.639] [UNKNOWN] If you want to,
+[01:05:02.199] [UNKNOWN] if you have a function
+[01:05:03.760] [UNKNOWN] if you.
+[01:05:04.820] [UNKNOWN] If you have a function
+[01:05:06.400] [UNKNOWN] for any function
+[01:05:08.260] [UNKNOWN] which has some rivals
+[01:05:11.900] [UNKNOWN] if you want to find
+[01:05:13.199] [UNKNOWN] the mean of that
+[01:05:14.239] [UNKNOWN] just take
+[01:05:15.659] [UNKNOWN] the derivative of that function. Okay, like what I did there. And then see that where
+[01:05:23.760] [UNKNOWN] the derivative is zero, it's going to be one of your optimal points. That's there from
+[01:05:31.219] [UNKNOWN] the high school math, right? We know what that is. Okay. So, this indicator for us to
+[01:05:41.849] [UNKNOWN] find the optimal function. So, this is my error, and I am looking for the points which
+[01:05:50.610] [UNKNOWN] makes this error optimal. What I can do? Simple. I need to find the derivative of E and set
+[01:06:03.159] [UNKNOWN] that one as zero and see that what it returns. Okay, let me explain further. So, now we
+[01:06:12.840] [UNKNOWN] know that just let's substitute the values. Okay. So, we have yi, and I know that yi is
+[01:06:20.960] [UNKNOWN] alpha plus beta x. Let's say y hat as alpha plus beta x, right? Because y hat is our
+[01:06:30.940] [UNKNOWN] function. This one is y hat. So, just substitute here. Then, I have this function error in this
+[01:06:45.349] [UNKNOWN] program. What I need to do? I'm going to see that what is the optimal alpha and what is
+[01:06:56.230] [UNKNOWN] the optimal beta? What is the best alpha and beta? To make this error, nothing, exactly zero
+[01:07:05.869] [UNKNOWN] but optimal alpha. Okay. So, what I need to do? I need to find the derivative of this
+[01:07:10.969] [UNKNOWN] E prime with respect to alpha and beta. So, I find the derivative of E with respect to
+[01:07:20.349] [UNKNOWN] alpha. Let's say that that one as zero. Why? Because I'm looking for the best alpha. And
+[01:07:27.309] [UNKNOWN] same thing for beta. To get there, zero. It is very similar to what we have on the white
+[01:07:34.090] [UNKNOWN] board. Because rather than just y here, we have E. There we have y. Here we have E.
+[01:07:45.250] [UNKNOWN] What y I'm looking for? Normal for derivative of E with respect to y parameters. Okay. The
+[01:08:04.380] [UNKNOWN] other one is beta. Just set as zero. I'm explaining one of those and the other one is also similar.
+[01:08:12.159] [UNKNOWN] So, if you have such a thing and you want to find the derivative of this with respect to alpha,
+[01:08:21.260] [UNKNOWN] it's going to be two times this derivative of this. Suppose it's something like this x to the
+[01:08:33.390] [UNKNOWN] power of n. What is the derivation of that? It's going to be n times x n minus one. So, here we
+[01:08:43.329] [UNKNOWN] have the same thing. It's going to be two times derivative of this times derivative of this n
+[01:08:56.609] [UNKNOWN] minus one. Okay. So, if you do like that, it's going to be two times the derivation of this with
+[01:09:08.609] [UNKNOWN] respect to alpha is going to be minus one and this one. What do we have? We have E plus y i
+[01:09:54.100] [UNKNOWN] minus a i x plus alpha and alpha plus beta x.
+[01:10:32.170] [UNKNOWN] So, then I'm looking for optimal alpha and alpha. So, what I can do? I can find the
+[01:10:42.909] [UNKNOWN] issue of this function with respect to alpha. If I do like this, that means that
+[01:11:05.529] [UNKNOWN] all these things I do like this, I'm looking for derivative with respect to alpha. It's going to
+[01:11:18.020] [UNKNOWN] be something like suppose it's going to be j x and this is f x and you have x in the same
+[01:11:48.970] [UNKNOWN] component. Okay. So, always derivative t is going to be times f prime x, for example,
+[01:12:30.039] [UNKNOWN] equal x to d prime of x is going to be f prime of what is our f x here? This is f x. Okay.
+[01:12:50.319] [UNKNOWN] For x, respect to x is one. That's right. Consider this
+[01:13:20.710] [UNKNOWN] correlation of strength. I have a function like this. What could be the derivation of this?
+[01:13:32.840] [UNKNOWN] It's going to be two times this point itself. That's the point this is over our plus. Okay.
+[01:14:08.279] [UNKNOWN] So, the only thing is that here. What is the derivative? This one is zero.
+[01:14:27.609] [UNKNOWN] What is this called? This. Minus one. One, right? Because now I can't add this. One, two.
+[01:14:51.579] [UNKNOWN] This is going to be zero. Now, what I have here is I from, I want to minus my i is going to be
+[01:15:32.270] [UNKNOWN] zero plus f prime x. I is from one, two. Here we have minus two. My i is two and this is one
+[01:16:12.420] [UNKNOWN] or five. Okay. One of those in one side of it, for example, I move down to one, two, and one.
+[01:16:19.880] [UNKNOWN] This is going to be something like this. That's what we see here. Because this one, you say something
+[01:16:36.250] [UNKNOWN] like this. Alpha plus alpha plus alpha n times. What is going to be n alpha and plus that's what
+[01:16:58.750] [UNKNOWN] we see. Okay. We have this one. If you do the same thing for beta, you're going to get this one.
+[01:17:39.789] [UNKNOWN] Okay. Any question on this? All right. Okay. Let's go. Okay. So, now we have two equations.
+[01:17:55.689] [UNKNOWN] One equation is this one. Another equation is this one. If you solve these equations together,
+[01:18:05.020] [UNKNOWN] it is something like this, for example, 2x1 plus 3x2 equals zero. The other one is
+[01:18:13.609] [UNKNOWN] 5x1 plus, I don't know, 6x2 equals zero. You have two equations and two variables.
+[01:18:21.149] [UNKNOWN] You can solve it. Okay. If you do that one, considering this two,
+[01:18:26.949] [UNKNOWN] the optimal value for alpha is going to be y bar. This is different from this way.
+[01:18:38.630] [UNKNOWN] Y bar means that average of x. Okay. Minus beta average of x.
+[01:18:48.390] [UNKNOWN] How we can get the alpha itself? Beta itself means covariance of xy divided by
+[01:18:55.590] [UNKNOWN] variance of xy. And this is the definition. Okay. I think here I can explain easily.
+[01:19:06.859] [UNKNOWN] So, suppose just this example. All right. And I want to know that what is the optimal alpha
+[01:19:12.739] [UNKNOWN] and what is the optimal beta. Okay. Look at here. So, to get the optimal alpha, you need to know
+[01:19:25.689] [UNKNOWN] what is the average of y's and average of x. So, I have calculated the average of x.
+[01:19:36.340] [UNKNOWN] All right. So, it's getting to be 3. 1 plus 2 plus 3 plus 4 plus 5 divided by 5.
+[01:19:44.560] [UNKNOWN] Average of y's is getting to be 2.46. Okay. Then it's good. I have y bar. I have x bar.
+[01:19:55.380] [UNKNOWN] The only thing is beta. I don't know what is the beta. So, but I know that beta means covariance
+[01:20:04.220] [UNKNOWN] of x and y divided by variance of x. And variance of x is this equation. So, I can calculate variance
+[01:20:14.109] [UNKNOWN] of x. So, it's going to be 1 over n minus 1 on over 4. And the difference between each x and its
+[01:20:23.529] [UNKNOWN] average, which is 1 minus average 3 squared. All right. Plus the other ones. 2 minus 3 squared
+[01:20:35.989] [UNKNOWN] and so on and so forth. If you do that one, it's going to be 2.5. For quarians, you need to multiply
+[01:20:45.390] [UNKNOWN] x. You need to find again x minus average, y minus is corresponding to 1 minus average.
+[01:20:56.289] [UNKNOWN] Okay. Plus for the second point, it's going to be 2 minus 3 times 2 minus 206. Okay. Divided by 4.
+[01:21:08.810] [UNKNOWN] It gives us the variance of x. So, now I have variance of x, variance of y. So, then I can
+[01:21:18.829] [UNKNOWN] just divide this by this, right, according to get the beta. Now, beta is depends on, sorry, alpha
+[01:21:33.329] [UNKNOWN] depends on beta. Then I can get there. Okay. So, what I have here, I got the optimal, how for an
+[01:21:44.609] [UNKNOWN] optimal beta? Means that I got the optimal slope and optimal intersection. So, it shows that if
+[01:21:55.689] [UNKNOWN] your point is like this, the best function that you linear function that you can consider is going
+[01:22:03.149] [UNKNOWN] to be a function like this with a less than 1 intersection. This slope is almost 0.5. Because
+[01:22:22.130] [UNKNOWN] this is for this one, this is 0, like this. This is 0.5. Just a formulation. We call this
+[01:22:37.659] [UNKNOWN] as an ordinary basis. What you need to know is you need to know this. And how we get that one,
+[01:22:53.789] [UNKNOWN] you get based on solving this, that I showed on the slide. Any question on this? So, this is a
+[01:23:11.880] [UNKNOWN] simple linear regression. This is one way we have, what is the variance of x? Okay, intuitively.
+[01:23:52.130] [UNKNOWN] So, points, what is the variance of x? What does it show? It shows that how much of the points are
+[01:24:06.640] [UNKNOWN] difference from the average. Like, if you have like a, you want to find the variance for this
+[01:24:15.159] [UNKNOWN] class, suppose that everyone has one score. Okay, one score. And then you want to know what is the
+[01:24:21.180] [UNKNOWN] variance. What is the average? And then what's the score of each person from the average? Find that
+[01:24:30.020] [UNKNOWN] and take the mean of that one, right? Yeah, square and then take the mean of that. It shows that on
+[01:24:40.159] [UNKNOWN] average, what is the difference of each person from representative of that, let's say, population, okay?
+[01:24:53.689] [UNKNOWN] The same. We want to know that what is the variance of ages. So, then if you know that what is the
+[01:25:02.149] [UNKNOWN] average of age for each person, you can understand what is the difference from the average, okay?
+[01:25:11.310] [UNKNOWN] You do the same thing for all the samples. And then take that, take that and learn the family.
+[01:25:17.810] [UNKNOWN] That's what we see here. Like variance of x means that difference of each point from the average.
+[01:25:24.630] [UNKNOWN] Difference of each point from the average, right? There's sum of and divided by number of points that
+[01:25:31.470] [UNKNOWN] you have. That five points, major lead or variance, we say five minus. Let's have it.
+[01:25:52.510] [UNKNOWN] Okay. So, we're going to continue on age 20.
+[01:26:14.329] [UNKNOWN] Me too. Long time ago you said, when did you start your undergrad?
+[01:26:38.310] [UNKNOWN] I'm the greatest at it.
+[01:26:43.260] [UNKNOWN] Sorry, sorry, why aim, multiply? At first, I thought aim, multiply this one.
+[01:26:52.739] [UNKNOWN] Mm-hmm. But no, no, this, no, no.
+[01:27:08.659] [UNKNOWN] Oh, I thought there was something like this, right?
+[01:27:10.880] [UNKNOWN] And then it's kind of like, that's the feeling of the universe, right?
+[01:27:15.140] [UNKNOWN] Just a piece of x has to be equal to f or x to be equal to minus one.
+[01:27:23.800] [UNKNOWN] Because you have to look at the universe, right?
+[01:27:26.359] [UNKNOWN] You're a host, and you're looking at the whole x.
+[01:27:29.579] [UNKNOWN] But even if I'm x, even if I'm ordinary x,
+[01:27:33.640] [UNKNOWN] it's actually looking at x as a whole.
+[01:27:35.479] [UNKNOWN] It's just x is the universe.
+[01:27:36.319] [UNKNOWN] It's just one.
+[01:27:39.140] [UNKNOWN] If it's 2x, if you look at 2x as a whole,
+[01:27:44.180] [UNKNOWN] don't you want to say this whole thing?
+[01:27:46.399] [UNKNOWN] It's not me.
+[01:27:48.300] [UNKNOWN] I have a question for you.
+[01:28:00.770] [UNKNOWN] I thought it was equal to f or x to be equal to minus one.
+[01:28:07.029] [UNKNOWN] I thought it was equal, but why is there such an action?
+[01:28:10.909] [UNKNOWN] Of course there is.
+[01:28:12.310] [UNKNOWN] You can't ignore this.
+[01:28:14.029] [UNKNOWN] You ignore this.
+[01:28:14.909] [UNKNOWN] It's not scientific.
+[01:28:16.130] [UNKNOWN] That's my fx.
+[01:28:18.050] [UNKNOWN] It's my fx equal to 2x.
+[01:28:20.649] [UNKNOWN] If I ignore this, I look at this as a whole.
+[01:28:23.909] [UNKNOWN] According to your statement, I just become 1 times minus 1.
+[01:28:28.270] [UNKNOWN] Then it becomes 0.
+[01:28:29.649] [UNKNOWN] This is 1.
+[01:28:30.329] [UNKNOWN] 2 is gone.
+[01:28:31.270] [UNKNOWN] Do you understand?
+[01:28:32.550] [UNKNOWN] You look at this as a whole.
+[01:28:34.229] [UNKNOWN] Oh, wait a minute.
+[01:28:36.329] [UNKNOWN] fx is fake, right?
+[01:28:40.170] [UNKNOWN] Yes.
+[01:28:40.670] [UNKNOWN] Then I assume this 2x is equal to gx.
+[01:28:47.210] [UNKNOWN] If you say my fx is equal to gx,
+[01:28:54.109] [UNKNOWN] this is 1 times 1, right?
+[01:28:56.310] [UNKNOWN] 1 times 1.
+[01:28:57.050] [UNKNOWN] If according to your statement,
+[01:28:58.550] [UNKNOWN] I just want 1 times 1 minus 1 becomes 1, right?
+[01:29:01.989] [UNKNOWN] Then you don't deal with this.
+[01:29:03.789] [UNKNOWN] You don't deal with this.
+[01:29:05.170] [UNKNOWN] You can't do this.
+[01:29:07.289] [UNKNOWN] Right?
+[01:29:08.130] [UNKNOWN] Then it becomes 0.
+[01:29:09.289] [UNKNOWN] Then it becomes 0.
+[01:29:10.149] [UNKNOWN] Oh, x is gone.
+[01:29:12.409] [UNKNOWN] That's not right.
+[01:29:14.729] [UNKNOWN] This is according to your example.
+[01:29:18.310] [UNKNOWN] gx is equal to 2x.
+[01:29:20.869] [UNKNOWN] 1 is equal to 1, right?
+[01:29:22.569] [UNKNOWN] Is it right?
+[01:29:23.229] [UNKNOWN] 1.
+[01:29:23.829] [UNKNOWN] 1 is equal to 1.
+[01:29:24.909] [UNKNOWN] Then if you ask this gx to be equal to 1 times 1,
+[01:29:29.229] [UNKNOWN] you assume that it is equal to 1 times 1 times 2x.
+[01:29:33.050] [UNKNOWN] 0 times 1, right?
+[01:29:34.350] [UNKNOWN] Yes, that's 1.
+[01:29:35.229] [UNKNOWN] So 1 times 1 is equal to 1.
+[01:29:37.850] [UNKNOWN] 0 times 1 is equal to 1, right?
+[01:29:39.250] [UNKNOWN] Then it becomes 1.
+[01:29:39.890] [UNKNOWN] 2 is not like this.
+[01:29:41.210] [UNKNOWN] Then this is not scientific.
+[01:29:42.510] [UNKNOWN] Then if it is like this,
+[01:29:46.189] [UNKNOWN] it should be, according to your statement,
+[01:29:49.810] [UNKNOWN] it should be...
+[01:29:50.890] [UNKNOWN] You can't ignore the curve inside.
+[01:29:54.010] [UNKNOWN] gx is equal to 2x.
+[01:29:57.210] [UNKNOWN] It should be gx, right?
+[01:30:00.010] [UNKNOWN] Equal to 1.
+[01:30:03.670] [UNKNOWN] You just...
+[01:30:04.630] [UNKNOWN] There's another curve in 2x.
+[01:30:07.930] [UNKNOWN] It becomes 2.
+[01:30:09.770] [UNKNOWN] Isn't there one missing here?
+[01:30:11.729] [UNKNOWN] 1 times 2x is 1.
+[01:30:13.750] [UNKNOWN] 1 is equal to 1 times 2x.
+[01:30:16.409] [UNKNOWN] Actually, it should be 2, right?
+[01:30:17.869] [UNKNOWN] Yes.
+[01:30:18.310] [UNKNOWN] It should be correct.
+[01:30:19.029] [UNKNOWN] But if it is according to my error...
+[01:30:20.710] [UNKNOWN] Just a little.
+[01:30:21.109] [UNKNOWN] So if it is more than gx,
+[01:30:26.909] [UNKNOWN] it is equal to 2, right?
+[01:30:28.590] [UNKNOWN] It is more than 2.
+[01:30:29.470] [UNKNOWN] If it is 2, it becomes 1.
+[01:30:30.789] [UNKNOWN] If it is 2, it becomes 2.
+[01:30:32.270] [UNKNOWN] Oh, that's right.
+[01:30:33.069] [UNKNOWN] You just need to miss one.
+[01:30:33.970] [UNKNOWN] Yes, yes, that's right.
+[01:30:36.880] [UNKNOWN] You can't ignore it.
+[01:30:37.840] [UNKNOWN] Otherwise, we will do the opposite.
+[01:30:38.960] [UNKNOWN] If you ignore it, what will happen?
+[01:30:40.079] [UNKNOWN] If you ignore it, it will be wrong, right?
+[01:30:41.880] [UNKNOWN] But if we don't ignore it,
+[01:30:42.859] [UNKNOWN] you can't ignore it.
+[01:30:43.760] [UNKNOWN] Then I beg you.
+[01:30:44.420] [UNKNOWN] Then I can see all the things as a whole.
+[01:30:46.439] [UNKNOWN] This is a beg.
+[01:30:47.239] [UNKNOWN] And then keep the original.
+[01:30:48.619] [UNKNOWN] Do you think it's possible?
+[01:30:49.460] [UNKNOWN] Right?
+[01:30:50.020] [UNKNOWN] If it is like this, I can...
+[01:30:51.300] [UNKNOWN] If it is a long time ago, I will...
+[01:30:52.479] [UNKNOWN] I have seen a whole on this long time.
+[01:30:54.199] [UNKNOWN] Just because it is a long time ago,
+[01:30:55.239] [UNKNOWN] and most of the time you see it as a whole,
+[01:30:57.220] [UNKNOWN] you can see it as one here, right?
+[01:30:59.760] [UNKNOWN] But if you see it as one,
+[01:31:00.600] [UNKNOWN] it will be zero here.
+[01:31:01.939] [UNKNOWN] So if you beg like this,
+[01:31:02.960] [UNKNOWN] it doesn't make sense.
+[01:31:04.819] [UNKNOWN] It will destroy the original mathematical principle.
+[01:31:07.859] [UNKNOWN] Because I can see everything as a whole.
+[01:31:09.920] [UNKNOWN] If it is like this,
+[01:31:10.960] [UNKNOWN] it will only be one time.
+[01:31:12.260] [UNKNOWN] Then you beg once, and it becomes one time.
+[01:31:13.619] [UNKNOWN] All the beg will become one.
+[01:31:15.800] [UNKNOWN] This will destroy the mathematical principle.
+[01:31:17.380] [UNKNOWN] Anyway, you see what I'm talking about.
+[01:31:18.779] [UNKNOWN] So it's impossible.
+[01:31:19.760] [UNKNOWN] It's the number of the number of the number of the number of the number of the number of the number.
+[01:31:45.109] [UNKNOWN] No problem.
+[01:31:46.710] [UNKNOWN] Because you are separated.
+[01:31:48.130] [UNKNOWN] Oh, yes.
+[01:31:49.069] [UNKNOWN] But if I say it in a way,
+[01:31:50.649] [UNKNOWN] I see it as a whole.
+[01:31:52.569] [UNKNOWN] Then it becomes one.
+[01:31:54.170] [UNKNOWN] Right?
+[01:31:54.489] [UNKNOWN] This is the whole thing.
+[01:31:55.810] [UNKNOWN] I move it all over here.
+[01:31:57.970] [UNKNOWN] This is the whole thing.
+[01:31:59.770] [UNKNOWN] Oh, yes.
+[01:32:01.289] [UNKNOWN] And then one minus one becomes one.
+[01:32:03.350] [UNKNOWN] So it becomes this.
+[01:32:05.470] [UNKNOWN] It's not this.
+[01:32:06.149] [UNKNOWN] So it still needs to be in a single line.
+[01:32:08.630] [UNKNOWN] In this circle.
+[01:32:10.250] [UNKNOWN] Yes, yes.
+[01:32:13.329] [UNKNOWN] Because we build a mathematical principle.
+[01:32:16.010] [UNKNOWN] We don't need the mathematical principle.
+[01:32:17.170] [UNKNOWN] We need the mathematical principle.
+[01:32:19.550] [UNKNOWN] No mobile phone.
+[01:32:20.590] [UNKNOWN] No mobile phone.

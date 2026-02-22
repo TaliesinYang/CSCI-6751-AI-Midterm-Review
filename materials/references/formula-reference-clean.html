@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSCI 6751 - Formula Reference</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    @page {
+      margin: 1.5cm;
+    }
+    body {
+      font-family: "Charter", "Georgia", "Times New Roman", serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      line-height: 1.65;
+      color: #2c3e50;
+      background: white;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+      color: #1a1a1a;
+      border-bottom: 2px solid #333;
+      padding-bottom: 12px;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      color: #2c3e50;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+    }
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 12px;
+      color: #34495e;
+    }
+    .formula-box {
+      background: #f8f9fa;
+      border-left: 3px solid #666;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .note {
+      background: #f9f9f9;
+      border-left: 3px solid #999;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-size: 13px;
+      color: #555;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 16px 0;
+      font-size: 13px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #f5f5f5;
+      font-weight: 600;
+      color: #333;
+    }
+    ul, ol {
+      margin: 12px 0;
+      padding-left: 28px;
+    }
+    li {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+    .section {
+      margin-bottom: 28px;
+      page-break-inside: avoid;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+    code {
+      font-family: "Courier New", monospace;
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 13px;
+    }
+    strong {
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+  </style>
+</head>
+<body>
+
+<h1>CSCI 6751 - Formula Reference Guide</h1>
+<div class="subtitle">Artificial Intelligence | Fall 2025</div>
+
+<!-- ==================== SECTION 1: Gradient Descent ==================== -->
+<div class="section">
+  <h2>1. Gradient Descent</h2>
+  
+  <h3>Core Update Rule</h3>
+  <div class="formula-box">
+    $$\theta_{new} = \theta_{old} - \eta \nabla J(\theta)$$
+    <p style="margin-top: 8px;"><strong>Where:</strong></p>
+    <ul style="margin: 4px 0;">
+      <li>η (eta) = Learning rate</li>
+      <li>∇J = Gradient (derivative of loss function)</li>
+    </ul>
+  </div>
+  
+  <h3>Simple Linear Regression (y = ax + b)</h3>
+  <div class="formula-box">
+    <p><strong>Loss Function (MSE):</strong></p>
+    $$J(a, b) = \frac{1}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i)^2$$
+    
+    <p style="margin-top: 12px;"><strong>Gradients:</strong></p>
+    $$\frac{\partial J}{\partial a} = \frac{2}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i) \cdot x_i$$
+    $$\frac{\partial J}{\partial b} = \frac{2}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i)$$
+    
+    <p style="margin-top: 12px;"><strong>Parameter Updates:</strong></p>
+    $$a_{new} = a_{old} - \eta \cdot \frac{\partial J}{\partial a}$$
+    $$b_{new} = b_{old} - \eta \cdot \frac{\partial J}{\partial b}$$
+  </div>
+  
+  <h3>Algorithm Steps</h3>
+  <div class="note">
+    <ol>
+      <li><strong>Compute predictions:</strong> ŷᵢ = a·xᵢ + b</li>
+      <li><strong>Calculate errors:</strong> eᵢ = ŷᵢ - yᵢ</li>
+      <li><strong>Compute gradient for a:</strong> ∂J/∂a = (2/n)Σ(eᵢ·xᵢ)</li>
+      <li><strong>Compute gradient for b:</strong> ∂J/∂b = (2/n)Σ(eᵢ)</li>
+      <li><strong>Update a:</strong> aₙₑw = aₒₗd - η·∂J/∂a</li>
+      <li><strong>Update b:</strong> bₙₑw = bₒₗd - η·∂J/∂b</li>
+    </ol>
+  </div>
+  
+  <h3>Multivariate Linear Regression</h3>
+  <div class="formula-box">
+    <p><strong>Model:</strong> y = θ₀ + θ₁x₁ + θ₂x₂ + ... + θₚxₚ</p>
+    
+    <p style="margin-top: 12px;"><strong>Gradients:</strong></p>
+    $$\frac{\partial J}{\partial \theta_0} = \frac{2}{n} \sum (\hat{y}_i - y_i)$$
+    $$\frac{\partial J}{\partial \theta_j} = \frac{2}{n} \sum (\hat{y}_i - y_i) \cdot x_{ji} \quad (j = 1, 2, ..., p)$$
+  </div>
+</div>
+
+<!-- ==================== SECTION 2: L2 Regularization ==================== -->
+<div class="section">
+  <h2>2. L2 Regularization (Ridge Regression)</h2>
+  
+  <h3>Regularized Cost Function</h3>
+  <div class="formula-box">
+    $$J_{Ridge} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^{p} \theta_j^2$$
+    
+    <p style="margin-top: 8px;"><strong>Note:</strong> Typically, θ₀ (intercept) is not regularized.</p>
+  </div>
+  
+  <h3>Gradient with L2 Regularization</h3>
+  <div class="formula-box">
+    $$\frac{\partial J}{\partial \theta_j} = \frac{2}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i) \cdot x_{ji} + 2\lambda\theta_j$$
+  </div>
+  
+  <h3>Effect of Lambda (λ)</h3>
+  <table>
+    <tr><th>Lambda Value</th><th>Effect</th></tr>
+    <tr><td>λ = 0</td><td>No regularization (standard regression)</td></tr>
+    <tr><td>Small λ</td><td>Weak penalty, potential overfitting</td></tr>
+    <tr><td>Medium λ</td><td>Balanced, optimal performance</td></tr>
+    <tr><td>Large λ</td><td>Strong penalty, potential underfitting</td></tr>
+  </table>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ==================== SECTION 3: Normal Equation ==================== -->
+<div class="section">
+  <h2>3. Normal Equation (Closed-Form Solution)</h2>
+  
+  <h3>Core Formula</h3>
+  <div class="formula-box">
+    $$\theta = (X^T X)^{-1} X^T y$$
+    
+    <p style="margin-top: 8px;"><strong>Where:</strong></p>
+    <ul style="margin: 4px 0;">
+      <li>X = Design matrix (first column is all 1s for intercept)</li>
+      <li>y = Target vector</li>
+      <li>θ = Parameter vector [θ₀, θ₁, ..., θₚ]</li>
+    </ul>
+  </div>
+  
+  <h3>Computation Steps</h3>
+  <div class="note">
+    <ol>
+      <li>Construct design matrix X (add column of 1s)</li>
+      <li>Compute X<sup>T</sup>X</li>
+      <li>Compute (X<sup>T</sup>X)<sup>-1</sup></li>
+      <li>Compute X<sup>T</sup>y</li>
+      <li>Multiply to obtain θ = (X<sup>T</sup>X)<sup>-1</sup>X<sup>T</sup>y</li>
+    </ol>
+  </div>
+  
+  <h3>2×2 Matrix Inversion</h3>
+  <div class="formula-box">
+    <p><strong>Given:</strong></p>
+    $$A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$$
+    
+    <p style="margin-top: 12px;"><strong>Determinant:</strong></p>
+    $$\text{det}(A) = ad - bc$$
+    
+    <p style="margin-top: 12px;"><strong>Inverse:</strong></p>
+    $$A^{-1} = \frac{1}{ad - bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$$
+    
+    <p style="margin-top: 8px;"><strong>Memory aid:</strong> Swap diagonal, negate off-diagonal, divide by determinant.</p>
+  </div>
+  
+  <h3>When to Use Normal Equation vs. Gradient Descent</h3>
+  <table>
+    <tr><th>Method</th><th>When to Use</th><th>Advantages</th><th>Disadvantages</th></tr>
+    <tr>
+      <td>Normal Equation</td>
+      <td>Features < 1000</td>
+      <td>Direct solution, no iterations</td>
+      <td>Requires matrix inversion (slow for large p)</td>
+    </tr>
+    <tr>
+      <td>Gradient Descent</td>
+      <td>Features > 1000</td>
+      <td>No inversion needed, scalable</td>
+      <td>Requires multiple iterations, tuning η</td>
+    </tr>
+  </table>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ==================== SECTION 4: Fuzzy Logic ==================== -->
+<div class="section">
+  <h2>4. Fuzzy Logic</h2>
+  
+  <h3>Triangular Membership Function</h3>
+  <div class="formula-box">
+    <p><strong>Notation:</strong> triangular(a, b, c)</p>
+    
+    <pre style="font-family: monospace; background: white; padding: 10px; border: none;">
+         μ
+         1 |      /\
+           |     /  \
+           |    /    \
+           |   /      \
+         0 |__/________\__
+             a    b    c
+    </pre>
+    
+    <p><strong>Formula:</strong></p>
+    $$\mu(x) = \begin{cases}
+    0 & x \leq a \\
+    \frac{x - a}{b - a} & a < x \leq b \\
+    \frac{c - x}{c - b} & b < x < c \\
+    0 & x \geq c
+    \end{cases}$$
+    
+    <p style="margin-top: 8px;"><strong>Key points:</strong> a = left boundary, b = peak (μ=1), c = right boundary</p>
+  </div>
+  
+  <h3>Trapezoidal Membership Function</h3>
+  <div class="formula-box">
+    <p><strong>Notation:</strong> trapmf(a, b, c, d)</p>
+    
+    <pre style="font-family: monospace; background: white; padding: 10px; border: none;">
+         μ
+         1 |    ____
+           |   /    \
+           |  /      \
+           | /        \
+         0 |/          \
+             a  b  c  d
+    </pre>
+    
+    <p><strong>Formula:</strong></p>
+    $$\mu(x) = \begin{cases}
+    0 & x \leq a \\
+    \frac{x - a}{b - a} & a < x < b \\
+    1 & b \leq x \leq c \\
+    \frac{d - x}{d - c} & c < x < d \\
+    0 & x \geq d
+    \end{cases}$$
+    
+    <p style="margin-top: 8px;"><strong>Key points:</strong> [a,b] = rising edge, [b,c] = plateau (μ=1), [c,d] = falling edge</p>
+  </div>
+  
+  <h3>Fuzzy Inference System (Mamdani)</h3>
+  <div class="note">
+    <p><strong>Four Steps:</strong></p>
+    <ol>
+      <li><strong>Fuzzification:</strong> Convert crisp inputs to membership degrees</li>
+      <li><strong>Rule Evaluation:</strong> Compute firing strength for each rule</li>
+      <li><strong>Aggregation:</strong> Combine outputs from all rules</li>
+      <li><strong>Defuzzification:</strong> Convert fuzzy output to crisp value</li>
+    </ol>
+  </div>
+  
+  <h3>Firing Strength (AND Operation)</h3>
+  <div class="formula-box">
+    <p><strong>Rule form:</strong> IF X is A AND Y is B THEN Z is C</p>
+    
+    <p style="margin-top: 12px;"><strong>Firing Strength (MIN operator):</strong></p>
+    $$\text{FS} = \min(\mu_A(x), \mu_B(y))$$
+    
+    <p style="margin-top: 8px;"><strong>Rationale:</strong> AND requires both conditions; take the weaker of the two.</p>
+  </div>
+  
+  <h3>Centroid Defuzzification</h3>
+  <div class="formula-box">
+    <p><strong>Weighted average method:</strong></p>
+    $$\text{Output} = \frac{\sum_{i=1}^{n} (\text{FS}_i \times \text{Output}_i)}{\sum_{i=1}^{n} \text{FS}_i}$$
+    
+    <p style="margin-top: 8px;"><strong>Where:</strong></p>
+    <ul style="margin: 4px 0;">
+      <li>FS<sub>i</sub> = Firing strength of rule i</li>
+      <li>Output<sub>i</sub> = Crisp output value of rule i</li>
+    </ul>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ==================== SECTION 5: Overfitting & Underfitting ==================== -->
+<div class="section">
+  <h2>5. Overfitting and Underfitting</h2>
+  
+  <h3>Definitions</h3>
+  <table>
+    <tr><th>Condition</th><th>Training Error</th><th>Test Error</th><th>Cause</th></tr>
+    <tr>
+      <td><strong>Underfitting</strong></td>
+      <td>High</td>
+      <td>High</td>
+      <td>Model too simple</td>
+    </tr>
+    <tr>
+      <td><strong>Good Fit</strong></td>
+      <td>Low</td>
+      <td>Low (≈ Train)</td>
+      <td>Optimal complexity</td>
+    </tr>
+    <tr>
+      <td><strong>Overfitting</strong></td>
+      <td>Very low</td>
+      <td>High (>> Train)</td>
+      <td>Model too complex</td>
+    </tr>
+  </table>
+  
+  <h3>Solutions</h3>
+  <div class="note">
+    <p><strong>To reduce overfitting:</strong></p>
+    <ul>
+      <li>Increase λ (regularization strength)</li>
+      <li>Decrease polynomial degree</li>
+      <li>Collect more training data</li>
+      <li>Apply early stopping</li>
+    </ul>
+    
+    <p style="margin-top: 12px;"><strong>To reduce underfitting:</strong></p>
+    <ul>
+      <li>Decrease λ</li>
+      <li>Increase polynomial degree</li>
+      <li>Add more features</li>
+    </ul>
+  </div>
+  
+  <h3>Hyperparameters</h3>
+  <table>
+    <tr><th>Hyperparameter</th><th>Role</th><th>Typical Values</th></tr>
+    <tr>
+      <td>Learning Rate (η)</td>
+      <td>Step size in gradient descent</td>
+      <td>0.001 to 0.1</td>
+    </tr>
+    <tr>
+      <td>Polynomial Degree</td>
+      <td>Model complexity</td>
+      <td>1 to 10</td>
+    </tr>
+    <tr>
+      <td>Lambda (λ)</td>
+      <td>Regularization strength</td>
+      <td>0.001 to 100</td>
+    </tr>
+  </table>
+  
+  <div class="note">
+    <p><strong>Note:</strong> Hyperparameters are not learned from data; they must be tuned via cross-validation.</p>
+  </div>
+</div>
+
+<!-- ==================== SECTION 6: Key Concepts ==================== -->
+<div class="section">
+  <h2>6. Additional Key Concepts</h2>
+  
+  <h3>Classification vs. Regression</h3>
+  <table>
+    <tr><th>Task Type</th><th>Output</th><th>Examples</th></tr>
+    <tr>
+      <td>Regression</td>
+      <td>Continuous values</td>
+      <td>House prices, temperature</td>
+    </tr>
+    <tr>
+      <td>Classification</td>
+      <td>Discrete categories</td>
+      <td>Cat vs. dog, spam detection</td>
+    </tr>
+  </table>
+  
+  <h3>Supervised vs. Unsupervised Learning</h3>
+  <table>
+    <tr><th>Learning Type</th><th>Characteristics</th><th>Examples</th></tr>
+    <tr>
+      <td>Supervised</td>
+      <td>Labeled data available</td>
+      <td>Price prediction, image classification</td>
+    </tr>
+    <tr>
+      <td>Unsupervised</td>
+      <td>No labels</td>
+      <td>Customer segmentation, dimensionality reduction</td>
+    </tr>
+  </table>
+  
+  <h3>Fuzzy vs. Classical Logic</h3>
+  <table>
+    <tr><th>Logic Type</th><th>Value Range</th><th>Example</th></tr>
+    <tr>
+      <td>Classical</td>
+      <td>Binary (0 or 1)</td>
+      <td>True / False</td>
+    </tr>
+    <tr>
+      <td>Fuzzy</td>
+      <td>Continuous [0, 1]</td>
+      <td>0.7 (somewhat true)</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ==================== SECTION 7: Common Errors ==================== -->
+<div class="section">
+  <h2>7. Common Errors to Avoid</h2>
+  
+  <h3>Gradient Descent</h3>
+  <ul>
+    <li>Computing error as y - ŷ instead of ŷ - y</li>
+    <li>Forgetting to divide by n (number of samples)</li>
+    <li>Using addition instead of subtraction in parameter update</li>
+    <li>Forgetting to multiply by learning rate η</li>
+    <li>Omitting multiplication by xᵢ when computing ∂J/∂a</li>
+  </ul>
+  
+  <h3>Normal Equation</h3>
+  <ul>
+    <li>Attempting matrix multiplication with incompatible dimensions</li>
+    <li>Computing determinant as ad + bc instead of ad - bc</li>
+    <li>Failing to swap diagonal elements in matrix inversion</li>
+  </ul>
+  
+  <h3>Fuzzy Logic</h3>
+  <ul>
+    <li>Misidentifying which region x falls into (rising/plateau/falling)</li>
+    <li>Using MAX for AND operations (should use MIN)</li>
+    <li>Errors in centroid numerator/denominator calculation</li>
+    <li>Forgetting that trapezoidal plateau region has μ = 1</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 8: Exam Strategy ==================== -->
+<div class="section">
+  <h2>8. Exam Strategy</h2>
+  
+  <h3>Time Management (50-minute exam)</h3>
+  <ul>
+    <li>Reading and planning: 3-5 minutes</li>
+    <li>Question 1: 20-22 minutes</li>
+    <li>Question 2: 20-22 minutes</li>
+    <li>Review: 3-5 minutes</li>
+  </ul>
+  
+  <h3>Answering Techniques</h3>
+  <ul>
+    <li>Show all steps clearly (partial credit for correct methodology)</li>
+    <li>Double-check signs (especially negative signs in gradients)</li>
+    <li>Verify dimensions in matrix operations</li>
+    <li>If stuck, move on and return later</li>
+    <li>Use pencil for easy corrections</li>
+  </ul>
+</div>
+
+<div style="border-top: 2px solid #333; margin-top: 40px; padding-top: 16px; text-align: center; font-size: 12px; color: #666;">
+  <p>CSCI 6751 Artificial Intelligence | Fall 2025</p>
+  <p>End of Formula Reference Guide</p>
+</div>
+
+</body>
+</html>

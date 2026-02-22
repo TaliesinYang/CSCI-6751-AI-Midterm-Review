@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"center","type":"text","text":"# Week 05\n# Model Evaluation Metrics\n\n模型评估指标\n\n[[Week05/notes|完整笔记]]","x":0,"y":300,"width":280,"height":200,"color":"6"},
+		{"id":"branch1","type":"text","text":"## Validation vs Test Set\n\nValidation Set（验证集）：\n- 来自训练数据\n- 调整超参数\n- 选择最佳模型\n\nTest Set（测试集）：\n- 完全独立\n- 只用一次\n- 评估泛化能力\n\n划分：Train 60-70%\nValidation 15-20%\nTest 15-20%\n\n[[Week05/notes#1) Validation Set vs Test Set|详细说明]]","x":350,"y":-20,"width":300,"height":400,"color":"3"},
+		{"id":"branch2","type":"text","text":"## Regression Metrics\n回归指标\n\nMAE = (1/n)Σ|y - ŷ|\n- 单位与数据相同\n- 对异常值不敏感\n\nMSE = (1/n)Σ(y - ŷ)²\n- 惩罚大误差\n\nRMSE = √MSE\n- 最可解释\n\nR² = 1 - SSres/SStot\n- 方差解释比例 (0-1)\n\n[[Week05/notes#2) 回归指标|详细内容]]","x":350,"y":420,"width":300,"height":440,"color":"2"},
+		{"id":"branch3","type":"text","text":"## Confusion Matrix\n混淆矩阵\n\n四种情况：\n- TP: 预测正·实际正 ✓\n- FP: 预测正·实际负 ✗\n- TN: 预测负·实际负 ✓\n- FN: 预测负·实际正 ✗\n\nType I Error = FP\nType II Error = FN\n\n[[Week05/notes#3.1 混淆矩阵|详细内容]]","x":720,"y":-20,"width":300,"height":360,"color":"2"},
+		{"id":"branch4","type":"text","text":"## Classification Metrics\n分类指标\n\nPrecision = TP/(TP+FP)\n- 预测正中的准确率\n- 重要：垃圾邮件过滤\n\nRecall = TP/(TP+FN)\n- 真正例的覆盖率\n- 重要：癌症筛查\n\nF1 = 2PR/(P+R)\n- 调和平均数\n- 平衡 P 和 R\n\n权衡：Precision ↑ → Recall ↓\n\n[[Week05/notes#3) 分类指标|详细内容]]","x":720,"y":380,"width":300,"height":460,"color":"5"},
+		{"id":"branch5","type":"text","text":"## Cross-Validation\n交叉验证\n\nK-Fold CV：\n1. 数据分 K 份\n2. 每份轮流做验证集\n3. 结果取平均\n\n常用：K=5 或 10\nLOOCV：K=n\n\n优点：结果稳定可靠\n缺点：计算成本高\n\n[[Week05/notes#4) Cross-Validation|详细内容]]","x":1090,"y":0,"width":300,"height":360,"color":"3"},
+		{"id":"branch6","type":"text","text":"## 应用建议\n\n回归问题：\n- MAE: 抗异常值\n- RMSE: 关注大误差\n- R²: 拟合程度\n\n分类问题：\n- Accuracy: 类别平衡\n- Precision: 避免误报\n- Recall: 避免漏报\n- F1: 平衡两者\n\n[[Week05/notes|完整笔记]]\n[[Week05/Reminders|重点提醒]]\n[[Week05/vocabulary|术语表]]","x":1090,"y":400,"width":300,"height":400,"color":"4"}
+	],
+	"edges":[
+		{"id":"c-b1","fromNode":"center","toNode":"branch1","fromSide":"right","toSide":"left"},
+		{"id":"c-b2","fromNode":"center","toNode":"branch2","fromSide":"right","toSide":"left"},
+		{"id":"b1-b3","fromNode":"branch1","toNode":"branch3","fromSide":"right","toSide":"left"},
+		{"id":"b2-b4","fromNode":"branch2","toNode":"branch4","fromSide":"right","toSide":"left"},
+		{"id":"b3-b5","fromNode":"branch3","toNode":"branch5","fromSide":"right","toSide":"left"},
+		{"id":"b4-b6","fromNode":"branch4","toNode":"branch6","fromSide":"right","toSide":"left"},
+		{"id":"b5-b6","fromNode":"branch5","toNode":"branch6","fromSide":"right","toSide":"left"}
+	]
+}

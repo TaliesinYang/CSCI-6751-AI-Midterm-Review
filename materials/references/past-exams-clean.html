@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSCI 6751 - Past Exam Questions</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    @page {
+      margin: 1.5cm;
+    }
+    body {
+      font-family: "Charter", "Georgia", "Times New Roman", serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      line-height: 1.65;
+      color: #2c3e50;
+      background: white;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+      color: #1a1a1a;
+      border-bottom: 2px solid #333;
+      padding-bottom: 12px;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      color: #2c3e50;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+    }
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 12px;
+      color: #34495e;
+    }
+    .question {
+      background: #f8f9fa;
+      border-left: 3px solid #666;
+      padding: 18px 22px;
+      margin: 18px 0;
+      font-size: 14px;
+    }
+    .solution {
+      background: #f9f9f9;
+      border-left: 3px solid #999;
+      padding: 18px 22px;
+      margin: 18px 0;
+      font-size: 14px;
+    }
+    .step {
+      background: white;
+      border: 1px solid #e0e0e0;
+      padding: 14px;
+      margin: 12px 0;
+      font-size: 13px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 16px 0;
+      font-size: 13px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background: #f5f5f5;
+      font-weight: 600;
+      color: #333;
+    }
+    ul, ol {
+      margin: 12px 0;
+      padding-left: 28px;
+    }
+    li {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+    .section {
+      margin-bottom: 28px;
+      page-break-inside: avoid;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+    .answer-box {
+      background: #f0f0f0;
+      border: 2px solid #666;
+      padding: 16px;
+      margin: 16px 0;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    strong {
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+    .exam-header {
+      background: #f5f5f5;
+      padding: 14px;
+      margin: 20px 0;
+      border-left: 4px solid #333;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>CSCI 6751 - Past Exam Questions</h1>
+<div class="subtitle">Quiz #1 and Midterm | With Complete Solutions</div>
+
+<!-- ==================== QUIZ #1 ==================== -->
+<div class="section">
+  <h2>Quiz #1 (October 14, 2025)</h2>
+  <div class="exam-header">
+    <p><strong>Total Points:</strong> 50 | <strong>Time Allowed:</strong> 40 minutes</p>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Question 1 (25 points) - Gradient Descent</h3>
+  
+  <div class="question">
+    <p><strong>Problem Statement</strong></p>
+    <p>We train a simple linear regression model: <strong>y = ax + b</strong></p>
+    
+    <p><strong>Given data:</strong></p>
+    <table style="width: 40%;">
+      <tr><th>x</th><th>y</th></tr>
+      <tr><td>1</td><td>3</td></tr>
+      <tr><td>2</td><td>5</td></tr>
+    </table>
+    
+    <p><strong>Initial parameters:</strong> a = 0, b = 0</p>
+    <p><strong>Learning rate:</strong> η = 0.1</p>
+    <p><strong>Loss function (MSE):</strong></p>
+    $$E(a, b) = \frac{1}{n} \sum (y_i - \hat{y}_i)^2$$
+    <p>where ŷᵢ = axᵢ + b and n = 2</p>
+    
+    <p><strong>Task:</strong> Compute one iteration of Gradient Descent. Show prediction, error, gradients, and updated values of a and b.</p>
+  </div>
+  
+  <div class="solution">
+    <h3>Solution</h3>
+    
+    <div class="step">
+      <p><strong>Step 1: Compute Predictions</strong></p>
+      $$\hat{y}_1 = a \cdot x_1 + b = 0 \cdot 1 + 0 = 0$$
+      $$\hat{y}_2 = a \cdot x_2 + b = 0 \cdot 2 + 0 = 0$$
+    </div>
+    
+    <div class="step">
+      <p><strong>Step 2: Calculate Errors</strong></p>
+      $$e_1 = \hat{y}_1 - y_1 = 0 - 3 = -3$$
+      $$e_2 = \hat{y}_2 - y_2 = 0 - 5 = -5$$
+    </div>
+    
+    <div class="step">
+      <p><strong>Step 3: Compute Gradient (∂E/∂a)</strong></p>
+      $$\frac{\partial E}{\partial a} = \frac{2}{n} \sum (e_i \cdot x_i)$$
+      $$= \frac{2}{2} [(e_1 \cdot x_1) + (e_2 \cdot x_2)]$$
+      $$= \frac{2}{2} [(-3 \cdot 1) + (-5 \cdot 2)]$$
+      $$= \frac{2}{2} [-3 - 10] = \frac{2}{2} \times (-13) = -13$$
+    </div>
+    
+    <div class="step">
+      <p><strong>Step 4: Compute Gradient (∂E/∂b)</strong></p>
+      $$\frac{\partial E}{\partial b} = \frac{2}{n} \sum e_i$$
+      $$= \frac{2}{2} [e_1 + e_2]$$
+      $$= \frac{2}{2} [(-3) + (-5)]$$
+      $$= \frac{2}{2} \times (-8) = -8$$
+    </div>
+    
+    <div class="step">
+      <p><strong>Step 5: Update Parameters</strong></p>
+      $$a_{new} = a_{old} - \eta \cdot \frac{\partial E}{\partial a}$$
+      $$= 0 - 0.1 \times (-13) = 0 + 1.3 = 1.3$$
+      
+      $$b_{new} = b_{old} - \eta \cdot \frac{\partial E}{\partial b}$$
+      $$= 0 - 0.1 \times (-8) = 0 + 0.8 = 0.8$$
+    </div>
+    
+    <div class="answer-box">
+      <p><strong>Final Answer:</strong></p>
+      <p>a<sub>new</sub> = 1.3, b<sub>new</sub> = 0.8</p>
+      <p>New model: y = 1.3x + 0.8</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<div class="section">
+  <h3>Question 2 (25 points) - Fuzzy Logic</h3>
+  
+  <div class="question">
+    <p><strong>Problem Statement</strong></p>
+    
+    <p><strong>Fuzzy sets for Temperature:</strong></p>
+    <ul>
+      <li>Low: triangular (0, 0, 25)</li>
+      <li>Medium: triangular (20, 30, 40)</li>
+      <li>High: triangular (35, 50, 50)</li>
+    </ul>
+    
+    <p><strong>Fan speed outputs:</strong></p>
+    <ul>
+      <li>Slow = 20</li>
+      <li>Medium = 50</li>
+      <li>Fast = 80</li>
+    </ul>
+    
+    <p><strong>Rules:</strong></p>
+    <ol>
+      <li>IF Temperature is Low THEN Speed is Slow</li>
+      <li>IF Temperature is Medium THEN Speed is Medium</li>
+      <li>IF Temperature is High THEN Speed is Fast</li>
+    </ol>
+    
+    <p><strong>Input:</strong> Temperature = 30°C</p>
+    
+    <p><strong>Tasks:</strong></p>
+    <p>(a) Compute the degree of membership of Temperature = 30°C in each fuzzy set (Low, Medium, High). Show your calculations using the triangular membership functions.</p>
+    <p>(b) Using the centroid (weighted average) method, compute the defuzzified fan speed output.</p>
+  </div>
+  
+  <div class="solution">
+    <h3>Solution</h3>
+    
+    <div class="step">
+      <p><strong>Part (a): Membership Degrees</strong></p>
+      
+      <table>
+        <tr>
+          <th>Fuzzy Set</th>
+          <th>Parameters (a, b, c)</th>
+          <th>μ(T=30)</th>
+          <th>Calculation</th>
+        </tr>
+        <tr>
+          <td>Low</td>
+          <td>(0, 0, 25)</td>
+          <td><strong>0</strong></td>
+          <td>30 > 25 (c) → 0</td>
+        </tr>
+        <tr>
+          <td>Medium</td>
+          <td>(20, 30, 40)</td>
+          <td><strong>1</strong></td>
+          <td>30 = b (peak) → 1</td>
+        </tr>
+        <tr>
+          <td>High</td>
+          <td>(35, 50, 50)</td>
+          <td><strong>0</strong></td>
+          <td>30 < 35 (a) → 0</td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="step">
+      <p><strong>Part (b): Defuzzification Using Centroid Method</strong></p>
+      
+      <p><strong>Firing Strengths:</strong></p>
+      <table>
+        <tr>
+          <th>Rule</th>
+          <th>Firing Strength</th>
+          <th>Output</th>
+        </tr>
+        <tr>
+          <td>Rule 1: Low → Slow</td>
+          <td>0</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Rule 2: Medium → Medium</td>
+          <td>1</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Rule 3: High → Fast</td>
+          <td>0</td>
+          <td>80</td>
+        </tr>
+      </table>
+      
+      <p><strong>Centroid Formula:</strong></p>
+      $$\text{Fan Speed} = \frac{\sum (\text{FS}_i \times \text{Output}_i)}{\sum \text{FS}_i}$$
+      
+      $$= \frac{(0 \times 20) + (1 \times 50) + (0 \times 80)}{0 + 1 + 0}$$
+      
+      $$= \frac{0 + 50 + 0}{1} = \frac{50}{1} = 50$$
+    </div>
+    
+    <div class="answer-box">
+      <p><strong>Final Answer:</strong></p>
+      <p>Fan Speed = 50</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ==================== MIDTERM ==================== -->
+<div class="section">
+  <h2>Midterm Examination (October 14, 2025)</h2>
+  <div class="exam-header">
+    <p><strong>Total Points:</strong> 50 (Calculation) + 50 (MCQ)</p>
+    <p><strong>Time Allowed:</strong> 50 minutes (Calculation) + 15 minutes (MCQ)</p>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Question 1 (25 points) - Multivariate Linear Regression with L2 Regularization</h3>
+  
+  <div class="question">
+    <p><strong>Problem Statement</strong></p>
+    <p>You are working with a multivariate linear regression model with the hypothesis function:</p>
+    $$y = \theta_0 + \theta_1 x_1 + \theta_2 x_2$$
+    
+    <p><strong>Given:</strong></p>
+    <ul>
+      <li>A single data point: (x₁, x₂, y) = (1, 3, 8)</li>
+      <li>Current model parameters: θ = [θ₀, θ₁, θ₂] = [1, 0.5, 1]</li>
+      <li>Learning rate for Gradient Descent: η = 0.05</li>
+      <li>L2 Regularization parameter: λ = 0.5</li>
+    </ul>
+    
+    <p><strong>Tasks:</strong></p>
+    <p>(i) Using the single data point, perform one iteration of Gradient Descent.</p>
+    <ul>
+      <li>a) Calculate the prediction ŷ</li>
+      <li>b) Calculate the prediction error</li>
+      <li>c) Calculate the updated parameter vector θ<sub>new</sub> after one GD step</li>
+    </ul>
+    <p>(ii) Using the initial parameters θ = [1, 0.5, 1], calculate the L2 regularized cost J<sub>Ridge</sub>. (Assume we do not regularize θ₀).</p>
+  </div>
+  
+  <div class="solution">
+    <h3>Solution</h3>
+    
+    <div class="step">
+      <p><strong>Part (i): Gradient Descent</strong></p>
+      
+      <p><strong>a) Prediction:</strong></p>
+      $$\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2$$
+      $$= 1 + 0.5 \times 1 + 1 \times 3$$
+      $$= 1 + 0.5 + 3 = 4.5$$
+      
+      <p><strong>b) Error:</strong></p>
+      $$e = \hat{y} - y = 4.5 - 8 = -3.5$$
+      
+      <p><strong>c) Gradients (MSE component):</strong></p>
+      $$\frac{\partial \text{MSE}}{\partial \theta_0} = \frac{2}{n} \sum e_i = 2 \times (-3.5) = -7$$
+      $$\frac{\partial \text{MSE}}{\partial \theta_1} = \frac{2}{n} \sum (e_i \times x_{1i}) = 2 \times (-3.5) \times 1 = -7$$
+      $$\frac{\partial \text{MSE}}{\partial \theta_2} = \frac{2}{n} \sum (e_i \times x_{2i}) = 2 \times (-3.5) \times 3 = -21$$
+      
+      <p><strong>Parameter Updates:</strong></p>
+      $$\theta_{0,new} = 1 - 0.05 \times (-7) = 1 + 0.35 = 1.35$$
+      $$\theta_{1,new} = 0.5 - 0.05 \times (-7) = 0.5 + 0.35 = 0.85$$
+      $$\theta_{2,new} = 1 - 0.05 \times (-21) = 1 + 1.05 = 2.05$$
+    </div>
+    
+    <div class="step">
+      <p><strong>Part (ii): L2 Regularized Cost</strong></p>
+      
+      <p><strong>MSE:</strong></p>
+      $$\text{MSE} = \frac{1}{n} \sum (y_i - \hat{y}_i)^2 = \frac{1}{1} (8 - 4.5)^2 = 3.5^2 = 12.25$$
+      
+      <p><strong>L2 Penalty (excluding θ₀):</strong></p>
+      $$\text{L2 Penalty} = \lambda \sum_{j=1}^{2} \theta_j^2 = 0.5 \times (\theta_1^2 + \theta_2^2)$$
+      $$= 0.5 \times (0.5^2 + 1^2) = 0.5 \times (0.25 + 1) = 0.5 \times 1.25 = 0.625$$
+      
+      <p><strong>Total Regularized Cost:</strong></p>
+      $$J_{Ridge} = \text{MSE} + \text{L2 Penalty}$$
+      $$= 12.25 + 0.625 = 12.875$$
+    </div>
+    
+    <div class="answer-box">
+      <p><strong>Final Answers:</strong></p>
+      <p>(i) θ<sub>new</sub> = [1.35, 0.85, 2.05]</p>
+      <p>(ii) J<sub>Ridge</sub> = 12.875</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<div class="section">
+  <h3>Question 2 (25 points) - Fuzzy Logic System (Coffee Maker)</h3>
+  
+  <div class="question">
+    <p><strong>Problem Statement</strong></p>
+    <p><strong>System:</strong> Smart Coffee Maker Strength Control</p>
+    
+    <p><strong>Input Variable 1 - Coffee Bean Freshness (days since roast):</strong></p>
+    <ul>
+      <li>Fresh: trapmf(0, 0, 3, 5)</li>
+      <li>Medium: trapmf(3, 5, 10, 14)</li>
+      <li>Old: trapmf(10, 14, 21, 21)</li>
+    </ul>
+    
+    <p><strong>Input Variable 2 - Water Quality (ppm minerals):</strong></p>
+    <ul>
+      <li>Soft: trapmf(0, 0, 50, 100)</li>
+      <li>Medium: trapmf(50, 100, 150, 200)</li>
+      <li>Hard: trapmf(150, 200, 300, 300)</li>
+    </ul>
+    
+    <p><strong>Output Variable - Brew Strength:</strong></p>
+    <ul>
+      <li>Mild: trapmf(0, 0, 3, 4)</li>
+      <li>Balanced: trapmf(3, 4, 6, 7)</li>
+      <li>Strong: trapmf(6, 7, 10, 10)</li>
+    </ul>
+    
+    <p><strong>Rules:</strong></p>
+    <ol>
+      <li>IF Beans are Fresh AND Water is Soft THEN Strength is Mild</li>
+      <li>IF Beans are Medium AND Water is Medium THEN Strength is Balanced</li>
+      <li>IF Beans are Old AND Water is Hard THEN Strength is Strong</li>
+    </ol>
+    
+    <p><strong>Current Input:</strong></p>
+    <ul>
+      <li>Bean Freshness = 6 days</li>
+      <li>Water Quality = 120 ppm</li>
+    </ul>
+    
+    <p><strong>Task:</strong> Calculate the firing strength of each rule.</p>
+  </div>
+  
+  <div class="solution">
+    <h3>Solution</h3>
+    
+    <div class="step">
+      <p><strong>Step 1: Membership Values for Bean Freshness = 6 days</strong></p>
+      
+      <p><strong>Fresh: trapmf(0, 0, 3, 5)</strong></p>
+      <p>6 > d (5) → μ<sub>Fresh</sub>(6) = <strong>0</strong></p>
+      
+      <p><strong>Medium: trapmf(3, 5, 10, 14)</strong></p>
+      <p>6 is in plateau region [b, c] = [5, 10] → μ<sub>Medium</sub>(6) = <strong>1</strong></p>
+      
+      <p><strong>Old: trapmf(10, 14, 21, 21)</strong></p>
+      <p>6 < a (10) → μ<sub>Old</sub>(6) = <strong>0</strong></p>
+    </div>
+    
+    <div class="step">
+      <p><strong>Step 2: Membership Values for Water Quality = 120 ppm</strong></p>
+      
+      <p><strong>Soft: trapmf(0, 0, 50, 100)</strong></p>
+      <p>120 > d (100) → μ<sub>Soft</sub>(120) = <strong>0</strong></p>
+      
+      <p><strong>Medium: trapmf(50, 100, 150, 200)</strong></p>
+      <p>120 is in plateau region [b, c] = [100, 150] → μ<sub>Medium</sub>(120) = <strong>1</strong></p>
+      
+      <p><strong>Hard: trapmf(150, 200, 300, 300)</strong></p>
+      <p>120 < a (150) → μ<sub>Hard</sub>(120) = <strong>0</strong></p>
+    </div>
+    
+    <div class="step">
+      <p><strong>Step 3: Firing Strengths (Using MIN Operator for AND)</strong></p>
+      
+      <table>
+        <tr>
+          <th>Rule</th>
+          <th>Calculation</th>
+          <th>Firing Strength</th>
+        </tr>
+        <tr>
+          <td>Rule 1: Fresh ∧ Soft → Mild</td>
+          <td>min(0, 0)</td>
+          <td><strong>0</strong></td>
+        </tr>
+        <tr>
+          <td>Rule 2: Medium ∧ Medium → Balanced</td>
+          <td>min(1, 1)</td>
+          <td><strong>1</strong></td>
+        </tr>
+        <tr>
+          <td>Rule 3: Old ∧ Hard → Strong</td>
+          <td>min(0, 0)</td>
+          <td><strong>0</strong></td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="answer-box">
+      <p><strong>Final Answer:</strong></p>
+      <p>Rule 1 Firing Strength: 0</p>
+      <p>Rule 2 Firing Strength: 1</p>
+      <p>Rule 3 Firing Strength: 0</p>
+      <p><em>Only Rule 2 is activated.</em></p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ==================== MIDTERM MCQ SELECTED ==================== -->
+<div class="section">
+  <h2>Midterm - Multiple Choice Questions (Selected)</h2>
+  <div class="exam-header">
+    <p><strong>Total Points:</strong> 50 (10 questions × 5 points)</p>
+    <p><strong>Time Allowed:</strong> 15 minutes</p>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Question 3 - When to Use Gradient Descent vs. Normal Equation</h3>
+  
+  <div class="question">
+    <p>The primary reason to use Gradient Descent for linear regression instead of the Least Squares Solution is when:</p>
+    <ol type="a">
+      <li>The model is severely underfitting.</li>
+      <li>The number of features is very large (e.g., >1000), making LSS computationally expensive.</li>
+      <li>The relationship between variables is perfectly linear.</li>
+      <li>You need a 100% accurate model.</li>
+    </ol>
+  </div>
+  
+  <div class="solution">
+    <p><strong>Correct Answer: (b)</strong></p>
+    <p><strong>Explanation:</strong> When the number of features is very large (>1000), computing the matrix inverse (X<sup>T</sup>X)<sup>-1</sup> in the Normal Equation becomes computationally expensive. Gradient Descent avoids this matrix inversion and scales better to high-dimensional problems.</p>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Question 4 - L1 vs. L2 Regularization</h3>
+  
+  <div class="question">
+    <p>You are building a linear regression model and suspect that only 5 out of 100 features are truly predictive. Which regularization technique would be most appropriate to help identify these key features?</p>
+    <ol type="a">
+      <li>L2 Regularization (Ridge)</li>
+      <li>L1 Regularization (Lasso)</li>
+      <li>ElasticNet with a higher weight on the L2 part</li>
+      <li>No regularization is needed.</li>
+    </ol>
+  </div>
+  
+  <div class="solution">
+    <p><strong>Correct Answer: (b) L1 Regularization (Lasso)</strong></p>
+    <p><strong>Explanation:</strong> L1 regularization (Lasso) drives some coefficients exactly to zero, effectively performing feature selection. L2 regularization (Ridge) only shrinks coefficients but does not set them to zero. For identifying a small subset of important features from many candidates, L1 is the appropriate choice.</p>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Question 6 - Normal Equation Matrix Dimensions</h3>
+  
+  <div class="question">
+    <p>In the multivariate linear regression normal equation θ = (X<sup>T</sup>X)<sup>-1</sup>X<sup>T</sup>Y, if the design matrix X has dimensions m × (n+1) (m examples, n features plus intercept), and Y is m × 1, what are the dimensions of the resulting parameter vector θ?</p>
+    <ol type="a">
+      <li>m × 1</li>
+      <li>(n+1) × 1</li>
+      <li>m × (n+1)</li>
+      <li>(n+1) × m</li>
+    </ol>
+  </div>
+  
+  <div class="solution">
+    <p><strong>Correct Answer: (b) (n+1) × 1</strong></p>
+    <p><strong>Explanation:</strong> The parameter vector θ must have one element for each feature plus the intercept term. Since there are n features plus 1 intercept, θ has dimension (n+1) × 1.</p>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Question 7 - Overfitting and Underfitting Transition</h3>
+  
+  <div class="question">
+    <p>A model has high error on both training and test data. Increasing model complexity reduces training error to near zero, but test error remains high. This sequence describes the transition from a model suffering primarily from ______ to one suffering primarily from ______.</p>
+    <ol type="a">
+      <li>High variance; High bias</li>
+      <li>High bias; High variance</li>
+      <li>Underfitting; Optimal fitting</li>
+      <li>High bias; Low bias</li>
+    </ol>
+  </div>
+  
+  <div class="solution">
+    <p><strong>Correct Answer: (b) High bias; High variance</strong></p>
+    <p><strong>Explanation:</strong> Initially, high errors on both training and test data indicate underfitting (high bias). After increasing complexity, low training error but high test error indicates overfitting (high variance). The model has transitioned from high bias to high variance.</p>
+  </div>
+</div>
+
+<div style="border-top: 2px solid #333; margin-top: 40px; padding-top: 16px; text-align: center; font-size: 12px; color: #666;">
+  <p>CSCI 6751 Artificial Intelligence | Fall 2025</p>
+  <p>End of Past Exam Questions</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+	"nodes":[
+		{"id":"center","type":"text","text":"# Week 03\n# Linear Regression\n\n线性回归\n\n[[Week03/notes|完整笔记]]","x":0,"y":300,"width":280,"height":200,"color":"6"},
+		{"id":"branch1","type":"text","text":"## 核心概念\n\nRegression vs Classification\n- Regression: 连续数值\n- Classification: 离散类别\n\nLinear Regression 任务\n- 学习函数预测连续值\n- 最小化预测误差\n\n[[Week03/notes#1) Supervised Learning：Regression vs Classification|详细说明]]","x":350,"y":0,"width":300,"height":320,"color":"3"},
+		{"id":"branch2","type":"text","text":"## Normal Equation\n闭式解\n\n必背公式：\nθ = (XᵀX)⁻¹Xᵀy\n\n特点：\n- 一步到位\n- 需要矩阵可逆\n\n需要掌握：\n- 矩阵转置\n- 矩阵求逆\n- 行列式\n\n[[Week03/notes#A. Closed-form / Least Squares（闭式解 / 最小二乘）|详细内容]]","x":350,"y":360,"width":300,"height":440,"color":"2"},
+		{"id":"branch3","type":"text","text":"## Gradient Descent\n梯度下降\n\n更新规则：\nθ := θ - α∇J(θ)\n\n特点：\n- 迭代优化\n- 不需要求逆\n- Learning Rate 控制步长\n\n类型：\n- Batch GD: 全部数据\n- SGD: 单个样本\n- Mini-batch: 小批量\n\n[[Week03/notes#B. Gradient-based solution（梯度法 / Gradient Descent）|详细内容]]\n[[Week03/gradient-descent-handout.pdf|PDF讲义]]","x":720,"y":0,"width":300,"height":500,"color":"2"},
+		{"id":"branch4","type":"text","text":"## 必背公式\n\nNormal Equation:\nθ = (XᵀX)⁻¹Xᵀy\n\nGradient Descent:\nθ := θ - α∇J(θ)\n\nGradient:\n∇J(θ) = (1/m)Xᵀ(Xθ - y)\n\nMSE Loss:\nJ(θ) = (1/2m)Σ(ŷ⁽ⁱ⁾ - y⁽ⁱ⁾)²\n\n[[Week03/notes#考试必背公式（Normal Equation）|笔记中的公式]]","x":720,"y":540,"width":300,"height":400,"color":"5"},
+		{"id":"branch5","type":"text","text":"## 考试重点\n\n必须会：\n- 区分 Regression vs Classification\n- 记住 Normal Equation 公式\n- 理解两种求解方法差异\n- 掌握基本矩阵运算\n- 理解梯度下降原理\n\n教授强调：\n- 考试可能没有 Python\n- 需要会手算\n- 矩阵运算很重要\n\n[[Week03/notes#5) 本周考试导向提醒（教授反复提到）|完整要求]]","x":1090,"y":0,"width":300,"height":420,"color":"6"},
+		{"id":"branch6","type":"text","text":"## 核心术语\n\n数据相关：\n- Instance 样本\n- Feature 输入变量\n- Target 输出\n\n模型相关：\n- Hypothesis 假设函数\n- Cost Function 损失函数\n- Gradient 梯度\n- Convergence 收敛\n\n[[Week03/vocabulary|完整术语表]]\n[[Week03/notes#4) 你需要能讲清楚的概念对照|概念对照]]","x":1090,"y":460,"width":300,"height":380,"color":"4"},
+		{"id":"branch7","type":"text","text":"## 课程资源\n\n[[Week03/notes|完整笔记]]\n[[Week03/vocabulary|术语表]]\n[[Week03/qa-summary|QA总结]]\n[[Week03/Reminders|重点提醒]]\n[[Week03/gradient-descent-handout.pdf|PDF讲义]]\n\n一句话总结：\n监督学习的回归任务落地到线性回归。\n两条求解路线：\n- Normal Equation (闭式解)\n- Gradient Descent (梯度法)\n\n[[Week03/notes#6) 小结（1段话）|完整总结]]","x":1460,"y":180,"width":300,"height":480,"color":"3"}
+	],
+	"edges":[
+		{"id":"c-b1","fromNode":"center","toNode":"branch1","fromSide":"right","toSide":"left"},
+		{"id":"c-b2","fromNode":"center","toNode":"branch2","fromSide":"right","toSide":"left"},
+		{"id":"b1-b3","fromNode":"branch1","toNode":"branch3","fromSide":"right","toSide":"left"},
+		{"id":"b2-b4","fromNode":"branch2","toNode":"branch4","fromSide":"right","toSide":"left"},
+		{"id":"b3-b5","fromNode":"branch3","toNode":"branch5","fromSide":"right","toSide":"left"},
+		{"id":"b4-b6","fromNode":"branch4","toNode":"branch6","fromSide":"right","toSide":"left"},
+		{"id":"b5-b7","fromNode":"branch5","toNode":"branch7","fromSide":"right","toSide":"left"},
+		{"id":"b6-b7","fromNode":"branch6","toNode":"branch7","fromSide":"right","toSide":"left"}
+	]
+}

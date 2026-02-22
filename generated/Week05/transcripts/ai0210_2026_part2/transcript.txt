@@ -1,0 +1,1 @@
+This 700, like this. Suppose that I have chunk 1, chunk 2, chunk 8. Chunk 8 is my validation. 1 to 7 is my trade. Next time, 1 to 6 is my trade plus chunk 8. Chunk 7 is going to be my validation. Okay? And next time, chunk, let's say, 3, my trade. Okay? 2, 1.

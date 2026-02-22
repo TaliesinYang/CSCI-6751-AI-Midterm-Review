@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuzzy Logic 完整教程 - CSCI 6751</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.8;
+      background: #f5f5f5;
+    }
+    .section {
+      background: white;
+      padding: 30px;
+      margin: 25px 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      page-break-inside: avoid;
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 4px solid #9b59b6;
+      padding-bottom: 15px;
+      font-size: 32px;
+    }
+    h2 {
+      color: #9b59b6;
+      margin-top: 35px;
+      font-size: 24px;
+      border-left: 5px solid #9b59b6;
+      padding-left: 15px;
+    }
+    h3 {
+      color: #16a085;
+      font-size: 20px;
+      margin-top: 25px;
+    }
+    .intuition {
+      background: #fff3cd;
+      padding: 25px;
+      margin: 20px 0;
+      border-left: 5px solid #ffc107;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+    .formula-box {
+      background: #e8f4f8;
+      padding: 25px;
+      margin: 20px 0;
+      border-left: 5px solid #3498db;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+    .example {
+      background: #e8f8f5;
+      padding: 25px;
+      margin: 20px 0;
+      border-left: 5px solid #16a085;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+    .step {
+      background: #f0f0f0;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 3px solid #7f8c8d;
+    }
+    .important {
+      background: #ffe6e6;
+      padding: 20px;
+      margin: 20px 0;
+      border-left: 5px solid #e74c3c;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .tip {
+      background: #e8f5e9;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 3px solid #4caf50;
+      font-size: 16px;
+    }
+    .comparison {
+      background: #f3e5f5;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 2px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background: #9b59b6;
+      color: white;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+    .graph {
+      text-align: center;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🎯 Fuzzy Logic 完整教程</h1>
+<p style="color: #7f8c8d; font-size: 16px;">期中考试 Question 2 (25分) | 从概念到计算到真题</p>
+
+<div class="important">
+  ⚠️ 期中考试重点：隶属函数（Membership Functions）、Firing Strength、Centroid Defuzzification
+</div>
+
+<div class="section">
+  <h2>1️⃣ 什么是 Fuzzy Logic？</h2>
+  
+  <h3>经典逻辑 vs 模糊逻辑</h3>
+  
+  <div class="comparison">
+    <table>
+      <tr>
+        <th>经典逻辑（Classical Logic）</th>
+        <th>模糊逻辑（Fuzzy Logic）</th>
+      </tr>
+      <tr>
+        <td><strong>二元</strong>：True (1) 或 False (0)</td>
+        <td><strong>程度</strong>：0 到 1 之间的任何值</td>
+      </tr>
+      <tr>
+        <td>"今天热吗？" → 是/否</td>
+        <td>"今天热吗？" → 热度 0.7（比较热）</td>
+      </tr>
+      <tr>
+        <td>20°C 是冷还是热？<br>→ 必须二选一</td>
+        <td>20°C 既有点冷（0.3）<br>又有点热（0.4）</td>
+      </tr>
+    </table>
+  </div>
+  
+  <div class="intuition">
+    <h3>💡 直觉理解</h3>
+    <p><strong>现实世界中，很多概念是模糊的：</strong></p>
+    <ul style="font-size: 18px;">
+      <li>"这个房间热吗？" → 不是简单的是/否</li>
+      <li>"这辆车快吗？" → 快的程度？</li>
+      <li>"这个人高吗？" → 多高算高？</li>
+    </ul>
+    
+    <p><strong>Fuzzy Logic 允许我们用"程度"来描述这些概念！</strong></p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>2️⃣ 隶属函数（Membership Functions）</h2>
+  
+  <h3>定义</h3>
+  <p>隶属函数 μ(x) 表示输入 x 属于某个模糊集合的"程度"。</p>
+  
+  <div class="formula-box">
+    <p><strong>符号：</strong></p>
+    $$\mu_{A}(x): X \rightarrow [0, 1]$$
+    
+    <ul>
+      <li>μ<sub>A</sub>(x) = 0 → x 完全不属于集合 A</li>
+      <li>μ<sub>A</sub>(x) = 1 → x 完全属于集合 A</li>
+      <li>0 < μ<sub>A</sub>(x) < 1 → x 部分属于集合 A</li>
+    </ul>
+  </div>
+  
+  <h3>两种常见形状</h3>
+  
+  <h4>1. 三角形隶属函数（Triangular Membership Function）</h4>
+  
+  <div class="formula-box">
+    <p><strong>参数：</strong>triangular(a, b, c)</p>
+    
+    <div class="graph">
+      <pre style="font-family: monospace; font-size: 14px; text-align: left; display: inline-block;">
+         μ
+         1.0 |        /\
+             |       /  \
+         0.5 |      /    \
+             |     /      \
+         0.0 |____/        \____
+             a    b    c
+      </pre>
+    </div>
+    
+    <p><strong>公式：</strong></p>
+    $$\mu(x) = \begin{cases}
+    0 & \text{if } x \leq a \\
+    \frac{x - a}{b - a} & \text{if } a < x \leq b \\
+    \frac{c - x}{c - b} & \text{if } b < x < c \\
+    0 & \text{if } x \geq c
+    \end{cases}$$
+    
+    <p><strong>关键点：</strong></p>
+    <ul>
+      <li>a = 左边界（开始上升）</li>
+      <li>b = 峰值（μ = 1）</li>
+      <li>c = 右边界（回到0）</li>
+    </ul>
+  </div>
+  
+  <div class="example">
+    <h3>例子：Temperature = "Medium"</h3>
+    <p><strong>参数：</strong>triangular(20, 30, 40)</p>
+    
+    <table>
+      <tr><th>温度 (°C)</th><th>μ_Medium</th><th>计算过程</th></tr>
+      <tr><td>10</td><td>0</td><td>10 < 20 → 0</td></tr>
+      <tr><td>25</td><td>0.5</td><td>(25-20)/(30-20) = 5/10 = 0.5</td></tr>
+      <tr><td>30</td><td>1.0</td><td>峰值 → 1</td></tr>
+      <tr><td>35</td><td>0.5</td><td>(40-35)/(40-30) = 5/10 = 0.5</td></tr>
+      <tr><td>50</td><td>0</td><td>50 > 40 → 0</td></tr>
+    </table>
+  </div>
+  
+  <h4>2. 梯形隶属函数（Trapezoidal Membership Function）</h4>
+  
+  <div class="formula-box">
+    <p><strong>参数：</strong>trapmf(a, b, c, d)</p>
+    
+    <div class="graph">
+      <pre style="font-family: monospace; font-size: 14px; text-align: left; display: inline-block;">
+         μ
+         1.0 |      ____
+             |     /    \
+         0.5 |    /      \
+             |   /        \
+         0.0 |__/          \__
+             a  b    c  d
+      </pre>
+    </div>
+    
+    <p><strong>公式：</strong></p>
+    $$\mu(x) = \begin{cases}
+    0 & \text{if } x \leq a \\
+    \frac{x - a}{b - a} & \text{if } a < x < b \\
+    1 & \text{if } b \leq x \leq c \\
+    \frac{d - x}{d - c} & \text{if } c < x < d \\
+    0 & \text{if } x \geq d
+    \end{cases}$$
+    
+    <p><strong>关键点：</strong></p>
+    <ul>
+      <li>a, b = 左边上升段</li>
+      <li>b 到 c = 平顶（μ = 1）</li>
+      <li>c, d = 右边下降段</li>
+    </ul>
+  </div>
+  
+  <div class="example">
+    <h3>例子：Bean Freshness = "Fresh"</h3>
+    <p><strong>参数：</strong>trapmf(0, 0, 3, 5)</p>
+    
+    <table>
+      <tr><th>天数</th><th>μ_Fresh</th><th>计算过程</th></tr>
+      <tr><td>0</td><td>1.0</td><td>在平顶 [0, 3] → 1</td></tr>
+      <tr><td>2</td><td>1.0</td><td>在平顶 [0, 3] → 1</td></tr>
+      <tr><td>4</td><td>0.5</td><td>(5-4)/(5-3) = 1/2 = 0.5</td></tr>
+      <tr><td>6</td><td>0</td><td>6 > 5 → 0</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<div class="section">
+  <h2>3️⃣ Fuzzy Inference System（模糊推理系统）</h2>
+  
+  <h3>四个步骤（Mamdani 系统）</h3>
+  
+  <div class="formula-box">
+    <ol style="font-size: 18px;">
+      <li><strong>Fuzzification（模糊化）</strong>：把清晰输入转换为隶属度</li>
+      <li><strong>Rule Evaluation（规则评估）</strong>：计算每条规则的激活强度</li>
+      <li><strong>Aggregation（聚合）</strong>：合并所有规则的输出</li>
+      <li><strong>Defuzzification（去模糊化）</strong>：把模糊输出转换为清晰值</li>
+    </ol>
+  </div>
+  
+  <h3>步骤 1: Fuzzification</h3>
+  <div class="example">
+    <p><strong>例子：</strong>Temperature = 30°C</p>
+    
+    <p>使用隶属函数计算：</p>
+    <ul>
+      <li>μ_Low(30) = ?</li>
+      <li>μ_Medium(30) = ?</li>
+      <li>μ_High(30) = ?</li>
+    </ul>
+  </div>
+  
+  <h3>步骤 2: Rule Evaluation（Firing Strength）</h3>
+  
+  <div class="formula-box">
+    <p><strong>规则形式：</strong></p>
+    <p>IF X is A AND Y is B THEN Z is C</p>
+    
+    <p><strong>Firing Strength 计算（使用 MIN 算子）：</strong></p>
+    $$\text{Firing Strength} = \min(\mu_A(x), \mu_B(y))$$
+    
+    <p><strong>为什么是 MIN？</strong></p>
+    <p>AND 表示"同时满足"，取最小值表示最弱的环节决定整体。</p>
+  </div>
+  
+  <div class="example">
+    <h3>例子：</h3>
+    <p><strong>规则：</strong>IF Temperature is Medium AND Humidity is High THEN Fan is Fast</p>
+    
+    <p><strong>输入：</strong></p>
+    <ul>
+      <li>μ_Medium(30) = 1.0</li>
+      <li>μ_High(70) = 0.6</li>
+    </ul>
+    
+    <p><strong>Firing Strength：</strong></p>
+    $$\text{FS} = \min(1.0, 0.6) = 0.6$$
+  </div>
+  
+  <h3>步骤 3 & 4: Aggregation + Defuzzification</h3>
+  
+  <div class="formula-box">
+    <p><strong>Centroid Method（加权平均法）：</strong></p>
+    $$\text{Output} = \frac{\sum_{i=1}^{n} (\text{FS}_i \times \text{Output}_i)}{\sum_{i=1}^{n} \text{FS}_i}$$
+    
+    <p>其中：</p>
+    <ul>
+      <li>FS<sub>i</sub> = 第 i 条规则的 Firing Strength</li>
+      <li>Output<sub>i</sub> = 第 i 条规则的输出值</li>
+    </ul>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<div class="section">
+  <h2>4️⃣ 期中真题完整解答</h2>
+  
+  <div class="example">
+    <h3>Question 2 (Midterm)</h3>
+    
+    <p><strong>题目：Fan Speed Control</strong></p>
+    
+    <p><strong>Temperature Fuzzy Sets：</strong></p>
+    <ul>
+      <li>Low: triangular(0, 0, 25)</li>
+      <li>Medium: triangular(20, 30, 40)</li>
+      <li>High: triangular(35, 50, 50)</li>
+    </ul>
+    
+    <p><strong>Fan Speed Outputs：</strong></p>
+    <ul>
+      <li>Slow = 20</li>
+      <li>Medium = 50</li>
+      <li>Fast = 80</li>
+    </ul>
+    
+    <p><strong>Rules：</strong></p>
+    <ol>
+      <li>IF Temperature is Low THEN Speed is Slow</li>
+      <li>IF Temperature is Medium THEN Speed is Medium</li>
+      <li>IF Temperature is High THEN Speed is Fast</li>
+    </ol>
+    
+    <p><strong>输入：Temperature = 30°C</strong></p>
+  </div>
+  
+  <h3>(a) 计算 Membership Degrees</h3>
+  
+  <div class="step">
+    <h4>1. μ_Low(30) - triangular(0, 0, 25)</h4>
+    <p><strong>参数：</strong>a=0, b=0, c=25</p>
+    
+    <p><strong>判断：</strong>30 > c (25) → 超出右边界</p>
+    
+    $$\mu_{Low}(30) = 0$$
+  </div>
+  
+  <div class="step">
+    <h4>2. μ_Medium(30) - triangular(20, 30, 40)</h4>
+    <p><strong>参数：</strong>a=20, b=30, c=40</p>
+    
+    <p><strong>判断：</strong>30 = b → 刚好在峰值！</p>
+    
+    $$\mu_{Medium}(30) = 1.0$$
+  </div>
+  
+  <div class="step">
+    <h4>3. μ_High(30) - triangular(35, 50, 50)</h4>
+    <p><strong>参数：</strong>a=35, b=50, c=50</p>
+    
+    <p><strong>判断：</strong>30 < a (35) → 在左边界之外</p>
+    
+    $$\mu_{High}(30) = 0$$
+  </div>
+  
+  <div class="formula-box" style="background: #e8f8f5;">
+    <h3>✅ (a) 答案</h3>
+    <table>
+      <tr><th>Fuzzy Set</th><th>μ(30)</th></tr>
+      <tr><td>Low</td><td>0</td></tr>
+      <tr><td>Medium</td><td>1.0</td></tr>
+      <tr><td>High</td><td>0</td></tr>
+    </table>
+  </div>
+  
+  <h3>(b) Defuzzification（Centroid Method）</h3>
+  
+  <div class="step">
+    <h4>步骤 1：确定每条规则的 Firing Strength</h4>
+    
+    <table>
+      <tr><th>规则</th><th>Firing Strength</th><th>Output</th></tr>
+      <tr><td>Rule 1: Low → Slow</td><td>0</td><td>20</td></tr>
+      <tr><td>Rule 2: Medium → Medium</td><td>1.0</td><td>50</td></tr>
+      <tr><td>Rule 3: High → Fast</td><td>0</td><td>80</td></tr>
+    </table>
+  </div>
+  
+  <div class="step">
+    <h4>步骤 2：应用 Centroid 公式</h4>
+    
+    $$\text{Fan Speed} = \frac{\sum (\text{FS}_i \times \text{Output}_i)}{\sum \text{FS}_i}$$
+    
+    <p><strong>分子：</strong></p>
+    $$= (0 \times 20) + (1.0 \times 50) + (0 \times 80)$$
+    $$= 0 + 50 + 0 = 50$$
+    
+    <p><strong>分母：</strong></p>
+    $$= 0 + 1.0 + 0 = 1.0$$
+    
+    <p><strong>结果：</strong></p>
+    $$\text{Fan Speed} = \frac{50}{1.0} = 50$$
+  </div>
+  
+  <div class="formula-box" style="background: #e8f8f5;">
+    <h3>✅ (b) 答案</h3>
+    <p style="font-size: 22px;"><strong>Defuzzified Fan Speed = 50</strong></p>
+    
+    <p><strong>解释：</strong>因为只有 Medium 规则被激活（FS=1），所以输出就是 Medium speed = 50。</p>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<div class="section">
+  <h2>5️⃣ 更复杂的例子（多规则激活）</h2>
+  
+  <div class="example">
+    <h3>例子：Temperature = 32°C</h3>
+    <p>这次不是峰值，会同时激活多条规则！</p>
+  </div>
+  
+  <div class="step">
+    <h4>步骤 1：计算 Membership Degrees</h4>
+    
+    <p><strong>μ_Low(32) - triangular(0, 0, 25)</strong></p>
+    <p>32 > 25 → μ_Low(32) = 0</p>
+    
+    <p><strong>μ_Medium(32) - triangular(20, 30, 40)</strong></p>
+    <p>参数：a=20, b=30, c=40</p>
+    <p>32 在下降段（b < 32 < c）：</p>
+    $$\mu_{Medium}(32) = \frac{c - x}{c - b} = \frac{40 - 32}{40 - 30} = \frac{8}{10} = 0.8$$
+    
+    <p><strong>μ_High(32) - triangular(35, 50, 50)</strong></p>
+    <p>32 < 35 → μ_High(32) = 0</p>
+  </div>
+  
+  <div class="step">
+    <h4>步骤 2：Firing Strengths</h4>
+    
+    <table>
+      <tr><th>规则</th><th>FS</th><th>Output</th></tr>
+      <tr><td>Rule 1: Low → Slow</td><td>0</td><td>20</td></tr>
+      <tr><td>Rule 2: Medium → Medium</td><td>0.8</td><td>50</td></tr>
+      <tr><td>Rule 3: High → Fast</td><td>0</td><td>80</td></tr>
+    </table>
+  </div>
+  
+  <div class="step">
+    <h4>步骤 3：Defuzzification</h4>
+    
+    $$\text{Fan Speed} = \frac{(0 \times 20) + (0.8 \times 50) + (0 \times 80)}{0 + 0.8 + 0}$$
+    $$= \frac{0 + 40 + 0}{0.8} = \frac{40}{0.8} = 50$$
+  </div>
+  
+  <div class="tip">
+    💡 <strong>注意：</strong>虽然 FS 变了，但输出还是 50，因为只有一条规则被激活！
+  </div>
+</div>
+
+<div class="section">
+  <h2>6️⃣ 真正复杂的例子（Midterm Coffee Maker）</h2>
+  
+  <div class="example">
+    <h3>Midterm Question 2（真题）</h3>
+    
+    <p><strong>Coffee Maker 系统</strong></p>
+    
+    <p><strong>Inputs：</strong></p>
+    <ul>
+      <li><strong>Bean Freshness (days)：</strong>
+        <ul>
+          <li>Fresh: trapmf(0, 0, 3, 5)</li>
+          <li>Medium: trapmf(3, 5, 10, 14)</li>
+          <li>Old: trapmf(10, 14, 21, 21)</li>
+        </ul>
+      </li>
+      <li><strong>Water Quality (ppm)：</strong>
+        <ul>
+          <li>Soft: trapmf(0, 0, 50, 100)</li>
+          <li>Medium: trapmf(50, 100, 150, 200)</li>
+          <li>Hard: trapmf(150, 200, 300, 300)</li>
+        </ul>
+      </li>
+    </ul>
+    
+    <p><strong>Output：Brew Strength</strong></p>
+    <ul>
+      <li>Mild: trapmf(0, 0, 3, 4)</li>
+      <li>Balanced: trapmf(3, 4, 6, 7)</li>
+      <li>Strong: trapmf(6, 7, 10, 10)</li>
+    </ul>
+    
+    <p><strong>Rules：</strong></p>
+    <ol>
+      <li>IF Beans are Fresh AND Water is Soft THEN Strength is Mild</li>
+      <li>IF Beans are Medium AND Water is Medium THEN Strength is Balanced</li>
+      <li>IF Beans are Old AND Water is Hard THEN Strength is Strong</li>
+    </ol>
+    
+    <p><strong>输入：Bean Freshness = 6 days, Water Quality = 120 ppm</strong></p>
+  </div>
+  
+  <div class="step">
+    <h4>步骤 1：计算 Bean Freshness = 6 days 的隶属度</h4>
+    
+    <p><strong>Fresh: trapmf(0, 0, 3, 5)</strong></p>
+    <p>6 > d (5) → μ_Fresh(6) = 0</p>
+    
+    <p><strong>Medium: trapmf(3, 5, 10, 14)</strong></p>
+    <p>参数：a=3, b=5, c=10, d=14</p>
+    <p>6 在平顶区间 [b, c] = [5, 10]：</p>
+    $$\mu_{Medium}(6) = 1.0$$
+    
+    <p><strong>Old: trapmf(10, 14, 21, 21)</strong></p>
+    <p>6 < a (10) → μ_Old(6) = 0</p>
+  </div>
+  
+  <div class="step">
+    <h4>步骤 2：计算 Water Quality = 120 ppm 的隶属度</h4>
+    
+    <p><strong>Soft: trapmf(0, 0, 50, 100)</strong></p>
+    <p>120 > d (100) → μ_Soft(120) = 0</p>
+    
+    <p><strong>Medium: trapmf(50, 100, 150, 200)</strong></p>
+    <p>参数：a=50, b=100, c=150, d=200</p>
+    <p>120 在平顶区间 [b, c] = [100, 150]：</p>
+    $$\mu_{Medium}(120) = 1.0$$
+    
+    <p><strong>Hard: trapmf(150, 200, 300, 300)</strong></p>
+    <p>120 < a (150) → μ_Hard(120) = 0</p>
+  </div>
+  
+  <div class="step">
+    <h4>步骤 3：计算 Firing Strengths</h4>
+    
+    <p><strong>Rule 1: Fresh AND Soft → Mild</strong></p>
+    $$\text{FS}_1 = \min(0, 0) = 0$$
+    
+    <p><strong>Rule 2: Medium AND Medium → Balanced</strong></p>
+    $$\text{FS}_2 = \min(1.0, 1.0) = 1.0$$
+    
+    <p><strong>Rule 3: Old AND Hard → Strong</strong></p>
+    $$\text{FS}_3 = \min(0, 0) = 0$$
+  </div>
+  
+  <div class="formula-box" style="background: #e8f8f5;">
+    <h3>✅ 最终答案</h3>
+    
+    <table>
+      <tr><th>规则</th><th>Firing Strength</th></tr>
+      <tr><td>Rule 1 (Mild)</td><td>0</td></tr>
+      <tr><td>Rule 2 (Balanced)</td><td>1.0</td></tr>
+      <tr><td>Rule 3 (Strong)</td><td>0</td></tr>
+    </table>
+    
+    <p><strong>结论：只有 Rule 2 被激活！</strong></p>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<div class="section">
+  <h2>7️⃣ 考试常见题型</h2>
+  
+  <h3>题型 1：计算隶属度（必考）</h3>
+  <div class="example">
+    <p>给定隶属函数和输入值，计算 μ(x)</p>
+    <p><strong>重点：</strong>判断 x 落在哪个区间（上升/平顶/下降/外部）</p>
+  </div>
+  
+  <h3>题型 2：计算 Firing Strength（必考）</h3>
+  <div class="example">
+    <p>给定规则和隶属度，计算 Firing Strength</p>
+    <p><strong>公式：</strong>FS = min(μ₁, μ₂, ...) 对于 AND</p>
+  </div>
+  
+  <h3>题型 3：Defuzzification（必考）</h3>
+  <div class="example">
+    <p>使用 Centroid Method 计算最终输出</p>
+    <p><strong>公式：</strong>Output = Σ(FS × Output) / Σ(FS)</p>
+  </div>
+  
+  <h3>题型 4：选择题 - 概念理解</h3>
+  <div class="example">
+    <ul>
+      <li>Q: Fuzzy vs Classical sets 的区别？<br>
+          A: Classical 是 binary (0/1), Fuzzy 是 degree (0-1)</li>
+      <li>Q: Fuzzy Inference 的四个步骤顺序？<br>
+          A: Fuzzification → Rule Evaluation → Aggregation → Defuzzification</li>
+      <li>Q: Fuzzy Union 操作？<br>
+          A: μ_A∪B(x) = max(μ_A(x), μ_B(x))</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section" style="background: #e8f5e9;">
+  <h2>📝 考试速查表</h2>
+  
+  <h3>必须记住的公式</h3>
+  
+  <div class="formula-box">
+    <p><strong>1. 三角形隶属函数 triangular(a, b, c)：</strong></p>
+    <ul>
+      <li>上升：μ = (x - a) / (b - a)</li>
+      <li>下降：μ = (c - x) / (c - b)</li>
+      <li>峰值（x = b）：μ = 1</li>
+    </ul>
+    
+    <p><strong>2. 梯形隶属函数 trapmf(a, b, c, d)：</strong></p>
+    <ul>
+      <li>上升：μ = (x - a) / (b - a)</li>
+      <li>平顶（b ≤ x ≤ c）：μ = 1</li>
+      <li>下降：μ = (d - x) / (d - c)</li>
+    </ul>
+    
+    <p><strong>3. Firing Strength（AND）：</strong></p>
+    $$\text{FS} = \min(\mu_1, \mu_2, ...)$$
+    
+    <p><strong>4. Centroid Defuzzification：</strong></p>
+    $$\text{Output} = \frac{\sum (\text{FS}_i \times \text{Output}_i)}{\sum \text{FS}_i}$$
+  </div>
+  
+  <h3>计算步骤（背诵！）</h3>
+  <ol style="font-size: 18px;">
+    <li>✅ 画出隶属函数图（标注 a, b, c, d）</li>
+    <li>✅ 判断输入落在哪个区间</li>
+    <li>✅ 应用对应公式计算隶属度</li>
+    <li>✅ 使用 MIN 计算 Firing Strength</li>
+    <li>✅ 使用 Centroid 公式计算输出</li>
+  </ol>
+  
+  <h3>常见错误</h3>
+  <ul style="font-size: 18px; color: #e74c3c;">
+    <li>❌ 区间判断错误（上升/下降/平顶/外部）</li>
+    <li>❌ AND 用 MAX（应该用 MIN）</li>
+    <li>❌ OR 用 MIN（应该用 MAX）</li>
+    <li>❌ Centroid 分子分母算错</li>
+    <li>❌ 梯形平顶区间忘记 μ = 1</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>🎯 练习题</h2>
+  
+  <div class="example">
+    <h3>练习：自己算一遍</h3>
+    
+    <p><strong>Temperature Fuzzy Sets：</strong></p>
+    <ul>
+      <li>Cold: triangular(0, 10, 20)</li>
+      <li>Warm: triangular(15, 25, 35)</li>
+      <li>Hot: triangular(30, 40, 50)</li>
+    </ul>
+    
+    <p><strong>输入：Temperature = 22°C</strong></p>
+    
+    <p><strong>计算：</strong></p>
+    <ol>
+      <li>μ_Cold(22) = ?</li>
+      <li>μ_Warm(22) = ?</li>
+      <li>μ_Hot(22) = ?</li>
+    </ol>
+  </div>
+  
+  <div style="height: 200px; border: 2px dashed #ccc; margin: 20px 0; padding: 20px;">
+    <p style="color: #999;">在此处写下你的计算过程...</p>
+  </div>
+  
+  <div class="tip">
+    💡 <strong>提示：</strong><br>
+    - Cold: 22 > c (20) → ?<br>
+    - Warm: 15 < 22 < 25 → 在哪个段？<br>
+    - Hot: 22 < a (30) → ?
+  </div>
+</div>
+
+</body>
+</html>

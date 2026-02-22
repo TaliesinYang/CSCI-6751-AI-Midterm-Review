@@ -1,0 +1,311 @@
+[00:00:14.189] [UNKNOWN] Do you have any idea about how you can find the universal matrix?
+[00:00:21.289] [UNKNOWN] Remember from my school?
+[00:00:25.719] [UNKNOWN] You need to find the determinant, right?
+[00:00:28.079] [UNKNOWN] So I can bring one example.
+[00:00:30.920] [UNKNOWN] You see, for example, 11 by 4.
+[00:00:34.179] [UNKNOWN] Okay?
+[00:00:35.200] [UNKNOWN] How this one is got from this one?
+[00:00:39.020] [UNKNOWN] That's the question, okay?
+[00:00:40.640] [UNKNOWN] Let me explain here.
+[00:00:43.039] [UNKNOWN] So you can just review on Google how to find the inverse of matrix,
+[00:00:52.359] [UNKNOWN] but in general it's very easy.
+[00:00:56.799] [UNKNOWN] So what you need to do,
+[00:00:59.920] [UNKNOWN] so you want to find the inverse for corresponding to this one, right?
+[00:01:06.120] [UNKNOWN] Which is 11 by 4.
+[00:01:07.439] [UNKNOWN] How you can find?
+[00:01:10.200] [UNKNOWN] Just review all these lines.
+[00:01:12.700] [UNKNOWN] Wherever 4 is located there,
+[00:01:15.280] [UNKNOWN] its row and columns should be written.
+[00:01:18.019] [UNKNOWN] What is left?
+[00:01:19.280] [UNKNOWN] 6, 7, 7, 10.
+[00:01:22.060] [UNKNOWN] And multiply 6 by 10 is 16.
+[00:01:25.319] [UNKNOWN] Minus 49.
+[00:01:26.780] [UNKNOWN] What is left?
+[00:01:28.579] [UNKNOWN] 11.
+[00:01:29.640] [UNKNOWN] It's going to be 11 divided by...
+[00:01:35.599] [UNKNOWN] Let's go to this one.
+[00:01:37.640] [UNKNOWN] How I got this?
+[00:01:38.819] [UNKNOWN] This is corresponding to this 4.
+[00:01:42.519] [UNKNOWN] And this 4 is in first row, second column.
+[00:01:48.120] [UNKNOWN] You remove that one, you're going to have only 4 and 7 and 6.
+[00:01:54.560] [UNKNOWN] 40 minus 42.
+[00:02:02.439] [UNKNOWN] So yeah, okay.
+[00:02:07.000] [UNKNOWN] I'm looking for...
+[00:02:08.719] [UNKNOWN] I'll explain how we get this value.
+[00:02:11.800] [UNKNOWN] So where is this value?
+[00:02:15.340] [UNKNOWN] Its corresponding value is 4.
+[00:02:18.879] [UNKNOWN] Where is 4 located?
+[00:02:21.520] [UNKNOWN] First row, second column.
+[00:02:26.490] [UNKNOWN] Remove all the values in the first row and second column.
+[00:02:30.590] [UNKNOWN] What is left?
+[00:02:32.250] [UNKNOWN] The matrix of 4, 7, 6, 10.
+[00:02:37.330] [UNKNOWN] Then the determination of that one is going to be like this.
+[00:02:42.210] [UNKNOWN] Multiply this, minus this one.
+[00:02:46.500] [UNKNOWN] 4 times 10.
+[00:02:49.039] [UNKNOWN] 40 minus 42.
+[00:02:53.080] [UNKNOWN] Which means minus 2.
+[00:02:57.340] [UNKNOWN] So we have minus, let's say, minus 2 here.
+[00:03:01.740] [UNKNOWN] I can explain what it's getting.
+[00:03:04.500] [UNKNOWN] Minus 2, and what is the value for 4 times?
+[00:03:16.930] [UNKNOWN] So...
+[00:03:17.569] [UNKNOWN] And then, again, here.
+[00:03:20.789] [UNKNOWN] What is getting positive?
+[00:03:22.889] [UNKNOWN] For the odd values, for this one, it's going to positive.
+[00:03:28.210] [UNKNOWN] For the next one, you multiply that one with one extra minus.
+[00:03:32.710] [UNKNOWN] It's giving you that how to calculate the immersive matrix.
+[00:03:38.069] [UNKNOWN] So you want to get this 6.
+[00:03:41.830] [UNKNOWN] Again, remove this row, remove this column.
+[00:03:45.150] [UNKNOWN] What is left?
+[00:03:46.969] [UNKNOWN] 27 minus 36.
+[00:03:53.830] [UNKNOWN] Which is going to be...
+[00:03:59.039] [UNKNOWN] Sorry, 24 minus...
+[00:04:03.580] [UNKNOWN] Minus 8.
+[00:04:05.180] [UNKNOWN] 28 minus 36, which is 8.
+[00:04:10.439] [UNKNOWN] And it could be 8.6.
+[00:04:14.520] [UNKNOWN] Just check this one.
+[00:04:16.079] [UNKNOWN] Maybe this calculation here is not correct.
+[00:04:18.839] [UNKNOWN] Okay?
+[00:04:19.560] [UNKNOWN] So what you need to do, just take this matrix and...
+[00:04:26.639] [UNKNOWN] And learn how you can find the inverse of that.
+[00:04:30.779] [UNKNOWN] By yourself.
+[00:04:32.819] [UNKNOWN] If there is any miscalculation, you can give this one to...
+[00:04:39.360] [UNKNOWN] Yeah, to AI and ask that what would be the...
+[00:04:48.139] [UNKNOWN] Okay, do that one.
+[00:04:49.339] [UNKNOWN] Just provide this matrix to AI and ask that what would be the inverse.
+[00:04:54.439] [UNKNOWN] Is it the same thing or is it something different?
+[00:05:08.500] [UNKNOWN] You can check on your side and correct it if it's not correct.
+[00:05:14.199] [UNKNOWN] And what is important to learn that if you have a matrix, how to get the inverse?
+[00:05:21.699] [UNKNOWN] Because everything depends on this minus.
+[00:05:23.639] [UNKNOWN] With this assumption that inverse is this, output is going to be...
+[00:05:36.620] [UNKNOWN] Just check this one on your side.
+[00:05:38.279] [UNKNOWN] That's it.
+[00:05:40.480] [UNKNOWN] It should be, I believe, some revision of this.
+[00:05:45.430] [UNKNOWN] But you can check.
+[00:05:48.689] [UNKNOWN] Same thing.
+[00:05:49.670] [UNKNOWN] Here, you see this is an example.
+[00:05:54.050] [UNKNOWN] When you have 3 by 3, you need to get inverse of result.
+[00:06:00.519] [UNKNOWN] Yeah.
+[00:06:01.779] [UNKNOWN] Yeah, just give you that how you can find the inverse of the matrix.
+[00:06:13.689] [UNKNOWN] Any questions?
+[00:06:28.779] [UNKNOWN] Will this kind of question show in our midterm?
+[00:06:34.120] [UNKNOWN] The calculation, I mean.
+[00:06:34.939] [UNKNOWN] In our midterm, we want to have...
+[00:06:38.519] [UNKNOWN] We might have something like this.
+[00:06:41.759] [UNKNOWN] And ask you what would be the optimal parameters.
+[00:06:50.100] [UNKNOWN] Yeah.
+[00:06:50.519] [UNKNOWN] Is it difficult to hear?
+[00:06:53.720] [UNKNOWN] Which one is and how we get this value?
+[00:06:56.540] [UNKNOWN] Can we use AI?
+[00:06:58.879] [UNKNOWN] Can we use Python?
+[00:07:01.120] [UNKNOWN] You can use Python, but in the exam, you don't have the Python, right?
+[00:07:05.259] [UNKNOWN] Yeah.
+[00:07:06.079] [UNKNOWN] You want to understand how we get this value.
+[00:07:11.060] [UNKNOWN] But you only give us the data.
+[00:07:13.439] [UNKNOWN] We have to assume they only have one or two degrees.
+[00:07:17.939] [UNKNOWN] What I want to give you, for example, I'm going to provide something like this.
+[00:07:23.540] [UNKNOWN] X1 and Y, or X1 and X2 and Y.
+[00:07:26.879] [UNKNOWN] And ask you that suppose we have a linear function.
+[00:07:30.939] [UNKNOWN] I give you that assumption.
+[00:07:32.819] [UNKNOWN] Okay.
+[00:07:33.879] [UNKNOWN] That makes sense.
+[00:07:34.939] [UNKNOWN] Just with that assumption, you're going to have to...
+[00:07:37.879] [UNKNOWN] So we have to remember the formula.
+[00:07:40.379] [UNKNOWN] This formula should be, yeah, it's a good point.
+[00:07:43.259] [UNKNOWN] You need to memorize this formula.
+[00:07:45.399] [UNKNOWN] That's it.
+[00:07:47.160] [UNKNOWN] It is a closed form.
+[00:07:48.560] [UNKNOWN] I also memorize that.
+[00:07:51.220] [UNKNOWN] Okay?
+[00:07:52.100] [UNKNOWN] X transpose, easy.
+[00:07:53.480] [UNKNOWN] X transpose X inverse.
+[00:07:56.519] [UNKNOWN] X transpose Y.
+[00:07:57.699] [UNKNOWN] That's it.
+[00:08:00.100] [UNKNOWN] If you know this one, all the linear regulations can be solved by this.
+[00:08:06.480] [UNKNOWN] Even the simple one, multivariable, or polynomial, any data.
+[00:08:22.079] [UNKNOWN] Okay.
+[00:08:29.110] [UNKNOWN] The takeaway.
+[00:08:29.870] [UNKNOWN] What is the conclusion here?
+[00:08:33.029] [UNKNOWN] What is the conclusion?
+[00:08:35.129] [UNKNOWN] Okay.
+[00:08:35.470] [UNKNOWN] People at the back.
+[00:08:37.610] [UNKNOWN] Let me know what is the conclusion.
+[00:08:40.769] [UNKNOWN] What you learned today.
+[00:08:43.269] [UNKNOWN] Let's give you that.
+[00:08:47.389] [UNKNOWN] Numbers.
+[00:08:48.970] [UNKNOWN] I didn't learn much.
+[00:08:50.690] [UNKNOWN] I didn't discuss too much.
+[00:08:52.090] [UNKNOWN] Numbers was just a part of our discussion.
+[00:08:56.929] [UNKNOWN] What was the A?
+[00:08:59.370] [UNKNOWN] Find the parameter.
+[00:09:00.909] [UNKNOWN] Find the parameter for what?
+[00:09:04.129] [UNKNOWN] Linear regression.
+[00:09:05.450] [UNKNOWN] Okay.
+[00:09:05.870] [UNKNOWN] Okay.
+[00:09:06.509] [UNKNOWN] Let's summarize together.
+[00:09:08.289] [UNKNOWN] The idea here is that suppose that you have some points.
+[00:09:12.529] [UNKNOWN] Okay?
+[00:09:12.929] [UNKNOWN] Some points.
+[00:09:14.389] [UNKNOWN] Like I have one point here.
+[00:09:17.769] [UNKNOWN] For that point, I have its X and I have its Y.
+[00:09:22.509] [UNKNOWN] I have lots of points like this.
+[00:09:26.029] [UNKNOWN] And I want to approximate or feed a linear function.
+[00:09:33.620] [UNKNOWN] The best linear function is that the one that which has the minimum error.
+[00:09:42.039] [UNKNOWN] Means that after you feed that function, the difference between that point.
+[00:09:47.960] [UNKNOWN] And that's why all the points, if you sum up together, should be a small number.
+[00:09:55.000] [UNKNOWN] The bigger number means that your feed is not good.
+[00:09:58.460] [UNKNOWN] And what you need to do?
+[00:10:02.100] [UNKNOWN] Increase the linearity to polynomial.
+[00:10:06.200] [UNKNOWN] They need to.
+[00:10:07.899] [UNKNOWN] Okay?
+[00:10:08.440] [UNKNOWN] So.
+[00:10:11.159] [UNKNOWN] And then, see that what would be the optimal degree to?
+[00:10:16.399] [UNKNOWN] The same if it's not good, increase to degree three.
+[00:10:20.779] [UNKNOWN] Okay?
+[00:10:21.200] [UNKNOWN] This is the general idea of philosophy behind the linear regression.
+[00:10:27.120] [UNKNOWN] The only point is that how we can find the coefficients for that line or polynomial.
+[00:10:38.299] [UNKNOWN] Find that line.
+[00:10:40.879] [UNKNOWN] We just need to memorize this.
+[00:10:44.460] [UNKNOWN] You know this one?
+[00:10:46.240] [UNKNOWN] You can bring everything in this format.
+[00:10:52.940] [UNKNOWN] And this is our inputs.
+[00:10:57.399] [UNKNOWN] And this is our outputs.
+[00:11:00.460] [UNKNOWN] And this is the polynomials, that's like coefficients.
+[00:11:04.840] [UNKNOWN] The best coefficient for the polynomial.
+[00:11:09.789] [UNKNOWN] Of course, if this polynomial is linear, you're going to have this coefficient.
+[00:11:21.080] [UNKNOWN] If you add more sentences to the polynomial, you're going to have more coefficients.
+[00:11:29.870] [UNKNOWN] Okay?
+[00:11:30.830] [UNKNOWN] That's our long story short.
+[00:11:36.360] [UNKNOWN] What we discussed.
+[00:11:40.809] [UNKNOWN] Okay?
+[00:11:48.840] [UNKNOWN] And what was the name of this method?
+[00:11:50.940] [UNKNOWN] This square method or closed form.
+[00:11:57.820] [UNKNOWN] Closed form.
+[00:11:59.980] [UNKNOWN] Okay?
+[00:12:02.299] [UNKNOWN] Closed form.
+[00:12:06.789] [UNKNOWN] This square solution.
+[00:12:09.690] [UNKNOWN] Okay.
+[00:12:12.830] [UNKNOWN] I have some questions for you.
+[00:12:35.320] [UNKNOWN] Okay.
+[00:12:36.379] [UNKNOWN] So, one question here is that.
+[00:12:40.559] [UNKNOWN] What is that?
+[00:12:42.539] [UNKNOWN] This is my x.
+[00:12:47.159] [UNKNOWN] My x.
+[00:12:48.360] [UNKNOWN] My x.
+[00:12:51.039] [UNKNOWN] And this is my y.
+[00:12:54.490] [UNKNOWN] Okay?
+[00:12:55.870] [UNKNOWN] And I have some points here.
+[00:12:58.330] [UNKNOWN] One point here, one point here, one point here, one point here, one point here.
+[00:13:09.039] [UNKNOWN] And one point here.
+[00:13:12.039] [UNKNOWN] The other point here.
+[00:13:15.039] [UNKNOWN] And the other point here.
+[00:13:17.039] [UNKNOWN] Okay. And maybe one point here, one point here, one point here. Okay. So what do you
+[00:13:26.970] [UNKNOWN] suggest as the best function for it? This goes step by step. What is the initial method?
+[00:13:40.519] [UNKNOWN] First method.
+[00:13:42.379] [UNKNOWN] Simulinear.
+[00:13:43.039] [UNKNOWN] Linear. Or simple. Okay. Linear function. And suppose that I pick the linear function
+[00:13:50.580] [UNKNOWN] and it is, or linear function of maybe one, going to be something like this. Okay. This
+[00:14:02.500] [UNKNOWN] assumption. Okay. Or maybe later. Yeah. What is the issue here? The one point is not fit.
+[00:14:35.940] [UNKNOWN] We have some errors here. Okay. It shows that it's not fit there. Okay. What do you suggest?
+[00:14:56.870] [UNKNOWN] Increase the data.
+[00:14:57.389] [UNKNOWN] Degree.
+[00:14:59.309] [UNKNOWN] Okay. Suppose that rather than this one, I have, I have this one. Like the back you can
+[00:15:09.990] [UNKNOWN] see. Okay. So suppose that I have something like this one. Okay. Maybe I can say that.
+[00:15:31.049] [UNKNOWN] Okay. Suppose that I have a polynomial of higher degree, something like this, which
+[00:15:37.909] [UNKNOWN] tries to cover every point. Every single point. Okay. And it's degree is something
+[00:15:56.000] [UNKNOWN] of degree of five. Okay. For the red, for the green one, degree is five. For the red
+[00:16:10.100] [UNKNOWN] one, degree is. Okay. What is the issue potential? So right now I don't have any error. You
+[00:16:22.220] [UNKNOWN] see any error?
+[00:16:23.419] [UNKNOWN] No.
+[00:16:24.039] [UNKNOWN] The color of the, of the point. I don't have any error. Is it good? Okay. Who says yes,
+[00:16:32.929] [UNKNOWN] it's good? Who says yes, it's good fit? You understand my question? My question is that,
+[00:16:44.360] [UNKNOWN] is this green, it is good? At red it's good. Because I, it fits all the points. Okay. And
+[00:16:57.139] [UNKNOWN] suppose that you have 85. And 85 is something like this. Alpha zero plus alpha one X one
+[00:17:14.299] [UNKNOWN] and I covered this one. So what is the potential issue? Okay. What happens for new points?
+[00:17:31.750] [UNKNOWN] So like the idea here is that, and I'm looking at the points here, that's like in general
+[00:17:40.599] [UNKNOWN] the type of relationship is linear. What I understand is that some points here, like
+[00:17:48.539] [UNKNOWN] this one and this one, those are kind of like noise. But in general, I have this relationship.
+[00:17:58.470] [UNKNOWN] It's a linear thing. Maybe there are some outliers, some points, some, some I don't
+[00:18:04.630] [UNKNOWN] know, noises. Okay. This point and this point is noise. We ask our model to learn the noise.
+[00:18:15.869] [UNKNOWN] Learn the noise. What can be the issue? The issue is that next time, if you had a point
+[00:18:23.569] [UNKNOWN] here, you have a point here. So this X you want to know you don't have this point in
+[00:18:35.420] [UNKNOWN] your data. Okay. And you learn this function. Next time somebody asks you, okay, what is
+[00:18:42.539] [UNKNOWN] the C qualifier? What you do? You just go here and this maps you. Okay. But in reality
+[00:19:03.130] [UNKNOWN] it should be, it should be some, some how around this one. So what was the issue? The
+[00:19:20.029] [UNKNOWN] issue comes from here that your model try to learn the noise. When you learn the noise
+[00:19:27.450] [UNKNOWN] for the new points, maybe the model will make a mistake. Okay. This is called over, you
+[00:19:49.339] [UNKNOWN] have a point here. All of them could be problematic. Okay. That's the point that somehow increasing
+[00:19:59.779] [UNKNOWN] the degree should mean the favor of training data. It's good for training data. Training
+[00:20:07.380] [UNKNOWN] data means originality. So for unseen data, if your model is from the higher degree, maybe
+[00:20:18.130] [UNKNOWN] for unseen data it makes a mistake. Okay. And this is, this issue is called overfitting.
+[00:20:26.009] [UNKNOWN] It means performing very well, 100% or throwing down 100% on your original training data.
+[00:20:35.829] [UNKNOWN] So make a mistake a lot for unseen data. Okay. That's why, like maybe one point you think,
+[00:20:45.769] [UNKNOWN] okay, let's, let's increase the degree. Then you can, you can eat everything, but it's
+[00:20:51.430] [UNKNOWN] not good. So what is the good point? Good point or good degree is that like something
+[00:21:00.329] [UNKNOWN] between. Performs well for training data as well as for just maybe some maybe of three.
+[00:21:11.039] [UNKNOWN] Okay. That's higher. The maximum degree, but let's not take it higher. The degree
+[00:21:17.799] [UNKNOWN] higher, of course, if you have some points here, it's going to learn those points as
+[00:21:23.559] [UNKNOWN] well, but those points are noise of the model. Noise of the model. Don't need to learn those.
+[00:21:30.359] [UNKNOWN] If you learn those, it's going to make a mistake. Something like this. We have some materials
+[00:21:37.259] [UNKNOWN] in the class. Okay. Some of the materials are not correct. If you learn those incorrect
+[00:21:44.759] [UNKNOWN] materials, you're going to make a mistake. Right. So if you see something is, is problematic
+[00:21:52.660] [UNKNOWN] or errorless. Okay. Something, I guess, somehow similar to this. Don't make it very complicated
+[00:22:04.539] [UNKNOWN] for the model. Always simple models is the best because that can perform good for your
+[00:22:12.759] [UNKNOWN] training data and for test data is also okay. That's what we are doing. Finding that optimal
+[00:22:20.019] [UNKNOWN] balance is something that we're going to talk about that. Make sense? So this is another
+[00:22:28.940] [UNKNOWN] important point and that is, that is called overfitting. Over, this is one of the most
+[00:22:43.859] [UNKNOWN] common questions in interviews. If you have a data and it has the overfitting, what will
+[00:22:50.779] [UNKNOWN] first explain what is the overfitting and the second one is that how we can combat,
+[00:22:56.500] [UNKNOWN] how we can prevent overfitting. Okay. That's the point that we're going to discuss later.
+[00:23:03.309] [UNKNOWN] Okay. Any questions? I think that's a good place that we can, we can close the discussion
+[00:23:12.470] [UNKNOWN] here. I'm going to get back to later. But we learned this least squares solution to
+[00:23:36.259] [UNKNOWN] the optimal parameters of the regression models. Other method is called gradient descent,
+[00:23:44.660] [UNKNOWN] which I will discuss about that one. So for now I skipped those, but there was some slides
+[00:23:52.440] [UNKNOWN] here that I mentioned that I'm going to get back quickly. Let's explain those for five
+[00:23:59.660] [UNKNOWN] more slides. I think now that they are, that should be very understandable for you. They're
+[00:24:12.599] [UNKNOWN] talking about, like let's back to this one. You have one point and you want to fit a function.
+[00:24:18.839] [UNKNOWN] You can just suppose that you have only one point. You have this function, you can consider
+[00:24:24.599] [UNKNOWN] this function or you can consider this function. Okay. So if you have more points, of course
+[00:24:33.039] [UNKNOWN] you have a function. With one point, it's not easy to determine which function it is.
+[00:24:39.940] [UNKNOWN] So this is a degree of two, as I mentioned, because you have some points that you can
+[00:24:47.500] [UNKNOWN] assume that your model is a plane, linear, or is a degree of two, or is a degree of three.
+[00:24:59.880] [UNKNOWN] This one is, yeah, this is degree of one and this one is degree of two. Both of them are
+[00:25:10.980] [UNKNOWN] degree of two actually, but with extra, extra sentences. Yeah, so both of them are degree
+[00:25:31.720] [UNKNOWN] of two. Okay. So what is the idea? The idea here is that we have our train data. Based
+[00:25:45.140] [UNKNOWN] on train data, we learn our model. Okay. And now that we know our model, we can pick new
+[00:25:52.099] [UNKNOWN] features, unseen data, and predict the target arrival based on the function we know. Right?
+[00:26:01.339] [UNKNOWN] Should be clear, right? Okay. Good. And this is an example of supervised learning. Just
+[00:26:12.589] [UNKNOWN] here, this is another example here. We want to predict this wise. This is our train data
+[00:26:29.900] [UNKNOWN] and then for unseen data, we want to predict. Okay. We have something like hyperparameter.
+[00:26:41.140] [UNKNOWN] I didn't explain yet what is the hyperparameter. I'm going to explain this one next week. So
+[00:26:48.779] [UNKNOWN] only one slide left. So linear definition for learning problems. Okay. Look at here.
+[00:27:03.160] [UNKNOWN] So if you want to define or design a learning system, what you need, again, you need to
+[00:27:12.299] [UNKNOWN] train your learner using some training data and then the testing data. Right? So we have
+[00:27:26.150] [UNKNOWN] two types of data, training and test data. Okay. So there are different algorithms in
+[00:27:44.289] [UNKNOWN] machine learning. Okay. And every year we increase those. What is important, first thing
+[00:27:52.230] [UNKNOWN] is that every machine learning algorithm, sorry, has these three components. Big presentation
+[00:28:00.829] [UNKNOWN] of the problem, optimization of the parameters, and then evaluate your model. We're going
+[00:28:10.490] [UNKNOWN] to discuss about details of all of these parts. Right? But in high level, you have
+[00:28:15.890] [UNKNOWN] a model. That model should work well. How do you do that one? You need to check its
+[00:28:21.390] [UNKNOWN] efficiency. This module called evaluation. Optimization is finding the best parameters
+[00:28:29.309] [UNKNOWN] and this presentation means nothing more than forming your problem such a way that you can
+[00:28:40.470] [UNKNOWN] use for the human algorithm. Let's say, for example, if it's a normal network, your problem
+[00:28:47.509] [UNKNOWN] should have one representation. If it's a decision tree, for example, if it's a decision
+[00:28:54.329] [UNKNOWN] tree for categorical data, you don't need encoding. But if it's a normal network, you
+[00:28:59.710] [UNKNOWN] need to encode this using the one-hot encoding system. That's called representation. And
+[00:29:07.430] [UNKNOWN] we have different methods here for each one, like, for example, linear regression, decision
+[00:29:18.569] [UNKNOWN] trees, nearest neighborhood, or k-nearest neighborhood, and also some graphical models
+[00:29:31.410] [UNKNOWN] like nine phasor, phasor network, and so on and so forth. So, yeah, these are other
+[00:29:39.750] [UNKNOWN] algorithms. So for evaluation of the model, you have some metrics. We're going to discuss
+[00:29:47.000] [UNKNOWN] again what is the accuracy, what is precision and recall. For example, if our problem is
+[00:29:54.819] [UNKNOWN] a regression, we're going to explore it together. But if it's a classification, we require
+[00:30:01.559] [UNKNOWN] precision and recall. Again, I'll discuss. Yeah, this one shows the loop or pipeline
+[00:30:12.619] [UNKNOWN] in machine learning. In practice, what we have, we need to understand first the problem
+[00:30:18.440] [UNKNOWN] itself. We need to gather the data and then train the model, interpret our result, and
+[00:30:25.259] [UNKNOWN] check the model. If it's not good, get back to first gather more data. Because if we don't
+[00:30:31.640] [UNKNOWN] have enough data, our model is not perfect. So it shows that what we are doing. Any questions?
+[00:30:47.859] [UNKNOWN] So these are some slides that I mentioned. Next, where we can go. Now we have everything.
+[00:30:53.819] [UNKNOWN] The only thing is hyperparameter that I will discuss later. So for now, yeah, up to here,
+[00:31:12.140] [UNKNOWN] please read it for the next session, especially the topic that I discussed, and learn about
+[00:31:18.619] [UNKNOWN] these closed modes and also how to calculate the transport. Check this one as well. If
+[00:31:25.500] [UNKNOWN] there are any errors, just correct this one. That's the end of today's session. If there
+[00:31:38.069] [UNKNOWN] is no question, we can close here.

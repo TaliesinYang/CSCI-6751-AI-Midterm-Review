@@ -1,0 +1,151 @@
+project:
+  name: CSCI 6751 V1 - Artificial Intelligence
+  profile: academic
+  language: auto
+roles:
+  SPEAKER_00: student
+  SPEAKER_01: professor
+  SPEAKER_02: professor
+  SPEAKER_03: student
+sessions:
+- id: Week01
+  date: '2026-01-14'
+  topic: Introduction to AI
+  status: completed
+  recordings:
+  - file: Recording.m4a
+    status: completed
+    duration: ~80 min
+  - file: Recording_2.m4a
+    status: completed
+    duration: ~50 min
+  - file: Recording_3.m4a
+    status: completed
+    duration: ~4 min
+  slides:
+  - file: materials/slides/Lecture#1_Introduction to AI(1).pdf
+  handouts:
+  - file: materials/handouts/CSCI_6751_V1-Artificial Intelligence.pdf
+  - file: materials/handouts/Python_Fundamentals_for_AI (1).ipynb
+  outputs:
+    notes: generated/Week01/notes.md
+    vocabulary: generated/Week01/vocabulary.md
+    qa: generated/Week01/qa-summary.md
+    reminders: generated/Week01/Reminders.md
+    mindmap: generated/Week01/Week01-MindMap.md
+    canvas: generated/Week01/Week01-Canvas.canvas
+    transcript_part1: generated/Week01/transcripts/Recording_1/Recording_en_annotated.txt
+    transcript_part2: generated/Week01/transcripts/Recording_2/Recording_2_en_annotated.txt
+    transcript_part3: generated/Week01/transcripts/Recording_3/Recording_3_en_annotated.txt
+- id: Week02
+  date: '2026-01-20'
+  topic: Machine Learning Fundamentals
+  status: completed
+  recordings:
+  - file: Recording_4.m4a
+    status: completed
+    duration: ~1h 42min
+    language: en
+  - file: Recording_5.m4a
+    status: completed
+    duration: ~18min
+    language: zh
+    note: Transcription quality issue - mostly background noise
+  outputs:
+    notes: generated/Week02/notes.md
+    vocabulary: generated/Week02/vocabulary.md
+    qa: generated/Week02/qa-summary.md
+    reminders: generated/Week02/Reminders.md
+    mindmap: generated/Week02/Week02-MindMap.md
+    canvas: generated/Week02/Week02-Canvas.canvas
+    transcript_recording4: generated/Week02/transcripts/Recording_4/Recording_4_en_annotated.txt
+    transcript_recording5: generated/Week02/transcripts/Recording_5/Recording_5_zh_annotated.txt
+- id: Week03
+  date: '2026-01-27'
+  topic: Linear Regression
+  status: completed
+  recordings:
+  - file: materials/recordings/Week03/AI 20260127  Recording.m4a
+    description: Main lecture content (136MB)
+    status: completed
+    transcript: generated/Week03/transcripts/AI 20260127  Recording/transcript.json
+  - file: materials/recordings/Week03/AI 20260127 Recording(1).m4a
+    description: Extended discussion - matrix inverse, exam tips, overfitting preview (46MB)
+    status: completed
+    transcript: generated/Week03/transcripts/AI 20260127 Recording(1)/transcript.json
+  slides:
+  - file: materials/slides/Lecture#3_Linear_Regression.pdf
+    status: completed
+  handouts:
+  - file: materials/handouts/Linear_Regression_Demo.ipynb
+    status: completed
+  outputs:
+    notes: generated/Week03/notes.md
+    vocabulary: generated/Week03/vocabulary.md
+    qa-summary: generated/Week03/qa-summary.md
+    reminders: generated/Week03/Reminders.md
+    mindmap: generated/Week03/Week03-MindMap.md
+    canvas: generated/Week03/Week03-Canvas.canvas
+    merged_transcript: generated/Week03/merged_transcript.json
+    handout_html: generated/Week03/gradient-descent-handout.html
+    handout_pdf: generated/Week03/gradient-descent-handout.pdf
+- id: Week04
+  date: '2026-02-03'
+  topic: Overfitting, Underfitting, and Regularization
+  status: completed
+  recordings:
+  - file: materials/recordings/Week04/ai0203 2026 Recording.m4a
+    description: Main lecture - Gradient Descent review, Overfitting, Regularization
+    status: completed
+    transcript: generated/Week04/transcripts/ai0203 2026 Recording/transcript.json
+  - file: materials/recordings/Week04/ai0203 2026 Recording (2).m4a
+    description: Continued - Lab demo, assignment discussion, exam format
+    status: completed
+    transcript: generated/Week04/transcripts/ai0203 2026 Recording (2)/transcript.json
+  slides:
+  - file: materials/slides/Lecture#4_Overfitting_Regularization.pdf
+    status: completed
+  outputs:
+    notes: generated/Week04/notes.md
+    vocabulary: generated/Week04/vocabulary.md
+    qa-summary: generated/Week04/qa-summary.md
+    reminders: generated/Week04/Reminders.md
+    mindmap: generated/Week04/Week04-MindMap.md
+    canvas: generated/Week04/Week04-Canvas.canvas
+- id: Week05
+  date: '2026-02-10'
+  topic: Model Evaluation Metrics
+  status: completed
+  recordings:
+  - file: materials/recordings/Week05/ai0210_2026_part1.m4a
+    description: Main lecture - Regression and Classification Metrics (148MB)
+    status: completed
+    transcript: generated/Week05/transcripts/ai0210_2026_part1/transcript.json
+  - file: materials/recordings/Week05/ai0210_2026_part2.m4a
+    description: Short continuation (829KB)
+    status: completed
+    transcript: generated/Week05/transcripts/ai0210_2026_part2/transcript.json
+  outputs:
+    notes: generated/Week05/notes.md
+    vocabulary: generated/Week05/vocabulary.md
+    qa-summary: generated/Week05/qa-summary.md
+    reminders: generated/Week05/Reminders.md
+    mindmap: generated/Week05/Week05-MindMap.md
+    canvas: generated/Week05/Week05-Canvas.canvas
+    merged_transcript: generated/Week05/transcripts/merged_transcript.json
+academic:
+  markers:
+  - exam
+  - quiz
+  - assignment
+  - important
+  - due date
+  - midterm
+  - final
+  outputs:
+  - notes.md
+  - vocabulary.md
+  - qa-summary.md
+  - Reminders.md
+  - WeekXX-MindMap.md
+  - WeekXX-Canvas.canvas

@@ -1,0 +1,430 @@
+[00:00:01.710] [UNKNOWN] So here I want to show an example of how we can apply linear regression in practice.
+[00:00:44.969] [UNKNOWN] So majorly there is a library for machine learning algorithms and that's called scikit-learn
+[00:01:18.590] [UNKNOWN] or test-scaler. So what you see here as test-scaler, this is a library in which you can do, you
+[00:01:28.530] [UNKNOWN] can use the linear regression, later probably neural network and so on and so forth. Decision
+[00:01:39.000] [UNKNOWN] trees, clustering, everything is there in scikit-learn. So I have imported here a library
+[00:02:04.359] [UNKNOWN] that's called scikit-learn.
+[00:02:05.159] [UNKNOWN] So I have imported a library that's called scikit-learn.
+[00:02:05.180] [UNKNOWN] So I have imported a library that's called scikit-learn.
+[00:02:09.000] [UNKNOWN] So I have imported a library that's called scikit-learn.
+[00:02:09.340] [UNKNOWN] So I have imported a library that's called scikit-learn.
+[00:02:09.759] [UNKNOWN] So I have imported a library that's called scikit-learn.
+[00:02:37.770] [UNKNOWN] I did get back to this. But the important thing here is that you import the linear
+[00:02:40.710] [UNKNOWN] regression, which is available in scikit-learn, linear models, OK. And also we have something
+[00:02:48.169] [UNKNOWN] for train test . Like whatever data set you have, to train And test.
+[00:02:57.050] [UNKNOWN] They do 80% for train, 20% for test. You train data and then test on test data.
+[00:03:07.560] [UNKNOWN] the model on there and test it. Okay. So, this Pyplot from Mathplot library is for just
+[00:03:23.479] [UNKNOWN] plotting, and NumPy is a library for working on tags. Okay? So, the other thing here is
+[00:03:34.729] [UNKNOWN] that, like, forget about this queue, I'm going to get back to this one. So, first thing here
+[00:03:41.919] [UNKNOWN] is that I want to create a synthetic data set, which has the 1000 data points, okay?
+[00:03:51.560] [UNKNOWN] And the formula or equation is something like this, 4, or in section, right? So, 3, and
+[00:04:02.550] [UNKNOWN] plus numbers. Okay? So, x is random points, 1000 random points, and I multiply that by
+[00:04:16.620] [UNKNOWN] 3.
+[00:04:17.620] [UNKNOWN] Okay? So, I'm going to get the values, and then y is coming from this. I added some noises
+[00:04:23.290] [UNKNOWN] because I want to see some noises in my data. And then if I create a function, I see that,
+[00:04:30.290] [UNKNOWN] okay, does my model learn those noises or not? Okay? And then here, just plotting, just
+[00:04:39.519] [UNKNOWN] plotting tags using the tlt.scatter, that means that I'm going to have something like this.
+[00:04:47.639] [UNKNOWN] Okay?
+[00:04:49.189] [UNKNOWN] And I'm going to get a little bit smaller. So, what you see here, the x is something
+[00:04:53.189] [UNKNOWN] with the, because, you see this rand? The output for rand is going to be between 0 and
+[00:04:59.569] [UNKNOWN] 1, as always, right? Rand, rand, rand of 1. If you want to convert that one to something
+[00:05:04.569] [UNKNOWN] between 0 to 2, you need to multiply that one by 2. Okay? If you multiply by 5, it's
+[00:05:14.399] [UNKNOWN] going to be between 0 and 1. So, that's why you see here, x is between 0 and 2. And then
+[00:05:20.009] [UNKNOWN] between 0 and 2, and your y is coming from this equation.
+[00:05:27.279] [UNKNOWN] Okay, again, noise is, you see that 4 plus 3x plus our noise,
+[00:05:32.899] [UNKNOWN] which is a small number, right?
+[00:05:38.000] [UNKNOWN] Okay, so what I see here is that 3 plus 4x.
+[00:05:44.589] [UNKNOWN] Maybe I can reduce this to, for example, 500.
+[00:05:50.879] [UNKNOWN] If I do that, 500, 500, and something like this.
+[00:06:09.990] [UNKNOWN] Okay, so I see that the relationship is kind of, like, linear.
+[00:06:17.069] [UNKNOWN] I believe here I can make, let me just show this in a color.
+[00:06:37.980] [UNKNOWN] Okay, marker, let me see if I can get a marker here, marker.
+[00:06:56.370] [UNKNOWN] Marker equal, yeah, okay, much, much better.
+[00:07:06.240] [UNKNOWN] Okay, so, and even we can decrease the size of this.
+[00:07:11.860] [UNKNOWN] Okay, so I have 1,000 data points, 1,000 data points here.
+[00:07:23.379] [UNKNOWN] Okay, and I see that this should be something like the relationship, like, linear.
+[00:07:29.339] [UNKNOWN] But there are a couple of points here, which is half light.
+[00:07:35.779] [UNKNOWN] Okay, so can I add the random seed?
+[00:07:40.899] [UNKNOWN] The responsibility of random seed is that if I deactivate this star, each time,
+[00:07:47.019] [UNKNOWN] these random points which are generated is going to be coming from different distributions.
+[00:07:52.730] [UNKNOWN] Maybe I run this one, and next time if I run the same thing, the same code,
+[00:08:04.420] [UNKNOWN] the data point can change.
+[00:08:06.689] [UNKNOWN] If I want to have reproducibility.
+[00:08:09.230] [UNKNOWN] This means that each time I have the same data, like, I write the code at home,
+[00:08:15.449] [UNKNOWN] then I want to show, I want to have the same data point.
+[00:08:20.269] [UNKNOWN] So, that's why I need to determine my data seed, okay?
+[00:08:26.040] [UNKNOWN] So, let me say seed 42 or whatever, seed 10, next time that I'm running the code,
+[00:08:35.200] [UNKNOWN] this data point, random data point will be the same, okay?
+[00:08:39.440] [UNKNOWN] They are random.
+[00:08:40.220] [UNKNOWN] But, let's say that it's reproducible, random data point, okay?
+[00:08:47.809] [UNKNOWN] So, that's why it's necessary to have this one, especially when you want to show an experiment.
+[00:08:56.379] [UNKNOWN] Okay, so this is something that I have in my data.
+[00:08:59.980] [UNKNOWN] So, if I print data right now, so data, data, if I print data, okay, so I have X,
+[00:09:21.419] [UNKNOWN] so if I print X, so you see that X is an array, right, an array of 1,000 data points,
+[00:09:32.590] [UNKNOWN] and Y is also an array of 1,000 data points, okay?
+[00:09:38.860] [UNKNOWN] So, now I want to feed the linear regression.
+[00:09:44.809] [UNKNOWN] What are these steps?
+[00:09:46.009] [UNKNOWN] These steps here, first of all, I need to add the linear regression here, okay?
+[00:09:53.470] [UNKNOWN] And then, please think about it.
+[00:09:55.039] [UNKNOWN] I don't want to do this.
+[00:09:55.620] [UNKNOWN] I don't want to do this.
+[00:09:57.679] [UNKNOWN] I don't want to do this.
+[00:09:57.919] [UNKNOWN] I don't want to do this.
+[00:09:58.100] [UNKNOWN] I don't want to do this.
+[00:09:58.120] [UNKNOWN] So, what I'm going to require here is this one.
+[00:10:03.639] [UNKNOWN] Link a psychic plane.
+[00:10:06.090] [UNKNOWN] I define a new object of that class, linear regression, and I call that one as link link, okay?
+[00:10:13.350] [UNKNOWN] So, link link.
+[00:10:14.450] [UNKNOWN] And then, that object has a function, which is called feed.
+[00:10:21.009] [UNKNOWN] If I write that one, dot feed, and pass X and Y, it's going to feed a linear regression model.
+[00:10:29.220] [UNKNOWN] Based on YX, the first parameter is the X.
+[00:10:34.279] [UNKNOWN] The second parameter is the Y, right?
+[00:10:37.919] [UNKNOWN] So, and after that one, like if I print, so, for example, I deactivate this bar.
+[00:10:51.320] [UNKNOWN] So, I print it, that linear regression, the learned linear regression,
+[00:10:58.960] [UNKNOWN] linear regression, its interception and coefficient.
+[00:11:05.139] [UNKNOWN] Okay, interception, so, which is this one, and the coefficient, which is this one, okay?
+[00:11:13.549] [UNKNOWN] Okay.
+[00:11:21.750] [UNKNOWN] And then, I activate this bar.
+[00:11:26.539] [UNKNOWN] So, the interception is 4, that means that 4X plus almost 3, right?
+[00:11:32.120] [UNKNOWN] And that's what we want to, 4 plus 3X.
+[00:11:36.340] [UNKNOWN] Yeah, 4 plus 3X.
+[00:11:38.419] [UNKNOWN] And this one is almost 4 plus 3X.
+[00:11:41.559] [UNKNOWN] It's not exactly the same thing.
+[00:11:43.580] [UNKNOWN] It's not exactly the same thing because we have some noises here and the model and those noises.
+[00:11:49.320] [UNKNOWN] That's why it's not exactly 4 plus 3X.
+[00:11:53.720] [UNKNOWN] Okay?
+[00:11:54.679] [UNKNOWN] So, I print the function and plot that.
+[00:11:59.159] [UNKNOWN] So, to plot that one, what I require is, because right now I trained it linear regression,
+[00:12:07.159] [UNKNOWN] if I plot any X to this and apply credit X,
+[00:12:14.440] [UNKNOWN] it's going to return the prediction value, right, that Y has here.
+[00:12:22.399] [UNKNOWN] And I just printed X and it was predicted by X.
+[00:12:29.120] [UNKNOWN] After this training, X can be unseen data, new data, okay?
+[00:12:34.419] [UNKNOWN] But for now, just print those and you see that I ask, okay, plot this and the color is going to be red
+[00:12:46.590] [UNKNOWN] and call that one as linear regression.
+[00:12:49.590] [UNKNOWN] Okay?
+[00:12:51.460] [UNKNOWN] So, linear regression, it's cited as my title and if I believe, you know, this and you want to see that later.
+[00:13:14.909] [UNKNOWN] Okay.
+[00:13:20.490] [UNKNOWN] Okay.
+[00:13:21.350] [UNKNOWN] So, the question here is that this is a linear regression.
+[00:13:26.720] [UNKNOWN] What if I want to have different degrees?
+[00:13:29.039] [UNKNOWN] If you have none, right?
+[00:13:30.220] [UNKNOWN] So, or whatever.
+[00:13:32.500] [UNKNOWN] In that case.
+[00:13:33.000] [UNKNOWN] So, in that case, you can use the polynomial from psychic plane processing for polynomial features.
+[00:13:42.899] [UNKNOWN] Okay?
+[00:13:43.940] [UNKNOWN] So, and if you do that one, you want to create a polynomial, right?
+[00:13:50.980] [UNKNOWN] So, because I want to show that over here.
+[00:13:56.970] [UNKNOWN] Okay?
+[00:13:57.529] [UNKNOWN] So, after importing, create a new object, polynomial features, and give it degrees.
+[00:14:06.480] [UNKNOWN] And call that one as poly.
+[00:14:10.519] [UNKNOWN] Now, you say that poly.is.
+[00:14:15.090] [UNKNOWN] Okay?
+[00:14:16.549] [UNKNOWN] So, I'm defining a new function, which is polynomial degree 10 to fit x.
+[00:14:24.070] [UNKNOWN] Okay?
+[00:14:26.820] [UNKNOWN] And then, I put in my data to train and test.
+[00:14:32.419] [UNKNOWN] And call that one as 20% as test.
+[00:14:37.019] [UNKNOWN] And the rest is going to be.
+[00:14:39.139] [UNKNOWN] Training.
+[00:14:40.539] [UNKNOWN] Okay?
+[00:14:41.919] [UNKNOWN] And this is the values that I have.
+[00:14:44.360] [UNKNOWN] X train, x test.
+[00:14:45.480] [UNKNOWN] Y train, and y test.
+[00:14:47.179] [UNKNOWN] Okay?
+[00:14:48.340] [UNKNOWN] So, and then, after that, I use x train and x test.
+[00:14:54.759] [UNKNOWN] To fitting the model.
+[00:15:01.110] [UNKNOWN] And then, as previous one, let's plug that.
+[00:15:11.799] [UNKNOWN] Okay?
+[00:15:12.179] [UNKNOWN] So, you see that there is a function of w.
+[00:15:18.309] [UNKNOWN] You see that it's going to be up and down.
+[00:15:40.059] [UNKNOWN] Okay?
+[00:15:40.539] [UNKNOWN] Okay?
+[00:15:44.679] [UNKNOWN] Oh, if you have 10.
+[00:15:48.940] [UNKNOWN] Okay, let's see if I have w of 10.
+[00:15:52.620] [UNKNOWN] Okay.
+[00:15:56.919] [UNKNOWN] So, what I did.
+[00:16:01.000] [UNKNOWN] I.
+[00:16:02.450] [UNKNOWN] Uh.
+[00:16:02.889] [UNKNOWN] Split my data, right, x, into train and test, and then fit on the, on the train data.
+[00:16:17.610] [UNKNOWN] Later, I predicted, predicted the values on the, on the, on train data and test data.
+[00:16:45.450] [UNKNOWN] Okay?
+[00:16:46.289] [UNKNOWN] So, I want to calculate what is the error of the model.
+[00:16:50.190] [UNKNOWN] So, one of the matrix that I explained was.
+[00:16:54.009] [UNKNOWN] Okay.
+[00:16:54.509] [UNKNOWN] That, it S squared error, right?
+[00:16:57.159] [UNKNOWN] Y minus, y salary hat is squared, right?
+[00:17:03.100] [UNKNOWN] For the error of the model.
+[00:17:05.180] [UNKNOWN] Y minus y hat is squared.
+[00:17:07.839] [UNKNOWN] If you divide that one by 10, or it shows they.
+[00:17:11.960] [UNKNOWN] Uh.
+[00:17:12.759] [UNKNOWN] So you calculate the mean square error here, it's going to show you that how much is the error of the model?
+[00:17:20.240] [UNKNOWN] So, again from ..
+[00:17:21.819] [UNKNOWN] The, the , uh...
+[00:17:23.700] [UNKNOWN] What we're using, the error.
+[00:17:25.000] [UNKNOWN] Uh.
+[00:17:25.039] [UNKNOWN] Uh.
+[00:17:25.460] [UNKNOWN] Cyluit, u dot.
+[00:17:26.079] [UNKNOWN] Two nou let F.
+[00:17:26.259] [UNKNOWN] that I mentioned before not quite be used now.
+[00:17:31.259] [UNKNOWN] So I can do a dot matrix, import mean squared error, okay.
+[00:17:37.339] [UNKNOWN] And then if you say mean squared error,
+[00:17:40.339] [UNKNOWN] you pass the prediction of the ground truth,
+[00:17:46.859] [UNKNOWN] and this one is the prediction of the model on test data.
+[00:17:57.190] [UNKNOWN] On train data, this is the prediction by the model.
+[00:18:03.410] [UNKNOWN] This is the ground truth, this is the prediction by the model,
+[00:18:06.410] [UNKNOWN] and same thing for testing, okay.
+[00:18:09.859] [UNKNOWN] So it shows that the train MSE is almost 1,
+[00:18:15.460] [UNKNOWN] and test MSE is less than that, okay.
+[00:18:19.910] [UNKNOWN] Do we have any sort of like overfitting here?
+[00:18:27.289] [UNKNOWN] Do you see any overfitting?
+[00:18:39.180] [UNKNOWN] No, right?
+[00:18:41.819] [UNKNOWN] Train is 1, and test is less than that.
+[00:18:45.359] [UNKNOWN] It's not there.
+[00:18:46.359] [UNKNOWN] Overfitting.
+[00:18:47.359] [UNKNOWN] Let's increase the degree to higher degrees.
+[00:18:52.289] [UNKNOWN] Because the data, I believe, is complicated data,
+[00:18:58.849] [UNKNOWN] probably that's why we don't see that.
+[00:19:01.849] [UNKNOWN] Okay.
+[00:19:07.519] [UNKNOWN] So now, again, like test is better than train 100,
+[00:19:18.440] [UNKNOWN] to see that it can be significant.
+[00:19:26.339] [UNKNOWN] Yeah, okay.
+[00:19:28.339] [UNKNOWN] Like when it's 100,
+[00:19:35.339] [UNKNOWN] like the model is learning more noises,
+[00:19:38.339] [UNKNOWN] but it's still, for test data, it's close, right?
+[00:19:42.720] [UNKNOWN] Okay.
+[00:19:44.900] [UNKNOWN] So I mean that's like in this example,
+[00:19:51.640] [UNKNOWN] even if that's a higher degree,
+[00:19:56.630] [UNKNOWN] but still train and test are close to each other.
+[00:20:04.130] [UNKNOWN] Okay.
+[00:20:05.539] [UNKNOWN] So if you want to add the regularization, right,
+[00:20:19.430] [UNKNOWN] so those regularizations, that's what I mentioned, okay.
+[00:20:24.170] [UNKNOWN] So what we can do,
+[00:20:25.170] [UNKNOWN] we can call the reach.
+[00:20:26.170] [UNKNOWN] Okay.
+[00:20:28.289] [UNKNOWN] So we have region also here,
+[00:21:02.859] [UNKNOWN] and create a reach,
+[00:21:17.980] [UNKNOWN] like a model like it from class reach,
+[00:21:20.980] [UNKNOWN] and then I pass it a string to reach,
+[00:21:26.420] [UNKNOWN] and then another model based on the losso, right,
+[00:21:29.420] [UNKNOWN] and pass it a range string to losso.
+[00:21:34.900] [UNKNOWN] And then if I run the model, okay, so find the reach from there, and okay, so you see
+[00:22:24.420] [UNKNOWN] that the, this is the trained model, just for 100 samples, okay, and when I add the
+[00:22:33.309] [UNKNOWN] reach or lasso, it makes it smooth.
+[00:22:36.150] [UNKNOWN] Our model, even if it's a kind of like higher degree, but it's still smooth.
+[00:22:41.609] [UNKNOWN] Okay, just visually we can see that we don't have that much, I mean, offset down here.
+[00:22:54.670] [UNKNOWN] For this one, maybe why we don't see too much offset down, the reason is that we just
+[00:22:59.549] [UNKNOWN] showed the 100.
+[00:23:00.970] [UNKNOWN] We show all the data, it's going to show better than those offsets.
+[00:23:06.390] [UNKNOWN] Okay, you can change this 100 to, for example, let's see if I change that one to 200, that's
+[00:23:17.829] [UNKNOWN] offset.
+[00:23:18.430] [UNKNOWN] Offset down is going to be more.
+[00:23:35.940] [UNKNOWN] You can test this by saying here, you see that's, like, usually you can change those
+[00:23:40.700] [UNKNOWN] ups and downs.
+[00:23:42.660] [UNKNOWN] Anyway, like, when we add the reach and regression, it's getting, in other words, like, if you
+[00:23:50.720] [UNKNOWN] learn the model, which is, has the higher degree, but still, it's not too much ups and
+[00:23:59.250] [UNKNOWN] downs.
+[00:23:59.970] [UNKNOWN] Right, it controls those coefficients, coefficients using the reach model.
+[00:24:06.869] [UNKNOWN] Okay, so, I mean, like, so, we don't need to think about this formula or whatever,
+[00:24:19.019] [UNKNOWN] but in the background, all of this is done.
+[00:24:24.299] [UNKNOWN] Right, when you say reach, that means that, and then, like, you create a model based on
+[00:24:32.250] [UNKNOWN] reach, and then you fit, it means that automatically adds those L2.
+[00:24:41.369] [UNKNOWN] So, we going to say, like, 8.
+[00:24:42.680] [UNKNOWN] 6.
+[00:24:43.539] [UNKNOWN] Right?
+[00:24:44.529] [UNKNOWN] One pair offen 쓰고,
+[00:25:25.609] [UNKNOWN] yeah.
+[00:25:26.529] [UNKNOWN] Alright.
+[00:25:27.470] [UNKNOWN] Okay.
+[00:25:27.589] [UNKNOWN] Awesome.
+[00:25:27.650] [UNKNOWN] That's right.
+[00:25:27.670] [UNKNOWN] Awesome.
+[00:25:27.690] [UNKNOWN] value. So default value is 1. You can increase or
+[00:25:31.980] [UNKNOWN] decrease whatever you want. We discussed about it getting bigger.
+[00:25:36.400] [UNKNOWN] So same thing for lesson. Here is
+[00:25:41.319] [UNKNOWN] 1, here is 0.1.
+[00:25:46.089] [UNKNOWN] You can play with those and see that how the error of the
+[00:25:50.089] [UNKNOWN] model is increasing or increasing.
+[00:25:56.519] [UNKNOWN] By doing that, when you see that train and test is getting
+[00:26:00.519] [UNKNOWN] exactly same.
+[00:26:05.390] [UNKNOWN] They are almost same values.
+[00:26:09.869] [UNKNOWN] But here, we had difference. The train was
+[00:26:14.440] [UNKNOWN] around 1, this one was 0.88.
+[00:26:19.079] [UNKNOWN] So I added ridge and muscle after
+[00:26:23.079] [UNKNOWN] that, RMSE for
+[00:26:27.440] [UNKNOWN] test using ridge. This one just shows
+[00:26:32.940] [UNKNOWN] for the
+[00:26:36.119] [UNKNOWN] test, he can print it. It's better to print
+[00:26:40.220] [UNKNOWN] train data as well to see how much they are
+[00:26:44.700] [UNKNOWN] going. This one just shows the
+[00:27:18.329] [UNKNOWN] OK. So
+[00:27:25.559] [UNKNOWN] ridge.
+[00:27:31.680] [UNKNOWN] You see there is some
+[00:27:45.500] [UNKNOWN] difference, but you can control that.
+[00:27:49.500] [UNKNOWN] We need to check this alpha of the train.
+[00:27:51.500] [UNKNOWN] The alpha and CDET are very close to each other.
+[00:27:55.500] [UNKNOWN] But we don't see too much over feeding.
+[00:27:59.980] [UNKNOWN] The reason is that. The reason is that after applying the ridge or so
+[00:28:04.359] [UNKNOWN] you don't see that. What kind of
+[00:28:08.940] [UNKNOWN] change? The only change here is that train
+[00:28:13.319] [UNKNOWN] is 99.88. Not too much change.
+[00:28:18.119] [UNKNOWN] Right? Not too much change. Almost same.
+[00:28:22.599] [UNKNOWN] So you can play with this hyperparameter.
+[00:28:26.829] [UNKNOWN] And it makes probably
+[00:28:28.829] [UNKNOWN] the update to hyperparameter
+[00:28:30.890] [UNKNOWN] and CF update.
+[00:28:32.960] [UNKNOWN] You can change. OK.
+[00:28:39.470] [UNKNOWN] I think there is an
+[00:28:41.470] [UNKNOWN] example here.
+[00:28:44.359] [UNKNOWN] So take this
+[00:28:46.430] [UNKNOWN] example. This is your
+[00:28:48.430] [UNKNOWN] class activity. Maybe for
+[00:28:52.759] [UNKNOWN] next time, go
+[00:28:56.619] [UNKNOWN] based on this activity
+[00:28:59.710] [UNKNOWN] and complete that one.
+[00:29:01.710] [UNKNOWN] And then we want to have
+[00:29:03.710] [UNKNOWN] that one in the class.
+[00:29:06.279] [UNKNOWN] So this is your assignment for next week.
+[00:29:08.279] [UNKNOWN] There are some requests here.
+[00:29:11.279] [UNKNOWN] Change the polynomial and observe
+[00:29:13.279] [UNKNOWN] is there any under feeding or over feeding.
+[00:29:15.279] [UNKNOWN] OK.
+[00:29:17.529] [UNKNOWN] And adjust
+[00:29:19.529] [UNKNOWN] this to 10 and again
+[00:29:21.529] [UNKNOWN] see that what's happening.
+[00:29:23.529] [UNKNOWN] OK. And answer this question.
+[00:29:29.440] [UNKNOWN] Why does regularization
+[00:29:31.440] [UNKNOWN] include generalization
+[00:29:33.440] [UNKNOWN] with 5 degree models and so on and so forth.
+[00:29:35.440] [UNKNOWN] Even you can work on this
+[00:29:38.809] [UNKNOWN] to see that
+[00:29:41.640] [UNKNOWN] you can see the over feeding
+[00:29:43.640] [UNKNOWN] better than this.
+[00:29:45.640] [UNKNOWN] Maybe increase the number of points.
+[00:29:47.640] [UNKNOWN] Or make the model
+[00:29:49.640] [UNKNOWN] complicated.
+[00:29:52.539] [UNKNOWN] Complicated than this.
+[00:29:54.670] [UNKNOWN] OK. To see that
+[00:29:56.670] [UNKNOWN] if there are different values
+[00:29:58.670] [UNKNOWN] they are getting too much
+[00:30:00.890] [UNKNOWN] difference.
+[00:30:03.720] [UNKNOWN] So
+[00:30:21.150] [UNKNOWN] yeah. Like this is an example
+[00:30:23.210] [UNKNOWN] that what we discussed.
+[00:30:25.210] [UNKNOWN] In theory
+[00:30:27.920] [UNKNOWN] how it's applied in
+[00:30:31.900] [UNKNOWN] practice.
+[00:30:34.119] [UNKNOWN] So of course we're updating
+[00:30:36.380] [UNKNOWN] those
+[00:30:38.380] [UNKNOWN] finding those coefficients.
+[00:30:40.509] [UNKNOWN] A, B and this
+[00:30:42.509] [UNKNOWN] star.
+[00:30:44.700] [UNKNOWN] We require the optimization.
+[00:30:46.700] [UNKNOWN] And that optimization
+[00:30:48.700] [UNKNOWN] which we call that one as
+[00:30:51.079] [UNKNOWN] a gradient descent
+[00:30:53.079] [UNKNOWN] is happening inside of this function.
+[00:30:55.079] [UNKNOWN] OK.
+[00:30:57.180] [UNKNOWN] Automatically
+[00:30:59.180] [UNKNOWN] let's see here.
+[00:31:02.490] [UNKNOWN] There's a linear regression.
+[00:31:04.490] [UNKNOWN] You can automatically find
+[00:31:06.490] [UNKNOWN] those coefficients
+[00:31:09.099] [UNKNOWN] using one of these
+[00:31:11.099] [UNKNOWN] optimization methods.
+[00:31:14.539] [UNKNOWN] OK. So
+[00:31:16.890] [UNKNOWN] if I go to open tab.
+[00:31:18.890] [UNKNOWN] So here
+[00:31:21.470] [UNKNOWN] what else we have.
+[00:31:23.470] [UNKNOWN] Let me change the
+[00:31:25.500] [UNKNOWN] optimizer.
+[00:31:33.359] [UNKNOWN] It tells you that
+[00:31:35.359] [UNKNOWN] what kind of
+[00:31:37.799] [UNKNOWN] information you can get.
+[00:31:39.799] [UNKNOWN] Here.
+[00:31:45.230] [UNKNOWN] Designation. Oh OK.
+[00:31:47.420] [UNKNOWN] So you see that
+[00:31:49.420] [UNKNOWN] based on the least square.
+[00:31:55.039] [UNKNOWN] Yeah. So
+[00:31:59.559] [UNKNOWN] based on the least square error.
+[00:32:01.559] [UNKNOWN] This is ordinary least square.
+[00:32:03.559] [UNKNOWN] Right?
+[00:32:05.559] [UNKNOWN] Based on the
+[00:32:09.549] [UNKNOWN] gradient descent.
+[00:32:11.799] [UNKNOWN] OK. So in background
+[00:32:14.250] [UNKNOWN] it's happening with multiplication
+[00:32:16.250] [UNKNOWN] of the matrix and
+[00:32:18.250] [UNKNOWN] find the optimal coefficient.
+[00:32:20.250] [UNKNOWN] That's why like when you print the
+[00:32:22.250] [UNKNOWN] coefficients
+[00:32:24.250] [UNKNOWN] so it shows you the
+[00:32:26.250] [UNKNOWN] optimal coefficient.
+[00:32:28.349] [UNKNOWN] OK. Then
+[00:32:31.279] [UNKNOWN] linear or then also
+[00:32:33.279] [UNKNOWN] you can print also.
+[00:32:35.470] [UNKNOWN] You can print here
+[00:32:37.720] [UNKNOWN] coefficients
+[00:32:39.880] [UNKNOWN] of the model.
+[00:32:44.990] [UNKNOWN] If I apply
+[00:32:46.990] [UNKNOWN] similar thing.
+[00:33:01.630] [UNKNOWN] OK. Let's call that one
+[00:33:03.630] [UNKNOWN] linear.
+[00:33:07.480] [UNKNOWN] What's mean is linear only.
+[00:33:09.480] [UNKNOWN] Linear
+[00:33:11.480] [UNKNOWN] only.
+[00:33:21.960] [UNKNOWN] Yeah. You see that
+[00:33:23.960] [UNKNOWN] one. But because it's a
+[00:33:25.960] [UNKNOWN] degree of 10. So we're gonna have
+[00:33:27.960] [UNKNOWN] 10 coefficients. 1, 2, 3.
+[00:33:29.960] [UNKNOWN] Yeah. OK.
+[00:33:33.660] [UNKNOWN] Those coefficients. So we can print it.
+[00:33:35.660] [UNKNOWN] And if you change the polynomial
+[00:33:40.670] [UNKNOWN] degree to more than
+[00:33:42.670] [UNKNOWN] degree. So your
+[00:33:44.670] [UNKNOWN] coefficient is gonna be higher.
+[00:33:46.670] [UNKNOWN] Any question?
+[00:33:52.440] [UNKNOWN] OK. So. Professor.
+[00:33:54.440] [UNKNOWN] Yes. How
+[00:33:56.730] [UNKNOWN] will you text in the midterm?
+[00:33:58.890] [UNKNOWN] How will you text in the midterm
+[00:34:01.720] [UNKNOWN] about this?
+[00:34:03.819] [UNKNOWN] I mean how we will
+[00:34:05.819] [UNKNOWN] text the knowledge in the midterm?
+[00:34:07.819] [UNKNOWN] In the midterm?
+[00:34:09.820] [UNKNOWN] Yeah. Yeah.
+[00:34:14.349] [UNKNOWN] I think in the exam.
+[00:34:16.349] [UNKNOWN] Because we don't write in the call
+[00:34:18.349] [UNKNOWN] during the exam, right?
+[00:34:37.050] [UNKNOWN] So it's the like MCQ?
+[00:34:39.210] [UNKNOWN] Multiple.
+[00:34:41.210] [UNKNOWN] Oh, we're gonna talk about that.
+[00:34:45.929] [UNKNOWN] We're gonna talk about that.
+[00:34:56.219] [UNKNOWN] So for next week, complete this assignment.
+[00:34:58.219] [UNKNOWN] And
+[00:35:01.760] [UNKNOWN] we don't need to solve it.
+[00:35:04.590] [UNKNOWN] And like to complete
+[00:35:06.679] [UNKNOWN] and opening your machine, right?
+[00:35:08.679] [UNKNOWN] And Google it.
+[00:35:10.679] [UNKNOWN] And Google call that.
+[00:35:13.550] [UNKNOWN] Or any ID that you have.
+[00:35:15.550] [UNKNOWN] And then we're gonna ask you
+[00:35:17.550] [UNKNOWN] one of, maybe one, two.
+[00:35:19.550] [UNKNOWN] It's gonna be random.
+[00:35:24.329] [UNKNOWN] OK. You need to be ready for that.
+[00:35:27.480] [UNKNOWN] Clear? Good.
+[00:35:32.170] [UNKNOWN] And find out like the reason.
+[00:35:34.170] [UNKNOWN] Like check the
+[00:35:36.170] [UNKNOWN] that you can
+[00:35:38.170] [UNKNOWN] see any clear
+[00:35:42.730] [UNKNOWN] overfitting there in the data.
+[00:35:44.730] [UNKNOWN] Increasing number of ones.
+[00:35:46.730] [UNKNOWN] Or reduce the number of
+[00:35:52.030] [UNKNOWN] ones, probably.
+[00:35:54.030] [UNKNOWN] I think that's the
+[00:36:05.210] [UNKNOWN] all the material
+[00:36:08.429] [UNKNOWN] I want to discuss today.
+[00:36:11.260] [UNKNOWN] OK.
+[00:36:17.320] [UNKNOWN] Any question?
+[00:36:36.480] [UNKNOWN] I think that's the end of the session.
+[00:36:48.239] [UNKNOWN] It's just that
+[00:36:50.239] [UNKNOWN] it's random and different.
+[00:36:52.239] [UNKNOWN] I changed some parameters.
+[00:36:55.480] [UNKNOWN] I don't know if I should say it.

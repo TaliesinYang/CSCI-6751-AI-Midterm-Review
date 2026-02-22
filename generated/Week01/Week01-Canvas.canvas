@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"center","type":"text","text":"# Week 01\n# Introduction to AI\n\n人工智能导论\n\n[[Week01/notes|完整笔记]]","x":0,"y":300,"width":280,"height":200,"color":"6"},
+		{"id":"branch1","type":"text","text":"## What is AI?\n\n定义：创造智能机器\n五大能力：\n- Learning 学习\n- Reasoning 推理\n- Problem Solving 问题求解\n- Perception 感知\n- Language 语言理解\n\nTuring Test (1950)\n- 人机不可分辨 → AI\n\n[[Week01/notes#What is Artificial Intelligence?|详细说明]]","x":350,"y":-20,"width":300,"height":380,"color":"3"},
+		{"id":"branch2","type":"text","text":"## AI 历史\n\n三次浪潮：\n- 1950s: Turing Test\n- 1980s: Expert Systems\n- 2010s: Deep Learning\n\n关键事件：\n- 1956 Dartmouth Conference\n- 2012 Deep Learning 突破\n- 2022 GPT-4 / ChatGPT\n\n[[Week01/notes#History of AI|详细内容]]","x":350,"y":400,"width":300,"height":360,"color":"2"},
+		{"id":"branch3","type":"text","text":"## Expert Systems\n专家系统 (1980s)\n\n架构：\n- Knowledge Base 知识库\n- Inference Engine 推理引擎\n- IF-THEN 规则\n\n局限：没有学习能力\n\n例子：MYCIN 医疗诊断\n\n[[Week01/notes#Expert Systems (1980s)|详细内容]]","x":720,"y":-20,"width":300,"height":360,"color":"2"},
+		{"id":"branch4","type":"text","text":"## Fuzzy Logic + Neural Networks\n\nFuzzy Logic 模糊逻辑：\n- 0-1 连续隶属度\n- 应用：控制系统\n\nNeural Networks 神经网络：\n- Input → Hidden → Output\n- 需要 GPU\n- 关键人物：\n  Hinton, LeCun\n\n[[Week01/notes#Fuzzy Logic|模糊逻辑]]\n[[Week01/notes#Neural Networks|神经网络]]","x":720,"y":380,"width":300,"height":420,"color":"5"},
+		{"id":"branch5","type":"text","text":"## Machine Learning 基础\n\n定义：从数据找模式\n\n三大类型：\n- Supervised: 有标签\n- Unsupervised: 无标签\n- Reinforcement: 奖惩\n\nClassification vs Regression\n- 离散类别 vs 连续数值\n\nML Pipeline:\n定义→收集→预处理→训练→评估→部署\n\n[[Week01/notes#Machine Learning Fundamentals|详细内容]]","x":1090,"y":0,"width":300,"height":440,"color":"3"},
+		{"id":"branch6","type":"text","text":"## 课程信息\n\n评分：\n- Participation 2%\n- Assignments 10%\n- Midterm 50%\n- Final Project 38%\n\n重要日期：\n- Midterm: Feb 24, 2026\n- Final: Mar 8, 2026\n\nPython 基础：\nNumPy, Lists, Loops\n\n[[Week01/notes|完整笔记]]\n[[Week01/vocabulary|术语表]]\n[[Week01/qa-summary|QA总结]]","x":1090,"y":480,"width":300,"height":420,"color":"4"}
+	],
+	"edges":[
+		{"id":"c-b1","fromNode":"center","toNode":"branch1","fromSide":"right","toSide":"left"},
+		{"id":"c-b2","fromNode":"center","toNode":"branch2","fromSide":"right","toSide":"left"},
+		{"id":"b1-b3","fromNode":"branch1","toNode":"branch3","fromSide":"right","toSide":"left"},
+		{"id":"b2-b4","fromNode":"branch2","toNode":"branch4","fromSide":"right","toSide":"left"},
+		{"id":"b3-b5","fromNode":"branch3","toNode":"branch5","fromSide":"right","toSide":"left"},
+		{"id":"b4-b5","fromNode":"branch4","toNode":"branch5","fromSide":"right","toSide":"left"},
+		{"id":"b5-b6","fromNode":"branch5","toNode":"branch6","fromSide":"right","toSide":"left"}
+	]
+}

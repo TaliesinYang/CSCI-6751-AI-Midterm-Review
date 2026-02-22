@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSCI 6751 Week03 — Gradient Descent (Linear Regression)</title>
+  <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans",sans-serif;line-height:1.5;margin:48px;}
+    h1{font-size:28px;margin:0 0 8px;}
+    h2{font-size:18px;margin:28px 0 10px;}
+    p,li{font-size:13.5px;}
+    .meta{color:#555;font-size:12px;margin-bottom:18px;}
+    .box{border:1px solid #ddd;border-radius:10px;padding:14px 16px;background:#fafafa;}
+    code{background:#f2f2f2;padding:1px 4px;border-radius:4px;}
+    .small{color:#555;font-size:12px;}
+    @media print{ body{margin:24px;} }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$','$'], ['\\(','\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <h1>Gradient Descent（梯度下降）— 线性回归 Week03 重点</h1>
+  <div class="meta">适用：考试手算 / 理解为什么用 GD 而不是 Normal Equation</div>
+
+  <div class="box">
+    <b>一句话：</b>Gradient Descent 用“沿着 loss $J(\theta)$ 最快下降的方向”迭代更新参数 $\theta$，把误差越压越小。
+  </div>
+
+  <h2>1. 线性回归模型 & 目标</h2>
+  <ul>
+    <li>预测：$\hat y = X\theta$（$X$ 是 design matrix，$\theta$ 是参数向量）</li>
+    <li>常用 cost（MSE 版本）：
+      $$J(\theta)=\frac{1}{2m}\sum_{i=1}^{m}(\hat y^{(i)}-y^{(i)})^2$$
+      这里 $m$ 是样本数；前面的 $\tfrac{1}{2}$ 方便求导（把 2 抵消掉）。
+    </li>
+  </ul>
+
+  <h2>2. 核心更新规则（必须会写）</h2>
+  <ul>
+    <li>总公式：
+      $$\theta := \theta - \alpha\,\nabla_{\theta}J(\theta)$$
+      $\alpha$ = learning rate（学习率/步长）；$\nabla J$ = 梯度（对每个参数的偏导组成的向量）。
+    </li>
+    <li><b>为什么是减号？</b> 梯度方向是“上升最快”，我们要让 $J$ 下降，所以走反方向：$-\nabla J$。</li>
+  </ul>
+
+  <h2>3. 线性回归下的梯度（向量形式）</h2>
+  <ul>
+    <li>对 MSE：
+      $$\nabla_{\theta}J(\theta)=\frac{1}{m}X^T(X\theta-y)$$
+    </li>
+    <li>所以更新就是：
+      $$\theta := \theta - \alpha\,\frac{1}{m}X^T(X\theta-y)$$
+    </li>
+  </ul>
+
+  <h2>4. Batch / SGD / Mini-batch（区别一句话背下来）</h2>
+  <ul>
+    <li><b>Batch GD</b>：每次用全部 $m$ 个样本算梯度（稳定，但一次更新成本高）。</li>
+    <li><b>Stochastic GD (SGD)</b>：每次用 1 个样本更新（快但抖动大）。</li>
+    <li><b>Mini-batch GD</b>：每次用一小批样本（最常用，速度与稳定折中）。</li>
+  </ul>
+
+  <h2>5. 学习率 $\alpha$（很爱考）</h2>
+  <ul>
+    <li>$\alpha$ 太大：可能 overshoot（跨过最低点）→ 不收敛 / 发散。</li>
+    <li>$\alpha$ 太小：会收敛但非常慢。</li>
+  </ul>
+
+  <h2>6. 和 Normal Equation 的关系（Week03 教授重点）</h2>
+  <ul>
+    <li><b>Normal equation（闭式解）</b>：
+      $$\theta = (X^TX)^{-1}X^Ty$$
+      一步到位，但需要矩阵可逆/求逆可能贵。
+    </li>
+    <li><b>Gradient Descent（迭代解）</b>：不需要显式求逆，通过迭代逼近最优 $\theta$。</li>
+  </ul>
+
+  <h2>7. 小手算模板（你可以按这个步骤写题）</h2>
+  <ol>
+    <li>写出 $\hat y = X\theta$，再写 $J(\theta)$（通常 MSE）。</li>
+    <li>写梯度：$\nabla J(\theta)=\tfrac{1}{m}X^T(X\theta-y)$。</li>
+    <li>代入更新：$\theta \leftarrow \theta-\alpha\nabla J(\theta)$。</li>
+    <li>重复 1~2 次（题目一般只让你更新几步）。</li>
+  </ol>
+
+  <p class="small">如果你把题目给的具体 $X, y, \alpha, \theta^{(0)}$ 发我，我可以帮你检查每一步矩阵维度与计算是否对（不直接代你交作业）。</p>
+</body>
+</html>

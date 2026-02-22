@@ -1,0 +1,446 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<meta charset="UTF-8" />
+<style type="text/css">
+    p, li {white-space: pre-wrap;}
+    p {font-size: 0.9em;}
+    .MsoNormal {font-family: "Arial"; font-weight: 400; font-style: normal; font-size: 0.9em;}
+</style>
+</head>
+<body style="font-family: 'Arial'; font-weight: 400; font-style: normal">
+<div class="WordSection1">
+    <p><em>Source: ai0203 2026 Recording (2)</em></p>
+    <p><a name="ts_1710_44970_UNKNOWN"><span style="color:#78909C">[00:00:01.710]</span> UNKNOWN: So here I want to show an example of how we can apply linear regression in practice.</a></p>
+    <p><a name="ts_44970_78590_UNKNOWN"><span style="color:#78909C">[00:00:44.969]</span> UNKNOWN: So majorly there is a library for machine learning algorithms and that's called scikit-learn</a></p>
+    <p><a name="ts_78590_88530_UNKNOWN"><span style="color:#78909C">[00:01:18.590]</span> UNKNOWN: or test-scaler. So what you see here as test-scaler, this is a library in which you can do, you</a></p>
+    <p><a name="ts_88530_99000_UNKNOWN"><span style="color:#78909C">[00:01:28.530]</span> UNKNOWN: can use the linear regression, later probably neural network and so on and so forth. Decision</a></p>
+    <p><a name="ts_99000_124360_UNKNOWN"><span style="color:#78909C">[00:01:39.000]</span> UNKNOWN: trees, clustering, everything is there in scikit-learn. So I have imported here a library</a></p>
+    <p><a name="ts_124360_125160_UNKNOWN"><span style="color:#78909C">[00:02:04.359]</span> UNKNOWN: that's called scikit-learn.</a></p>
+    <p><a name="ts_125160_125180_UNKNOWN"><span style="color:#78909C">[00:02:05.159]</span> UNKNOWN: So I have imported a library that's called scikit-learn.</a></p>
+    <p><a name="ts_125180_129000_UNKNOWN"><span style="color:#78909C">[00:02:05.180]</span> UNKNOWN: So I have imported a library that's called scikit-learn.</a></p>
+    <p><a name="ts_129000_129340_UNKNOWN"><span style="color:#78909C">[00:02:09.000]</span> UNKNOWN: So I have imported a library that's called scikit-learn.</a></p>
+    <p><a name="ts_129340_129759_UNKNOWN"><span style="color:#78909C">[00:02:09.340]</span> UNKNOWN: So I have imported a library that's called scikit-learn.</a></p>
+    <p><a name="ts_129759_157770_UNKNOWN"><span style="color:#78909C">[00:02:09.759]</span> UNKNOWN: So I have imported a library that's called scikit-learn.</a></p>
+    <p><a name="ts_157770_160710_UNKNOWN"><span style="color:#78909C">[00:02:37.770]</span> UNKNOWN: I did get back to this. But the important thing here is that you import the linear</a></p>
+    <p><a name="ts_160710_168170_UNKNOWN"><span style="color:#78909C">[00:02:40.710]</span> UNKNOWN: regression, which is available in scikit-learn, linear models, OK. And also we have something</a></p>
+    <p><a name="ts_168170_177050_UNKNOWN"><span style="color:#78909C">[00:02:48.169]</span> UNKNOWN: for train test . Like whatever data set you have, to train And test.</a></p>
+    <p><a name="ts_177050_187560_UNKNOWN"><span style="color:#78909C">[00:02:57.050]</span> UNKNOWN: They do 80% for train, 20% for test. You train data and then test on test data.</a></p>
+    <p><a name="ts_187560_203480_UNKNOWN"><span style="color:#78909C">[00:03:07.560]</span> UNKNOWN: the model on there and test it. Okay. So, this Pyplot from Mathplot library is for just</a></p>
+    <p><a name="ts_203480_214730_UNKNOWN"><span style="color:#78909C">[00:03:23.479]</span> UNKNOWN: plotting, and NumPy is a library for working on tags. Okay? So, the other thing here is</a></p>
+    <p><a name="ts_214730_221920_UNKNOWN"><span style="color:#78909C">[00:03:34.729]</span> UNKNOWN: that, like, forget about this queue, I'm going to get back to this one. So, first thing here</a></p>
+    <p><a name="ts_221920_231560_UNKNOWN"><span style="color:#78909C">[00:03:41.919]</span> UNKNOWN: is that I want to create a synthetic data set, which has the 1000 data points, okay?</a></p>
+    <p><a name="ts_231560_242550_UNKNOWN"><span style="color:#78909C">[00:03:51.560]</span> UNKNOWN: And the formula or equation is something like this, 4, or in section, right? So, 3, and</a></p>
+    <p><a name="ts_242550_256620_UNKNOWN"><span style="color:#78909C">[00:04:02.550]</span> UNKNOWN: plus numbers. Okay? So, x is random points, 1000 random points, and I multiply that by</a></p>
+    <p><a name="ts_256620_257620_UNKNOWN"><span style="color:#78909C">[00:04:16.620]</span> UNKNOWN: 3.</a></p>
+    <p><a name="ts_257620_263290_UNKNOWN"><span style="color:#78909C">[00:04:17.620]</span> UNKNOWN: Okay? So, I'm going to get the values, and then y is coming from this. I added some noises</a></p>
+    <p><a name="ts_263290_270290_UNKNOWN"><span style="color:#78909C">[00:04:23.290]</span> UNKNOWN: because I want to see some noises in my data. And then if I create a function, I see that,</a></p>
+    <p><a name="ts_270290_279520_UNKNOWN"><span style="color:#78909C">[00:04:30.290]</span> UNKNOWN: okay, does my model learn those noises or not? Okay? And then here, just plotting, just</a></p>
+    <p><a name="ts_279520_287640_UNKNOWN"><span style="color:#78909C">[00:04:39.519]</span> UNKNOWN: plotting tags using the tlt.scatter, that means that I'm going to have something like this.</a></p>
+    <p><a name="ts_287640_289190_UNKNOWN"><span style="color:#78909C">[00:04:47.639]</span> UNKNOWN: Okay?</a></p>
+    <p><a name="ts_289190_293190_UNKNOWN"><span style="color:#78909C">[00:04:49.189]</span> UNKNOWN: And I'm going to get a little bit smaller. So, what you see here, the x is something</a></p>
+    <p><a name="ts_293190_299570_UNKNOWN"><span style="color:#78909C">[00:04:53.189]</span> UNKNOWN: with the, because, you see this rand? The output for rand is going to be between 0 and</a></p>
+    <p><a name="ts_299570_304570_UNKNOWN"><span style="color:#78909C">[00:04:59.569]</span> UNKNOWN: 1, as always, right? Rand, rand, rand of 1. If you want to convert that one to something</a></p>
+    <p><a name="ts_304570_314400_UNKNOWN"><span style="color:#78909C">[00:05:04.569]</span> UNKNOWN: between 0 to 2, you need to multiply that one by 2. Okay? If you multiply by 5, it's</a></p>
+    <p><a name="ts_314400_320010_UNKNOWN"><span style="color:#78909C">[00:05:14.399]</span> UNKNOWN: going to be between 0 and 1. So, that's why you see here, x is between 0 and 2. And then</a></p>
+    <p><a name="ts_320010_325690_UNKNOWN"><span style="color:#78909C">[00:05:20.009]</span> UNKNOWN: between 0 and 2, and your y is coming from this equation.</a></p>
+    <p><a name="ts_327280_332220_UNKNOWN"><span style="color:#78909C">[00:05:27.279]</span> UNKNOWN: Okay, again, noise is, you see that 4 plus 3x plus our noise,</a></p>
+    <p><a name="ts_332900_335420_UNKNOWN"><span style="color:#78909C">[00:05:32.899]</span> UNKNOWN: which is a small number, right?</a></p>
+    <p><a name="ts_338000_342820_UNKNOWN"><span style="color:#78909C">[00:05:38.000]</span> UNKNOWN: Okay, so what I see here is that 3 plus 4x.</a></p>
+    <p><a name="ts_344590_350880_UNKNOWN"><span style="color:#78909C">[00:05:44.589]</span> UNKNOWN: Maybe I can reduce this to, for example, 500.</a></p>
+    <p><a name="ts_350880_368340_UNKNOWN"><span style="color:#78909C">[00:05:50.879]</span> UNKNOWN: If I do that, 500, 500, and something like this.</a></p>
+    <p><a name="ts_369990_373730_UNKNOWN"><span style="color:#78909C">[00:06:09.990]</span> UNKNOWN: Okay, so I see that the relationship is kind of, like, linear.</a></p>
+    <p><a name="ts_377070_397980_UNKNOWN"><span style="color:#78909C">[00:06:17.069]</span> UNKNOWN: I believe here I can make, let me just show this in a color.</a></p>
+    <p><a name="ts_397980_416290_UNKNOWN"><span style="color:#78909C">[00:06:37.980]</span> UNKNOWN: Okay, marker, let me see if I can get a marker here, marker.</a></p>
+    <p><a name="ts_416370_425700_UNKNOWN"><span style="color:#78909C">[00:06:56.370]</span> UNKNOWN: Marker equal, yeah, okay, much, much better.</a></p>
+    <p><a name="ts_426240_431600_UNKNOWN"><span style="color:#78909C">[00:07:06.240]</span> UNKNOWN: Okay, so, and even we can decrease the size of this.</a></p>
+    <p><a name="ts_431860_441550_UNKNOWN"><span style="color:#78909C">[00:07:11.860]</span> UNKNOWN: Okay, so I have 1,000 data points, 1,000 data points here.</a></p>
+    <p><a name="ts_443380_448340_UNKNOWN"><span style="color:#78909C">[00:07:23.379]</span> UNKNOWN: Okay, and I see that this should be something like the relationship, like, linear.</a></p>
+    <p><a name="ts_449340_454690_UNKNOWN"><span style="color:#78909C">[00:07:29.339]</span> UNKNOWN: But there are a couple of points here, which is half light.</a></p>
+    <p><a name="ts_455780_460160_UNKNOWN"><span style="color:#78909C">[00:07:35.779]</span> UNKNOWN: Okay, so can I add the random seed?</a></p>
+    <p><a name="ts_460900_467020_UNKNOWN"><span style="color:#78909C">[00:07:40.899]</span> UNKNOWN: The responsibility of random seed is that if I deactivate this star, each time,</a></p>
+    <p><a name="ts_467020_471840_UNKNOWN"><span style="color:#78909C">[00:07:47.019]</span> UNKNOWN: these random points which are generated is going to be coming from different distributions.</a></p>
+    <p><a name="ts_472730_481050_UNKNOWN"><span style="color:#78909C">[00:07:52.730]</span> UNKNOWN: Maybe I run this one, and next time if I run the same thing, the same code,</a></p>
+    <p><a name="ts_484420_485600_UNKNOWN"><span style="color:#78909C">[00:08:04.420]</span> UNKNOWN: the data point can change.</a></p>
+    <p><a name="ts_486690_488870_UNKNOWN"><span style="color:#78909C">[00:08:06.689]</span> UNKNOWN: If I want to have reproducibility.</a></p>
+    <p><a name="ts_489230_495450_UNKNOWN"><span style="color:#78909C">[00:08:09.230]</span> UNKNOWN: This means that each time I have the same data, like, I write the code at home,</a></p>
+    <p><a name="ts_495450_499810_UNKNOWN"><span style="color:#78909C">[00:08:15.449]</span> UNKNOWN: then I want to show, I want to have the same data point.</a></p>
+    <p><a name="ts_500270_506040_UNKNOWN"><span style="color:#78909C">[00:08:20.269]</span> UNKNOWN: So, that's why I need to determine my data seed, okay?</a></p>
+    <p><a name="ts_506040_514940_UNKNOWN"><span style="color:#78909C">[00:08:26.040]</span> UNKNOWN: So, let me say seed 42 or whatever, seed 10, next time that I'm running the code,</a></p>
+    <p><a name="ts_515200_518980_UNKNOWN"><span style="color:#78909C">[00:08:35.200]</span> UNKNOWN: this data point, random data point will be the same, okay?</a></p>
+    <p><a name="ts_519440_520220_UNKNOWN"><span style="color:#78909C">[00:08:39.440]</span> UNKNOWN: They are random.</a></p>
+    <p><a name="ts_520220_527330_UNKNOWN"><span style="color:#78909C">[00:08:40.220]</span> UNKNOWN: But, let's say that it's reproducible, random data point, okay?</a></p>
+    <p><a name="ts_527810_535680_UNKNOWN"><span style="color:#78909C">[00:08:47.809]</span> UNKNOWN: So, that's why it's necessary to have this one, especially when you want to show an experiment.</a></p>
+    <p><a name="ts_536380_539300_UNKNOWN"><span style="color:#78909C">[00:08:56.379]</span> UNKNOWN: Okay, so this is something that I have in my data.</a></p>
+    <p><a name="ts_539980_559500_UNKNOWN"><span style="color:#78909C">[00:08:59.980]</span> UNKNOWN: So, if I print data right now, so data, data, if I print data, okay, so I have X,</a></p>
+    <p><a name="ts_561420_571530_UNKNOWN"><span style="color:#78909C">[00:09:21.419]</span> UNKNOWN: so if I print X, so you see that X is an array, right, an array of 1,000 data points,</a></p>
+    <p><a name="ts_572590_578140_UNKNOWN"><span style="color:#78909C">[00:09:32.590]</span> UNKNOWN: and Y is also an array of 1,000 data points, okay?</a></p>
+    <p><a name="ts_578860_584670_UNKNOWN"><span style="color:#78909C">[00:09:38.860]</span> UNKNOWN: So, now I want to feed the linear regression.</a></p>
+    <p><a name="ts_584810_585510_UNKNOWN"><span style="color:#78909C">[00:09:44.809]</span> UNKNOWN: What are these steps?</a></p>
+    <p><a name="ts_586010_593470_UNKNOWN"><span style="color:#78909C">[00:09:46.009]</span> UNKNOWN: These steps here, first of all, I need to add the linear regression here, okay?</a></p>
+    <p><a name="ts_593470_595040_UNKNOWN"><span style="color:#78909C">[00:09:53.470]</span> UNKNOWN: And then, please think about it.</a></p>
+    <p><a name="ts_595040_595620_UNKNOWN"><span style="color:#78909C">[00:09:55.039]</span> UNKNOWN: I don't want to do this.</a></p>
+    <p><a name="ts_595620_597680_UNKNOWN"><span style="color:#78909C">[00:09:55.620]</span> UNKNOWN: I don't want to do this.</a></p>
+    <p><a name="ts_597680_597920_UNKNOWN"><span style="color:#78909C">[00:09:57.679]</span> UNKNOWN: I don't want to do this.</a></p>
+    <p><a name="ts_597920_598100_UNKNOWN"><span style="color:#78909C">[00:09:57.919]</span> UNKNOWN: I don't want to do this.</a></p>
+    <p><a name="ts_598100_598120_UNKNOWN"><span style="color:#78909C">[00:09:58.100]</span> UNKNOWN: I don't want to do this.</a></p>
+    <p><a name="ts_598120_601840_UNKNOWN"><span style="color:#78909C">[00:09:58.120]</span> UNKNOWN: So, what I'm going to require here is this one.</a></p>
+    <p><a name="ts_603640_604740_UNKNOWN"><span style="color:#78909C">[00:10:03.639]</span> UNKNOWN: Link a psychic plane.</a></p>
+    <p><a name="ts_606090_613250_UNKNOWN"><span style="color:#78909C">[00:10:06.090]</span> UNKNOWN: I define a new object of that class, linear regression, and I call that one as link link, okay?</a></p>
+    <p><a name="ts_613350_613910_UNKNOWN"><span style="color:#78909C">[00:10:13.350]</span> UNKNOWN: So, link link.</a></p>
+    <p><a name="ts_614450_620190_UNKNOWN"><span style="color:#78909C">[00:10:14.450]</span> UNKNOWN: And then, that object has a function, which is called feed.</a></p>
+    <p><a name="ts_621010_629220_UNKNOWN"><span style="color:#78909C">[00:10:21.009]</span> UNKNOWN: If I write that one, dot feed, and pass X and Y, it's going to feed a linear regression model.</a></p>
+    <p><a name="ts_629220_633740_UNKNOWN"><span style="color:#78909C">[00:10:29.220]</span> UNKNOWN: Based on YX, the first parameter is the X.</a></p>
+    <p><a name="ts_634280_637240_UNKNOWN"><span style="color:#78909C">[00:10:34.279]</span> UNKNOWN: The second parameter is the Y, right?</a></p>
+    <p><a name="ts_637920_649850_UNKNOWN"><span style="color:#78909C">[00:10:37.919]</span> UNKNOWN: So, and after that one, like if I print, so, for example, I deactivate this bar.</a></p>
+    <p><a name="ts_651320_658820_UNKNOWN"><span style="color:#78909C">[00:10:51.320]</span> UNKNOWN: So, I print it, that linear regression, the learned linear regression,</a></p>
+    <p><a name="ts_658960_664840_UNKNOWN"><span style="color:#78909C">[00:10:58.960]</span> UNKNOWN: linear regression, its interception and coefficient.</a></p>
+    <p><a name="ts_665140_672950_UNKNOWN"><span style="color:#78909C">[00:11:05.139]</span> UNKNOWN: Okay, interception, so, which is this one, and the coefficient, which is this one, okay?</a></p>
+    <p><a name="ts_673550_679720_UNKNOWN"><span style="color:#78909C">[00:11:13.549]</span> UNKNOWN: Okay.</a></p>
+    <p><a name="ts_681750_685260_UNKNOWN"><span style="color:#78909C">[00:11:21.750]</span> UNKNOWN: And then, I activate this bar.</a></p>
+    <p><a name="ts_686540_691820_UNKNOWN"><span style="color:#78909C">[00:11:26.539]</span> UNKNOWN: So, the interception is 4, that means that 4X plus almost 3, right?</a></p>
+    <p><a name="ts_692120_695960_UNKNOWN"><span style="color:#78909C">[00:11:32.120]</span> UNKNOWN: And that's what we want to, 4 plus 3X.</a></p>
+    <p><a name="ts_696340_698060_UNKNOWN"><span style="color:#78909C">[00:11:36.340]</span> UNKNOWN: Yeah, 4 plus 3X.</a></p>
+    <p><a name="ts_698420_701560_UNKNOWN"><span style="color:#78909C">[00:11:38.419]</span> UNKNOWN: And this one is almost 4 plus 3X.</a></p>
+    <p><a name="ts_701560_703580_UNKNOWN"><span style="color:#78909C">[00:11:41.559]</span> UNKNOWN: It's not exactly the same thing.</a></p>
+    <p><a name="ts_703580_709080_UNKNOWN"><span style="color:#78909C">[00:11:43.580]</span> UNKNOWN: It's not exactly the same thing because we have some noises here and the model and those noises.</a></p>
+    <p><a name="ts_709320_712860_UNKNOWN"><span style="color:#78909C">[00:11:49.320]</span> UNKNOWN: That's why it's not exactly 4 plus 3X.</a></p>
+    <p><a name="ts_713720_714100_UNKNOWN"><span style="color:#78909C">[00:11:53.720]</span> UNKNOWN: Okay?</a></p>
+    <p><a name="ts_714680_718820_UNKNOWN"><span style="color:#78909C">[00:11:54.679]</span> UNKNOWN: So, I print the function and plot that.</a></p>
+    <p><a name="ts_719160_727160_UNKNOWN"><span style="color:#78909C">[00:11:59.159]</span> UNKNOWN: So, to plot that one, what I require is, because right now I trained it linear regression,</a></p>
+    <p><a name="ts_727160_734080_UNKNOWN"><span style="color:#78909C">[00:12:07.159]</span> UNKNOWN: if I plot any X to this and apply credit X,</a></p>
+    <p><a name="ts_734440_741620_UNKNOWN"><span style="color:#78909C">[00:12:14.440]</span> UNKNOWN: it's going to return the prediction value, right, that Y has here.</a></p>
+    <p><a name="ts_742400_748420_UNKNOWN"><span style="color:#78909C">[00:12:22.399]</span> UNKNOWN: And I just printed X and it was predicted by X.</a></p>
+    <p><a name="ts_749120_753920_UNKNOWN"><span style="color:#78909C">[00:12:29.120]</span> UNKNOWN: After this training, X can be unseen data, new data, okay?</a></p>
+    <p><a name="ts_754420_765810_UNKNOWN"><span style="color:#78909C">[00:12:34.419]</span> UNKNOWN: But for now, just print those and you see that I ask, okay, plot this and the color is going to be red</a></p>
+    <p><a name="ts_766590_769210_UNKNOWN"><span style="color:#78909C">[00:12:46.590]</span> UNKNOWN: and call that one as linear regression.</a></p>
+    <p><a name="ts_769590_771460_UNKNOWN"><span style="color:#78909C">[00:12:49.590]</span> UNKNOWN: Okay?</a></p>
+    <p><a name="ts_771460_794530_UNKNOWN"><span style="color:#78909C">[00:12:51.460]</span> UNKNOWN: So, linear regression, it's cited as my title and if I believe, you know, this and you want to see that later.</a></p>
+    <p><a name="ts_794910_795210_UNKNOWN"><span style="color:#78909C">[00:13:14.909]</span> UNKNOWN: Okay.</a></p>
+    <p><a name="ts_800490_800990_UNKNOWN"><span style="color:#78909C">[00:13:20.490]</span> UNKNOWN: Okay.</a></p>
+    <p><a name="ts_801350_806540_UNKNOWN"><span style="color:#78909C">[00:13:21.350]</span> UNKNOWN: So, the question here is that this is a linear regression.</a></p>
+    <p><a name="ts_806720_808480_UNKNOWN"><span style="color:#78909C">[00:13:26.720]</span> UNKNOWN: What if I want to have different degrees?</a></p>
+    <p><a name="ts_809040_810160_UNKNOWN"><span style="color:#78909C">[00:13:29.039]</span> UNKNOWN: If you have none, right?</a></p>
+    <p><a name="ts_810220_812160_UNKNOWN"><span style="color:#78909C">[00:13:30.220]</span> UNKNOWN: So, or whatever.</a></p>
+    <p><a name="ts_812500_813000_UNKNOWN"><span style="color:#78909C">[00:13:32.500]</span> UNKNOWN: In that case.</a></p>
+    <p><a name="ts_813000_821930_UNKNOWN"><span style="color:#78909C">[00:13:33.000]</span> UNKNOWN: So, in that case, you can use the polynomial from psychic plane processing for polynomial features.</a></p>
+    <p><a name="ts_822900_823260_UNKNOWN"><span style="color:#78909C">[00:13:42.899]</span> UNKNOWN: Okay?</a></p>
+    <p><a name="ts_823940_830820_UNKNOWN"><span style="color:#78909C">[00:13:43.940]</span> UNKNOWN: So, and if you do that one, you want to create a polynomial, right?</a></p>
+    <p><a name="ts_830980_835860_UNKNOWN"><span style="color:#78909C">[00:13:50.980]</span> UNKNOWN: So, because I want to show that over here.</a></p>
+    <p><a name="ts_836970_837530_UNKNOWN"><span style="color:#78909C">[00:13:56.970]</span> UNKNOWN: Okay?</a></p>
+    <p><a name="ts_837530_846480_UNKNOWN"><span style="color:#78909C">[00:13:57.529]</span> UNKNOWN: So, after importing, create a new object, polynomial features, and give it degrees.</a></p>
+    <p><a name="ts_846480_850280_UNKNOWN"><span style="color:#78909C">[00:14:06.480]</span> UNKNOWN: And call that one as poly.</a></p>
+    <p><a name="ts_850520_854230_UNKNOWN"><span style="color:#78909C">[00:14:10.519]</span> UNKNOWN: Now, you say that poly.is.</a></p>
+    <p><a name="ts_855090_855410_UNKNOWN"><span style="color:#78909C">[00:14:15.090]</span> UNKNOWN: Okay?</a></p>
+    <p><a name="ts_856550_862710_UNKNOWN"><span style="color:#78909C">[00:14:16.549]</span> UNKNOWN: So, I'm defining a new function, which is polynomial degree 10 to fit x.</a></p>
+    <p><a name="ts_864070_866100_UNKNOWN"><span style="color:#78909C">[00:14:24.070]</span> UNKNOWN: Okay?</a></p>
+    <p><a name="ts_866820_871390_UNKNOWN"><span style="color:#78909C">[00:14:26.820]</span> UNKNOWN: And then, I put in my data to train and test.</a></p>
+    <p><a name="ts_872420_876620_UNKNOWN"><span style="color:#78909C">[00:14:32.419]</span> UNKNOWN: And call that one as 20% as test.</a></p>
+    <p><a name="ts_877020_879140_UNKNOWN"><span style="color:#78909C">[00:14:37.019]</span> UNKNOWN: And the rest is going to be.</a></p>
+    <p><a name="ts_879140_879540_UNKNOWN"><span style="color:#78909C">[00:14:39.139]</span> UNKNOWN: Training.</a></p>
+    <p><a name="ts_880540_880920_UNKNOWN"><span style="color:#78909C">[00:14:40.539]</span> UNKNOWN: Okay?</a></p>
+    <p><a name="ts_881920_884260_UNKNOWN"><span style="color:#78909C">[00:14:41.919]</span> UNKNOWN: And this is the values that I have.</a></p>
+    <p><a name="ts_884360_885320_UNKNOWN"><span style="color:#78909C">[00:14:44.360]</span> UNKNOWN: X train, x test.</a></p>
+    <p><a name="ts_885480_887000_UNKNOWN"><span style="color:#78909C">[00:14:45.480]</span> UNKNOWN: Y train, and y test.</a></p>
+    <p><a name="ts_887180_887460_UNKNOWN"><span style="color:#78909C">[00:14:47.179]</span> UNKNOWN: Okay?</a></p>
+    <p><a name="ts_888340_892520_UNKNOWN"><span style="color:#78909C">[00:14:48.340]</span> UNKNOWN: So, and then, after that, I use x train and x test.</a></p>
+    <p><a name="ts_894760_897460_UNKNOWN"><span style="color:#78909C">[00:14:54.759]</span> UNKNOWN: To fitting the model.</a></p>
+    <p><a name="ts_901110_908860_UNKNOWN"><span style="color:#78909C">[00:15:01.110]</span> UNKNOWN: And then, as previous one, let's plug that.</a></p>
+    <p><a name="ts_911800_912180_UNKNOWN"><span style="color:#78909C">[00:15:11.799]</span> UNKNOWN: Okay?</a></p>
+    <p><a name="ts_912180_918310_UNKNOWN"><span style="color:#78909C">[00:15:12.179]</span> UNKNOWN: So, you see that there is a function of w.</a></p>
+    <p><a name="ts_918310_938020_UNKNOWN"><span style="color:#78909C">[00:15:18.309]</span> UNKNOWN: You see that it's going to be up and down.</a></p>
+    <p><a name="ts_940060_940540_UNKNOWN"><span style="color:#78909C">[00:15:40.059]</span> UNKNOWN: Okay?</a></p>
+    <p><a name="ts_940540_940620_UNKNOWN"><span style="color:#78909C">[00:15:40.539]</span> UNKNOWN: Okay?</a></p>
+    <p><a name="ts_944680_948170_UNKNOWN"><span style="color:#78909C">[00:15:44.679]</span> UNKNOWN: Oh, if you have 10.</a></p>
+    <p><a name="ts_948940_951820_UNKNOWN"><span style="color:#78909C">[00:15:48.940]</span> UNKNOWN: Okay, let's see if I have w of 10.</a></p>
+    <p><a name="ts_952620_952940_UNKNOWN"><span style="color:#78909C">[00:15:52.620]</span> UNKNOWN: Okay.</a></p>
+    <p><a name="ts_956920_959670_UNKNOWN"><span style="color:#78909C">[00:15:56.919]</span> UNKNOWN: So, what I did.</a></p>
+    <p><a name="ts_961000_961160_UNKNOWN"><span style="color:#78909C">[00:16:01.000]</span> UNKNOWN: I.</a></p>
+    <p><a name="ts_962450_962890_UNKNOWN"><span style="color:#78909C">[00:16:02.450]</span> UNKNOWN: Uh.</a></p>
+    <p><a name="ts_962890_976010_UNKNOWN"><span style="color:#78909C">[00:16:02.889]</span> UNKNOWN: Split my data, right, x, into train and test, and then fit on the, on the train data.</a></p>
+    <p><a name="ts_977610_1003840_UNKNOWN"><span style="color:#78909C">[00:16:17.610]</span> UNKNOWN: Later, I predicted, predicted the values on the, on the, on train data and test data.</a></p>
+    <p><a name="ts_1005450_1005830_UNKNOWN"><span style="color:#78909C">[00:16:45.450]</span> UNKNOWN: Okay?</a></p>
+    <p><a name="ts_1006290_1009250_UNKNOWN"><span style="color:#78909C">[00:16:46.289]</span> UNKNOWN: So, I want to calculate what is the error of the model.</a></p>
+    <p><a name="ts_1010190_1013530_UNKNOWN"><span style="color:#78909C">[00:16:50.190]</span> UNKNOWN: So, one of the matrix that I explained was.</a></p>
+    <p><a name="ts_1014010_1014510_UNKNOWN"><span style="color:#78909C">[00:16:54.009]</span> UNKNOWN: Okay.</a></p>
+    <p><a name="ts_1014510_1015810_UNKNOWN"><span style="color:#78909C">[00:16:54.509]</span> UNKNOWN: That, it S squared error, right?</a></p>
+    <p><a name="ts_1017160_1023020_UNKNOWN"><span style="color:#78909C">[00:16:57.159]</span> UNKNOWN: Y minus, y salary hat is squared, right?</a></p>
+    <p><a name="ts_1023100_1025180_UNKNOWN"><span style="color:#78909C">[00:17:03.100]</span> UNKNOWN: For the error of the model.</a></p>
+    <p><a name="ts_1025180_1026980_UNKNOWN"><span style="color:#78909C">[00:17:05.180]</span> UNKNOWN: Y minus y hat is squared.</a></p>
+    <p><a name="ts_1027839_1031339_UNKNOWN"><span style="color:#78909C">[00:17:07.839]</span> UNKNOWN: If you divide that one by 10, or it shows they.</a></p>
+    <p><a name="ts_1031960_1032260_UNKNOWN"><span style="color:#78909C">[00:17:11.960]</span> UNKNOWN: Uh.</a></p>
+    <p><a name="ts_1032760_1040220_UNKNOWN"><span style="color:#78909C">[00:17:12.759]</span> UNKNOWN: So you calculate the mean square error here, it's going to show you that how much is the error of the model?</a></p>
+    <p><a name="ts_1040240_1041819_UNKNOWN"><span style="color:#78909C">[00:17:20.240]</span> UNKNOWN: So, again from ..</a></p>
+    <p><a name="ts_1041819_1043640_UNKNOWN"><span style="color:#78909C">[00:17:21.819]</span> UNKNOWN: The, the , uh...</a></p>
+    <p><a name="ts_1043700_1045000_UNKNOWN"><span style="color:#78909C">[00:17:23.700]</span> UNKNOWN: What we're using, the error.</a></p>
+    <p><a name="ts_1045000_1045040_UNKNOWN"><span style="color:#78909C">[00:17:25.000]</span> UNKNOWN: Uh.</a></p>
+    <p><a name="ts_1045040_1045460_UNKNOWN"><span style="color:#78909C">[00:17:25.039]</span> UNKNOWN: Uh.</a></p>
+    <p><a name="ts_1045460_1046079_UNKNOWN"><span style="color:#78909C">[00:17:25.460]</span> UNKNOWN: Cyluit, u dot.</a></p>
+    <p><a name="ts_1046079_1046260_UNKNOWN"><span style="color:#78909C">[00:17:26.079]</span> UNKNOWN: Two nou let F.</a></p>
+    <p><a name="ts_1046260_1051260_UNKNOWN"><span style="color:#78909C">[00:17:26.259]</span> UNKNOWN: that I mentioned before not quite be used now.</a></p>
+    <p><a name="ts_1051260_1057340_UNKNOWN"><span style="color:#78909C">[00:17:31.259]</span> UNKNOWN: So I can do a dot matrix, import mean squared error, okay.</a></p>
+    <p><a name="ts_1057340_1060340_UNKNOWN"><span style="color:#78909C">[00:17:37.339]</span> UNKNOWN: And then if you say mean squared error,</a></p>
+    <p><a name="ts_1060340_1066860_UNKNOWN"><span style="color:#78909C">[00:17:40.339]</span> UNKNOWN: you pass the prediction of the ground truth,</a></p>
+    <p><a name="ts_1066860_1077190_UNKNOWN"><span style="color:#78909C">[00:17:46.859]</span> UNKNOWN: and this one is the prediction of the model on test data.</a></p>
+    <p><a name="ts_1077190_1083410_UNKNOWN"><span style="color:#78909C">[00:17:57.190]</span> UNKNOWN: On train data, this is the prediction by the model.</a></p>
+    <p><a name="ts_1083410_1086410_UNKNOWN"><span style="color:#78909C">[00:18:03.410]</span> UNKNOWN: This is the ground truth, this is the prediction by the model,</a></p>
+    <p><a name="ts_1086410_1089860_UNKNOWN"><span style="color:#78909C">[00:18:06.410]</span> UNKNOWN: and same thing for testing, okay.</a></p>
+    <p><a name="ts_1089860_1095460_UNKNOWN"><span style="color:#78909C">[00:18:09.859]</span> UNKNOWN: So it shows that the train MSE is almost 1,</a></p>
+    <p><a name="ts_1095460_1099910_UNKNOWN"><span style="color:#78909C">[00:18:15.460]</span> UNKNOWN: and test MSE is less than that, okay.</a></p>
+    <p><a name="ts_1099910_1107290_UNKNOWN"><span style="color:#78909C">[00:18:19.910]</span> UNKNOWN: Do we have any sort of like overfitting here?</a></p>
+    <p><a name="ts_1107290_1119180_UNKNOWN"><span style="color:#78909C">[00:18:27.289]</span> UNKNOWN: Do you see any overfitting?</a></p>
+    <p><a name="ts_1119180_1121820_UNKNOWN"><span style="color:#78909C">[00:18:39.180]</span> UNKNOWN: No, right?</a></p>
+    <p><a name="ts_1121820_1125360_UNKNOWN"><span style="color:#78909C">[00:18:41.819]</span> UNKNOWN: Train is 1, and test is less than that.</a></p>
+    <p><a name="ts_1125360_1126360_UNKNOWN"><span style="color:#78909C">[00:18:45.359]</span> UNKNOWN: It's not there.</a></p>
+    <p><a name="ts_1126360_1127360_UNKNOWN"><span style="color:#78909C">[00:18:46.359]</span> UNKNOWN: Overfitting.</a></p>
+    <p><a name="ts_1127360_1132290_UNKNOWN"><span style="color:#78909C">[00:18:47.359]</span> UNKNOWN: Let's increase the degree to higher degrees.</a></p>
+    <p><a name="ts_1132290_1138850_UNKNOWN"><span style="color:#78909C">[00:18:52.289]</span> UNKNOWN: Because the data, I believe, is complicated data,</a></p>
+    <p><a name="ts_1138850_1141850_UNKNOWN"><span style="color:#78909C">[00:18:58.849]</span> UNKNOWN: probably that's why we don't see that.</a></p>
+    <p><a name="ts_1141850_1147520_UNKNOWN"><span style="color:#78909C">[00:19:01.849]</span> UNKNOWN: Okay.</a></p>
+    <p><a name="ts_1147520_1158440_UNKNOWN"><span style="color:#78909C">[00:19:07.519]</span> UNKNOWN: So now, again, like test is better than train 100,</a></p>
+    <p><a name="ts_1158440_1166340_UNKNOWN"><span style="color:#78909C">[00:19:18.440]</span> UNKNOWN: to see that it can be significant.</a></p>
+    <p><a name="ts_1166340_1168340_UNKNOWN"><span style="color:#78909C">[00:19:26.339]</span> UNKNOWN: Yeah, okay.</a></p>
+    <p><a name="ts_1168340_1175340_UNKNOWN"><span style="color:#78909C">[00:19:28.339]</span> UNKNOWN: Like when it's 100,</a></p>
+    <p><a name="ts_1175340_1178340_UNKNOWN"><span style="color:#78909C">[00:19:35.339]</span> UNKNOWN: like the model is learning more noises,</a></p>
+    <p><a name="ts_1178340_1182720_UNKNOWN"><span style="color:#78909C">[00:19:38.339]</span> UNKNOWN: but it's still, for test data, it's close, right?</a></p>
+    <p><a name="ts_1182720_1184900_UNKNOWN"><span style="color:#78909C">[00:19:42.720]</span> UNKNOWN: Okay.</a></p>
+    <p><a name="ts_1184900_1191640_UNKNOWN"><span style="color:#78909C">[00:19:44.900]</span> UNKNOWN: So I mean that's like in this example,</a></p>
+    <p><a name="ts_1191640_1196630_UNKNOWN"><span style="color:#78909C">[00:19:51.640]</span> UNKNOWN: even if that's a higher degree,</a></p>
+    <p><a name="ts_1196630_1204130_UNKNOWN"><span style="color:#78909C">[00:19:56.630]</span> UNKNOWN: but still train and test are close to each other.</a></p>
+    <p><a name="ts_1204130_1205540_UNKNOWN"><span style="color:#78909C">[00:20:04.130]</span> UNKNOWN: Okay.</a></p>
+    <p><a name="ts_1205540_1219430_UNKNOWN"><span style="color:#78909C">[00:20:05.539]</span> UNKNOWN: So if you want to add the regularization, right,</a></p>
+    <p><a name="ts_1219430_1224170_UNKNOWN"><span style="color:#78909C">[00:20:19.430]</span> UNKNOWN: so those regularizations, that's what I mentioned, okay.</a></p>
+    <p><a name="ts_1224170_1225170_UNKNOWN"><span style="color:#78909C">[00:20:24.170]</span> UNKNOWN: So what we can do,</a></p>
+    <p><a name="ts_1225170_1226170_UNKNOWN"><span style="color:#78909C">[00:20:25.170]</span> UNKNOWN: we can call the reach.</a></p>
+    <p><a name="ts_1226170_1228290_UNKNOWN"><span style="color:#78909C">[00:20:26.170]</span> UNKNOWN: Okay.</a></p>
+    <p><a name="ts_1228290_1262860_UNKNOWN"><span style="color:#78909C">[00:20:28.289]</span> UNKNOWN: So we have region also here,</a></p>
+    <p><a name="ts_1262860_1277980_UNKNOWN"><span style="color:#78909C">[00:21:02.859]</span> UNKNOWN: and create a reach,</a></p>
+    <p><a name="ts_1277980_1280980_UNKNOWN"><span style="color:#78909C">[00:21:17.980]</span> UNKNOWN: like a model like it from class reach,</a></p>
+    <p><a name="ts_1280980_1286420_UNKNOWN"><span style="color:#78909C">[00:21:20.980]</span> UNKNOWN: and then I pass it a string to reach,</a></p>
+    <p><a name="ts_1286420_1289420_UNKNOWN"><span style="color:#78909C">[00:21:26.420]</span> UNKNOWN: and then another model based on the losso, right,</a></p>
+    <p><a name="ts_1289420_1294900_UNKNOWN"><span style="color:#78909C">[00:21:29.420]</span> UNKNOWN: and pass it a range string to losso.</a></p>
+    <p><a name="ts_1294900_1344420_UNKNOWN"><span style="color:#78909C">[00:21:34.900]</span> UNKNOWN: And then if I run the model, okay, so find the reach from there, and okay, so you see</a></p>
+    <p><a name="ts_1344420_1353310_UNKNOWN"><span style="color:#78909C">[00:22:24.420]</span> UNKNOWN: that the, this is the trained model, just for 100 samples, okay, and when I add the</a></p>
+    <p><a name="ts_1353310_1355790_UNKNOWN"><span style="color:#78909C">[00:22:33.309]</span> UNKNOWN: reach or lasso, it makes it smooth.</a></p>
+    <p><a name="ts_1356150_1361610_UNKNOWN"><span style="color:#78909C">[00:22:36.150]</span> UNKNOWN: Our model, even if it's a kind of like higher degree, but it's still smooth.</a></p>
+    <p><a name="ts_1361610_1373710_UNKNOWN"><span style="color:#78909C">[00:22:41.609]</span> UNKNOWN: Okay, just visually we can see that we don't have that much, I mean, offset down here.</a></p>
+    <p><a name="ts_1374670_1379550_UNKNOWN"><span style="color:#78909C">[00:22:54.670]</span> UNKNOWN: For this one, maybe why we don't see too much offset down, the reason is that we just</a></p>
+    <p><a name="ts_1379550_1380530_UNKNOWN"><span style="color:#78909C">[00:22:59.549]</span> UNKNOWN: showed the 100.</a></p>
+    <p><a name="ts_1380970_1386390_UNKNOWN"><span style="color:#78909C">[00:23:00.970]</span> UNKNOWN: We show all the data, it's going to show better than those offsets.</a></p>
+    <p><a name="ts_1386390_1397830_UNKNOWN"><span style="color:#78909C">[00:23:06.390]</span> UNKNOWN: Okay, you can change this 100 to, for example, let's see if I change that one to 200, that's</a></p>
+    <p><a name="ts_1397830_1398210_UNKNOWN"><span style="color:#78909C">[00:23:17.829]</span> UNKNOWN: offset.</a></p>
+    <p><a name="ts_1398430_1400530_UNKNOWN"><span style="color:#78909C">[00:23:18.430]</span> UNKNOWN: Offset down is going to be more.</a></p>
+    <p><a name="ts_1415940_1420700_UNKNOWN"><span style="color:#78909C">[00:23:35.940]</span> UNKNOWN: You can test this by saying here, you see that's, like, usually you can change those</a></p>
+    <p><a name="ts_1420700_1421660_UNKNOWN"><span style="color:#78909C">[00:23:40.700]</span> UNKNOWN: ups and downs.</a></p>
+    <p><a name="ts_1422660_1430720_UNKNOWN"><span style="color:#78909C">[00:23:42.660]</span> UNKNOWN: Anyway, like, when we add the reach and regression, it's getting, in other words, like, if you</a></p>
+    <p><a name="ts_1430720_1439250_UNKNOWN"><span style="color:#78909C">[00:23:50.720]</span> UNKNOWN: learn the model, which is, has the higher degree, but still, it's not too much ups and</a></p>
+    <p><a name="ts_1439250_1439590_UNKNOWN"><span style="color:#78909C">[00:23:59.250]</span> UNKNOWN: downs.</a></p>
+    <p><a name="ts_1439970_1446090_UNKNOWN"><span style="color:#78909C">[00:23:59.970]</span> UNKNOWN: Right, it controls those coefficients, coefficients using the reach model.</a></p>
+    <p><a name="ts_1446870_1459020_UNKNOWN"><span style="color:#78909C">[00:24:06.869]</span> UNKNOWN: Okay, so, I mean, like, so, we don't need to think about this formula or whatever,</a></p>
+    <p><a name="ts_1459020_1463260_UNKNOWN"><span style="color:#78909C">[00:24:19.019]</span> UNKNOWN: but in the background, all of this is done.</a></p>
+    <p><a name="ts_1464300_1472250_UNKNOWN"><span style="color:#78909C">[00:24:24.299]</span> UNKNOWN: Right, when you say reach, that means that, and then, like, you create a model based on</a></p>
+    <p><a name="ts_1472250_1481070_UNKNOWN"><span style="color:#78909C">[00:24:32.250]</span> UNKNOWN: reach, and then you fit, it means that automatically adds those L2.</a></p>
+    <p><a name="ts_1481370_1482680_UNKNOWN"><span style="color:#78909C">[00:24:41.369]</span> UNKNOWN: So, we going to say, like, 8.</a></p>
+    <p><a name="ts_1482680_1483540_UNKNOWN"><span style="color:#78909C">[00:24:42.680]</span> UNKNOWN: 6.</a></p>
+    <p><a name="ts_1483540_1484530_UNKNOWN"><span style="color:#78909C">[00:24:43.539]</span> UNKNOWN: Right?</a></p>
+    <p><a name="ts_1484530_1525610_UNKNOWN"><span style="color:#78909C">[00:24:44.529]</span> UNKNOWN: One pair offen 쓰고,</a></p>
+    <p><a name="ts_1525610_1526530_UNKNOWN"><span style="color:#78909C">[00:25:25.609]</span> UNKNOWN: yeah.</a></p>
+    <p><a name="ts_1526530_1527470_UNKNOWN"><span style="color:#78909C">[00:25:26.529]</span> UNKNOWN: Alright.</a></p>
+    <p><a name="ts_1527470_1527590_UNKNOWN"><span style="color:#78909C">[00:25:27.470]</span> UNKNOWN: Okay.</a></p>
+    <p><a name="ts_1527590_1527650_UNKNOWN"><span style="color:#78909C">[00:25:27.589]</span> UNKNOWN: Awesome.</a></p>
+    <p><a name="ts_1527650_1527670_UNKNOWN"><span style="color:#78909C">[00:25:27.650]</span> UNKNOWN: That's right.</a></p>
+    <p><a name="ts_1527670_1527690_UNKNOWN"><span style="color:#78909C">[00:25:27.670]</span> UNKNOWN: Awesome.</a></p>
+    <p><a name="ts_1527690_1531980_UNKNOWN"><span style="color:#78909C">[00:25:27.690]</span> UNKNOWN: value. So default value is 1. You can increase or</a></p>
+    <p><a name="ts_1531980_1536400_UNKNOWN"><span style="color:#78909C">[00:25:31.980]</span> UNKNOWN: decrease whatever you want. We discussed about it getting bigger.</a></p>
+    <p><a name="ts_1536400_1541320_UNKNOWN"><span style="color:#78909C">[00:25:36.400]</span> UNKNOWN: So same thing for lesson. Here is</a></p>
+    <p><a name="ts_1541320_1546090_UNKNOWN"><span style="color:#78909C">[00:25:41.319]</span> UNKNOWN: 1, here is 0.1.</a></p>
+    <p><a name="ts_1546090_1550090_UNKNOWN"><span style="color:#78909C">[00:25:46.089]</span> UNKNOWN: You can play with those and see that how the error of the</a></p>
+    <p><a name="ts_1550090_1556520_UNKNOWN"><span style="color:#78909C">[00:25:50.089]</span> UNKNOWN: model is increasing or increasing.</a></p>
+    <p><a name="ts_1556520_1560520_UNKNOWN"><span style="color:#78909C">[00:25:56.519]</span> UNKNOWN: By doing that, when you see that train and test is getting</a></p>
+    <p><a name="ts_1560520_1565390_UNKNOWN"><span style="color:#78909C">[00:26:00.519]</span> UNKNOWN: exactly same.</a></p>
+    <p><a name="ts_1565390_1569870_UNKNOWN"><span style="color:#78909C">[00:26:05.390]</span> UNKNOWN: They are almost same values.</a></p>
+    <p><a name="ts_1569870_1574440_UNKNOWN"><span style="color:#78909C">[00:26:09.869]</span> UNKNOWN: But here, we had difference. The train was</a></p>
+    <p><a name="ts_1574440_1579080_UNKNOWN"><span style="color:#78909C">[00:26:14.440]</span> UNKNOWN: around 1, this one was 0.88.</a></p>
+    <p><a name="ts_1579080_1583080_UNKNOWN"><span style="color:#78909C">[00:26:19.079]</span> UNKNOWN: So I added ridge and muscle after</a></p>
+    <p><a name="ts_1583080_1587440_UNKNOWN"><span style="color:#78909C">[00:26:23.079]</span> UNKNOWN: that, RMSE for</a></p>
+    <p><a name="ts_1587440_1592940_UNKNOWN"><span style="color:#78909C">[00:26:27.440]</span> UNKNOWN: test using ridge. This one just shows</a></p>
+    <p><a name="ts_1592940_1596120_UNKNOWN"><span style="color:#78909C">[00:26:32.940]</span> UNKNOWN: for the</a></p>
+    <p><a name="ts_1596120_1600220_UNKNOWN"><span style="color:#78909C">[00:26:36.119]</span> UNKNOWN: test, he can print it. It's better to print</a></p>
+    <p><a name="ts_1600220_1604700_UNKNOWN"><span style="color:#78909C">[00:26:40.220]</span> UNKNOWN: train data as well to see how much they are</a></p>
+    <p><a name="ts_1604700_1638330_UNKNOWN"><span style="color:#78909C">[00:26:44.700]</span> UNKNOWN: going. This one just shows the</a></p>
+    <p><a name="ts_1638330_1645560_UNKNOWN"><span style="color:#78909C">[00:27:18.329]</span> UNKNOWN: OK. So</a></p>
+    <p><a name="ts_1645560_1651680_UNKNOWN"><span style="color:#78909C">[00:27:25.559]</span> UNKNOWN: ridge.</a></p>
+    <p><a name="ts_1651680_1665500_UNKNOWN"><span style="color:#78909C">[00:27:31.680]</span> UNKNOWN: You see there is some</a></p>
+    <p><a name="ts_1665500_1669500_UNKNOWN"><span style="color:#78909C">[00:27:45.500]</span> UNKNOWN: difference, but you can control that.</a></p>
+    <p><a name="ts_1669500_1671500_UNKNOWN"><span style="color:#78909C">[00:27:49.500]</span> UNKNOWN: We need to check this alpha of the train.</a></p>
+    <p><a name="ts_1671500_1675500_UNKNOWN"><span style="color:#78909C">[00:27:51.500]</span> UNKNOWN: The alpha and CDET are very close to each other.</a></p>
+    <p><a name="ts_1675500_1679980_UNKNOWN"><span style="color:#78909C">[00:27:55.500]</span> UNKNOWN: But we don't see too much over feeding.</a></p>
+    <p><a name="ts_1679980_1684360_UNKNOWN"><span style="color:#78909C">[00:27:59.980]</span> UNKNOWN: The reason is that. The reason is that after applying the ridge or so</a></p>
+    <p><a name="ts_1684360_1688940_UNKNOWN"><span style="color:#78909C">[00:28:04.359]</span> UNKNOWN: you don't see that. What kind of</a></p>
+    <p><a name="ts_1688940_1693320_UNKNOWN"><span style="color:#78909C">[00:28:08.940]</span> UNKNOWN: change? The only change here is that train</a></p>
+    <p><a name="ts_1693320_1698120_UNKNOWN"><span style="color:#78909C">[00:28:13.319]</span> UNKNOWN: is 99.88. Not too much change.</a></p>
+    <p><a name="ts_1698120_1702600_UNKNOWN"><span style="color:#78909C">[00:28:18.119]</span> UNKNOWN: Right? Not too much change. Almost same.</a></p>
+    <p><a name="ts_1702600_1706830_UNKNOWN"><span style="color:#78909C">[00:28:22.599]</span> UNKNOWN: So you can play with this hyperparameter.</a></p>
+    <p><a name="ts_1706830_1708830_UNKNOWN"><span style="color:#78909C">[00:28:26.829]</span> UNKNOWN: And it makes probably</a></p>
+    <p><a name="ts_1708830_1710890_UNKNOWN"><span style="color:#78909C">[00:28:28.829]</span> UNKNOWN: the update to hyperparameter</a></p>
+    <p><a name="ts_1710890_1712960_UNKNOWN"><span style="color:#78909C">[00:28:30.890]</span> UNKNOWN: and CF update.</a></p>
+    <p><a name="ts_1712960_1719470_UNKNOWN"><span style="color:#78909C">[00:28:32.960]</span> UNKNOWN: You can change. OK.</a></p>
+    <p><a name="ts_1719470_1721470_UNKNOWN"><span style="color:#78909C">[00:28:39.470]</span> UNKNOWN: I think there is an</a></p>
+    <p><a name="ts_1721470_1724360_UNKNOWN"><span style="color:#78909C">[00:28:41.470]</span> UNKNOWN: example here.</a></p>
+    <p><a name="ts_1724360_1726430_UNKNOWN"><span style="color:#78909C">[00:28:44.359]</span> UNKNOWN: So take this</a></p>
+    <p><a name="ts_1726430_1728430_UNKNOWN"><span style="color:#78909C">[00:28:46.430]</span> UNKNOWN: example. This is your</a></p>
+    <p><a name="ts_1728430_1732760_UNKNOWN"><span style="color:#78909C">[00:28:48.430]</span> UNKNOWN: class activity. Maybe for</a></p>
+    <p><a name="ts_1732760_1736620_UNKNOWN"><span style="color:#78909C">[00:28:52.759]</span> UNKNOWN: next time, go</a></p>
+    <p><a name="ts_1736620_1739710_UNKNOWN"><span style="color:#78909C">[00:28:56.619]</span> UNKNOWN: based on this activity</a></p>
+    <p><a name="ts_1739710_1741710_UNKNOWN"><span style="color:#78909C">[00:28:59.710]</span> UNKNOWN: and complete that one.</a></p>
+    <p><a name="ts_1741710_1743710_UNKNOWN"><span style="color:#78909C">[00:29:01.710]</span> UNKNOWN: And then we want to have</a></p>
+    <p><a name="ts_1743710_1746280_UNKNOWN"><span style="color:#78909C">[00:29:03.710]</span> UNKNOWN: that one in the class.</a></p>
+    <p><a name="ts_1746280_1748280_UNKNOWN"><span style="color:#78909C">[00:29:06.279]</span> UNKNOWN: So this is your assignment for next week.</a></p>
+    <p><a name="ts_1748280_1751280_UNKNOWN"><span style="color:#78909C">[00:29:08.279]</span> UNKNOWN: There are some requests here.</a></p>
+    <p><a name="ts_1751280_1753280_UNKNOWN"><span style="color:#78909C">[00:29:11.279]</span> UNKNOWN: Change the polynomial and observe</a></p>
+    <p><a name="ts_1753280_1755280_UNKNOWN"><span style="color:#78909C">[00:29:13.279]</span> UNKNOWN: is there any under feeding or over feeding.</a></p>
+    <p><a name="ts_1755280_1757530_UNKNOWN"><span style="color:#78909C">[00:29:15.279]</span> UNKNOWN: OK.</a></p>
+    <p><a name="ts_1757530_1759530_UNKNOWN"><span style="color:#78909C">[00:29:17.529]</span> UNKNOWN: And adjust</a></p>
+    <p><a name="ts_1759530_1761530_UNKNOWN"><span style="color:#78909C">[00:29:19.529]</span> UNKNOWN: this to 10 and again</a></p>
+    <p><a name="ts_1761530_1763530_UNKNOWN"><span style="color:#78909C">[00:29:21.529]</span> UNKNOWN: see that what's happening.</a></p>
+    <p><a name="ts_1763530_1769440_UNKNOWN"><span style="color:#78909C">[00:29:23.529]</span> UNKNOWN: OK. And answer this question.</a></p>
+    <p><a name="ts_1769440_1771440_UNKNOWN"><span style="color:#78909C">[00:29:29.440]</span> UNKNOWN: Why does regularization</a></p>
+    <p><a name="ts_1771440_1773440_UNKNOWN"><span style="color:#78909C">[00:29:31.440]</span> UNKNOWN: include generalization</a></p>
+    <p><a name="ts_1773440_1775440_UNKNOWN"><span style="color:#78909C">[00:29:33.440]</span> UNKNOWN: with 5 degree models and so on and so forth.</a></p>
+    <p><a name="ts_1775440_1778810_UNKNOWN"><span style="color:#78909C">[00:29:35.440]</span> UNKNOWN: Even you can work on this</a></p>
+    <p><a name="ts_1778810_1781640_UNKNOWN"><span style="color:#78909C">[00:29:38.809]</span> UNKNOWN: to see that</a></p>
+    <p><a name="ts_1781640_1783640_UNKNOWN"><span style="color:#78909C">[00:29:41.640]</span> UNKNOWN: you can see the over feeding</a></p>
+    <p><a name="ts_1783640_1785640_UNKNOWN"><span style="color:#78909C">[00:29:43.640]</span> UNKNOWN: better than this.</a></p>
+    <p><a name="ts_1785640_1787640_UNKNOWN"><span style="color:#78909C">[00:29:45.640]</span> UNKNOWN: Maybe increase the number of points.</a></p>
+    <p><a name="ts_1787640_1789640_UNKNOWN"><span style="color:#78909C">[00:29:47.640]</span> UNKNOWN: Or make the model</a></p>
+    <p><a name="ts_1789640_1792540_UNKNOWN"><span style="color:#78909C">[00:29:49.640]</span> UNKNOWN: complicated.</a></p>
+    <p><a name="ts_1792540_1794670_UNKNOWN"><span style="color:#78909C">[00:29:52.539]</span> UNKNOWN: Complicated than this.</a></p>
+    <p><a name="ts_1794670_1796670_UNKNOWN"><span style="color:#78909C">[00:29:54.670]</span> UNKNOWN: OK. To see that</a></p>
+    <p><a name="ts_1796670_1798670_UNKNOWN"><span style="color:#78909C">[00:29:56.670]</span> UNKNOWN: if there are different values</a></p>
+    <p><a name="ts_1798670_1800890_UNKNOWN"><span style="color:#78909C">[00:29:58.670]</span> UNKNOWN: they are getting too much</a></p>
+    <p><a name="ts_1800890_1803720_UNKNOWN"><span style="color:#78909C">[00:30:00.890]</span> UNKNOWN: difference.</a></p>
+    <p><a name="ts_1803720_1821150_UNKNOWN"><span style="color:#78909C">[00:30:03.720]</span> UNKNOWN: So</a></p>
+    <p><a name="ts_1821150_1823210_UNKNOWN"><span style="color:#78909C">[00:30:21.150]</span> UNKNOWN: yeah. Like this is an example</a></p>
+    <p><a name="ts_1823210_1825210_UNKNOWN"><span style="color:#78909C">[00:30:23.210]</span> UNKNOWN: that what we discussed.</a></p>
+    <p><a name="ts_1825210_1827920_UNKNOWN"><span style="color:#78909C">[00:30:25.210]</span> UNKNOWN: In theory</a></p>
+    <p><a name="ts_1827920_1831900_UNKNOWN"><span style="color:#78909C">[00:30:27.920]</span> UNKNOWN: how it's applied in</a></p>
+    <p><a name="ts_1831900_1834120_UNKNOWN"><span style="color:#78909C">[00:30:31.900]</span> UNKNOWN: practice.</a></p>
+    <p><a name="ts_1834120_1836380_UNKNOWN"><span style="color:#78909C">[00:30:34.119]</span> UNKNOWN: So of course we're updating</a></p>
+    <p><a name="ts_1836380_1838380_UNKNOWN"><span style="color:#78909C">[00:30:36.380]</span> UNKNOWN: those</a></p>
+    <p><a name="ts_1838380_1840510_UNKNOWN"><span style="color:#78909C">[00:30:38.380]</span> UNKNOWN: finding those coefficients.</a></p>
+    <p><a name="ts_1840510_1842510_UNKNOWN"><span style="color:#78909C">[00:30:40.509]</span> UNKNOWN: A, B and this</a></p>
+    <p><a name="ts_1842510_1844700_UNKNOWN"><span style="color:#78909C">[00:30:42.509]</span> UNKNOWN: star.</a></p>
+    <p><a name="ts_1844700_1846700_UNKNOWN"><span style="color:#78909C">[00:30:44.700]</span> UNKNOWN: We require the optimization.</a></p>
+    <p><a name="ts_1846700_1848700_UNKNOWN"><span style="color:#78909C">[00:30:46.700]</span> UNKNOWN: And that optimization</a></p>
+    <p><a name="ts_1848700_1851080_UNKNOWN"><span style="color:#78909C">[00:30:48.700]</span> UNKNOWN: which we call that one as</a></p>
+    <p><a name="ts_1851080_1853080_UNKNOWN"><span style="color:#78909C">[00:30:51.079]</span> UNKNOWN: a gradient descent</a></p>
+    <p><a name="ts_1853080_1855080_UNKNOWN"><span style="color:#78909C">[00:30:53.079]</span> UNKNOWN: is happening inside of this function.</a></p>
+    <p><a name="ts_1855080_1857180_UNKNOWN"><span style="color:#78909C">[00:30:55.079]</span> UNKNOWN: OK.</a></p>
+    <p><a name="ts_1857180_1859180_UNKNOWN"><span style="color:#78909C">[00:30:57.180]</span> UNKNOWN: Automatically</a></p>
+    <p><a name="ts_1859180_1862490_UNKNOWN"><span style="color:#78909C">[00:30:59.180]</span> UNKNOWN: let's see here.</a></p>
+    <p><a name="ts_1862490_1864490_UNKNOWN"><span style="color:#78909C">[00:31:02.490]</span> UNKNOWN: There's a linear regression.</a></p>
+    <p><a name="ts_1864490_1866490_UNKNOWN"><span style="color:#78909C">[00:31:04.490]</span> UNKNOWN: You can automatically find</a></p>
+    <p><a name="ts_1866490_1869100_UNKNOWN"><span style="color:#78909C">[00:31:06.490]</span> UNKNOWN: those coefficients</a></p>
+    <p><a name="ts_1869100_1871100_UNKNOWN"><span style="color:#78909C">[00:31:09.099]</span> UNKNOWN: using one of these</a></p>
+    <p><a name="ts_1871100_1874540_UNKNOWN"><span style="color:#78909C">[00:31:11.099]</span> UNKNOWN: optimization methods.</a></p>
+    <p><a name="ts_1874540_1876890_UNKNOWN"><span style="color:#78909C">[00:31:14.539]</span> UNKNOWN: OK. So</a></p>
+    <p><a name="ts_1876890_1878890_UNKNOWN"><span style="color:#78909C">[00:31:16.890]</span> UNKNOWN: if I go to open tab.</a></p>
+    <p><a name="ts_1878890_1881470_UNKNOWN"><span style="color:#78909C">[00:31:18.890]</span> UNKNOWN: So here</a></p>
+    <p><a name="ts_1881470_1883470_UNKNOWN"><span style="color:#78909C">[00:31:21.470]</span> UNKNOWN: what else we have.</a></p>
+    <p><a name="ts_1883470_1885500_UNKNOWN"><span style="color:#78909C">[00:31:23.470]</span> UNKNOWN: Let me change the</a></p>
+    <p><a name="ts_1885500_1893360_UNKNOWN"><span style="color:#78909C">[00:31:25.500]</span> UNKNOWN: optimizer.</a></p>
+    <p><a name="ts_1893360_1895360_UNKNOWN"><span style="color:#78909C">[00:31:33.359]</span> UNKNOWN: It tells you that</a></p>
+    <p><a name="ts_1895360_1897800_UNKNOWN"><span style="color:#78909C">[00:31:35.359]</span> UNKNOWN: what kind of</a></p>
+    <p><a name="ts_1897800_1899800_UNKNOWN"><span style="color:#78909C">[00:31:37.799]</span> UNKNOWN: information you can get.</a></p>
+    <p><a name="ts_1899800_1905230_UNKNOWN"><span style="color:#78909C">[00:31:39.799]</span> UNKNOWN: Here.</a></p>
+    <p><a name="ts_1905230_1907420_UNKNOWN"><span style="color:#78909C">[00:31:45.230]</span> UNKNOWN: Designation. Oh OK.</a></p>
+    <p><a name="ts_1907420_1909420_UNKNOWN"><span style="color:#78909C">[00:31:47.420]</span> UNKNOWN: So you see that</a></p>
+    <p><a name="ts_1909420_1915040_UNKNOWN"><span style="color:#78909C">[00:31:49.420]</span> UNKNOWN: based on the least square.</a></p>
+    <p><a name="ts_1915040_1919560_UNKNOWN"><span style="color:#78909C">[00:31:55.039]</span> UNKNOWN: Yeah. So</a></p>
+    <p><a name="ts_1919560_1921560_UNKNOWN"><span style="color:#78909C">[00:31:59.559]</span> UNKNOWN: based on the least square error.</a></p>
+    <p><a name="ts_1921560_1923560_UNKNOWN"><span style="color:#78909C">[00:32:01.559]</span> UNKNOWN: This is ordinary least square.</a></p>
+    <p><a name="ts_1923560_1925560_UNKNOWN"><span style="color:#78909C">[00:32:03.559]</span> UNKNOWN: Right?</a></p>
+    <p><a name="ts_1925560_1929550_UNKNOWN"><span style="color:#78909C">[00:32:05.559]</span> UNKNOWN: Based on the</a></p>
+    <p><a name="ts_1929550_1931800_UNKNOWN"><span style="color:#78909C">[00:32:09.549]</span> UNKNOWN: gradient descent.</a></p>
+    <p><a name="ts_1931800_1934250_UNKNOWN"><span style="color:#78909C">[00:32:11.799]</span> UNKNOWN: OK. So in background</a></p>
+    <p><a name="ts_1934250_1936250_UNKNOWN"><span style="color:#78909C">[00:32:14.250]</span> UNKNOWN: it's happening with multiplication</a></p>
+    <p><a name="ts_1936250_1938250_UNKNOWN"><span style="color:#78909C">[00:32:16.250]</span> UNKNOWN: of the matrix and</a></p>
+    <p><a name="ts_1938250_1940250_UNKNOWN"><span style="color:#78909C">[00:32:18.250]</span> UNKNOWN: find the optimal coefficient.</a></p>
+    <p><a name="ts_1940250_1942250_UNKNOWN"><span style="color:#78909C">[00:32:20.250]</span> UNKNOWN: That's why like when you print the</a></p>
+    <p><a name="ts_1942250_1944250_UNKNOWN"><span style="color:#78909C">[00:32:22.250]</span> UNKNOWN: coefficients</a></p>
+    <p><a name="ts_1944250_1946250_UNKNOWN"><span style="color:#78909C">[00:32:24.250]</span> UNKNOWN: so it shows you the</a></p>
+    <p><a name="ts_1946250_1948350_UNKNOWN"><span style="color:#78909C">[00:32:26.250]</span> UNKNOWN: optimal coefficient.</a></p>
+    <p><a name="ts_1948350_1951280_UNKNOWN"><span style="color:#78909C">[00:32:28.349]</span> UNKNOWN: OK. Then</a></p>
+    <p><a name="ts_1951280_1953280_UNKNOWN"><span style="color:#78909C">[00:32:31.279]</span> UNKNOWN: linear or then also</a></p>
+    <p><a name="ts_1953280_1955470_UNKNOWN"><span style="color:#78909C">[00:32:33.279]</span> UNKNOWN: you can print also.</a></p>
+    <p><a name="ts_1955470_1957720_UNKNOWN"><span style="color:#78909C">[00:32:35.470]</span> UNKNOWN: You can print here</a></p>
+    <p><a name="ts_1957720_1959880_UNKNOWN"><span style="color:#78909C">[00:32:37.720]</span> UNKNOWN: coefficients</a></p>
+    <p><a name="ts_1959880_1964990_UNKNOWN"><span style="color:#78909C">[00:32:39.880]</span> UNKNOWN: of the model.</a></p>
+    <p><a name="ts_1964990_1966990_UNKNOWN"><span style="color:#78909C">[00:32:44.990]</span> UNKNOWN: If I apply</a></p>
+    <p><a name="ts_1966990_1981630_UNKNOWN"><span style="color:#78909C">[00:32:46.990]</span> UNKNOWN: similar thing.</a></p>
+    <p><a name="ts_1981630_1983630_UNKNOWN"><span style="color:#78909C">[00:33:01.630]</span> UNKNOWN: OK. Let's call that one</a></p>
+    <p><a name="ts_1983630_1987480_UNKNOWN"><span style="color:#78909C">[00:33:03.630]</span> UNKNOWN: linear.</a></p>
+    <p><a name="ts_1987480_1989480_UNKNOWN"><span style="color:#78909C">[00:33:07.480]</span> UNKNOWN: What's mean is linear only.</a></p>
+    <p><a name="ts_1989480_1991480_UNKNOWN"><span style="color:#78909C">[00:33:09.480]</span> UNKNOWN: Linear</a></p>
+    <p><a name="ts_1991480_2001960_UNKNOWN"><span style="color:#78909C">[00:33:11.480]</span> UNKNOWN: only.</a></p>
+    <p><a name="ts_2001960_2003960_UNKNOWN"><span style="color:#78909C">[00:33:21.960]</span> UNKNOWN: Yeah. You see that</a></p>
+    <p><a name="ts_2003960_2005960_UNKNOWN"><span style="color:#78909C">[00:33:23.960]</span> UNKNOWN: one. But because it's a</a></p>
+    <p><a name="ts_2005960_2007960_UNKNOWN"><span style="color:#78909C">[00:33:25.960]</span> UNKNOWN: degree of 10. So we're gonna have</a></p>
+    <p><a name="ts_2007960_2009960_UNKNOWN"><span style="color:#78909C">[00:33:27.960]</span> UNKNOWN: 10 coefficients. 1, 2, 3.</a></p>
+    <p><a name="ts_2009960_2013660_UNKNOWN"><span style="color:#78909C">[00:33:29.960]</span> UNKNOWN: Yeah. OK.</a></p>
+    <p><a name="ts_2013660_2015660_UNKNOWN"><span style="color:#78909C">[00:33:33.660]</span> UNKNOWN: Those coefficients. So we can print it.</a></p>
+    <p><a name="ts_2015660_2020670_UNKNOWN"><span style="color:#78909C">[00:33:35.660]</span> UNKNOWN: And if you change the polynomial</a></p>
+    <p><a name="ts_2020670_2022670_UNKNOWN"><span style="color:#78909C">[00:33:40.670]</span> UNKNOWN: degree to more than</a></p>
+    <p><a name="ts_2022670_2024670_UNKNOWN"><span style="color:#78909C">[00:33:42.670]</span> UNKNOWN: degree. So your</a></p>
+    <p><a name="ts_2024670_2026670_UNKNOWN"><span style="color:#78909C">[00:33:44.670]</span> UNKNOWN: coefficient is gonna be higher.</a></p>
+    <p><a name="ts_2026670_2032440_UNKNOWN"><span style="color:#78909C">[00:33:46.670]</span> UNKNOWN: Any question?</a></p>
+    <p><a name="ts_2032440_2034440_UNKNOWN"><span style="color:#78909C">[00:33:52.440]</span> UNKNOWN: OK. So. Professor.</a></p>
+    <p><a name="ts_2034440_2036730_UNKNOWN"><span style="color:#78909C">[00:33:54.440]</span> UNKNOWN: Yes. How</a></p>
+    <p><a name="ts_2036730_2038890_UNKNOWN"><span style="color:#78909C">[00:33:56.730]</span> UNKNOWN: will you text in the midterm?</a></p>
+    <p><a name="ts_2038890_2041720_UNKNOWN"><span style="color:#78909C">[00:33:58.890]</span> UNKNOWN: How will you text in the midterm</a></p>
+    <p><a name="ts_2041720_2043820_UNKNOWN"><span style="color:#78909C">[00:34:01.720]</span> UNKNOWN: about this?</a></p>
+    <p><a name="ts_2043820_2045820_UNKNOWN"><span style="color:#78909C">[00:34:03.819]</span> UNKNOWN: I mean how we will</a></p>
+    <p><a name="ts_2045820_2047820_UNKNOWN"><span style="color:#78909C">[00:34:05.819]</span> UNKNOWN: text the knowledge in the midterm?</a></p>
+    <p><a name="ts_2047820_2049820_UNKNOWN"><span style="color:#78909C">[00:34:07.819]</span> UNKNOWN: In the midterm?</a></p>
+    <p><a name="ts_2049820_2054350_UNKNOWN"><span style="color:#78909C">[00:34:09.820]</span> UNKNOWN: Yeah. Yeah.</a></p>
+    <p><a name="ts_2054350_2056350_UNKNOWN"><span style="color:#78909C">[00:34:14.349]</span> UNKNOWN: I think in the exam.</a></p>
+    <p><a name="ts_2056350_2058350_UNKNOWN"><span style="color:#78909C">[00:34:16.349]</span> UNKNOWN: Because we don't write in the call</a></p>
+    <p><a name="ts_2058350_2077050_UNKNOWN"><span style="color:#78909C">[00:34:18.349]</span> UNKNOWN: during the exam, right?</a></p>
+    <p><a name="ts_2077050_2079210_UNKNOWN"><span style="color:#78909C">[00:34:37.050]</span> UNKNOWN: So it's the like MCQ?</a></p>
+    <p><a name="ts_2079210_2081210_UNKNOWN"><span style="color:#78909C">[00:34:39.210]</span> UNKNOWN: Multiple.</a></p>
+    <p><a name="ts_2081210_2085929_UNKNOWN"><span style="color:#78909C">[00:34:41.210]</span> UNKNOWN: Oh, we're gonna talk about that.</a></p>
+    <p><a name="ts_2085929_2096219_UNKNOWN"><span style="color:#78909C">[00:34:45.929]</span> UNKNOWN: We're gonna talk about that.</a></p>
+    <p><a name="ts_2096219_2098220_UNKNOWN"><span style="color:#78909C">[00:34:56.219]</span> UNKNOWN: So for next week, complete this assignment.</a></p>
+    <p><a name="ts_2098220_2101760_UNKNOWN"><span style="color:#78909C">[00:34:58.219]</span> UNKNOWN: And</a></p>
+    <p><a name="ts_2101760_2104590_UNKNOWN"><span style="color:#78909C">[00:35:01.760]</span> UNKNOWN: we don't need to solve it.</a></p>
+    <p><a name="ts_2104590_2106680_UNKNOWN"><span style="color:#78909C">[00:35:04.590]</span> UNKNOWN: And like to complete</a></p>
+    <p><a name="ts_2106680_2108680_UNKNOWN"><span style="color:#78909C">[00:35:06.679]</span> UNKNOWN: and opening your machine, right?</a></p>
+    <p><a name="ts_2108680_2110680_UNKNOWN"><span style="color:#78909C">[00:35:08.679]</span> UNKNOWN: And Google it.</a></p>
+    <p><a name="ts_2110680_2113550_UNKNOWN"><span style="color:#78909C">[00:35:10.679]</span> UNKNOWN: And Google call that.</a></p>
+    <p><a name="ts_2113550_2115550_UNKNOWN"><span style="color:#78909C">[00:35:13.550]</span> UNKNOWN: Or any ID that you have.</a></p>
+    <p><a name="ts_2115550_2117550_UNKNOWN"><span style="color:#78909C">[00:35:15.550]</span> UNKNOWN: And then we're gonna ask you</a></p>
+    <p><a name="ts_2117550_2119550_UNKNOWN"><span style="color:#78909C">[00:35:17.550]</span> UNKNOWN: one of, maybe one, two.</a></p>
+    <p><a name="ts_2119550_2124330_UNKNOWN"><span style="color:#78909C">[00:35:19.550]</span> UNKNOWN: It's gonna be random.</a></p>
+    <p><a name="ts_2124330_2127480_UNKNOWN"><span style="color:#78909C">[00:35:24.329]</span> UNKNOWN: OK. You need to be ready for that.</a></p>
+    <p><a name="ts_2127480_2132170_UNKNOWN"><span style="color:#78909C">[00:35:27.480]</span> UNKNOWN: Clear? Good.</a></p>
+    <p><a name="ts_2132170_2134170_UNKNOWN"><span style="color:#78909C">[00:35:32.170]</span> UNKNOWN: And find out like the reason.</a></p>
+    <p><a name="ts_2134170_2136170_UNKNOWN"><span style="color:#78909C">[00:35:34.170]</span> UNKNOWN: Like check the</a></p>
+    <p><a name="ts_2136170_2138170_UNKNOWN"><span style="color:#78909C">[00:35:36.170]</span> UNKNOWN: that you can</a></p>
+    <p><a name="ts_2138170_2142730_UNKNOWN"><span style="color:#78909C">[00:35:38.170]</span> UNKNOWN: see any clear</a></p>
+    <p><a name="ts_2142730_2144730_UNKNOWN"><span style="color:#78909C">[00:35:42.730]</span> UNKNOWN: overfitting there in the data.</a></p>
+    <p><a name="ts_2144730_2146730_UNKNOWN"><span style="color:#78909C">[00:35:44.730]</span> UNKNOWN: Increasing number of ones.</a></p>
+    <p><a name="ts_2146730_2152030_UNKNOWN"><span style="color:#78909C">[00:35:46.730]</span> UNKNOWN: Or reduce the number of</a></p>
+    <p><a name="ts_2152030_2154030_UNKNOWN"><span style="color:#78909C">[00:35:52.030]</span> UNKNOWN: ones, probably.</a></p>
+    <p><a name="ts_2154030_2165210_UNKNOWN"><span style="color:#78909C">[00:35:54.030]</span> UNKNOWN: I think that's the</a></p>
+    <p><a name="ts_2165210_2168430_UNKNOWN"><span style="color:#78909C">[00:36:05.210]</span> UNKNOWN: all the material</a></p>
+    <p><a name="ts_2168430_2171260_UNKNOWN"><span style="color:#78909C">[00:36:08.429]</span> UNKNOWN: I want to discuss today.</a></p>
+    <p><a name="ts_2171260_2177320_UNKNOWN"><span style="color:#78909C">[00:36:11.260]</span> UNKNOWN: OK.</a></p>
+    <p><a name="ts_2177320_2196480_UNKNOWN"><span style="color:#78909C">[00:36:17.320]</span> UNKNOWN: Any question?</a></p>
+    <p><a name="ts_2196480_2208240_UNKNOWN"><span style="color:#78909C">[00:36:36.480]</span> UNKNOWN: I think that's the end of the session.</a></p>
+    <p><a name="ts_2208240_2210240_UNKNOWN"><span style="color:#78909C">[00:36:48.239]</span> UNKNOWN: It's just that</a></p>
+    <p><a name="ts_2210240_2212240_UNKNOWN"><span style="color:#78909C">[00:36:50.239]</span> UNKNOWN: it's random and different.</a></p>
+    <p><a name="ts_2212240_2215480_UNKNOWN"><span style="color:#78909C">[00:36:52.239]</span> UNKNOWN: I changed some parameters.</a></p>
+    <p><a name="ts_2215480_2220590_UNKNOWN"><span style="color:#78909C">[00:36:55.480]</span> UNKNOWN: I don't know if I should say it.</a></p>
+</div>
+</body>
+</html>

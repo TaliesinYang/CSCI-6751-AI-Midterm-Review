@@ -1,0 +1,1845 @@
+[00:00:00.210] [UNKNOWN] Okay, for example here, we have a couple of points, this is our x and this is our y.
+[00:00:08.060] [UNKNOWN] Can we approximate a function like this, a linear function, or maybe a non-linear function like this?
+[00:00:17.719] [UNKNOWN] And the answer was yes, we can do, and we can use the linear regression model to do this.
+[00:00:25.370] [UNKNOWN] And then, like as you see, this one is not linear, but it's a polynomial as well.
+[00:00:34.219] [UNKNOWN] We can consider that one as a degree of 2 or something.
+[00:00:37.619] [UNKNOWN] And again, like apply the version of the linear regression, which is called, we call that one as polynomial.
+[00:00:50.679] [UNKNOWN] Okay, so, yeah, polynomial regression.
+[00:01:02.810] [UNKNOWN] So, because you see that here,
+[00:01:04.549] [UNKNOWN] we have the degree of 2.
+[00:01:07.650] [UNKNOWN] Still, this function is, I mean, if it is with respect to x, it's non-linear,
+[00:01:16.680] [UNKNOWN] but we can consider that one as a linear function as well, with respect to our coefficients.
+[00:01:23.120] [UNKNOWN] So, then we discussed that.
+[00:01:29.840] [UNKNOWN] If we have a couple of points, how we can determine our function,
+[00:01:35.239] [UNKNOWN] linear function here, which means that our slope and our intersection, right?
+[00:01:42.939] [UNKNOWN] So, and there was some discussion around here, and the method which is used called the least squared method, okay?
+[00:01:53.250] [UNKNOWN] So, it was nothing more than, so, and then what we had was something like this, right?
+[00:02:26.039] [UNKNOWN] So, using this equation, we can find what is our coefficients, right?
+[00:02:37.319] [UNKNOWN] Theta 0, Theta 1, or Theta 2, okay?
+[00:02:40.560] [UNKNOWN] So, it depends on the, if it's a kind of just one variable, or we have more than one variable, one variable.
+[00:02:50.729] [UNKNOWN] So, what we require here, for example, if it is our points, this is our input, this one is our output,
+[00:03:02.389] [UNKNOWN] we can, let's say, format our data in something like this.
+[00:03:09.110] [UNKNOWN] Okay.
+[00:03:10.870] [UNKNOWN] So, we have one matrix for our outputs, you see, like for our outputs, one matrix for our inputs,
+[00:03:18.860] [UNKNOWN] we have four points here, so, that's why here you see one, two, three, four points here.
+[00:03:28.840] [UNKNOWN] So, but, the first one, you see, like, we have one and one, then one and two, one and one, one and two, two and two, and zero and one.
+[00:03:42.750] [UNKNOWN] The first column.
+[00:03:44.250] [UNKNOWN] It's going to be, always one, because that one is for beta zero, right?
+[00:03:50.550] [UNKNOWN] Because this one is beta zero times one.
+[00:03:53.620] [UNKNOWN] That's why we, we put values, like, one here.
+[00:03:59.250] [UNKNOWN] Okay.
+[00:03:59.550] [UNKNOWN] But the other one is beta one times X1, and what is X1, one, one, two, zero.
+[00:04:05.439] [UNKNOWN] Okay.
+[00:04:05.819] [UNKNOWN] So, that's the equation behind why we, we put ones over here.
+[00:04:10.099] [UNKNOWN] So, because beta zero times, it's not X1.
+[00:04:14.840] [UNKNOWN] It's not x, just y, right?
+[00:04:17.120] [UNKNOWN] So, and then we have e, beta here.
+[00:04:21.259] [UNKNOWN] So, what we require is to find the x transpose x,
+[00:04:26.240] [UNKNOWN] and then the inverse of that one,
+[00:04:28.819] [UNKNOWN] and multiply by x transpose y.
+[00:04:31.360] [UNKNOWN] And then we can do something with this example
+[00:04:34.339] [UNKNOWN] and give them some values for other coefficients.
+[00:04:38.000] [UNKNOWN] In other words, we determine the function.
+[00:04:41.439] [UNKNOWN] Okay?
+[00:04:41.579] [UNKNOWN] So, this method is called this is good.
+[00:04:50.680] [UNKNOWN] Close format, close form solution.
+[00:04:54.019] [UNKNOWN] Okay?
+[00:04:54.939] [UNKNOWN] So, the other method, which is used,
+[00:04:59.500] [UNKNOWN] this one is like has some limitation.
+[00:05:01.560] [UNKNOWN] What is the limitation of this method?
+[00:05:11.930] [UNKNOWN] The limitation is that some of the methods
+[00:05:14.949] [UNKNOWN] are not inversible.
+[00:05:18.069] [UNKNOWN] You can't find the inverse of any method.
+[00:05:21.120] [UNKNOWN] Okay?
+[00:05:22.079] [UNKNOWN] That's why, like, if you want to apply this method,
+[00:05:25.600] [UNKNOWN] it's not generalizable.
+[00:05:27.300] [UNKNOWN] Okay?
+[00:05:28.079] [UNKNOWN] So, because inverse of some of the methods
+[00:05:30.500] [UNKNOWN] is not computable.
+[00:05:35.189] [UNKNOWN] Okay?
+[00:05:35.850] [UNKNOWN] So, in practice, the method, the other method,
+[00:05:38.910] [UNKNOWN] let's say, which is used,
+[00:05:40.970] [UNKNOWN] is gradient descent.
+[00:05:42.850] [UNKNOWN] Like, each of those has their own virtual, right?
+[00:05:46.129] [UNKNOWN] So, the merit advantage and disadvantage.
+[00:05:49.689] [UNKNOWN] Okay?
+[00:05:50.550] [UNKNOWN] So,
+[00:05:51.629] [UNKNOWN] Now, let's discuss about the gradient descent
+[00:05:55.050] [UNKNOWN] and then we can compare in which occasion
+[00:05:57.350] [UNKNOWN] we can use this for any mutual case in grad.
+[00:06:01.069] [UNKNOWN] Okay?
+[00:06:01.910] [UNKNOWN] So, gradient descent is very simple.
+[00:06:04.129] [UNKNOWN] Let me explain that.
+[00:06:05.790] [UNKNOWN] What is this?
+[00:06:07.050] [UNKNOWN] Like, suppose that you are in,
+[00:06:09.290] [UNKNOWN] you are in,
+[00:06:12.930] [UNKNOWN] I'm going to ask someone.
+[00:06:22.470] [UNKNOWN] Something is in for this one, right?
+[00:06:27.060] [UNKNOWN] Right?
+[00:06:27.319] [UNKNOWN] So, noise is good.
+[00:06:38.459] [UNKNOWN] Then, I'm fast.
+[00:06:40.379] [UNKNOWN] Okay.
+[00:06:41.220] [UNKNOWN] So, what I mean is,
+[00:06:42.279] [UNKNOWN] is that you have a function, right?
+[00:06:50.279] [UNKNOWN] This function is fx.
+[00:06:54.600] [UNKNOWN] Okay?
+[00:06:57.189] [UNKNOWN] Suppose fx is something like
+[00:07:00.649] [UNKNOWN] tb of your value.
+[00:07:06.920] [UNKNOWN] It will be different.
+[00:07:09.100] [UNKNOWN] But for now, suppose it's x.
+[00:07:12.610] [UNKNOWN] Then you are, you want to see that
+[00:07:14.870] [UNKNOWN] what is the, and if it's x,
+[00:07:19.290] [UNKNOWN] and if it's the y,
+[00:07:22.360] [UNKNOWN] you want to find the optimal form.
+[00:07:27.459] [UNKNOWN] Okay?
+[00:07:27.800] [UNKNOWN] In other words, the minimum form.
+[00:07:32.990] [UNKNOWN] Okay?
+[00:07:33.170] [UNKNOWN] Where is the,
+[00:07:33.850] [UNKNOWN] the minimum point of this function?
+[00:07:40.420] [UNKNOWN] Okay?
+[00:07:41.319] [UNKNOWN] So, we know that if you get the
+[00:07:43.040] [UNKNOWN] derivative of this one,
+[00:07:45.360] [UNKNOWN] and you put zero,
+[00:07:47.240] [UNKNOWN] you can return
+[00:07:48.199] [UNKNOWN] something like this.
+[00:07:50.149] [UNKNOWN] Two x is zero,
+[00:07:54.310] [UNKNOWN] and x means zero.
+[00:07:56.019] [UNKNOWN] Okay?
+[00:07:57.220] [UNKNOWN] This is for simple functions.
+[00:08:04.139] [UNKNOWN] So, what is the method in general
+[00:08:06.120] [UNKNOWN] which we call that one as gradient descent?
+[00:08:08.939] [UNKNOWN] So, suppose that you are on top of a mountain.
+[00:08:15.790] [UNKNOWN] Okay?
+[00:08:16.649] [UNKNOWN] Then you want to know that,
+[00:08:18.189] [UNKNOWN] what is the, like, a flat area, right?
+[00:08:22.569] [UNKNOWN] You want to go down.
+[00:08:24.949] [UNKNOWN] And that's foggy.
+[00:08:27.220] [UNKNOWN] You don't see anything.
+[00:08:29.329] [UNKNOWN] Okay?
+[00:08:30.230] [UNKNOWN] Imagine like that.
+[00:08:32.490] [UNKNOWN] But you want to get it that, I mean,
+[00:08:38.080] [UNKNOWN] in like a quick stop.
+[00:08:41.549] [UNKNOWN] Okay?
+[00:08:42.750] [UNKNOWN] So, you don't, you don't want to get stuck
+[00:08:44.769] [UNKNOWN] in somewhere which is not the ground.
+[00:08:47.509] [UNKNOWN] Okay?
+[00:08:48.090] [UNKNOWN] What you do, like, what you can do,
+[00:08:52.059] [UNKNOWN] the easy way is that,
+[00:08:53.950] [UNKNOWN] you find the steepest, right, steepest way.
+[00:08:58.700] [UNKNOWN] So, you are here,
+[00:09:01.350] [UNKNOWN] and then,
+[00:09:03.450] [UNKNOWN] maybe there are different ways,
+[00:09:05.350] [UNKNOWN] but you check which way is the steepest.
+[00:09:08.879] [UNKNOWN] Okay?
+[00:09:09.440] [UNKNOWN] You are here,
+[00:09:10.480] [UNKNOWN] maybe there is one way on the mountain,
+[00:09:13.440] [UNKNOWN] there's another way,
+[00:09:14.720] [UNKNOWN] there's another way,
+[00:09:16.360] [UNKNOWN] but you know that if you continue that steepest way,
+[00:09:19.759] [UNKNOWN] you're going to move the point
+[00:09:22.200] [UNKNOWN] which can be closer to the ground.
+[00:09:26.559] [UNKNOWN] Okay?
+[00:09:27.370] [UNKNOWN] So, you are here, you take the steepest way,
+[00:09:32.049] [UNKNOWN] the one which has the most, the steepest one,
+[00:09:36.159] [UNKNOWN] and then you put here after two, three steps.
+[00:09:40.179] [UNKNOWN] Okay?
+[00:09:40.960] [UNKNOWN] Or after one step.
+[00:09:42.639] [UNKNOWN] Now you are here, again, maybe here you have different ways.
+[00:09:46.889] [UNKNOWN] Okay?
+[00:09:47.710] [UNKNOWN] So, which way are you going to take?
+[00:09:50.049] [UNKNOWN] Maybe you have one way here, it's, slope is like this,
+[00:09:54.049] [UNKNOWN] the other one is like this, and the other one is like this.
+[00:09:57.649] [UNKNOWN] So, again, you're going to take the steepest way.
+[00:09:59.789] [UNKNOWN] The one which has the highest slope, and then you get here.
+[00:10:05.840] [UNKNOWN] If you keep doing after a while, what's going to happen?
+[00:10:09.960] [UNKNOWN] You're going to get the, yeah, the bottom, okay, or ground.
+[00:10:17.179] [UNKNOWN] That's the same idea here.
+[00:10:19.399] [UNKNOWN] So, if you want to, what does the gradient descent tell us is that,
+[00:10:24.620] [UNKNOWN] suppose that you are in a random point, okay?
+[00:10:28.279] [UNKNOWN] And then you want to get here.
+[00:10:31.610] [UNKNOWN] What you can do, you can start from here.
+[00:10:35.360] [UNKNOWN] And then you have, okay, so here is your, okay, let's call it as, okay,
+[00:10:56.220] [UNKNOWN] or your current point, X current, okay?
+[00:11:00.659] [UNKNOWN] X. So, you are here, and each time, what you need to do,
+[00:11:11.960] [UNKNOWN] you need to move toward this, right?
+[00:11:16.169] [UNKNOWN] This is slope here.
+[00:11:19.559] [UNKNOWN] Is it positive or negative?
+[00:11:21.200] [UNKNOWN] Yeah.
+[00:11:23.639] [UNKNOWN] Downward.
+[00:11:25.070] [UNKNOWN] Here is the upward, okay?
+[00:11:27.990] [UNKNOWN] So, I have X.
+[00:11:28.730] [UNKNOWN] I know that slope here is negative, like, let's say, the minus, okay?
+[00:11:41.009] [UNKNOWN] The slope here is minus 2.
+[00:11:46.009] [UNKNOWN] This X minus value to this, do I go this way or this way?
+[00:11:52.899] [UNKNOWN] It's going to be this way, right?
+[00:11:56.299] [UNKNOWN] You just suppose that this is 10, and then slope here is minus 2.
+[00:12:02.889] [UNKNOWN] And then I add minus 2 to this one.
+[00:12:06.029] [UNKNOWN] What's going to happen?
+[00:12:07.429] [UNKNOWN] Rather than going to this way, I'm going to go this way.
+[00:12:10.960] [UNKNOWN] And it's wrong.
+[00:12:13.440] [UNKNOWN] So, what is true is that I need to add 1 minus 2 here.
+[00:12:19.730] [UNKNOWN] And what it tells, it's going to be 10 plus, 10 plus 2.
+[00:12:28.850] [UNKNOWN] So, the next point here is, again, what is the slope here?
+[00:12:39.139] [UNKNOWN] Is it positive or negative?
+[00:12:41.960] [UNKNOWN] Negative.
+[00:12:42.759] [UNKNOWN] So, what I need to do, I need to take this 12 and add the slope there, okay?
+[00:12:51.440] [UNKNOWN] Which is, again, minus 2.
+[00:12:53.840] [UNKNOWN] Because, again, I need to add this.
+[00:12:57.200] [UNKNOWN] So, I want to go this way, right?
+[00:12:59.940] [UNKNOWN] Should be minus 40.
+[00:13:11.889] [UNKNOWN] And I continue, okay?
+[00:13:15.330] [UNKNOWN] So, I continue, and then what's going to happen?
+[00:13:20.460] [UNKNOWN] Always I go this way, this way, this way, here.
+[00:13:27.269] [UNKNOWN] Right now I'm here.
+[00:13:29.009] [UNKNOWN] And I keep doing, if I keep doing this, what's going to happen?
+[00:13:33.639] [UNKNOWN] I'm going to get the optimal, okay?
+[00:13:37.600] [UNKNOWN] I'm going to get the optimal, okay?
+[00:13:40.070] [UNKNOWN] So, or maybe it's, x is 0, maybe it's not 0, just like something like 20, okay?
+[00:13:49.990] [UNKNOWN] Just like that.
+[00:13:51.759] [UNKNOWN] So, what I did, I did something like this.
+[00:13:55.539] [UNKNOWN] Each time, if you consider this t, this t, each time I added something like the slope of this, f prime of x, okay?
+[00:14:19.840] [UNKNOWN] And it gives me.
+[00:14:22.000] [UNKNOWN] And it gives me x, t plus, okay, my position in the next step, okay?
+[00:14:30.870] [UNKNOWN] So, it's just this, this one, okay?
+[00:14:37.049] [UNKNOWN] Sometimes, in reality, it's not like exactly like this.
+[00:14:47.320] [UNKNOWN] We have a coefficient because always it's not like other steps is big steps, right?
+[00:14:54.000] [UNKNOWN] Other steps might be like a small steps.
+[00:14:57.580] [UNKNOWN] Because suppose that you are on a mountain, right?
+[00:15:01.460] [UNKNOWN] So.
+[00:15:01.799] [UNKNOWN] So, you don't, it's not, it's not like a safe way to take a big steps, right?
+[00:15:10.379] [UNKNOWN] What you want to take, take small steps, small steps, and because, and then you're going to get the ground, but it's a safe way.
+[00:15:20.379] [UNKNOWN] Like, if it's the same in creation, you can think about multiplying this one by something like one coefficient, okay?
+[00:15:29.679] [UNKNOWN] So, like.
+[00:15:32.240] [UNKNOWN] And we call this one as learning rate.
+[00:15:37.600] [UNKNOWN] Learning rate.
+[00:15:39.669] [UNKNOWN] So, the value for lambda is small values, okay?
+[00:15:45.009] [UNKNOWN] Like, say, tell, consider lambda here is 0 point, what's going to happen?
+[00:15:53.889] [UNKNOWN] If I am at 10, my next point is going to be like 2 times 0.1.
+[00:16:07.120] [UNKNOWN] So, it's going.
+[00:16:08.039] [UNKNOWN] It's going to be 10 plus 0.2, rather than 10 plus 2.
+[00:16:15.570] [UNKNOWN] Okay, so I'm going toward the 20, but with small steps, okay?
+[00:16:21.899] [UNKNOWN] So, this is, this is called the learning rate, okay?
+[00:16:29.240] [UNKNOWN] So, in other words, I'm here.
+[00:16:34.080] [UNKNOWN] If this learning rate is small, rather than coming here, I'm going to be somewhere in here, okay?
+[00:16:43.399] [UNKNOWN] Mm-hmm.
+[00:16:44.220] [UNKNOWN] Mm-hmm.
+[00:16:44.360] [UNKNOWN] Mm-hmm.
+[00:16:44.899] [UNKNOWN] Mm-hmm.
+[00:16:44.960] [UNKNOWN] Mm-hmm.
+[00:16:45.019] [UNKNOWN] Mm-hmm.
+[00:16:45.039] [UNKNOWN] Mm-hmm.
+[00:16:45.059] [UNKNOWN] Mm-hmm.
+[00:16:45.080] [UNKNOWN] Mm-hmm.
+[00:16:45.100] [UNKNOWN] Mm-hmm.
+[00:16:45.360] [UNKNOWN] Mm-hmm.
+[00:16:45.399] [UNKNOWN] This is going to be small steps.
+[00:16:47.120] [UNKNOWN] What is the, what is the, I mean, disadvantage of this?
+[00:16:56.929] [UNKNOWN] Let's first talk about the disadvantage.
+[00:17:01.700] [UNKNOWN] Think in reality, what's happening if your step is not safe?
+[00:17:07.400] [UNKNOWN] It takes time.
+[00:17:09.140] [UNKNOWN] It takes too much time, you can imagine, to get here.
+[00:17:11.920] [UNKNOWN] Ah.
+[00:17:12.500] [UNKNOWN] Right?
+[00:17:13.059] [UNKNOWN] Yeah.
+[00:17:13.339] [UNKNOWN] This is the disadvantage.
+[00:17:15.220] [UNKNOWN] The advantage here is that you're going to get your objective point in a safe way.
+[00:17:25.579] [UNKNOWN] Okay?
+[00:17:26.079] [UNKNOWN] So, even if it takes time, but it's better, at the end, I got to get my, my objective,
+[00:17:38.069] [UNKNOWN] right?
+[00:17:39.069] [UNKNOWN] So, what if this lambda is bigger value?
+[00:17:41.059] [UNKNOWN] Yes.
+[00:17:42.059] [UNKNOWN] What's going to happen?
+[00:17:43.059] [UNKNOWN] Yeah?
+[00:17:45.180] [UNKNOWN] What would be the issue here if this lambda is getting bigger value?
+[00:17:50.180] [UNKNOWN] Okay?
+[00:17:51.730] [UNKNOWN] So, think about this.
+[00:17:52.730] [UNKNOWN] You are here.
+[00:17:53.730] [UNKNOWN] It's 10.
+[00:17:54.730] [UNKNOWN] If lambda is bigger, like suppose that lambda is 10, okay?
+[00:17:55.730] [UNKNOWN] So, you are here.
+[00:18:01.109] [UNKNOWN] It's 10.
+[00:18:02.109] [UNKNOWN] Okay?
+[00:18:03.109] [UNKNOWN] So, you are here.
+[00:18:04.109] [UNKNOWN] You are here.
+[00:18:05.589] [UNKNOWN] You are here.
+[00:18:06.589] [UNKNOWN] You are here.
+[00:18:07.589] [UNKNOWN] You are here.
+[00:18:08.589] [UNKNOWN] You are here.
+[00:18:09.589] [UNKNOWN] You are here.
+[00:18:11.200] [UNKNOWN] Okay?
+[00:18:13.900] [UNKNOWN] Or 5.
+[00:18:14.900] [UNKNOWN] It's going to be 10 plus 5 times this degree, which is 2.
+[00:18:22.140] [UNKNOWN] 2.
+[00:18:23.140] [UNKNOWN] It's going to be 20.
+[00:18:24.140] [UNKNOWN] 20.
+[00:18:25.140] [UNKNOWN] So, what's going to, let's say that, rather than 5, take it 6.
+[00:18:30.490] [UNKNOWN] It's going to be 22.
+[00:18:32.420] [UNKNOWN] Right?
+[00:18:33.420] [UNKNOWN] So, that means that I'm going to jump from here to here.
+[00:18:38.480] [UNKNOWN] Yeah.
+[00:18:40.410] [UNKNOWN] Yeah?
+[00:18:41.410] [UNKNOWN] So, what happened?
+[00:18:42.470] [UNKNOWN] You got 5 points.
+[00:18:44.079] [UNKNOWN] I missed this one.
+[00:18:45.079] [UNKNOWN] Okay.
+[00:18:46.079] [UNKNOWN] Again, here.
+[00:18:47.079] [UNKNOWN] What's going to happen?
+[00:18:49.970] [UNKNOWN] You missed the point.
+[00:18:51.990] [UNKNOWN] It's going to be something like this.
+[00:18:52.990] [UNKNOWN] Like a zigzag.
+[00:18:54.730] [UNKNOWN] Right?
+[00:18:55.730] [UNKNOWN] Or maybe I can't do it.
+[00:18:57.849] [UNKNOWN] But that's why, like, this learning rate is important.
+[00:18:58.849] [UNKNOWN] Yeah.
+[00:19:00.779] [UNKNOWN] It shouldn't be very big value.
+[00:19:01.839] [UNKNOWN] Big value is going to be something like this.
+[00:19:06.420] [UNKNOWN] You have to balance.
+[00:19:07.420] [UNKNOWN] Sorry, what's that?
+[00:19:08.420] [UNKNOWN] I mean, you have to balance the small and the big.
+[00:19:09.420] [UNKNOWN] Yeah.
+[00:19:10.420] [UNKNOWN] Exactly.
+[00:19:11.940] [UNKNOWN] Like a small learning rate shouldn't be too much small.
+[00:19:12.940] [UNKNOWN] On the other hand, it shouldn't be very big.
+[00:19:13.940] [UNKNOWN] You're going to have a very big learning rate.
+[00:19:15.480] [UNKNOWN] Yeah.
+[00:19:16.740] [UNKNOWN] Yeah.
+[00:19:17.740] [UNKNOWN] Yeah.
+[00:19:18.740] [UNKNOWN] Yeah.
+[00:19:19.740] [UNKNOWN] Yeah.
+[00:19:20.740] [UNKNOWN] Yeah.
+[00:19:21.740] [UNKNOWN] Yeah.
+[00:19:22.740] [UNKNOWN] Yeah.
+[00:19:23.740] [UNKNOWN] Yeah.
+[00:19:24.740] [UNKNOWN] Yeah.
+[00:19:25.740] [UNKNOWN] Yeah.
+[00:19:26.740] [UNKNOWN] Yeah.
+[00:19:27.740] [UNKNOWN] Just join.
+[00:19:28.740] [UNKNOWN] Okay?
+[00:19:29.740] [UNKNOWN] Yeah.
+[00:19:31.220] [UNKNOWN] Yeah.
+[00:19:43.740] [UNKNOWN] Yeah.
+[00:19:44.740] [UNKNOWN] Yeah.
+[00:19:45.740] [UNKNOWN] Yeah.
+[00:19:49.329] [UNKNOWN] Right.
+[00:19:50.549] [UNKNOWN] Yeah.
+[00:19:51.579] [UNKNOWN] Yeah.
+[00:19:52.579] [UNKNOWN] Yeah.
+[00:19:58.539] [UNKNOWN] Yeah.
+[00:19:59.539] [UNKNOWN] Yeah.
+[00:20:00.539] [UNKNOWN] Are there less things to say?
+[00:20:01.539] [UNKNOWN] Yeah.
+[00:20:02.769] [UNKNOWN] Yeah.
+[00:20:03.769] [UNKNOWN] Exactly.
+[00:20:04.769] [UNKNOWN] Yeah.
+[00:20:05.769] [UNKNOWN] Yeah.
+[00:20:06.769] [UNKNOWN] Yeah.
+[00:20:07.769] [UNKNOWN] Yeah.
+[00:20:08.769] [UNKNOWN] Yeah.
+[00:20:09.769] [UNKNOWN] Yeah.
+[00:20:10.930] [UNKNOWN] Yeah.
+[00:20:11.930] [UNKNOWN] Yeah.
+[00:20:14.369] [UNKNOWN] What is the last acted?
+[00:20:17.779] [UNKNOWN] Oh.
+[00:20:18.779] [UNKNOWN] Oh isn't it?
+[00:20:19.779] [UNKNOWN] Yeah.
+[00:20:20.779] [UNKNOWN] going to reach here.
+[00:20:23.019] [UNKNOWN] Okay, what is the slope here?
+[00:20:24.740] [UNKNOWN] Is it negative or positive?
+[00:20:26.900] [UNKNOWN] It's a positive, right? It's a kind
+[00:20:28.779] [UNKNOWN] of like upward, right?
+[00:20:32.420] [UNKNOWN] Then,
+[00:20:34.160] [UNKNOWN] if I add to this point,
+[00:20:36.559] [UNKNOWN] the slope of this point, which is again
+[00:20:38.299] [UNKNOWN] 2 times 2x,
+[00:20:44.500] [UNKNOWN] right? So,
+[00:20:46.349] [UNKNOWN] it's going to move me
+[00:20:49.279] [UNKNOWN] this way. But I
+[00:20:51.660] [UNKNOWN] have one negative, and that
+[00:20:53.640] [UNKNOWN] negative helps me to
+[00:20:55.059] [UNKNOWN] move this way.
+[00:20:58.099] [UNKNOWN] Definitely. I just want to mention
+[00:21:00.200] [UNKNOWN] that this equation,
+[00:21:02.710] [UNKNOWN] this equation is a kind of like
+[00:21:04.789] [UNKNOWN] general equation.
+[00:21:07.119] [UNKNOWN] It works for every
+[00:21:08.920] [UNKNOWN] point, sorry. It should be
+[00:21:10.619] [UNKNOWN] minus, right?
+[00:21:16.599] [UNKNOWN] Yeah? This minus helps me.
+[00:21:18.579] [UNKNOWN] If I have it at downward,
+[00:21:21.740] [UNKNOWN] minus minus
+[00:21:22.759] [UNKNOWN] is going to be plus, and I'm
+[00:21:25.000] [UNKNOWN] going toward, like,
+[00:21:26.859] [UNKNOWN] to the right side. If I'm here,
+[00:21:30.700] [UNKNOWN] because here is just a
+[00:21:32.299] [UNKNOWN] slope is positive,
+[00:21:34.470] [UNKNOWN] minus times
+[00:21:36.250] [UNKNOWN] like a
+[00:21:37.450] [UNKNOWN] minus times positive value is going to be
+[00:21:40.410] [UNKNOWN] minus, and it moves me, push me
+[00:21:42.349] [UNKNOWN] to the left, right?
+[00:21:46.240] [UNKNOWN] This is the technical
+[00:21:49.539] [UNKNOWN] called the gradient
+[00:21:51.970] [UNKNOWN] descent.
+[00:21:54.269] [UNKNOWN] It's a repetitive algorithm.
+[00:21:56.230] [UNKNOWN] You start from some point,
+[00:21:58.380] [UNKNOWN] let's say one of these points,
+[00:22:00.900] [UNKNOWN] and then
+[00:22:02.079] [UNKNOWN] keep doing this,
+[00:22:05.299] [UNKNOWN] and based on that point, you update your
+[00:22:07.140] [UNKNOWN] position. After some,
+[00:22:10.519] [UNKNOWN] iterations, you can get
+[00:22:12.720] [UNKNOWN] the, get the mean.
+[00:22:16.900] [UNKNOWN] Okay? What would
+[00:22:20.289] [UNKNOWN] be the stopping condition for this algorithm?
+[00:22:28.400] [UNKNOWN] Finding the minimum
+[00:22:29.559] [UNKNOWN] one?
+[00:22:32.250] [UNKNOWN] The change is not, I mean, the change
+[00:22:36.500] [UNKNOWN] is not significant,
+[00:22:38.680] [UNKNOWN] right? The change is not
+[00:22:40.220] [UNKNOWN] x and x t plus 1 and x.
+[00:22:43.160] [UNKNOWN] It's almost the same.
+[00:22:44.440] [UNKNOWN] This is one way. Or maybe
+[00:22:46.359] [UNKNOWN] after 100 iterations,
+[00:22:48.380] [UNKNOWN] we say, okay, after
+[00:22:49.740] [UNKNOWN] any iteration,
+[00:22:52.619] [UNKNOWN] we say, okay,
+[00:22:52.720] [UNKNOWN] stop. Or whenever
+[00:22:54.579] [UNKNOWN] you see that, it's returned
+[00:22:56.299] [UNKNOWN] like a minimum value,
+[00:22:59.200] [UNKNOWN] like we are looking for 0, right?
+[00:23:01.380] [UNKNOWN] Whenever f getting 0,
+[00:23:05.259] [UNKNOWN] because we have x,
+[00:23:06.700] [UNKNOWN] we can apply
+[00:23:07.299] [UNKNOWN] that one on f,
+[00:23:09.859] [UNKNOWN] and see that where it's getting
+[00:23:11.220] [UNKNOWN] 0. If that point
+[00:23:14.210] [UNKNOWN] leads to 0, we can stop.
+[00:23:17.099] [UNKNOWN] Okay? So there are
+[00:23:18.640] [UNKNOWN] different ways. So suppose that
+[00:23:20.500] [UNKNOWN] after some iteration, we continue,
+[00:23:22.619] [UNKNOWN] continue after 100, for example.
+[00:23:24.980] [UNKNOWN] Now we have some idea about
+[00:24:38.359] [UNKNOWN] the gradient descent, and
+[00:24:43.859] [UNKNOWN] this is a linear regression,
+[00:24:45.920] [UNKNOWN] right? So we have some point,
+[00:24:47.799] [UNKNOWN] and I want to pick a function,
+[00:24:49.599] [UNKNOWN] pick a linear function here.
+[00:24:51.799] [UNKNOWN] Okay? So
+[00:24:53.140] [UNKNOWN] we know that after
+[00:24:56.200] [UNKNOWN] picking this function,
+[00:24:59.140] [UNKNOWN] for some points, it's going to be
+[00:25:00.759] [UNKNOWN] error is going to be probably
+[00:25:02.440] [UNKNOWN] 0, but for this point,
+[00:25:05.000] [UNKNOWN] this is just a person.
+[00:25:09.680] [UNKNOWN] So for this point,
+[00:25:15.720] [UNKNOWN] error is 0,
+[00:25:18.130] [UNKNOWN] for this point, we have
+[00:25:20.009] [UNKNOWN] error, we have big error here,
+[00:25:23.230] [UNKNOWN] not too much big error
+[00:25:24.369] [UNKNOWN] here, so we have some errors.
+[00:25:27.400] [UNKNOWN] And the error is the
+[00:25:28.880] [UNKNOWN] difference between the predicted
+[00:25:30.940] [UNKNOWN] value and actual value.
+[00:25:33.670] [UNKNOWN] Okay? So actual
+[00:25:34.950] [UNKNOWN] means our ground truth,
+[00:25:39.029] [UNKNOWN] and predicted
+[00:25:40.309] [UNKNOWN] value is the output by the model.
+[00:25:43.660] [UNKNOWN] Yeah?
+[00:25:44.420] [UNKNOWN] Okay. So we know that we have some
+[00:25:46.660] [UNKNOWN] error, so if I put
+[00:25:48.759] [UNKNOWN] all this error together to all the
+[00:25:50.660] [UNKNOWN] points, it's going to be
+[00:25:52.480] [UNKNOWN] this one, okay? And this
+[00:25:54.839] [UNKNOWN] is nothing more than the sum of
+[00:25:56.799] [UNKNOWN] the squared error for this point.
+[00:25:59.579] [UNKNOWN] Right? So
+[00:26:01.119] [UNKNOWN] this one minus
+[00:26:03.619] [UNKNOWN] this, which is squared off that.
+[00:26:07.930] [UNKNOWN] And then we go to the next one.
+[00:26:09.690] [UNKNOWN] And that's one of them.
+[00:26:12.069] [UNKNOWN] So, for example,
+[00:26:14.680] [UNKNOWN] I have 2, for 2 I've got
+[00:26:16.880] [UNKNOWN] 2.2. So error here is
+[00:26:18.740] [UNKNOWN] 0.2. I get
+[00:26:20.819] [UNKNOWN] square of that square is going to be
+[00:26:22.700] [UNKNOWN] 0.04. Plus,
+[00:26:25.619] [UNKNOWN] same thing for the next point.
+[00:26:28.000] [UNKNOWN] Plus, for the next
+[00:26:30.160] [UNKNOWN] point. And I get
+[00:26:32.059] [UNKNOWN] it, and then it returns 1
+[00:26:33.859] [UNKNOWN] over 2. Right?
+[00:26:35.700] [UNKNOWN] So, if I divide this number
+[00:26:38.000] [UNKNOWN] by n,
+[00:26:40.380] [UNKNOWN] it shows that the average
+[00:26:43.420] [UNKNOWN] error.
+[00:26:44.940] [UNKNOWN] So, let's consider this
+[00:26:48.500] [UNKNOWN] one as some of the squared error.
+[00:26:50.900] [UNKNOWN] We know that we have
+[00:26:52.859] [UNKNOWN] this, and we want to minimize
+[00:26:54.920] [UNKNOWN] it. Right? This is our
+[00:26:58.170] [UNKNOWN] objective. Okay.
+[00:27:09.220] [UNKNOWN] Again, I have
+[00:27:11.059] [UNKNOWN] a function here.
+[00:27:14.700] [UNKNOWN] Right? And then
+[00:27:16.579] [UNKNOWN] just replace y hat
+[00:27:22.410] [UNKNOWN] model of 2
+[00:27:24.259] [UNKNOWN] by this function.
+[00:27:26.440] [UNKNOWN] Right? So,
+[00:27:28.509] [UNKNOWN] and that function is our linear function.
+[00:27:31.289] [UNKNOWN] A times x plus
+[00:27:32.369] [UNKNOWN] 2. And
+[00:27:35.279] [UNKNOWN] in other words, I want
+[00:27:38.099] [UNKNOWN] to minimize this, or I want to
+[00:27:40.059] [UNKNOWN] minimize this.
+[00:27:40.779] [UNKNOWN] We don't have 0.
+[00:27:52.680] [UNKNOWN] Just consider
+[00:27:54.519] [UNKNOWN] this. Okay?
+[00:27:59.160] [UNKNOWN] So, y i minus
+[00:28:00.819] [UNKNOWN] a x i
+[00:28:03.809] [UNKNOWN] plus p squared.
+[00:28:07.740] [UNKNOWN] Okay?
+[00:28:08.599] [UNKNOWN] One more point. How's this function?
+[00:28:15.900] [UNKNOWN] Is it
+[00:28:16.500] [UNKNOWN] linear? Is it
+[00:28:18.730] [UNKNOWN] polynomial? It's squared, right?
+[00:28:29.569] [UNKNOWN] It's squared. Okay?
+[00:28:31.390] [UNKNOWN] So, because that's squared,
+[00:28:34.359] [UNKNOWN] then its
+[00:28:35.339] [UNKNOWN] shape is going to be something like this.
+[00:28:37.950] [UNKNOWN] Okay? It's not
+[00:28:39.150] [UNKNOWN] like a
+[00:28:40.390] [UNKNOWN] plane. It's going to be
+[00:28:42.230] [UNKNOWN] something like this. Okay?
+[00:28:48.549] [UNKNOWN] And now I want
+[00:28:50.549] [UNKNOWN] to get the optimal point
+[00:28:52.470] [UNKNOWN] for me is
+[00:28:55.779] [UNKNOWN] the point which
+[00:28:57.799] [UNKNOWN] makes this error function
+[00:28:59.519] [UNKNOWN] 0. Okay?
+[00:29:04.490] [UNKNOWN] So, I mean that
+[00:29:06.960] [UNKNOWN] suppose that this e
+[00:29:08.880] [UNKNOWN] is our
+[00:29:10.279] [UNKNOWN] function x. So, this one is also
+[00:29:16.740] [UNKNOWN] squared, and this one is also
+[00:29:19.410] [UNKNOWN] squared. You can consider
+[00:29:22.579] [UNKNOWN] this function,
+[00:29:23.700] [UNKNOWN] and something like this.
+[00:29:27.089] [UNKNOWN] And what we are looking for,
+[00:29:30.440] [UNKNOWN] we want to see that
+[00:29:31.539] [UNKNOWN] where this error is getting
+[00:29:33.579] [UNKNOWN] 0. Or,
+[00:29:36.420] [UNKNOWN] in this context,
+[00:29:39.400] [UNKNOWN] where our function f is getting
+[00:29:41.579] [UNKNOWN] 0. So, I can apply
+[00:29:45.750] [UNKNOWN] the same idea of gradient
+[00:29:47.589] [UNKNOWN] descent on error
+[00:29:50.059] [UNKNOWN] function. So, what I
+[00:29:54.769] [UNKNOWN] need is that, like,
+[00:29:57.900] [UNKNOWN] again here, we want
+[00:29:59.099] [UNKNOWN] to know that in each point,
+[00:30:01.200] [UNKNOWN] the error of the
+[00:30:02.099] [UNKNOWN] model is getting
+[00:30:03.339] [UNKNOWN] minimum. Okay?
+[00:30:07.660] [UNKNOWN] And based on that one, we want
+[00:30:09.660] [UNKNOWN] to find a and b.
+[00:30:13.079] [UNKNOWN] Okay? a and
+[00:30:14.299] [UNKNOWN] b. Those are
+[00:30:17.150] [UNKNOWN] the coefficients
+[00:30:18.450] [UNKNOWN] which makes
+[00:30:24.000] [UNKNOWN] our function. Okay?
+[00:30:26.759] [UNKNOWN] So, what I can do
+[00:30:29.009] [UNKNOWN] here, I can apply the same idea.
+[00:30:31.450] [UNKNOWN] I start from one
+[00:30:32.970] [UNKNOWN] initial arbitrary
+[00:30:35.269] [UNKNOWN] point. For what?
+[00:30:37.869] [UNKNOWN] For a and b.
+[00:30:39.619] [UNKNOWN] So, suppose that I start
+[00:30:42.910] [UNKNOWN] from here, and then
+[00:30:45.869] [UNKNOWN] here, I calculate the
+[00:30:49.750] [UNKNOWN] value of e. Okay?
+[00:30:53.200] [UNKNOWN] So, and then, I change
+[00:30:55.220] [UNKNOWN] a and b. How I can
+[00:30:57.180] [UNKNOWN] change? I find a
+[00:30:59.430] [UNKNOWN] slope with respect
+[00:31:03.670] [UNKNOWN] to function e,
+[00:31:06.329] [UNKNOWN] and it reaches
+[00:31:07.829] [UNKNOWN] values. It's the slope of the function.
+[00:31:11.220] [UNKNOWN] Right? And then, if I apply
+[00:31:13.920] [UNKNOWN] that one on something like this,
+[00:31:17.319] [UNKNOWN] okay, what's going to happen?
+[00:31:18.920] [UNKNOWN] I have currently,
+[00:31:22.480] [UNKNOWN] suppose that I don't have a.
+[00:31:23.980] [UNKNOWN] I have just b. Okay?
+[00:31:26.460] [UNKNOWN] So, for b,
+[00:31:29.009] [UNKNOWN] I have just a. Okay?
+[00:31:31.349] [UNKNOWN] I don't have the b. Okay?
+[00:31:32.910] [UNKNOWN] It's kind of like a. Okay?
+[00:31:36.059] [UNKNOWN] So, what's going to happen?
+[00:31:38.619] [UNKNOWN] I have one value for a,
+[00:31:40.950] [UNKNOWN] and then, after taking the
+[00:31:44.519] [UNKNOWN] derivation
+[00:31:46.180] [UNKNOWN] of that function, it returns
+[00:31:47.720] [UNKNOWN] something like f prime to b.
+[00:31:53.849] [UNKNOWN] And based on that one, I can
+[00:31:55.589] [UNKNOWN] know that
+[00:31:57.130] [UNKNOWN] what will be the next one.
+[00:31:59.890] [UNKNOWN] If I'm here,
+[00:32:01.089] [UNKNOWN] I'm going to down.
+[00:32:02.609] [UNKNOWN] Down. And then,
+[00:32:04.720] [UNKNOWN] it leads me.
+[00:32:07.140] [UNKNOWN] The error is zero.
+[00:32:13.839] [UNKNOWN] Okay? And,
+[00:32:15.920] [UNKNOWN] okay. When I got that point,
+[00:32:18.440] [UNKNOWN] that means that, okay, what happened?
+[00:32:20.900] [UNKNOWN] I have, I, I,
+[00:32:23.039] [UNKNOWN] I checked different a and b's,
+[00:32:25.700] [UNKNOWN] and at the end,
+[00:32:27.490] [UNKNOWN] I got the best a and b.
+[00:32:30.369] [UNKNOWN] Okay? What was the best a and b?
+[00:32:33.099] [UNKNOWN] The best a and b was the point
+[00:32:34.779] [UNKNOWN] that, for each
+[00:32:37.160] [UNKNOWN] function,
+[00:32:37.839] [UNKNOWN] a and b, or error,
+[00:32:39.839] [UNKNOWN] getting zero, or minimum.
+[00:32:41.839] [UNKNOWN] Minimum, okay?
+[00:32:43.839] [UNKNOWN] Because if you continue to watch,
+[00:32:45.839] [UNKNOWN] it's getting zero. Otherwise,
+[00:32:48.099] [UNKNOWN] suppose this example,
+[00:33:07.700] [UNKNOWN] I think this one can show
+[00:33:10.049] [UNKNOWN] what, what I mean.
+[00:33:12.279] [UNKNOWN] Suppose this is the,
+[00:33:17.539] [UNKNOWN] function f or function e.
+[00:33:19.539] [UNKNOWN] Okay? And then, you want to know
+[00:33:22.240] [UNKNOWN] that what is the best x and y,
+[00:33:24.240] [UNKNOWN] rather than a and b.
+[00:33:26.440] [UNKNOWN] Okay? So, what I can do,
+[00:33:28.559] [UNKNOWN] I can find the,
+[00:33:30.559] [UNKNOWN] derivative of this function.
+[00:33:32.880] [UNKNOWN] Because I have two variables,
+[00:33:34.880] [UNKNOWN] I need to get the derivative
+[00:33:36.980] [UNKNOWN] with respect to x,
+[00:33:39.200] [UNKNOWN] and with respect to y.
+[00:33:41.200] [UNKNOWN] With respect to x,
+[00:33:43.400] [UNKNOWN] it's called norm of f,
+[00:33:45.400] [UNKNOWN] or derivative of f
+[00:33:47.400] [UNKNOWN] with respect to x,
+[00:33:49.559] [UNKNOWN] derivative of f with respect to y.
+[00:33:51.559] [UNKNOWN] So,
+[00:33:54.000] [UNKNOWN] what is the derivative of this function
+[00:33:56.000] [UNKNOWN] with respect to x?
+[00:33:58.799] [UNKNOWN] x 2 times 0.5,
+[00:34:01.220] [UNKNOWN] right? 2 times 0.5.
+[00:34:03.220] [UNKNOWN] y times x.
+[00:34:05.220] [UNKNOWN] Okay?
+[00:34:08.050] [UNKNOWN] How about with respect to y?
+[00:34:10.050] [UNKNOWN] 2y.
+[00:34:12.050] [UNKNOWN] Right? 2y.
+[00:34:14.849] [UNKNOWN] So, because this one is getting constant
+[00:34:16.849] [UNKNOWN] when I'm talking about y.
+[00:34:19.239] [UNKNOWN] And when I'm talking about x,
+[00:34:21.239] [UNKNOWN] this one is getting constant,
+[00:34:23.239] [UNKNOWN] so I don't consider this y
+[00:34:25.239] [UNKNOWN] in this,
+[00:34:27.460] [UNKNOWN] and I don't consider x in this.
+[00:34:29.460] [UNKNOWN] That means that just
+[00:34:32.039] [UNKNOWN] for this one,
+[00:34:34.039] [UNKNOWN] I need to find the derivative of this.
+[00:34:37.829] [UNKNOWN] Okay.
+[00:34:39.829] [UNKNOWN] So that's why, like,
+[00:34:42.050] [UNKNOWN] suppose that I start
+[00:34:44.050] [UNKNOWN] from 10, 10,
+[00:34:46.050] [UNKNOWN] a point right here,
+[00:34:48.050] [UNKNOWN] x is 10,
+[00:34:50.050] [UNKNOWN] and y is 10.
+[00:34:52.920] [UNKNOWN] A point right here.
+[00:34:55.360] [UNKNOWN] Okay? And then I want to see
+[00:34:57.360] [UNKNOWN] if I can get to the minimum.
+[00:34:59.360] [UNKNOWN] So, I have the gradient,
+[00:35:01.719] [UNKNOWN] we call that derivative,
+[00:35:03.719] [UNKNOWN] we call that one a gradient.
+[00:35:06.519] [UNKNOWN] So, gradient means that
+[00:35:08.519] [UNKNOWN] slope of the function.
+[00:35:10.519] [UNKNOWN] Okay? So,
+[00:35:13.800] [UNKNOWN] our gradient in this point,
+[00:35:16.980] [UNKNOWN] uh, sorry,
+[00:35:18.980] [UNKNOWN] our gradient is 10 and 10,
+[00:35:20.980] [UNKNOWN] it's gonna be 10 and
+[00:35:23.010] [UNKNOWN] 2 times y, which is 20.
+[00:35:25.010] [UNKNOWN] So then what I need,
+[00:35:27.460] [UNKNOWN] I just need to here,
+[00:35:29.460] [UNKNOWN] okay, take this,
+[00:35:31.460] [UNKNOWN] plus the gradient.
+[00:35:33.460] [UNKNOWN] Meanwhile, we need to multiply
+[00:35:36.039] [UNKNOWN] that one to our learning rate.
+[00:35:38.039] [UNKNOWN] So I'm in something like this.
+[00:35:40.769] [UNKNOWN] So every point,
+[00:35:43.480] [UNKNOWN] next point, or next point,
+[00:35:47.110] [UNKNOWN] next position,
+[00:35:49.110] [UNKNOWN] is gonna be current point
+[00:35:51.429] [UNKNOWN] times learning rate,
+[00:35:53.489] [UNKNOWN] okay,
+[00:35:56.800] [UNKNOWN] times the gradient.
+[00:36:06.800] [UNKNOWN] Okay.
+[00:36:11.010] [UNKNOWN] So, so gradient isn't
+[00:36:13.010] [UNKNOWN] is nothing more than this.
+[00:36:15.010] [UNKNOWN] So, on the, example on the,
+[00:36:17.010] [UNKNOWN] uh, point 4, rather than t,
+[00:36:19.010] [UNKNOWN] probably I have used once,
+[00:36:21.010] [UNKNOWN] I have used, uh, x, right?
+[00:36:23.010] [UNKNOWN] So, x, t plus 1,
+[00:36:25.010] [UNKNOWN] or n, n plus 1.
+[00:36:27.010] [UNKNOWN] Same, same situation.
+[00:36:29.650] [UNKNOWN] So, this one is
+[00:36:32.800] [UNKNOWN] very simple algorithm.
+[00:36:34.800] [UNKNOWN] You start from initial guess,
+[00:36:36.800] [UNKNOWN] initial random point,
+[00:36:39.030] [UNKNOWN] and then you calculate gradient of,
+[00:36:41.030] [UNKNOWN] uh, each point, like the current point,
+[00:36:43.030] [UNKNOWN] and then after
+[00:36:45.190] [UNKNOWN] that point, you update this.
+[00:36:48.820] [UNKNOWN] Okay? And then you
+[00:36:51.840] [UNKNOWN] repeat step 2 and 3 until
+[00:36:53.840] [UNKNOWN] one of these criteria is next.
+[00:36:55.840] [UNKNOWN] After maximum number
+[00:36:58.389] [UNKNOWN] of iterations, and then
+[00:37:00.389] [UNKNOWN] you get the maximum number of iterations,
+[00:37:02.389] [UNKNOWN] for example, after 100 iterations,
+[00:37:04.389] [UNKNOWN] or your step size
+[00:37:07.409] [UNKNOWN] is smaller than
+[00:37:10.280] [UNKNOWN] even full x,
+[00:37:12.280] [UNKNOWN] for example, as your, uh,
+[00:37:14.280] [UNKNOWN] classmate
+[00:37:16.440] [UNKNOWN] mentioned that, like,
+[00:37:18.469] [UNKNOWN] when the change is not significant.
+[00:37:20.469] [UNKNOWN] Okay? You see that
+[00:37:22.949] [UNKNOWN] x is 1,
+[00:37:25.170] [UNKNOWN] and, uh,
+[00:37:27.170] [UNKNOWN] x, xn is, for example,
+[00:37:29.809] [UNKNOWN] 1, and n,
+[00:37:31.809] [UNKNOWN] xn plus 1 is
+[00:37:33.809] [UNKNOWN] 1.00001.
+[00:37:35.809] [UNKNOWN] So, they are very close
+[00:37:38.099] [UNKNOWN] to each other. Not too much
+[00:37:40.199] [UNKNOWN] difference, so then you can stop.
+[00:37:42.199] [UNKNOWN] Here, there is a nice example.
+[00:37:47.750] [UNKNOWN] I say you can
+[00:37:49.750] [UNKNOWN] go with this example
+[00:37:51.969] [UNKNOWN] and see how
+[00:37:53.969] [UNKNOWN] the gradient descent works.
+[00:37:55.969] [UNKNOWN] So, suppose that
+[00:38:05.010] [UNKNOWN] this function f is
+[00:38:07.010] [UNKNOWN] x squared minus 4x
+[00:38:09.269] [UNKNOWN] plus 1. And you want to
+[00:38:11.650] [UNKNOWN] see that, uh, and this is your
+[00:38:14.739] [UNKNOWN] error function. And you want
+[00:38:17.699] [UNKNOWN] to see that what is the optimal
+[00:38:19.699] [UNKNOWN] x. Okay?
+[00:38:23.300] [UNKNOWN] So, your guess point,
+[00:38:25.300] [UNKNOWN] or start point, is
+[00:38:27.300] [UNKNOWN] 9. So you start it
+[00:38:30.099] [UNKNOWN] from here, and then
+[00:38:32.099] [UNKNOWN] you want to get this point.
+[00:38:34.289] [UNKNOWN] What's going to happen,
+[00:38:36.289] [UNKNOWN] I get the derivative of this function,
+[00:38:38.289] [UNKNOWN] it's going to be with respect to x,
+[00:38:40.289] [UNKNOWN] because I have only one variable,
+[00:38:42.289] [UNKNOWN] it's not like with respect
+[00:38:44.320] [UNKNOWN] to x and y,
+[00:38:46.320] [UNKNOWN] or x1 and x2.
+[00:38:48.480] [UNKNOWN] I have just one variable, x,
+[00:38:50.480] [UNKNOWN] right? Okay?
+[00:38:52.480] [UNKNOWN] So, the derivative of this
+[00:38:54.480] [UNKNOWN] function is going to be 2x
+[00:38:56.480] [UNKNOWN] minus 4. Then,
+[00:39:02.710] [UNKNOWN] my start point is
+[00:39:04.710] [UNKNOWN] 9.
+[00:39:06.710] [UNKNOWN] I get that point as,
+[00:39:08.710] [UNKNOWN] I consider that point as x0.
+[00:39:11.119] [UNKNOWN] Okay? So, in
+[00:39:13.280] [UNKNOWN] x0, this
+[00:39:15.440] [UNKNOWN] value is getting to be
+[00:39:17.440] [UNKNOWN] right. Yeah.
+[00:39:22.519] [UNKNOWN] In x0, which is 9, this value is getting to be
+[00:39:24.519] [UNKNOWN] 2 times 9 minus 4.
+[00:39:27.159] [UNKNOWN] As you see here, 2 times 9 minus 4.
+[00:39:29.159] [UNKNOWN] And, uh,
+[00:39:32.980] [UNKNOWN] I multiply that one by our
+[00:39:34.980] [UNKNOWN] rate, which is 0.1.
+[00:39:37.519] [UNKNOWN] That's the
+[00:39:39.519] [UNKNOWN] assumption. Okay?
+[00:39:41.940] [UNKNOWN] Then, if I see
+[00:39:44.199] [UNKNOWN] the next point, it's going to be
+[00:39:46.199] [UNKNOWN] 7.6. That means I'm
+[00:39:48.230] [UNKNOWN] here, the slope here is
+[00:39:50.320] [UNKNOWN] positive, so
+[00:39:52.320] [UNKNOWN] minus positive,
+[00:39:57.110] [UNKNOWN] which leads me going
+[00:39:59.110] [UNKNOWN] from 9 to 7.6.
+[00:40:01.940] [UNKNOWN] And again, the 7.6,
+[00:40:03.940] [UNKNOWN] which I'm here, I can
+[00:40:05.940] [UNKNOWN] continue. 7.6
+[00:40:07.940] [UNKNOWN] is applied on this,
+[00:40:09.940] [UNKNOWN] okay? So I have the
+[00:40:11.940] [UNKNOWN] current point is 7.6,
+[00:40:13.940] [UNKNOWN] this is my burning rate,
+[00:40:15.940] [UNKNOWN] and the
+[00:40:17.940] [UNKNOWN] uh, gradient
+[00:40:19.940] [UNKNOWN] is 0.7.6,
+[00:40:21.940] [UNKNOWN] because currently I'm at
+[00:40:23.940] [UNKNOWN] 7.6, so it's going to be
+[00:40:25.940] [UNKNOWN] 2 times 7.6 minus
+[00:40:27.940] [UNKNOWN] 4, which
+[00:40:30.480] [UNKNOWN] pushes me to
+[00:40:32.480] [UNKNOWN] 0.640.
+[00:40:34.800] [UNKNOWN] And if I keep doing this,
+[00:40:36.800] [UNKNOWN] you see
+[00:40:39.219] [UNKNOWN] that each time, it helps me
+[00:40:41.219] [UNKNOWN] like, it pushes me from
+[00:40:43.219] [UNKNOWN] 10 to 6.48
+[00:40:45.219] [UNKNOWN] and 5 points
+[00:40:47.219] [UNKNOWN] I'm saying, and at the end,
+[00:40:49.219] [UNKNOWN] it leads me to
+[00:40:51.219] [UNKNOWN] uh,
+[00:40:53.539] [UNKNOWN] the minimum point of this,
+[00:40:55.539] [UNKNOWN] right? Which is,
+[00:41:01.800] [UNKNOWN] what is the minimum point of this
+[00:41:03.800] [UNKNOWN] function, right?
+[00:41:09.829] [UNKNOWN] It's equal to.
+[00:41:14.000] [UNKNOWN] So it pushes me to
+[00:41:16.000] [UNKNOWN] 2 at the end. Okay?
+[00:41:19.510] [UNKNOWN] How many steps?
+[00:41:21.860] [UNKNOWN] Like, let's just solve this
+[00:41:24.119] [UNKNOWN] three steps, okay?
+[00:41:26.340] [UNKNOWN] Like, after 24 steps,
+[00:41:28.340] [UNKNOWN] the result is
+[00:41:30.340] [UNKNOWN] 2.04.
+[00:41:32.340] [UNKNOWN] 2.04.
+[00:41:34.369] [UNKNOWN] Okay? Not exactly.
+[00:41:37.429] [UNKNOWN] If I keep doing, maybe I can
+[00:41:39.429] [UNKNOWN] get the exact point.
+[00:41:43.760] [UNKNOWN] Make sense? Any question on this?
+[00:41:51.780] [UNKNOWN] You have question?
+[00:42:01.909] [UNKNOWN] Yeah, which one? Not clear.
+[00:42:07.139] [UNKNOWN] 0.1 is
+[00:42:14.099] [UNKNOWN] our assumption.
+[00:42:16.550] [UNKNOWN] I say that's like a learning rate,
+[00:42:18.550] [UNKNOWN] okay? 0.1.
+[00:42:20.869] [UNKNOWN] This is something that's,
+[00:42:22.869] [UNKNOWN] you know, like a, it's a kind of like
+[00:42:24.869] [UNKNOWN] input, or assumption.
+[00:42:26.869] [UNKNOWN] It's okay. Take it 0.1.
+[00:42:28.869] [UNKNOWN] Or maybe take it 0.2.
+[00:42:30.869] [UNKNOWN] Okay?
+[00:42:33.030] [UNKNOWN] It's some assumption.
+[00:42:35.059] [UNKNOWN] But the other, others
+[00:42:37.059] [UNKNOWN] are not that.
+[00:42:39.570] [UNKNOWN] And the another assumption is that I
+[00:42:41.570] [UNKNOWN] start to solve x equal to 0.
+[00:42:43.570] [UNKNOWN] You can start from any point,
+[00:42:46.179] [UNKNOWN] and then you're gonna get the
+[00:42:48.179] [UNKNOWN] local, uh, you're gonna
+[00:42:50.179] [UNKNOWN] get the optimal
+[00:42:53.139] [UNKNOWN] for your x equal to 0.
+[00:42:55.489] [UNKNOWN] The takeaway here is that
+[00:43:10.130] [UNKNOWN] as you see in this example,
+[00:43:12.130] [UNKNOWN] if I have any function
+[00:43:14.130] [UNKNOWN] like this,
+[00:43:16.130] [UNKNOWN] not any, any function,
+[00:43:18.130] [UNKNOWN] but the function which is,
+[00:43:20.130] [UNKNOWN] uh, you can calculate
+[00:43:22.550] [UNKNOWN] its derivation, okay?
+[00:43:24.550] [UNKNOWN] So in other words,
+[00:43:26.579] [UNKNOWN] this is the depreciable.
+[00:43:28.579] [UNKNOWN] The function should depreciate,
+[00:43:30.579] [UNKNOWN] okay? Uh, means that
+[00:43:32.579] [UNKNOWN] I can find its, uh,
+[00:43:34.579] [UNKNOWN] gradient. Like,
+[00:43:37.320] [UNKNOWN] this is straight. Okay?
+[00:43:39.510] [UNKNOWN] So, if I have
+[00:43:41.510] [UNKNOWN] any function in the format of,
+[00:43:43.510] [UNKNOWN] format of, for example,
+[00:43:45.510] [UNKNOWN] a square, or any
+[00:43:47.510] [UNKNOWN] differentiable algorithm, I can find
+[00:43:49.510] [UNKNOWN] its optimal point,
+[00:43:51.800] [UNKNOWN] or the point in which
+[00:43:53.800] [UNKNOWN] that function is getting, like,
+[00:43:55.800] [UNKNOWN] a minimal
+[00:43:58.050] [UNKNOWN] using gradients. One of those
+[00:44:00.760] [UNKNOWN] examples, like,
+[00:44:02.760] [UNKNOWN] this is one example, but we can
+[00:44:04.760] [UNKNOWN] extend, I mean, we can
+[00:44:06.760] [UNKNOWN] generalize that one
+[00:44:12.369] [UNKNOWN] into our arrow function, right?
+[00:44:14.369] [UNKNOWN] So,
+[00:44:18.260] [UNKNOWN] because arrow function also,
+[00:44:20.260] [UNKNOWN] you see here,
+[00:44:23.190] [UNKNOWN] it's kind of like a function
+[00:44:26.210] [UNKNOWN] like this, and it's
+[00:44:28.210] [UNKNOWN] differentiable. Okay. So,
+[00:44:32.929] [UNKNOWN] for gradient descent,
+[00:44:36.630] [UNKNOWN] uh, we have
+[00:44:38.630] [UNKNOWN] some limitation
+[00:44:40.659] [UNKNOWN] or requirement, let's say.
+[00:44:42.659] [UNKNOWN] Uh,
+[00:44:44.980] [UNKNOWN] the first requirement is this.
+[00:44:48.039] [UNKNOWN] Uh, the function should be
+[00:44:50.039] [UNKNOWN] differentiable, right?
+[00:44:52.039] [UNKNOWN] For example, this is differentiable.
+[00:44:54.039] [UNKNOWN] This one is differentiable
+[00:44:56.039] [UNKNOWN] in any point. In any point,
+[00:44:58.130] [UNKNOWN] you can find this slope.
+[00:45:00.130] [UNKNOWN] In any point, you can find this slope.
+[00:45:02.130] [UNKNOWN] But for this one, you can't find
+[00:45:04.230] [UNKNOWN] this slope in x equals 0.
+[00:45:06.230] [UNKNOWN] Okay?
+[00:45:09.030] [UNKNOWN] Some of the functions, like
+[00:45:11.280] [UNKNOWN] this, or this, or this,
+[00:45:15.039] [UNKNOWN] they are not differentiable.
+[00:45:18.000] [UNKNOWN] Okay? If it's not differentiable,
+[00:45:20.000] [UNKNOWN] you can't find this slope.
+[00:45:22.000] [UNKNOWN] Right? Gradient.
+[00:45:25.119] [UNKNOWN] If you can't find the gradient
+[00:45:27.119] [UNKNOWN] then you can't
+[00:45:29.119] [UNKNOWN] calculate or apply
+[00:45:31.119] [UNKNOWN] this function,
+[00:45:33.250] [UNKNOWN] this equation.
+[00:45:35.760] [UNKNOWN] Make sense? Yes or no?
+[00:45:39.650] [UNKNOWN] Okay. So,
+[00:45:44.280] [UNKNOWN] other thing is that it should be
+[00:45:51.909] [UNKNOWN] convex. Okay.
+[00:45:54.360] [UNKNOWN] What's the convex mean?
+[00:45:56.360] [UNKNOWN] Okay. For example, this one.
+[00:46:00.280] [UNKNOWN] This one is differentiable,
+[00:46:04.159] [UNKNOWN] right? Because you can find
+[00:46:06.159] [UNKNOWN] the derivative of this.
+[00:46:08.159] [UNKNOWN] Derivative is 2x minus 1.
+[00:46:11.159] [UNKNOWN] In any point, you can find this one.
+[00:46:13.159] [UNKNOWN] So, or maybe
+[00:46:16.500] [UNKNOWN] you can take the derivative of derivative
+[00:46:18.500] [UNKNOWN] which is like this.
+[00:46:20.630] [UNKNOWN] Again, if you take the derivative
+[00:46:22.630] [UNKNOWN] of this, you can take this,
+[00:46:24.630] [UNKNOWN] it's getting 2.
+[00:46:26.630] [UNKNOWN] Okay? So, the function
+[00:46:32.369] [UNKNOWN] which has the derivative everywhere,
+[00:46:34.369] [UNKNOWN] the second derivation is always
+[00:46:36.369] [UNKNOWN] greater than 2. Okay?
+[00:46:39.329] [UNKNOWN] So, maybe you can ask
+[00:46:41.329] [UNKNOWN] how I can understand that
+[00:46:43.329] [UNKNOWN] function is
+[00:46:45.329] [UNKNOWN] differentiable.
+[00:46:47.329] [UNKNOWN] So, you can
+[00:46:49.489] [UNKNOWN] take the derivation 2 times
+[00:46:51.489] [UNKNOWN] and it
+[00:46:53.489] [UNKNOWN] returns the
+[00:46:56.929] [UNKNOWN] something like this.
+[00:46:58.929] [UNKNOWN] It's greater than 0, positive value.
+[00:47:00.929] [UNKNOWN] So, then
+[00:47:03.119] [UNKNOWN] you finish it. Okay?
+[00:47:09.349] [UNKNOWN] What is the convex?
+[00:47:11.480] [UNKNOWN] The other requirement here
+[00:47:13.480] [UNKNOWN] is that it should be convex.
+[00:47:16.630] [UNKNOWN] Okay. So, the convex is something
+[00:47:18.630] [UNKNOWN] like this. If you take any
+[00:47:21.199] [UNKNOWN] two points inside
+[00:47:23.650] [UNKNOWN] of this function, right?
+[00:47:25.650] [UNKNOWN] One point here, one point here.
+[00:47:27.650] [UNKNOWN] And then connect these two points
+[00:47:29.650] [UNKNOWN] together. Okay?
+[00:47:32.420] [UNKNOWN] Like, look at here.
+[00:47:34.840] [UNKNOWN] I have this one point here,
+[00:47:36.840] [UNKNOWN] another point here.
+[00:47:38.840] [UNKNOWN] Then I connect these two points together.
+[00:47:40.840] [UNKNOWN] That line is
+[00:47:42.840] [UNKNOWN] inside of my function. Okay?
+[00:47:44.840] [UNKNOWN] It's going to be something like this.
+[00:47:46.840] [UNKNOWN] That's inside of that
+[00:47:48.869] [UNKNOWN] pole, right? Okay?
+[00:47:51.349] [UNKNOWN] That's a ball.
+[00:47:53.349] [UNKNOWN] Okay? So,
+[00:47:55.349] [UNKNOWN] that is its convex.
+[00:47:57.730] [UNKNOWN] But how about this one?
+[00:48:00.179] [UNKNOWN] Is it convex?
+[00:48:04.230] [UNKNOWN] No. The reason is that
+[00:48:06.550] [UNKNOWN] we take these two points
+[00:48:08.550] [UNKNOWN] and if you connect them together,
+[00:48:10.550] [UNKNOWN] this line is not necessarily
+[00:48:12.550] [UNKNOWN] inside of it. Okay? Inside.
+[00:48:15.639] [UNKNOWN] Bigger. Okay?
+[00:48:17.800] [UNKNOWN] Inside. So,
+[00:48:20.079] [UNKNOWN] that's why, like, we
+[00:48:22.079] [UNKNOWN] know that this one is not convex.
+[00:48:24.079] [UNKNOWN] Okay?
+[00:48:32.900] [UNKNOWN] So, these are some requirements
+[00:48:34.900] [UNKNOWN] that we need to have. That means that
+[00:48:36.900] [UNKNOWN] we can't apply gradients
+[00:48:38.900] [UNKNOWN] on any function.
+[00:48:40.900] [UNKNOWN] So, this is in the format of, for example,
+[00:48:42.900] [UNKNOWN] like, squared
+[00:48:46.530] [UNKNOWN] or something.
+[00:48:49.110] [UNKNOWN] So, for example,
+[00:48:51.969] [UNKNOWN] right,
+[00:48:53.969] [UNKNOWN] how nice?
+[00:48:59.110] [UNKNOWN] No.
+[00:49:02.610] [UNKNOWN] No.
+[00:49:04.610] [UNKNOWN] Like this.
+[00:49:16.599] [UNKNOWN] That's one of the requirements we need to
+[00:49:18.599] [UNKNOWN] Okay?
+[00:49:22.769] [UNKNOWN] Just simply
+[00:49:24.769] [UNKNOWN] What is important,
+[00:49:27.599] [UNKNOWN] so, again,
+[00:49:29.599] [UNKNOWN] let's focus on this
+[00:49:33.880] [UNKNOWN] equation and
+[00:49:35.880] [UNKNOWN] the importance of learning rate.
+[00:49:37.880] [UNKNOWN] I showed on the whiteboard
+[00:49:40.130] [UNKNOWN] like what's going to happen.
+[00:49:42.130] [UNKNOWN] Suppose the learning rate
+[00:49:44.130] [UNKNOWN] is 0.1,
+[00:49:47.699] [UNKNOWN] this small value.
+[00:49:49.699] [UNKNOWN] Then you see that if you go
+[00:49:51.699] [UNKNOWN] slowly, you start from here
+[00:49:53.699] [UNKNOWN] and you slowly
+[00:49:55.699] [UNKNOWN] go toward the optimal point.
+[00:49:57.699] [UNKNOWN] If this
+[00:50:00.150] [UNKNOWN] learning rate is bigger,
+[00:50:02.150] [UNKNOWN] your steps, your jumps
+[00:50:04.150] [UNKNOWN] is going to be
+[00:50:06.150] [UNKNOWN] bigger, right?
+[00:50:08.150] [UNKNOWN] So, that means that you jump from
+[00:50:10.150] [UNKNOWN] rather than going from here to here,
+[00:50:12.150] [UNKNOWN] you're going to jump here, okay?
+[00:50:16.610] [UNKNOWN] And then, probably, you can get
+[00:50:18.610] [UNKNOWN] that optimal.
+[00:50:20.610] [UNKNOWN] But if it's a very big number,
+[00:50:22.840] [UNKNOWN] it's going to be like
+[00:50:24.840] [UNKNOWN] rather than 0.1, it's 0.8
+[00:50:26.840] [UNKNOWN] or 10 or 9
+[00:50:28.840] [UNKNOWN] or 0.9.
+[00:50:30.840] [UNKNOWN] Okay, what's going to happen?
+[00:50:32.840] [UNKNOWN] You're here and you jump.
+[00:50:35.539] [UNKNOWN] Okay?
+[00:50:37.670] [UNKNOWN] It's going to be something like
+[00:50:40.309] [UNKNOWN] for example, it shows that
+[00:50:42.309] [UNKNOWN] in this example, if it's the learning rate
+[00:50:44.309] [UNKNOWN] is 0.8 for this function,
+[00:50:46.309] [UNKNOWN] after 15
+[00:50:48.599] [UNKNOWN] steps,
+[00:50:50.599] [UNKNOWN] you're going to get the
+[00:50:53.780] [UNKNOWN] optimal point.
+[00:50:56.230] [UNKNOWN] Right here, after 8
+[00:50:58.230] [UNKNOWN] steps, you can get it.
+[00:51:00.800] [UNKNOWN] Or, if your learning rate is
+[00:51:02.800] [UNKNOWN] very big, then
+[00:51:04.800] [UNKNOWN] the number of iterations takes
+[00:51:07.250] [UNKNOWN] more time. What is important
+[00:51:10.630] [UNKNOWN] here is that
+[00:51:13.139] [UNKNOWN] the learning rate
+[00:51:15.139] [UNKNOWN] what is the balanced learning rate?
+[00:51:17.139] [UNKNOWN] What is the best learning rate?
+[00:51:20.679] [UNKNOWN] That's why we don't take it very big.
+[00:51:22.679] [UNKNOWN] We don't take it very
+[00:51:24.840] [UNKNOWN] small.
+[00:51:26.840] [UNKNOWN] Okay?
+[00:51:29.250] [UNKNOWN] So, major is 0.1
+[00:51:31.250] [UNKNOWN] and it's good.
+[00:51:34.119] [UNKNOWN] You take that one as 0.01,
+[00:51:36.119] [UNKNOWN] it's going to be
+[00:51:38.119] [UNKNOWN] a little bit small.
+[00:51:41.269] [UNKNOWN] Okay? So,
+[00:51:47.909] [UNKNOWN] again, here it shows that the learning
+[00:51:49.909] [UNKNOWN] rate is too small,
+[00:51:51.909] [UNKNOWN] too slow to convert.
+[00:51:54.610] [UNKNOWN] Maybe reach the maximum
+[00:51:56.610] [UNKNOWN] iteration before
+[00:51:58.610] [UNKNOWN] convergence. That means that
+[00:52:00.610] [UNKNOWN] you said that I'm going to
+[00:52:02.610] [UNKNOWN] stop after 100
+[00:52:04.610] [UNKNOWN] iterations. Okay?
+[00:52:07.059] [UNKNOWN] So, if your
+[00:52:09.059] [UNKNOWN] learning rate is
+[00:52:11.059] [UNKNOWN] small, and
+[00:52:13.320] [UNKNOWN] you stop after 100 iterations,
+[00:52:15.320] [UNKNOWN] what's going to happen?
+[00:52:18.340] [UNKNOWN] Maybe you can't get the
+[00:52:20.340] [UNKNOWN] optimal point.
+[00:52:23.079] [UNKNOWN] Okay? And if it's very big,
+[00:52:25.079] [UNKNOWN] may not converge to the optimal point,
+[00:52:27.079] [UNKNOWN] because I'll jump right, right?
+[00:52:29.079] [UNKNOWN] All these
+[00:52:31.880] [UNKNOWN] moves. Question?
+[00:52:59.030] [UNKNOWN] Okay. The second point
+[00:53:01.030] [UNKNOWN] is the point which is
+[00:53:03.030] [UNKNOWN] you see that, like, the whole silo, right?
+[00:53:05.030] [UNKNOWN] It's a point that's
+[00:53:07.670] [UNKNOWN] something like this. Just want to
+[00:53:09.670] [UNKNOWN] mention that this point is
+[00:53:12.980] [UNKNOWN] not the local
+[00:53:14.980] [UNKNOWN] minimum.
+[00:53:17.460] [UNKNOWN] So, because the
+[00:53:19.460] [UNKNOWN] minimum value for this is here,
+[00:53:21.460] [UNKNOWN] we have a point here,
+[00:53:24.039] [UNKNOWN] its gradient is
+[00:53:26.039] [UNKNOWN] zero.
+[00:53:28.159] [UNKNOWN] Okay? That means that it's
+[00:53:30.159] [UNKNOWN] going to be local optimal, but
+[00:53:32.159] [UNKNOWN] it's not our global
+[00:53:34.159] [UNKNOWN] optimal. So,
+[00:53:36.550] [UNKNOWN] if we have some saddle point,
+[00:53:38.550] [UNKNOWN] maybe
+[00:53:41.059] [UNKNOWN] the algorithm can make
+[00:53:43.059] [UNKNOWN] a little bit mistake. So, that
+[00:53:45.250] [UNKNOWN] depends on the data that we have.
+[00:53:53.559] [UNKNOWN] Okay. I think this one is just
+[00:53:55.559] [UNKNOWN] a
+[00:53:58.039] [UNKNOWN] summarize everything that we have
+[00:54:00.039] [UNKNOWN] here. So, the idea here
+[00:54:07.409] [UNKNOWN] is that, suppose we have some point,
+[00:54:09.409] [UNKNOWN] a couple of points,
+[00:54:12.019] [UNKNOWN] and then I want to see that
+[00:54:14.019] [UNKNOWN] what is the best
+[00:54:16.500] [UNKNOWN] bit flight. Okay?
+[00:54:18.630] [UNKNOWN] So, what I do, I start from
+[00:54:20.630] [UNKNOWN] some,
+[00:54:24.159] [UNKNOWN] suppose, m and b.
+[00:54:29.110] [UNKNOWN] Okay? Like our
+[00:54:31.110] [UNKNOWN] a and b.
+[00:54:37.110] [UNKNOWN] a and b. This
+[00:54:39.110] [UNKNOWN] minus 8 and minus 8 is
+[00:54:41.110] [UNKNOWN] going to be something like
+[00:54:43.110] [UNKNOWN] this function.
+[00:54:46.159] [UNKNOWN] And we want to see that what is the best.
+[00:54:48.159] [UNKNOWN] Okay? So, I want to
+[00:54:51.030] [UNKNOWN] change a and b. How I can
+[00:54:53.030] [UNKNOWN] change a and b?
+[00:54:55.030] [UNKNOWN] If I need to find the gradient
+[00:54:57.159] [UNKNOWN] of error, and
+[00:54:59.159] [UNKNOWN] see that
+[00:55:01.159] [UNKNOWN] like I can step by step
+[00:55:03.159] [UNKNOWN] update a and b.
+[00:55:05.599] [UNKNOWN] And continue this
+[00:55:07.599] [UNKNOWN] until
+[00:55:09.599] [UNKNOWN] I get the optimal
+[00:55:12.239] [UNKNOWN] a and b. In other words,
+[00:55:14.239] [UNKNOWN] if I have something like this, after one
+[00:55:16.239] [UNKNOWN] iteration, maybe change.
+[00:55:18.239] [UNKNOWN] Okay?
+[00:55:20.239] [UNKNOWN] So, I have a function
+[00:55:22.239] [UNKNOWN] like this. After one
+[00:55:24.239] [UNKNOWN] iteration, maybe, rather
+[00:55:26.239] [UNKNOWN] than this, rather than
+[00:55:28.309] [UNKNOWN] this, it's going to be changed a little bit like
+[00:55:30.309] [UNKNOWN] this. Okay? After
+[00:55:32.309] [UNKNOWN] the second iteration is
+[00:55:34.309] [UNKNOWN] getting something like this.
+[00:55:36.309] [UNKNOWN] And if I keep doing
+[00:55:38.309] [UNKNOWN] this, it's going to be
+[00:55:40.309] [UNKNOWN] correct
+[00:55:42.949] [UNKNOWN] or close
+[00:55:44.949] [UNKNOWN] to correct, let's say,
+[00:55:47.559] [UNKNOWN] line.
+[00:55:49.940] [UNKNOWN] Okay? So,
+[00:55:55.780] [UNKNOWN] for this line, we have
+[00:55:57.780] [UNKNOWN] error of this value.
+[00:55:59.780] [UNKNOWN] This much error. Okay?
+[00:56:02.230] [UNKNOWN] If I change a and b,
+[00:56:04.869] [UNKNOWN] my
+[00:56:06.960] [UNKNOWN] expectation is that the error
+[00:56:08.960] [UNKNOWN] should be
+[00:56:11.250] [UNKNOWN] previous
+[00:56:13.800] [UNKNOWN] because of the nature of
+[00:56:15.800] [UNKNOWN] gradient descent also. Okay?
+[00:56:18.530] [UNKNOWN] So, what's the
+[00:56:21.780] [UNKNOWN] connection between here? We have some
+[00:56:23.780] [UNKNOWN] points. We want to see that what is the
+[00:56:25.780] [UNKNOWN] best line.
+[00:56:27.780] [UNKNOWN] Okay? So,
+[00:56:30.320] [UNKNOWN] for each line, we have
+[00:56:32.320] [UNKNOWN] one error. I can
+[00:56:34.929] [UNKNOWN] consider that error and
+[00:56:36.929] [UNKNOWN] the function that I want to optimize.
+[00:56:38.929] [UNKNOWN] Okay?
+[00:56:41.380] [UNKNOWN] So, because it's
+[00:56:43.440] [UNKNOWN] s squared, it's going to have
+[00:56:45.440] [UNKNOWN] a shape like this, then I want
+[00:56:47.440] [UNKNOWN] to see that where
+[00:56:49.440] [UNKNOWN] this function is getting
+[00:56:51.440] [UNKNOWN] minimal error.
+[00:56:54.719] [UNKNOWN] Okay? If I find
+[00:56:56.719] [UNKNOWN] that point, in other words,
+[00:56:58.719] [UNKNOWN] I'm treating this
+[00:57:00.719] [UNKNOWN] line. I'm changing
+[00:57:02.719] [UNKNOWN] a and b. Okay?
+[00:57:05.139] [UNKNOWN] I start from this point,
+[00:57:07.139] [UNKNOWN] I'm keep doing, and at the end,
+[00:57:09.139] [UNKNOWN] it leaves me a point which is
+[00:57:11.139] [UNKNOWN] error. Okay?
+[00:57:13.940] [UNKNOWN] So,
+[00:57:15.940] [UNKNOWN] it's important to see how we can
+[00:57:18.099] [UNKNOWN] connect these two figures together
+[00:57:20.099] [UNKNOWN] or three figures. We want to
+[00:57:23.320] [UNKNOWN] minimize, we want to find
+[00:57:25.320] [UNKNOWN] the best line.
+[00:57:27.380] [UNKNOWN] The best line means that
+[00:57:29.380] [UNKNOWN] I want to minimize this error.
+[00:57:31.380] [UNKNOWN] To minimize this error,
+[00:57:33.380] [UNKNOWN] I use the gradient
+[00:57:35.380] [UNKNOWN] descent. Okay?
+[00:57:38.920] [UNKNOWN] Make sense? Okay.
+[00:57:42.260] [UNKNOWN] And because only this function is
+[00:57:45.320] [UNKNOWN] convex, right? So I can
+[00:57:47.320] [UNKNOWN] I can apply the gradient descent.
+[00:57:53.380] [UNKNOWN] Okay. So, now that's the point
+[00:57:58.449] [UNKNOWN] that I can think
+[00:58:00.579] [UNKNOWN] about, okay, which one is good?
+[00:58:02.579] [UNKNOWN] Gradient descent or least square
+[00:58:04.579] [UNKNOWN] error? Okay, close one.
+[00:58:06.769] [UNKNOWN] So,
+[00:58:13.059] [UNKNOWN] for gradient descent, what is important?
+[00:58:15.059] [UNKNOWN] I need to find the
+[00:58:17.059] [UNKNOWN] I need to choose a learning rate.
+[00:58:19.730] [UNKNOWN] It shouldn't be too small, it shouldn't be
+[00:58:21.730] [UNKNOWN] very big. I need to
+[00:58:23.730] [UNKNOWN] Okay.
+[00:58:25.730] [UNKNOWN] And the other thing is that
+[00:58:27.730] [UNKNOWN] it needs many iterations.
+[00:58:30.239] [UNKNOWN] Okay? It needs many, maybe
+[00:58:32.239] [UNKNOWN] takes time. Okay?
+[00:58:35.880] [UNKNOWN] So, on the other hand,
+[00:58:37.880] [UNKNOWN] for least square error
+[00:58:39.880] [UNKNOWN] or close one,
+[00:58:41.880] [UNKNOWN] you don't need to choose any learning rate
+[00:58:43.880] [UNKNOWN] because we don't have any learning rate
+[00:58:45.880] [UNKNOWN] here, right? So, what is
+[00:58:47.880] [UNKNOWN] what we have is just this.
+[00:58:49.880] [UNKNOWN] Okay? Take the point,
+[00:58:52.159] [UNKNOWN] construct x,
+[00:58:54.550] [UNKNOWN] construct y, and then
+[00:58:56.550] [UNKNOWN] multiply them together. The only cost
+[00:58:59.570] [UNKNOWN] here is the cost of finding
+[00:59:01.570] [UNKNOWN] inverse. Okay?
+[00:59:03.699] [UNKNOWN] So, one limitation
+[00:59:05.860] [UNKNOWN] here is that
+[00:59:11.030] [UNKNOWN] okay, the advantage is that it doesn't
+[00:59:13.030] [UNKNOWN] need any iteration. Okay?
+[00:59:15.030] [UNKNOWN] x transpose x is
+[00:59:17.030] [UNKNOWN] okay. We can, with any square
+[00:59:19.030] [UNKNOWN] we can find because
+[00:59:21.190] [UNKNOWN] multiplication of two functions,
+[00:59:23.190] [UNKNOWN] two matrices. Okay? Every row,
+[00:59:25.570] [UNKNOWN] every column.
+[00:59:29.010] [UNKNOWN] Limitation here is that some of
+[00:59:31.010] [UNKNOWN] the matrices is not invariant.
+[00:59:33.010] [UNKNOWN] Okay?
+[00:59:35.269] [UNKNOWN] That means that you can't use
+[00:59:37.269] [UNKNOWN] this
+[00:59:39.940] [UNKNOWN] anytime.
+[00:59:42.360] [UNKNOWN] But this one is okay. You can use
+[00:59:44.360] [UNKNOWN] for
+[00:59:46.360] [UNKNOWN] almost all the data
+[00:59:48.360] [UNKNOWN] for
+[00:59:50.389] [UNKNOWN] data sets that you have.
+[01:00:04.260] [UNKNOWN] Okay. On the other hand,
+[01:00:06.900] [UNKNOWN] another limitation here is that
+[01:00:08.900] [UNKNOWN] if n is big,
+[01:00:10.900] [UNKNOWN] again, calculation of
+[01:00:12.929] [UNKNOWN] the inverse is
+[01:00:14.929] [UNKNOWN] it's kind of complex.
+[01:00:18.559] [UNKNOWN] Okay?
+[01:00:20.880] [UNKNOWN] So,
+[01:00:25.250] [UNKNOWN] that's why, like, when your
+[01:00:27.250] [UNKNOWN] n number of points
+[01:00:29.349] [UNKNOWN] is higher,
+[01:00:31.349] [UNKNOWN] in reality, we have too much points, right?
+[01:00:33.349] [UNKNOWN] So,
+[01:00:35.730] [UNKNOWN] we don't recommend this one
+[01:00:37.730] [UNKNOWN] because it's getting very slow.
+[01:00:39.730] [UNKNOWN] Why? Because the calculation
+[01:00:41.730] [UNKNOWN] of the inverse. And also,
+[01:00:43.989] [UNKNOWN] the other limitation is that
+[01:00:45.989] [UNKNOWN] always inverse is not
+[01:00:47.989] [UNKNOWN] available. Okay?
+[01:00:50.599] [UNKNOWN] So, that's why we use the gradient.
+[01:00:52.599] [UNKNOWN] We send majorly in practice.
+[01:00:54.599] [UNKNOWN] Okay?
+[01:00:56.630] [UNKNOWN] And the recommendation here is that
+[01:00:58.630] [UNKNOWN] if your data points
+[01:01:00.630] [UNKNOWN] are under 1000 points,
+[01:01:03.139] [UNKNOWN] you can apply NSS.
+[01:01:05.429] [UNKNOWN] Otherwise, go to
+[01:01:07.619] [UNKNOWN] gradient. Okay?
+[01:01:12.690] [UNKNOWN] Because when it's under 1000,
+[01:01:14.690] [UNKNOWN] it doesn't take too much time
+[01:01:16.690] [UNKNOWN] to calculate those matrices.
+[01:01:18.690] [UNKNOWN] Express with x in there.
+[01:01:22.070] [UNKNOWN] Other than that, it's gonna be
+[01:01:26.449] [UNKNOWN] computationally expensive.
+[01:01:28.449] [UNKNOWN] So, that's why, like,
+[01:01:30.449] [UNKNOWN] we prefer gradient.
+[01:01:34.340] [UNKNOWN] So, which one is used
+[01:01:37.039] [UNKNOWN] in practice?
+[01:01:41.349] [UNKNOWN] Because in practice, the number of
+[01:01:43.349] [UNKNOWN] points is not 1000.
+[01:01:46.280] [UNKNOWN] It's not this simple toy problem.
+[01:01:48.280] [UNKNOWN] This is a simple toy
+[01:01:50.309] [UNKNOWN] problem. Yes, if they
+[01:01:52.309] [UNKNOWN] take a point, it's probably just 1000.
+[01:01:54.309] [UNKNOWN] And it's okay. You can use
+[01:01:56.309] [UNKNOWN] the NSS.
+[01:01:58.309] [UNKNOWN] Okay? This is correct. Okay.
+[01:02:30.420] [UNKNOWN] I think last time I
+[01:02:32.420] [UNKNOWN] talked about the
+[01:02:34.420] [UNKNOWN] over-fitting.
+[01:02:36.610] [UNKNOWN] Right? But
+[01:02:38.610] [UNKNOWN] let's
+[01:02:40.869] [UNKNOWN] focus a little bit more
+[01:02:42.869] [UNKNOWN] on what is over-fitting.
+[01:02:45.570] [UNKNOWN] Suppose that you have some data points here.
+[01:02:47.570] [UNKNOWN] Like x
+[01:02:50.050] [UNKNOWN] and y, right?
+[01:02:52.050] [UNKNOWN] And you want to fit a function.
+[01:02:54.050] [UNKNOWN] Because it has less than 1000,
+[01:02:56.050] [UNKNOWN] I can apply simply
+[01:02:59.010] [UNKNOWN] the formula
+[01:03:01.010] [UNKNOWN] x transpose
+[01:03:04.039] [UNKNOWN] x inverse x transpose y.
+[01:03:06.039] [UNKNOWN] Okay? So,
+[01:03:08.039] [UNKNOWN] that means that
+[01:03:12.150] [UNKNOWN] suppose that
+[01:03:14.179] [UNKNOWN] I want to
+[01:03:16.719] [UNKNOWN] find the best polynomial
+[01:03:21.219] [UNKNOWN] of degree 2. Okay?
+[01:03:23.219] [UNKNOWN] Because I see that this is not exactly linear.
+[01:03:25.219] [UNKNOWN] What I see is that
+[01:03:27.219] [UNKNOWN] something like polynomial.
+[01:03:29.480] [UNKNOWN] Right? It's not linear.
+[01:03:31.889] [UNKNOWN] So, let's take this one.
+[01:03:33.889] [UNKNOWN] Just that degree of 2.
+[01:03:35.889] [UNKNOWN] And based on that,
+[01:03:37.889] [UNKNOWN] I can
+[01:03:40.280] [UNKNOWN] just fit the values.
+[01:03:42.280] [UNKNOWN] Right? So,
+[01:03:44.280] [UNKNOWN] for each x, I have its y.
+[01:03:46.280] [UNKNOWN] So, I can calculate
+[01:03:48.280] [UNKNOWN] x squared,
+[01:03:50.280] [UNKNOWN] x and 1,
+[01:03:52.280] [UNKNOWN] and this is the y.
+[01:03:54.599] [UNKNOWN] Maybe you see that sometimes this 1
+[01:03:56.599] [UNKNOWN] are here. Okay?
+[01:03:59.079] [UNKNOWN] It's also okay.
+[01:04:01.079] [UNKNOWN] Then it's going to be 1, 1, 1.
+[01:04:03.079] [UNKNOWN] Then x, then x squared.
+[01:04:05.079] [UNKNOWN] You can exchange the values.
+[01:04:07.079] [UNKNOWN] Okay? First column is 1.
+[01:04:09.940] [UNKNOWN] That column is x squared.
+[01:04:11.940] [UNKNOWN] Like what we had
+[01:04:14.420] [UNKNOWN] over here.
+[01:04:17.480] [UNKNOWN] Right?
+[01:04:21.489] [UNKNOWN] Okay? So,
+[01:04:25.320] [UNKNOWN] theta 2 is x2,
+[01:04:27.730] [UNKNOWN] x1, and this is
+[01:04:29.730] [UNKNOWN] just the rows constant. Okay.
+[01:04:32.760] [UNKNOWN] If I go based on that,
+[01:04:34.760] [UNKNOWN] if I go based on
+[01:04:39.090] [UNKNOWN] this, x,
+[01:04:41.280] [UNKNOWN] and then y,
+[01:04:43.280] [UNKNOWN] and then if I
+[01:04:45.280] [UNKNOWN] apply the old values,
+[01:04:47.280] [UNKNOWN] the optimal coefficient
+[01:04:49.280] [UNKNOWN] for me is going to be 0.68,
+[01:04:51.280] [UNKNOWN] 1.74,
+[01:04:53.280] [UNKNOWN] 1.73,
+[01:04:55.280] [UNKNOWN] and then,
+[01:04:57.280] [UNKNOWN] in other words,
+[01:04:59.440] [UNKNOWN] I will have
+[01:05:01.440] [UNKNOWN] order-2 polynomial,
+[01:05:03.440] [UNKNOWN] polynomial of the
+[01:05:10.239] [UNKNOWN] , right?
+[01:05:15.000] [UNKNOWN] Any questions so far?
+[01:05:17.860] [UNKNOWN] Is this clear or not?
+[01:05:20.719] [UNKNOWN] Is there any question here?
+[01:05:22.719] [UNKNOWN] Just interrupt me
+[01:05:24.719] [UNKNOWN] if there isn't anything clear,
+[01:05:26.719] [UNKNOWN] just interrupt me because
+[01:05:28.719] [UNKNOWN] I don't want to continue
+[01:05:31.429] [UNKNOWN] if someone has some questions.
+[01:05:33.519] [UNKNOWN] Just ask your question.
+[01:05:35.519] [UNKNOWN] Any type of question is okay, okay?
+[01:05:45.960] [UNKNOWN] You don't have simple or complicated questions.
+[01:05:49.440] [UNKNOWN] What I did is want to summarize.
+[01:05:59.570] [UNKNOWN] I have some points, and then I assume that the function here is the, for example, degree of 2.
+[01:06:08.360] [UNKNOWN] And then I find that order 2 or degree of 2 polynomial.
+[01:06:16.280] [UNKNOWN] Okay, how?
+[01:06:17.440] [UNKNOWN] Using the closed form.
+[01:06:19.619] [UNKNOWN] Or maybe you can apply the gradient descent.
+[01:06:24.320] [UNKNOWN] Okay?
+[01:06:25.079] [UNKNOWN] Both of them are going to return a function like this.
+[01:06:28.659] [UNKNOWN] Okay.
+[01:06:31.099] [UNKNOWN] So what I have here is that, like, some of those are not exactly feet.
+[01:06:36.739] [UNKNOWN] All right?
+[01:06:37.579] [UNKNOWN] So some of those are very close, but this point is not.
+[01:06:42.260] [UNKNOWN] Okay, let's increase the order from 2 to 3.
+[01:06:46.340] [UNKNOWN] Okay?
+[01:06:47.440] [UNKNOWN] Is this one better?
+[01:06:48.519] [UNKNOWN] Is this one better or this one?
+[01:06:56.929] [UNKNOWN] Visually, I see that.
+[01:06:58.190] [UNKNOWN] Like, still, I have some error.
+[01:07:01.750] [UNKNOWN] Okay?
+[01:07:02.190] [UNKNOWN] Maybe this one is better.
+[01:07:04.750] [UNKNOWN] Okay? So degree 2.
+[01:07:22.679] [UNKNOWN] Not too much difference, right?
+[01:07:25.639] [UNKNOWN] So that's why, like, they are close to each other, the amount of error they have.
+[01:07:30.530] [UNKNOWN] Let's increase that one to this one, order 4.
+[01:07:35.449] [UNKNOWN] Okay? If I have more points, probably it shows that the degree of 4 is better.
+[01:07:43.980] [UNKNOWN] Okay. But.
+[01:07:45.579] [UNKNOWN] What I'm doing, I'm increasing that one to order 5.
+[01:07:50.550] [UNKNOWN] Order 6. You see that I want to cover every point.
+[01:07:55.969] [UNKNOWN] Order 7. Okay.
+[01:07:59.570] [UNKNOWN] Order 8. Okay, what happened in order 8?
+[01:08:06.199] [UNKNOWN] The function I feed is almost covering every point.
+[01:08:10.519] [UNKNOWN] Exactly. For this one, this one, this one, the error is zero.
+[01:08:15.190] [UNKNOWN] Maybe I have just some small, very small error here.
+[01:08:19.170] [UNKNOWN] Okay?
+[01:08:20.500] [UNKNOWN] Then, if I increase the order from 8 to 9, it can cover, it can feed every single point.
+[01:08:30.960] [UNKNOWN] Is it good?
+[01:08:32.039] [UNKNOWN] It's not good, right?
+[01:08:37.880] [UNKNOWN] Why it's not good?
+[01:08:41.470] [UNKNOWN] Because if I look at, I look at these data points, I see that, like, generally the type
+[01:08:51.319] [UNKNOWN] of relationship should be something like this.
+[01:08:54.670] [UNKNOWN] Maybe this point is an outlier.
+[01:08:57.369] [UNKNOWN] It's a kind of noise.
+[01:08:58.750] [UNKNOWN] Mm-hmm.
+[01:08:58.989] [UNKNOWN] Or maybe I have.
+[01:08:59.869] [UNKNOWN] Let's say I have one point here, one point here, or one point here.
+[01:09:04.369] [UNKNOWN] If I increase the order, what's going to happen?
+[01:09:08.229] [UNKNOWN] It's going to learn every single point.
+[01:09:11.029] [UNKNOWN] Every single point.
+[01:09:12.029] [UNKNOWN] For example, if I have one point here, it's still this function.
+[01:09:15.939] [UNKNOWN] It's going to learn that one.
+[01:09:18.409] [UNKNOWN] But that's a kind of, like, noise.
+[01:09:22.300] [UNKNOWN] Maybe I have some points.
+[01:09:23.500] [UNKNOWN] Some of the data points are kind of like outliers, right?
+[01:09:29.510] [UNKNOWN] For example, you are in a class.
+[01:09:32.460] [UNKNOWN] Okay?
+[01:09:32.600] [UNKNOWN] So everyone is good, or average about, or around, so maybe someone is, like, kind of,
+[01:09:40.659] [UNKNOWN] like, very good, or someone is not very good, right?
+[01:09:44.699] [UNKNOWN] It's opposite of each other.
+[01:09:46.680] [UNKNOWN] But if you want to see the function, in general, you should know that what is the best function
+[01:09:53.100] [UNKNOWN] for that.
+[01:09:54.229] [UNKNOWN] Some of points can be outliers, okay?
+[01:09:58.239] [UNKNOWN] I'm talking majorly about the, for example, the point, which is far from the average,
+[01:10:03.159] [UNKNOWN] or far from the, you know, how you have, okay, far from this, like, very bad, for example.
+[01:10:09.869] [UNKNOWN] So those are some, let's say, outlier points in general.
+[01:10:14.569] [UNKNOWN] Or maybe, like, in any context, you can make maybe some show.
+[01:10:22.760] [UNKNOWN] Yes, if you increase the degree of your polynomial, maybe you can hit every single point, but
+[01:10:36.649] [UNKNOWN] some of those points.
+[01:10:37.609] [UNKNOWN] Okay?
+[01:10:38.189] [UNKNOWN] Noise.
+[01:10:39.680] [UNKNOWN] Outlier.
+[01:10:40.640] [UNKNOWN] Noise.
+[01:10:41.319] [UNKNOWN] Okay?
+[01:10:41.859] [UNKNOWN] So we don't want to learn the noise.
+[01:10:44.479] [UNKNOWN] Okay?
+[01:10:45.319] [UNKNOWN] So what would be the issue if I learned the noise here?
+[01:10:48.899] [UNKNOWN] For example, here.
+[01:10:52.050] [UNKNOWN] In this example, why do you think that it's a problem?
+[01:10:57.890] [UNKNOWN] Because suppose that next time I want to add a point here, like this one, here.
+[01:11:05.600] [UNKNOWN] Okay?
+[01:11:06.699] [UNKNOWN] Do you see the cursor?
+[01:11:10.140] [UNKNOWN] Okay.
+[01:11:10.460] [UNKNOWN] Okay.
+[01:11:10.760] [UNKNOWN] Suppose that I have a point here.
+[01:11:13.079] [UNKNOWN] Okay.
+[01:11:13.239] [UNKNOWN] Okay.
+[01:11:13.300] [UNKNOWN] Okay.
+[01:11:13.659] [UNKNOWN] This is a common point.
+[01:11:14.800] [UNKNOWN] This is a common point, right?
+[01:11:16.180] [UNKNOWN] But that's an unseen point.
+[01:11:18.829] [UNKNOWN] I have a new, let's say, the sample.
+[01:11:23.560] [UNKNOWN] For that sample, I want to see what is the y of that point.
+[01:11:27.619] [UNKNOWN] Okay?
+[01:11:28.340] [UNKNOWN] So if I have a point here, my expectation is that that point's y should be, because
+[01:11:39.819] [UNKNOWN] you see that's a kind of, like, increase, right?
+[01:11:42.590] [UNKNOWN] Something like this.
+[01:11:44.390] [UNKNOWN] If I have a point here, it's y should be something this error.
+[01:11:50.210] [UNKNOWN] But based on this, based on this, it's y should be a point right here.
+[01:11:58.100] [UNKNOWN] You know what I mean?
+[01:11:59.880] [UNKNOWN] Because you see that this function is, like, a kind of, like, a sine is all right.
+[01:12:05.149] [UNKNOWN] So it's going up, down, going up, maybe some down here, because we don't see.
+[01:12:11.609] [UNKNOWN] So if I have an x here, it's y is going to be negative.
+[01:12:16.880] [UNKNOWN] Okay?
+[01:12:16.960] [UNKNOWN] Okay.
+[01:12:17.039] [UNKNOWN] But for that x, it should be something around here.
+[01:12:24.479] [UNKNOWN] Okay?
+[01:12:26.779] [UNKNOWN] But what if, rather than this, I had a simple linear function?
+[01:12:32.619] [UNKNOWN] Which one was better?
+[01:12:36.579] [UNKNOWN] Linear, right?
+[01:12:37.619] [UNKNOWN] A linear function.
+[01:12:39.380] [UNKNOWN] Or, I mean, if you have such a thing, if you have such a thing, or something like this,
+[01:12:48.420] [UNKNOWN] degree of three, let's say, just degree of two.
+[01:12:56.810] [UNKNOWN] Okay?
+[01:12:57.090] [UNKNOWN] Okay?
+[01:12:57.449] [UNKNOWN] Okay.
+[01:12:57.569] [UNKNOWN] Okay.
+[01:12:57.630] [UNKNOWN] Okay.
+[01:12:57.689] [UNKNOWN] Okay.
+[01:12:57.729] [UNKNOWN] Okay.
+[01:12:57.750] [UNKNOWN] Okay.
+[01:12:57.770] [UNKNOWN] Okay.
+[01:12:57.789] [UNKNOWN] Okay.
+[01:12:57.850] [UNKNOWN] Okay.
+[01:12:57.869] [UNKNOWN] Okay.
+[01:12:57.890] [UNKNOWN] Okay.
+[01:12:58.130] [UNKNOWN] Okay.
+[01:12:58.149] [UNKNOWN] Okay.
+[01:12:58.289] [UNKNOWN] It's not that.
+[01:12:58.310] [UNKNOWN] It's not that.
+[01:12:58.350] [UNKNOWN] Okay.
+[01:12:58.449] [UNKNOWN] Okay.
+[01:12:58.510] [UNKNOWN] Okay.
+[01:12:58.529] [UNKNOWN] If you are going to consider any point here, its output is going to be here.
+[01:13:03.449] [UNKNOWN] Okay?
+[01:13:04.600] [UNKNOWN] You consider any point.
+[01:13:06.479] [UNKNOWN] Like, if I have a point here, its y is going to be here.
+[01:13:11.119] [UNKNOWN] It's something we expect.
+[01:13:14.720] [UNKNOWN] Okay?
+[01:13:15.560] [UNKNOWN] What is the, what is the learning for?
+[01:13:24.840] [UNKNOWN] Take away.
+[01:13:25.960] [UNKNOWN] The takeaway here is that if you make your model complex, if you make your model complex,
+[01:13:36.729] [UNKNOWN] in other words, it is there.
+[01:13:38.670] [UNKNOWN] order of your function, right?
+[01:13:43.550] [UNKNOWN] It's good, but it's just for
+[01:13:48.319] [UNKNOWN] your training data. You can fit, you see that you can fit
+[01:13:53.909] [UNKNOWN] your function on any point.
+[01:13:58.140] [UNKNOWN] For that one, you have the target, okay? But what if
+[01:14:02.119] [UNKNOWN] for unseen data, okay, or for your test data?
+[01:14:09.989] [UNKNOWN] If you have a new point, which is not available in your
+[01:14:13.630] [UNKNOWN] initial set, if your model is complicated,
+[01:14:20.680] [UNKNOWN] those unseen data, there's a
+[01:14:24.500] [UNKNOWN] high chance of error. There's a high chance that
+[01:14:29.050] [UNKNOWN] the model cannot detect those very well.
+[01:14:33.279] [UNKNOWN] Because you made your model complex
+[01:14:35.600] [UNKNOWN] and you learned the noises, so those noises is going to be
+[01:14:41.840] [UNKNOWN] something. Okay, this issue is called overfitting.
+[01:14:47.310] [UNKNOWN] So overfitting means that your
+[01:14:51.390] [UNKNOWN] model performs well on your training data
+[01:14:55.609] [UNKNOWN] but not necessarily on the test data.
+[01:14:59.970] [UNKNOWN] In other words, the amount of error you see on
+[01:15:03.649] [UNKNOWN] training data is lower for test data
+[01:15:07.569] [UNKNOWN] is higher. It's not good. It's overfitting.
+[01:15:11.819] [UNKNOWN] This model is nothing. We don't consider that.
+[01:15:17.510] [UNKNOWN] A good model is that. Like what if, for example,
+[01:15:20.810] [UNKNOWN] let's say I have a
+[01:15:23.789] [UNKNOWN] model. This is a question for you guys.
+[01:15:26.529] [UNKNOWN] So I have a model. So why don't you change your location?
+[01:15:32.550] [UNKNOWN] I'll ask you to stay here. Okay, no, no.
+[01:15:34.829] [UNKNOWN] Just, just.
+[01:15:36.380] [UNKNOWN] Okay, so suppose that you have a model A.
+[01:15:48.420] [UNKNOWN] Model A and your training data, you have 2,000 training data,
+[01:15:57.029] [UNKNOWN] okay, like 2,000 points like this, okay?
+[01:16:01.760] [UNKNOWN] And then you fit a model a polynomial of degree 9, or whatever,
+[01:16:08.899] [UNKNOWN] and the error you get is, for example, 10.
+[01:16:13.920] [UNKNOWN] Okay? The error that you get as y minus y ha Click
+[01:16:19.359] [UNKNOWN] and then from you normalize that point to the number of point
+[01:16:23.140] [UNKNOWN] and you get 10. It shows that, for each point,
+[01:16:28.079] [UNKNOWN] the error in average is 10, okay? This is the model A.
+[01:16:35.640] [UNKNOWN] Then you apply that one, and then overfitting.
+[01:16:36.979] [UNKNOWN] that model in your on-scene data. And you got the error of like 200, okay? So 10 for training data,
+[01:16:50.159] [UNKNOWN] 204 testing. The second model is like this. It's a simple model, just a degree of 2. And you got
+[01:17:01.289] [UNKNOWN] the error of 30 for training and 4 tests. 30-30. Which one do you prefer? Second or the second
+[01:17:13.300] [UNKNOWN] model? Why do you think, why do you like the second? And then what is important for us? Yeah,
+[01:17:28.539] [UNKNOWN] stable, but what is important for us? Suppose that, let's make example in reality. Suppose that
+[01:17:36.430] [UNKNOWN] you want to create a machine learning model to predict the price of houses in Great Bank, in
+[01:17:43.810] [UNKNOWN] downtown Vancouver, okay? You have some points. And then you train a model. It works perfect. But
+[01:17:52.579] [UNKNOWN] you know,
+[01:17:54.340] [UNKNOWN] those data, you don't need those information. What is important is that it predicts something,
+[01:18:00.640] [UNKNOWN] predicts for something that you don't know the price of that. You know what I mean? So I mean
+[01:18:10.649] [UNKNOWN] that if your model that was perfect on training data, because I don't need, I know what is the
+[01:18:19.689] [UNKNOWN] price of, for example, this building. I don't know what is the price of the second, okay? So that's
+[01:18:28.670] [UNKNOWN] why, like,
+[01:18:29.390] [UNKNOWN] training data is not something that we do. It's an indicator, but it's not everything, okay? So our
+[01:18:39.079] [UNKNOWN] prediction model, like, suppose that you have prediction for weather, right? You want to forecast
+[01:18:45.520] [UNKNOWN] what will be the next week's, I mean, temperature. And you have a machine learning model. It's trained
+[01:18:52.350] [UNKNOWN] on something. For those trained data, of course, it should, works perfect, right? 100. Something
+[01:19:00.159] [UNKNOWN] like memorizing.
+[01:19:01.039] [UNKNOWN] Okay?
+[01:19:02.619] [UNKNOWN] The good thing is that it should reason. It should, something like, can predict on seeing data, okay?
+[01:19:12.829] [UNKNOWN] That's why. In reality, what is important is that the model should perform well for both training and
+[01:19:24.460] [UNKNOWN] test. If it's like a training is very good, but test is not good, it's, I personally prefer a model
+[01:19:35.100] [UNKNOWN] which train and test are,
+[01:19:37.260] [UNKNOWN] Great.
+[01:19:37.760] [UNKNOWN] like, we, are, okay. Then training is perfect. So is better than, much better than, for
+[01:19:47.460] [UNKNOWN] example, 10 and 200. for train and test. Is much better than error of 10 for
+[01:19:54.029] [UNKNOWN] training. But for, we, call this, what as an over-fitting, in other words, we's, we can, of our
+[01:20:02.899] [UNKNOWN] model is not generalizable. Okay? So generalizable means that our models are, you're wrong, okay?
+[01:20:10.159] [UNKNOWN] ORT
+[01:20:16.180] [UNKNOWN] model should perform well on test data as well.
+[01:20:23.289] [UNKNOWN] It's something that's like a very common.
+[01:20:26.729] [UNKNOWN] And also like if you go and work in industrial,
+[01:20:29.890] [UNKNOWN] in academia, it's something that if you make
+[01:20:33.140] [UNKNOWN] a machine learning model, first thing you need to check,
+[01:20:36.460] [UNKNOWN] okay, how's my model?
+[01:20:39.170] [UNKNOWN] It's good.
+[01:20:40.289] [UNKNOWN] Is it good for the test data as well?
+[01:20:42.569] [UNKNOWN] If not, change it, think about your model,
+[01:20:45.289] [UNKNOWN] change it to something, make it simple.
+[01:20:48.029] [UNKNOWN] Maybe you have, you made it very complicated.
+[01:20:53.829] [UNKNOWN] In reality, something like, sometimes, you know,
+[01:20:56.289] [UNKNOWN] you are overthinking on something, right?
+[01:20:59.810] [UNKNOWN] You don't need to think that much.
+[01:21:02.399] [UNKNOWN] So when you are overthinking on simple problems,
+[01:21:06.260] [UNKNOWN] also, you can't make a good decision.
+[01:21:10.409] [UNKNOWN] Sometimes you prefer, okay, let's take it casual, right?
+[01:21:15.119] [UNKNOWN] The simple thinking is the best, right?
+[01:21:19.800] [UNKNOWN] But casual is not the best.
+[01:21:21.340] [UNKNOWN] It's not also okay, like some say teaching, right?
+[01:21:26.340] [UNKNOWN] Machine learning models, we have the same, okay?
+[01:21:34.100] [UNKNOWN] Overfitting is a very common question.
+[01:21:37.329] [UNKNOWN] In interviews, like, as far as overfitting,
+[01:21:41.090] [UNKNOWN] the first question, you go to machine learning
+[01:21:44.130] [UNKNOWN] or data science, one of the theoretical questions is that,
+[01:21:48.810] [UNKNOWN] suppose you have a model.
+[01:21:50.979] [UNKNOWN] How do you know that there is overfitting?
+[01:21:53.520] [UNKNOWN] The answer is that, okay, check the error
+[01:21:55.199] [UNKNOWN] between train and test.
+[01:21:57.119] [UNKNOWN] Okay.
+[01:21:58.060] [UNKNOWN] How do you know that they are close to each other?
+[01:21:59.060] [UNKNOWN] No, it's overfitting.
+[01:22:01.140] [UNKNOWN] How we can prevent overfitting?
+[01:22:04.560] [UNKNOWN] One way is making the model not too much complicated.
+[01:22:10.699] [UNKNOWN] So there are some ways that we can do that.
+[01:22:19.720] [UNKNOWN] Okay, so I think a lot of them are talking about the same.
+[01:22:25.279] [UNKNOWN] You want to find the hypothesis, hypothesis is the model.
+[01:22:30.289] [UNKNOWN] Which explain perfectly on training data,
+[01:22:33.909] [UNKNOWN] but cannot generalize to,
+[01:22:36.189] [UNKNOWN] it's a problem of overfitting.
+[01:22:41.560] [UNKNOWN] So, yeah, in this example that we had,
+[01:22:49.640] [UNKNOWN] we have, for example, lots of parameters,
+[01:22:52.560] [UNKNOWN] those dates, W0, W1, right, those coefficient.
+[01:22:57.180] [UNKNOWN] So how does this match the data point exactly?
+[01:23:00.319] [UNKNOWN] Yeah.
+[01:23:01.359] [UNKNOWN] For order of nine, but it's one everywhere else.
+[01:23:07.939] [UNKNOWN] So 500 everywhere else, right?
+[01:23:10.899] [UNKNOWN] Mm-hmm. It's one of them, right?
+[01:23:13.840] [UNKNOWN] It's one of the important points in machine learning.
+[01:23:17.239] [UNKNOWN] Okay, here is another example of overfitting.
+[01:23:21.359] [UNKNOWN] So degree of zero, what is the degree of zero?
+[01:23:26.850] [UNKNOWN] Flat, right?
+[01:23:27.689] [UNKNOWN] Mm-hmm.
+[01:23:28.510] [UNKNOWN] Just a flat line.
+[01:23:29.329] [UNKNOWN] Flat line.
+[01:23:30.170] [UNKNOWN] Right, this line?
+[01:23:31.750] [UNKNOWN] Yeah.
+[01:23:32.590] [UNKNOWN] It doesn't have any slope.
+[01:23:33.430] [UNKNOWN] Yeah.
+[01:23:34.270] [UNKNOWN] So when the degree is zero,
+[01:23:35.329] [UNKNOWN] you start from degree of zero,
+[01:23:37.710] [UNKNOWN] not degree of zero or zero.
+[01:23:40.600] [UNKNOWN] Then we increase to degree of one,
+[01:23:43.979] [UNKNOWN] and find the best degree of one.
+[01:23:46.279] [UNKNOWN] How?
+[01:23:46.880] [UNKNOWN] We can use the gradient descent,
+[01:23:49.899] [UNKNOWN] or we can use the closed form, right?
+[01:23:52.380] [UNKNOWN] So return this line.
+[01:23:55.380] [UNKNOWN] I see still, I see that it's not with feet.
+[01:23:59.260] [UNKNOWN] Increase that one to two, then three, right?
+[01:24:06.069] [UNKNOWN] The red line is our feet function.
+[01:24:10.739] [UNKNOWN] The green line is, in reality, where one is at, okay?
+[01:24:14.300] [UNKNOWN] Ground control.
+[01:24:15.439] [UNKNOWN] Okay.
+[01:24:16.279] [UNKNOWN] So still we have some error,
+[01:24:18.140] [UNKNOWN] but if I increase too much,
+[01:24:21.340] [UNKNOWN] it's going to be degree of nine.
+[01:24:23.199] [UNKNOWN] We're going to be learning every single points,
+[01:24:26.840] [UNKNOWN] and it's overfitting, okay?
+[01:24:32.029] [UNKNOWN] So the higher the degree of polynomial M,
+[01:24:34.409] [UNKNOWN] the more degree of freedom, and more capacity to overfitting.
+[01:24:45.500] [UNKNOWN] There is one slide here, which I believe, explain that one.
+[01:24:51.640] [UNKNOWN] Yeah, I may need some time for this.
+[01:24:56.399] [UNKNOWN] So, but in general, I want to say that, you know,
+[01:25:00.159] [UNKNOWN] I want to explain this, maybe up here, okay?
+[01:25:26.869] [UNKNOWN] So one way to prevent overfitting is making the model simple, okay?
+[01:25:40.250] [UNKNOWN] Making the model simple means that I don't want something
+[01:25:43.949] [UNKNOWN] like this, very simple, very simple, but something
+[01:25:48.359] [UNKNOWN] that is not complicated, but at the same time,
+[01:25:55.409] [UNKNOWN] I don't want to see too much error, okay?
+[01:25:59.329] [UNKNOWN] So.
+[01:26:03.100] [UNKNOWN] If you're not having too much error, what I can use,
+[01:26:06.319] [UNKNOWN] I can find the error of the model, okay?
+[01:26:11.800] [UNKNOWN] Like y minus y hat, right?
+[01:26:15.859] [UNKNOWN] So I want to minimize it.
+[01:26:20.189] [UNKNOWN] If I minimize that one, in other words,
+[01:26:23.340] [UNKNOWN] the error of the model is going to be small.
+[01:26:29.029] [UNKNOWN] But the error of this one, and the error of this one is also small,
+[01:26:35.029] [UNKNOWN] but this one is almost zero.
+[01:26:38.020] [UNKNOWN] Here, probably, you have some error like this, okay?
+[01:26:43.479] [UNKNOWN] At the same time, what I can control is that how much,
+[01:26:48.800] [UNKNOWN] what is the summation of the coefficients?
+[01:26:54.239] [UNKNOWN] Is this going too much up or down?
+[01:26:57.939] [UNKNOWN] That means that, like, here, if I go on this example, okay?
+[01:27:10.859] [UNKNOWN] So if these values are going to very big numbers, very big numbers,
+[01:27:17.340] [UNKNOWN] it shows that you have w2, w1x, w2x3 plus w4, w2x squared plus w3x cubed, right?
+[01:27:29.989] [UNKNOWN] If these values of w are getting bigger number,
+[01:27:34.180] [UNKNOWN] it shows that your model is complicated, okay?
+[01:27:38.430] [UNKNOWN] In other words, going up and down, too much up and down.
+[01:27:43.100] [UNKNOWN] So it's too much up and down.
+[01:27:47.390] [UNKNOWN] It's too much up and down means that,
+[01:27:50.630] [UNKNOWN] this values coefficients are big number.
+[01:27:57.520] [UNKNOWN] If you make those values smaller, your model,
+[01:28:06.180] [UNKNOWN] your model will not have some jobs like this, okay?
+[01:28:11.850] [UNKNOWN] So what is important here, I want to mention this.
+[01:28:16.880] [UNKNOWN] At the same time, just think about this.
+[01:28:19.239] [UNKNOWN] At the same time that you want to decrease loss function,
+[01:28:22.819] [UNKNOWN] loss function is error, you want to have
+[01:28:27.789] [UNKNOWN] those coefficients small, as small as possible, okay?
+[01:28:35.250] [UNKNOWN] As small as possible.
+[01:28:37.550] [UNKNOWN] So if I don't have this one, just have the loss function,
+[01:28:41.649] [UNKNOWN] what is this object function?
+[01:28:46.090] [UNKNOWN] Objective function that we discussed, error, right?
+[01:28:48.630] [UNKNOWN] Y minus y hat squared.
+[01:28:52.789] [UNKNOWN] But it's a multi-object, so I say that at the same time
+[01:28:56.609] [UNKNOWN] that I want to keep the error, like, small, I don't want to have,
+[01:29:03.800] [UNKNOWN] you know, very big code, okay?
+[01:29:09.090] [UNKNOWN] Rather than minimizing this, I can minimize this too, okay?
+[01:29:17.300] [UNKNOWN] That means that at the same time, error of the model should be small,
+[01:29:22.989] [UNKNOWN] but I don't want to see these big jobs.
+[01:29:26.359] [UNKNOWN] To control those big jobs, you need minimize, okay?
+[01:29:37.369] [UNKNOWN] Take code like that, if you have, for example, w0 plus w1,
+[01:29:42.250] [UNKNOWN] because it could be positive or negative.
+[01:29:45.250] [UNKNOWN] So we take the absolute value, okay?
+[01:29:50.699] [UNKNOWN] Forget about this lambda, what is that for now?
+[01:29:53.739] [UNKNOWN] Suppose lambda is 1, okay?
+[01:29:58.069] [UNKNOWN] So this is called the regularization.
+[01:30:02.689] [UNKNOWN] Regularization means that you want to regularize your coefficient.
+[01:30:06.930] [UNKNOWN] Rather than absolute value of coefficient, sometimes we use the square.
+[01:30:18.170] [UNKNOWN] So this one is called l1, this is called l2 regularizing.
+[01:30:29.159] [UNKNOWN] They're not, in reality, too much,
+[01:30:30.899] [UNKNOWN] they're not the same thing, but rather than summation of coefficient,
+[01:30:36.579] [UNKNOWN] we have the summation of this square in l2 normalization, l2 regularization.
+[01:30:44.380] [UNKNOWN] If you use this one, either l1 or l2, it tells you to prevent the overfitting.
+[01:30:56.779] [UNKNOWN] So how do we combat overfitting?
+[01:30:58.880] [UNKNOWN] Regularization is the solution, okay?
+[01:31:04.449] [UNKNOWN] So what is the lambda?
+[01:31:10.649] [UNKNOWN] I mentioned the lambda, like,
+[01:31:12.449] [UNKNOWN] consider that one as 1.
+[01:31:16.869] [UNKNOWN] So, if lambda is something small value, what's going to happen?
+[01:31:23.680] [UNKNOWN] It's like lambda is getting to, for example, 0.01.
+[01:31:32.960] [UNKNOWN] Why?
+[01:31:36.329] [UNKNOWN] Because we give the weight, we give the more weight to plus function, right?
+[01:31:42.590] [UNKNOWN] Suppose that this is 1 times plus function plus 0.01 times coefficient.
+[01:31:48.090] [UNKNOWN] It's almost nothing, almost.
+[01:31:53.859] [UNKNOWN] So, but if it's like a 1, this one is 0.01.
+[01:31:57.260] [UNKNOWN] So, 5, that means that we give the weight to plus and add the same time to this one,
+[01:32:04.420] [UNKNOWN] 2 times this.
+[01:32:07.470] [UNKNOWN] It's not like 1 and 100.
+[01:32:10.659] [UNKNOWN] If it's like 1 and 100, what's going to happen in 1 and 100?
+[01:32:14.779] [UNKNOWN] Like, suppose the opposite, right?
+[01:32:20.359] [UNKNOWN] So, I give them more weight to coefficients.
+[01:32:25.640] [UNKNOWN] What's going to happen?
+[01:32:26.640] [UNKNOWN] Note that the first thing is to control the error.
+[01:32:32.779] [UNKNOWN] The second one is to control the overfitting.
+[01:32:35.020] [UNKNOWN] It is to control the error.
+[01:32:36.020] [UNKNOWN] Right?
+[01:32:36.380] [UNKNOWN] Right.
+[01:32:36.779] [UNKNOWN] If you make this one bigger, you will not have over-fitting.
+[01:32:43.510] [UNKNOWN] It means your model is coefficient is going to be very small, slow, right?
+[01:32:49.630] [UNKNOWN] It's a kind of like plateau.
+[01:32:52.100] [UNKNOWN] It means that, like, you give more away to this one.
+[01:32:57.560] [UNKNOWN] It means that, like, the responsibility of the second sentence is to prevent your model to be complicated.
+[01:33:05.220] [UNKNOWN] If you give more away to that one, your model is going to be too very simple.
+[01:33:09.399] [UNKNOWN] Very simple, okay?
+[01:33:13.880] [UNKNOWN] So, on the other hand, if it's a small value, that means that you don't consider that sentence,
+[01:33:22.899] [UNKNOWN] and your optimization is just based on decreasing the amount of error, or whatever model, right?
+[01:33:31.859] [UNKNOWN] So, no matter that that's complicated or what.
+[01:33:36.720] [UNKNOWN] So, in other words, it's very small, it seems that we don't have this.
+[01:33:42.250] [UNKNOWN] So, that's it.
+[01:33:43.210] [UNKNOWN] So, that's important to know that.
+[01:33:45.939] [UNKNOWN] Also, lambda here is another, let's say, hyperparameter, like this learning rate, okay?
+[01:33:56.779] [UNKNOWN] And we need to control.
+[01:33:59.199] [UNKNOWN] We need to, we call those as hyperparameters, okay?
+[01:34:03.989] [UNKNOWN] Hyperparameter can be this lambda, or can be this learning rate, okay?
+[01:34:14.539] [UNKNOWN] Any question on this?
+[01:34:15.619] [UNKNOWN] So, the first sentence, just minimize.
+[01:34:20.319] [UNKNOWN] The second one, prevent you to have the over-frequency.
+[01:34:25.220] [UNKNOWN] Because the second one helps you to not to have big jumps.
+[01:34:32.140] [UNKNOWN] Coefficients do not be very big, means that you don't learn the noises, okay?
+[01:34:38.550] [UNKNOWN] The square is called L2.
+[01:34:44.819] [UNKNOWN] The first one is called L1.
+[01:34:47.680] [UNKNOWN] Sometimes we call that one.
+[01:34:49.180] [UNKNOWN] Yeah, we call L1, and the rest are L2, okay?
+[01:35:14.819] [UNKNOWN] So, we call.
+[01:35:15.720] [UNKNOWN] We call this one as, and this one is called range.
+[01:35:52.729] [UNKNOWN] That's the problem with the first one.
+[01:35:57.560] [UNKNOWN] Okay?
+[01:36:06.260] [UNKNOWN] So, for example, if you look at this, this is for the L2, and this is my circle, and this is your last function.
+[01:36:25.310] [UNKNOWN] You want to find the balanced one, which is here, okay?
+[01:36:30.560] [UNKNOWN] But here, this is your, you see this diamond.
+[01:36:35.609] [UNKNOWN] It is absolute, and this one is the optimal one, the optimal coefficient, okay?
+[01:36:44.869] [UNKNOWN] So, W1 and W2, but here, the optimal coefficient, anyway, just simply on this, and what is this, and it's important, okay?
+[01:36:58.909] [UNKNOWN] And we discuss about this, if we don't include this.
+[01:37:05.750] [UNKNOWN] Question?
+[01:37:08.069] [UNKNOWN] Yes.
+[01:37:08.850] [UNKNOWN] Yes.
+[01:37:09.170] [UNKNOWN] Yeah.
+[01:37:11.899] [UNKNOWN] Yeah.
+[01:37:11.960] [UNKNOWN] Yeah.
+[01:37:12.500] [UNKNOWN] Yeah.
+[01:37:14.699] [UNKNOWN] Yeah.
+[01:37:14.840] [UNKNOWN] Yeah.
+[01:37:14.899] [UNKNOWN] Yeah.
+[01:37:14.920] [UNKNOWN] Yeah.
+[01:37:14.979] [UNKNOWN] Yeah.
+[01:37:15.380] [UNKNOWN] Yeah.
+[01:37:15.500] [UNKNOWN] Yeah.
+[01:37:15.640] [UNKNOWN] Yeah.
+[01:37:15.739] [UNKNOWN] Yeah.
+[01:37:15.819] [UNKNOWN] Yeah.
+[01:37:16.060] [UNKNOWN] Yeah.
+[01:37:16.399] [UNKNOWN] Yeah.
+[01:37:17.920] [UNKNOWN] Yeah.
+[01:37:21.800] [UNKNOWN] Okay.
+[01:37:22.359] [UNKNOWN] Well, first of all, if your data is kind of like just one, like this one, like x is just one dimension.
+[01:37:32.109] [UNKNOWN] Yes, maybe you can, you can see that, those points, and you take those and remove them.
+[01:37:39.470] [UNKNOWN] Okay.
+[01:37:39.609] [UNKNOWN] One way, yes, of course you can do it.
+[01:37:42.090] [UNKNOWN] But sometimes it's not like this.
+[01:37:44.210] [UNKNOWN] You have x, you have 100 columns, and based on that one, using.
+[01:37:48.250] [UNKNOWN] you want to just predict normally sometimes it's not easy to detect those numbers but for example
+[01:37:54.829] [UNKNOWN] clustering is a way to detect those numbers yes you can find those isolated points remote dots
+[01:38:03.119] [UNKNOWN] and then it makes it easier to predict them or train them visually you can just check one
+[01:38:13.390] [UNKNOWN] or maybe two right or maybe just the three okay but it's no more that's what but in reality most
+[01:38:20.590] [UNKNOWN] of the time our data like for example in the in the banking system we want to check this customer
+[01:38:27.789] [UNKNOWN] at least or not not just based on one credit score you know lots of lots of columns again
+[01:38:39.840] [UNKNOWN] you want to calculate premium in insurance not just depends on one column there are lots of
+[01:38:45.600] [UNKNOWN] other features neighborhood uh education uh lifestyle everything again and then
+[01:38:52.800] [UNKNOWN] the size of for example authority this is all i think if you want there's too much cover
+[01:39:00.159] [UNKNOWN] really just going to one column not really but yeah maybe it's a good idea or escape the data
+[01:39:09.560] [UNKNOWN] apply some algorithms to detect the last layer remodels and yeah
+[01:39:18.670] [UNKNOWN] i mean good idea but not really any other question good question
+[01:39:26.539] [UNKNOWN] any other question
+[01:39:44.079] [UNKNOWN] okay you mean that what if the degree of polynomial is higher
+[01:39:49.529] [UNKNOWN] okay if your polynomial is higher what's gonna happen okay you're gonna have over two but your
+[01:39:57.340] [UNKNOWN] point is that what if the
+[01:39:59.979] [UNKNOWN] what if the lambda is also getting higher in that case at the end it doesn't consider this one
+[01:40:09.640] [UNKNOWN] because it gives more weight to this one to minimizing this right simply means that if this
+[01:40:16.279] [UNKNOWN] one is 100 and this one is one it doesn't care about the error of the model you care about the
+[01:40:23.560] [UNKNOWN] makes the model simpler like a flat line or something because this one should be something that
+[01:40:32.319] [UNKNOWN] okay and that is still if even if it's a daily of nine but it's gonna be something like some line
+[01:40:43.279] [UNKNOWN] simple line yeah good question anything else okay so for now very good you can stop here
+[01:41:01.689] [UNKNOWN] take a break um and get back after 25 minutes okay
+[01:41:10.239] [UNKNOWN] 8.4.
+[01:41:10.800] [UNKNOWN] 8.4.
+[01:41:25.220] [UNKNOWN] 8.4.
+[01:41:25.720] [UNKNOWN] 8.4.
+[01:41:27.520] [UNKNOWN] yeah
+[01:41:30.300] [UNKNOWN] you may
+[01:41:39.319] [UNKNOWN] sit
+[01:41:43.239] [UNKNOWN] square
+[01:41:50.159] [UNKNOWN] is
+[01:41:53.359] [UNKNOWN] music
+[01:41:54.640] [UNKNOWN] so
+[01:41:54.960] [UNKNOWN] um
+[01:41:55.600] [UNKNOWN] you
+[01:41:56.100] [UNKNOWN] should
+[01:41:56.640] [UNKNOWN] be a plus
+[01:41:57.119] [UNKNOWN] oh yeah
+[01:41:57.619] [UNKNOWN] that should be a comentarios
